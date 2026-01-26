@@ -1,0 +1,10 @@
+{
+    "menu_options" : [
+        "English",
+        "日本語"
+    ],
+    "menu_description" : [
+        "Please choose a language.",
+        "言語をご選択ください。"
+    ]
+}

@@ -1,0 +1,11 @@
+scribble_object[0] = scribble(txt)
+	.starting_format("drp_shd",make_color_rgb(255,255,255))
+	.align(fa_left,fa_top)
+	.wrap(624)
+	.draw(8,304,typist)
+
+scribble_object[1] = scribble(speaker)
+	.starting_format("drp_shd",make_color_rgb(255,0,0))
+	.align(fa_left,fa_top)
+	.wrap(624)
+	.draw(8,288)

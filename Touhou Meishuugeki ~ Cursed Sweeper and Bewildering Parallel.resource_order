@@ -29,6 +29,7 @@
     {"name":"font_chicago","order":3,"path":"fonts/font_chicago/font_chicago.yy",},
     {"name":"font_dice_condensed","order":2,"path":"fonts/font_dice_condensed/font_dice_condensed.yy",},
     {"name":"font_dice","order":1,"path":"fonts/font_dice/font_dice.yy",},
+    {"name":"font_misaki","order":7,"path":"fonts/font_misaki/font_misaki.yy",},
     {"name":"scribble_fallback_font","order":24,"path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},
     {"name":"obj_cutscene_fade_in","order":26,"path":"objects/obj_cutscene_fade_in/obj_cutscene_fade_in.yy",},
     {"name":"obj_cutscene_fade_out","order":25,"path":"objects/obj_cutscene_fade_out/obj_cutscene_fade_out.yy",},

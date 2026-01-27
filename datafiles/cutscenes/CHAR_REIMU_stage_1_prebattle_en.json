@@ -1,0 +1,26 @@
+{
+    "dialogue_texts" : [
+        ["Reimu","What is with all this mail that has scattered all over the place?"],
+        ["Reimu","Is this supposed to be notices containing his rumor?"],
+        [" ","Argh... No... Confound it! Where have they all gone?"],
+        ["Reimu","Could that be the one?"],
+        ["Reimu","Oof! Geez! Where did that come from?"],
+        ["???","Oh! Sorry, Your Honor. Very sorry. I didn't notice you were standing in my way!"],
+        ["Reimu","That's fine, but please explain what's with all this mail on the ground."],
+        ["???","I was trying to gather all of the mail I need to deliver and I wasn't watching where I was going."],
+        ["Reimu","You can't leave all of the mail on the ground; you have got to pick them all up!"],
+        ["???","What now, Your Honor? I also didn't take the chance to introduce myself."],
+        ["Kotori","The name's Kotori Tegami - a tengu who delivers the mail to Kozankyo's residents."],
+        ["Reimu","So, you're one of the primary mail couriers in the city, eh?"],
+        ["Kotori","That's right. I'm normally a perfect postgirl, but I'm having trouble trying to get all the mail back in my pouch."],
+        ["Reimu","I'd like to help, but there's this rumor from the Gensokyo Socialite Order I have to uncover."],
+        ["Kotori","Rumor? Wouldn't you know it - I don't want to get persecuted by the Order..."],
+        ["Reimu","If we happen to stumble across a grunt around here, there will be no chance for escape!"],
+        ["Kotori","I would have to halt my job in that case..."],
+        ["Kotori","I'll be searching thoroughly for a while..."],
+        ["Reimu","Please do it yourself. I can't help you at this moment."],
+        ["Kotori","I can't, I have a crucial deadline approaching."],
+        ["Reimu","I don't want to pick a fight with you..."],
+        ["Kotori","Time is money... you'll see me fired without it!"]
+    ]
+}

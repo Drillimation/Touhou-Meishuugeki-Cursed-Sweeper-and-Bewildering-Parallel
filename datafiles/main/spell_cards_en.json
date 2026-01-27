@@ -1,0 +1,15 @@
+{
+    "player_spell" : {
+        "CHAR_REIMU" : "Spirit Sign \"Fantasy Seal\"",
+        "CHAR_MARISA" : "Love Sign \"Master Spark\"",
+        "CHAR_YUKARI" : "Border Sign \"Quadruple Barrier\"",
+        "CHAR_KAGUYA" : "Eternal Sign \"Branch of Hourai\""
+    },
+    "enemy_spell" : {
+        "SPELL_KOTORI_01" : "Tengu's Kick \"Sky Dive\"",
+        "SPELL_KOTORI_02" : "Tengu Shot \"Aerial Ace\"",
+        "SPELL_KOTORI_03" : "Air Lift \"Out For Delivery\"",
+        "SPELL_KOTORI_04" : "Air Raid \"Wild Flight\"",
+        "SPELL_KOTORI_05" : "Mail Sign \"Infinite Backlog of Lost Letters\""
+    }
+}

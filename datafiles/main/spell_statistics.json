@@ -1,0 +1,16 @@
+{
+    "spell_statistics" : {
+        "SPELL_KOTORI_01" : { "encounters" : 0, "captures" : 0 },
+        "SPELL_KOTORI_02" : { "encounters" : 0, "captures" : 0 },
+        "SPELL_KOTORI_03" : { "encounters" : 0, "captures" : 0 },
+        "SPELL_KOTORI_04" : { "encounters" : 0, "captures" : 0 },
+        "SPELL_KOTORI_05" : { "encounters" : 0, "captures" : 0 }
+    },
+    "spell_order" : [
+        "SPELL_KOTORI_01",
+        "SPELL_KOTORI_02",
+        "SPELL_KOTORI_03",
+        "SPELL_KOTORI_04",
+        "SPELL_KOTORI_05"
+    ]
+}

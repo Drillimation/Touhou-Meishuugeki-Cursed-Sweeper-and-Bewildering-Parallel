@@ -1,0 +1,15 @@
+{
+    "player_spell" : {
+        "CHAR_REIMU" : "霊符「夢想封印」",
+        "CHAR_MARISA" : "恋符「マスタースパーク」",
+        "CHAR_YUKARI" : "境符「四重結界」",
+        "CHAR_KAGUYA" : "永符「蓬莱の枝」"
+    },
+    "enemy_spell" : {
+        "SPELL_KOTORI_01" : "天狗の蹴り「スカイダイブ」",
+        "SPELL_KOTORI_02" : "天狗の弾「燕返し」",
+        "SPELL_KOTORI_03" : "運び出し「配送中」",
+        "SPELL_KOTORI_04" : "空襲「乱れ飛び」",
+        "SPELL_KOTORI_05" : "郵便符「紛失した手紙の無限の残務」"
+    }
+}

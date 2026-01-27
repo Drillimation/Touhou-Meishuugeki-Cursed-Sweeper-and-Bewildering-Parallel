@@ -18,5 +18,67 @@
         "Adjust the game's settings.",
         "Exit the game."
     ],
-    "demo_play" : "PUSH ANY BUTTON TO PLAY"
+    "demo_play" : "PUSH ANY BUTTON TO PLAY",
+    "player_select" : {
+        "menu_options" : [
+            "ONE PLAYER",
+            "TWO PLAYERS"
+        ],
+        "menu_description" : [
+            "Play the game alone. A second player can join at any time.",
+            "Play the game with a friend. The second player can drop out at any time."
+        ]
+    },
+    "mode_select" : {
+        "menu_options" : [
+            "CLASSIC",
+            "BREEZY"
+        ],
+        "menu_description" : [
+            "You only get one hit before a life is lost. Select this mode if you want a challenge.",
+            "Not good at danmaku? We'll give you thirty hits. Select this mode if you want to quickly progress the story."
+        ]
+    },
+    "episode_select" : {
+        "menu_options" : [
+            "THE CURSED SWEEPER",
+            "EXTRA STAGE",
+            "THE BEWILDERING PARALLEL",
+            "PHANTASM STAGE"
+        ],
+        "menu_description" : [
+            "A youkai-born man has called you to find the source of this \"glohm\".",
+            "There's someone who may have ordered its creation. Could it be Flandre or someone else?",
+            "The glohm has spread further than Yumemura. Has it reached Kozankyo?",
+            "There's someone at the festival who wanted to challenge you. Who is it?"
+        ]
+    },
+    "difficulty_select" : {
+        "menu_options" : [
+            "EASY",
+            "NORMAL",
+            "DIFFICULT",
+            "LUNATIC"
+        ],
+        "menu_description" : [
+            "A starter mode recommended for beginners. Enemies will fire less danmaku.",
+            "A basic mode recommended for most players. Enemies will fire normal amounts of danmaku.",
+            "A challenge mode recommended for hardcore players. Enemies will fire larger amounts of danmaku.",
+            "A mode not for the faint of heart. Recommended for experts. Enemies will fire substantial amounts of danmaku."
+        ]
+    },
+    "character_select" : {
+        "menu_options" : [
+            "REIMU HAKUREI",
+            "MARISA KIRISAME",
+            "YUKARI YAKUMO",
+            "KAGUYA HOURAISAN"
+        ],
+        "menu_description" : [
+            "The shrine maiden of the Hakurei Shrine has taken the heavy burden of the first Chief Justice of the Federal Kingdom of Gensokyo. Armed with her signature Spirit Sign \"Fantasy Seal\", she is investigating the corruptive \"glohm\" substance to prevent it from reaching Kozankyo and ruining the upcoming festival.\nSpecial: Homing amulets home in on nearby enemies. She is great for beginners.",
+            "Once a lowly magician, she has crowned herself queen as the founder of the Federal Kingdom of Gensokyo and is the host of the autumn equinox festival in honor of her late mother Mima. Wielding the powerful Love Sign \"Master Spark\", she joins the alliance to ensure the celebration of her kingdom remains untouched by the shadows of the Gensokyo Socialite Order.\nSpecial: Devastating lasers continuously damage enemies, but doesn't have a wide range.",
+            "The youkai-born sage and monarch of the Democratic Kingdom of Gensokyo visiting Kozankyo for the festival. With her Border Sign \"Quadruple Barrier\", she seeks to silence the rumors of the glohm before they slip through the gaps. She views the spreading glohm as not just a threat, but a lesson in boundaries.\nSpecial: Placeable narrow needle danmaku allows for strategic screen control.",
+            "A former princess from the Lunar Capital who now reigns as the Empress of the People's Kingdom of Gensokyo and a guest of honor at the autumn festival. Using her Eternal Sign \"Branch of Hourai\", she investigates the disruptive trail of \"glohm\" affecting the continent's infrastructure. She refuses to let the substance overshadow the majesty of the equinox.\nSpecial: Deploys shimmering, star-like danmaku patterns that cover a wide range."
+        ]
+    }
 }

@@ -1,0 +1,22 @@
+{
+    "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
+    "menu_options" : [
+        "Arcade",
+        "Free Play",
+        "Replay Menu",
+        "Fork on GitHub",
+        "Drillipedia",
+        "Options",
+        "Exit"
+    ],
+    "menu_description" : [
+        "Play the story mode.",
+        "Freely play on any stage you have unlocked.",
+        "Watch replays you have saved.",
+        "Open this game's GitHub page (will open a browser window).",
+        "Open Drillipedia (will open a browser window).",
+        "Adjust the game's settings.",
+        "Exit the game."
+    ],
+    "demo_play" : "PUSH ANY BUTTON TO PLAY"
+}

@@ -1,3 +1,11 @@
+function scr_create_cutscene(_scene){
+	var inst = instance_create_layer(0,0,"Instances",obj_cutscene);
+	with(inst) {
+		scene_info = _scene;
+		event_perform(ev_other,ev_user0);
+	}
+}
+
 function scr_cutscene_end_action() {
 	//show_debug_message("Cutscene transition")
 	scene++;
@@ -97,8 +105,16 @@ function scr_cutscene_show_text(_file,_key,_sound) {
 				with(other) {
 					scr_cutscene_end_action();
 				}
+				instance_destroy();
+				exit
 			}
 			count++;
 		}
 	}
+}
+
+function scr_cutscene_room_transition(_room) {
+	inst = instance_create_depth(0,0,0,obj_fade_out);
+	inst.target = asset_get_index(_room);
+	scr_cutscene_end_action();
 }

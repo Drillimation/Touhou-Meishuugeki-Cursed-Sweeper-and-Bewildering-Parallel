@@ -12,7 +12,7 @@ gamepad_button_check_pressed(0,gp_shoulderr) or
 gamepad_button_check_pressed(0,gp_shoulderrb) {
 	scr_one_channel_sound(snd_menuconfirm);
 	instance_destroy();
-	inst = instance_create_depth(0,0,0,obj_fade_out);
+	var inst = instance_create_depth(0,0,0,obj_fade_out);
 	inst.target = asset_get_index(room_setup);
 }
 

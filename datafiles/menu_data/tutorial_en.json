@@ -1,0 +1,10 @@
+{
+    "menu_prompt" : "%au Continue",
+    "tutorial_header" : "HOW TO PLAY",
+    "tutorial_controls" : [
+        "Use the arrow keys, WASD, or the left stick to move your character.",
+        "Hold the %au button to shoot.",
+        "Hold the %bu button to focus.",
+        "Push the %xu button to use a spell card. Only use as a last resort."
+    ]
+}

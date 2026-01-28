@@ -29,18 +29,15 @@ if delay <= 0 {
 	if x <= 32 {
 		if (a_button) or clicked == true {
 			scr_one_channel_sound(snd_menuconfirm);
+			switch(y_pos) {
+				case 0: /*global.main_stats.max_health = 1;*/ break;
+				case 1: /*global.main_stats.max_health = 30;*/ break;
+			}
 			instance_destroy();
-			//global.global_stats.difficulty = y_pos;
-			//instance_create_depth(656,32,0,obj_mode_select)
-			instance_create_depth(0,0,0,obj_tutorial)
+			instance_create_depth(656,32,0,obj_difficulty_select)
 		}
 		
-		if (b_button) {
-			instance_destroy();
-			instance_create_depth(656,32,0,obj_mode_select)
-		}
-		
-		if count == 1800 {
+		if (b_button) or count == 1800 {
 			instance_destroy();
 			var inst = instance_create_depth(0,0,0,obj_fade_out);
 			inst.target = asset_get_index(room_title);

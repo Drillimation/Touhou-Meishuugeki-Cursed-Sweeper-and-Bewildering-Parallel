@@ -1,4 +1,10 @@
 function scr_change_bgm(_bgm){
+	if global.bgm_fadeout == true { 
+		global.bgm_channel = undefined;
+		global.current_bgm = undefined;
+		struct_remove(self,"current_volume");
+		global.bgm_fadeout = false;
+	}
 	if fmod_channel_control_is_playing(global.bgm_channel) && global.current_bgm != _bgm {
 		fmod_channel_control_stop(global.bgm_channel);
 		global.bgm_channel = undefined;
@@ -19,5 +25,11 @@ function scr_stop_bgm(){
 		fmod_channel_control_stop(global.bgm_channel);
 		global.bgm_channel = undefined;
 		global.current_bgm = undefined;
+	}
+}
+
+function scr_fade_bgm(){
+	if fmod_channel_control_is_playing(global.bgm_channel) {
+		global.bgm_fadeout = true;
 	}
 }

@@ -5,3 +5,9 @@
 if keyboard_check_pressed(vk_f2) {
 	item_CreateItemA1(spr_full_item,irandom_range(4,252),irandom_range(20,80),0);
 }*/
+
+for(var i = 0; i < array_length(global.player_stats); i++) {
+	if global.player_stats[i].cur_score > highscore {
+		highscore = global.player_stats[i].cur_score;
+	}
+}

@@ -7,7 +7,6 @@ function scr_main_hud() {
 	draw_set_font(sprite_font);
 	//Top Part
 	//High score text
-	var highscore = global.highscores[0].score;
 	draw_set_halign(fa_center);
 	draw_set_color(make_color_rgb(255,0,0));
 	draw_text(xview + 128,yview + 0,"HIGH SCORE");
@@ -101,7 +100,7 @@ function scr_enemy_hud() {
 		.starting_format("drp_shd5",make_color_rgb(255,255,255))
 		.wrap(240)
 		.line_spacing(16)
-		.draw(xview + 8, yview + 216)
+		.draw(xview + 0, yview + 24)
 }
 
 function scr_game_over_hud() {
@@ -129,16 +128,17 @@ function scr_enemy_spell_card_hud() {
 	draw_sprite(spr_enemy_spell_banner,0,xview + x_pos,yview + 24);
 	scribble_object[0] = scribble(attack_name)
 		.starting_format("drp_shd5",make_color_rgb(255,255,255))
+		.align(fa_right,fa_top)
 		.wrap(240)
 		.line_spacing(16)
 		.draw(xview + x_pos,yview + 32)
 	
-	draw_set_halign(fa_left);
+	//draw_set_halign(fa_left);
 	switch(captured) {
 		case true: 
-			//draw_text(xview + 0,yview + 24,round((global.main_stats.stage * 1000) + (associated_object.timer * 100))); 
 			scribble_object[1] = scribble(string(round((global.main_stats.stage * 1000) + (associated_object.timer * 100))))
 				.starting_format("drp_shd5",make_color_rgb(255,255,255))
+				.align(fa_right,fa_top)
 				.wrap(240)
 				.line_spacing(16)
 				.draw((xview + x_pos) - 100,yview + 24)
@@ -146,6 +146,7 @@ function scr_enemy_spell_card_hud() {
 		case false: 
 			scribble_object[1] = scribble(fail_text)
 				.starting_format("drp_shd5",make_color_rgb(255,255,255))
+				.align(fa_right,fa_top)
 				.wrap(240)
 				.line_spacing(16)
 				.draw((xview + x_pos) - 100,yview + 24)

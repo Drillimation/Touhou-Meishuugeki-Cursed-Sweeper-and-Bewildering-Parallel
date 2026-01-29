@@ -2,9 +2,17 @@
     "STAGE_01_DAY_MID" : {
         "stage_speed" : 0.5,
         "end_path_function" : "MIDBOSS",
-        "midboss" : "spr_kotori_midboss",
+        "midboss" : "obj_kotori_midboss",
         "midboss_sprite" : "spr_kotori",
         "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_1_prebattle"
+    },
+    "STAGE_01_DAY" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_kotori",
+        "midboss_sprite" : "spr_kotori",
+        "camera_path" : "path_scroll_h2",
         "cutscene_index" : "_stage_1_prebattle"
     }
 }

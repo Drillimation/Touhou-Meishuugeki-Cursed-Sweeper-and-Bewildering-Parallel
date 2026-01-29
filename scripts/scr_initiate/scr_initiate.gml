@@ -3,12 +3,13 @@ function scr_system_initiate(_no_of_players = 1){
 	/// @description Initiates the system. This is important when running the game, as running the game without it may result in errors.
 	/// @param {real} _no_of_players Sets the number of players.
 	
+	randomize();
 	global.replay_mode = false;
 	global.playing_field = {
 		x1 : 0,
-		y1 : 16,
+		y1 : 0,
 		x2 : 255,
-		y2 : 271,
+		y2 : 287,
 		minrpriority : 20,
 		maxrpriority : 60,
 		camera_priority : 80,

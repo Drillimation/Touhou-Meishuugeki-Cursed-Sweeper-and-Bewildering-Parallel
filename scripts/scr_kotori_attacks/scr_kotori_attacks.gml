@@ -4,6 +4,61 @@ function scr_kotori_attacks(){
 	char_name = _load_file.char_names.CHAR_KOTORI
 	
 	//Main attacks
+	attack_kotori_mid = function() {
+		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
+		if count <= 140 {
+			if count mod 45 == 0 {
+				sound_ObjSound_Play(se_tan02);
+				var angleT = point_direction(x,y,obj_player.x,obj_player.y)
+				repeat(16 + (global.main_stats.difficulty * 2)) {
+					var inst = shot_CreateShotA1(x,y,1.25,angleT,spr_danmaku_amulet,5,2);
+					with(inst) {
+						image_xscale = 2;
+						image_yscale = 2;
+						set_function = function() {
+							direction += random_range(-5,5);
+						}
+					}
+					angleT += 360 / (16 + (global.main_stats.difficulty * 2))
+				}
+			}
+		}
+		if count == 140 {
+			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
+		}
+		if count >= 141 and count <= 200 {
+			if count mod 20 == 0 {
+				sound_ObjSound_Play(se_tan02);
+				var angleT = point_direction(x,y,obj_player.x,obj_player.y)
+				repeat(20 + (global.main_stats.difficulty * 4)) {
+					var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
+					with(inst) {
+						set_function = function() {
+							if count == 10 { direction += 90 }
+							if count == 20 { 
+								direction -= 90; 
+								count = 0; 
+							}
+						}
+					}
+					angleT += 360 / (20 + (global.main_stats.difficulty * 4))
+				}
+			}
+		}
+		if count == 200 {
+			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
+		}
+		if count == 260 {
+			count = 1;
+		}
+		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
+			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+		}
+		else {
+			speed = 0;
+			move_mode = false;
+		}
+	}
 	attack_kotori_main_1 = function() {
 		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
 		if count > 1 and count < 121 {

@@ -1,5 +1,5 @@
-function scr_create_cutscene(_scene){
-	var inst = instance_create_layer(0,0,"Instances",obj_cutscene);
+function scr_create_cutscene(_scene,_type = obj_cutscene){
+	var inst = instance_create_layer(0,0,"Instances",_type);
 	with(inst) {
 		scene_info = _scene;
 		event_perform(ev_other,ev_user0);
@@ -82,6 +82,11 @@ function scr_cutscene_change_bgm(_bgm) {
 	scr_cutscene_end_action();
 }
 
+function scr_cutscene_fade_bgm() {
+	scr_fade_bgm();
+	scr_cutscene_end_action();
+}
+
 function scr_cutscene_show_text(_file,_key,_sound) {
 	if !instance_exists(obj_textbox) {
 		var inst = instance_create_depth(8,288,0,obj_textbox)
@@ -108,6 +113,59 @@ function scr_cutscene_show_text(_file,_key,_sound) {
 			count++;
 		}
 	}
+}
+
+function scr_cutscene_show_textbox(_file,_key) {
+	if !instance_exists(obj_textbox_small) {
+		var inst = instance_create_depth(8,288,0,obj_textbox_small)
+		with(inst) {
+			var load_data = scr_json_load_file(string(_file) + string(global.suf) + ".json");
+			speaker = load_data.dialogue_texts[_key][0];
+			txt = load_data.dialogue_texts[_key][1];
+			
+			typist = scribble_typist()
+				.in(0.5, 0)
+		}
+	}
+	with(obj_textbox_small) {
+		if keyboard_check_pressed(vk_enter) or 
+		keyboard_check_pressed(ord("Z")) or 
+		gamepad_button_check_pressed(0,gp_face1) {
+			var check_fade = typist.get_state()
+			if check_fade == 1 {
+				with(other) {
+					scr_cutscene_end_action();
+				}
+				instance_destroy();
+			}
+			else {
+				typist.skip();
+			}
+		}
+	}
+}
+
+function scr_cutscene_reveal_name(_name) {
+	var _load_data = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+	var ss = struct_get(_load_data.char_names,_name);
+	actual_name += ss;
+	actual_name += "\n"
+	ss = struct_get(_load_data.char_desc,_name);
+	actual_name += ss;
+	name_reveal = true;
+	scr_cutscene_end_action();
+}
+
+function scr_cutscene_stage_clear() {
+	instance_create_depth(0,0,0,obj_stage_clear);
+	instance_destroy();
+	scr_cutscene_end_action();
+}
+
+function scr_cutscene_game_clear() {
+	instance_create_depth(0,0,0,obj_game_clear);
+	instance_destroy();
+	scr_cutscene_end_action();
 }
 
 function scr_cutscene_room_transition(_room) {

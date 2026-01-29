@@ -6,7 +6,7 @@ function sound_ObjSound_Play(_sound) {
 	if audio_is_playing(_sound) {
 		audio_stop_sound(_sound)
 	}
-	var sound_id = audio_play_sound(_sound,10,false);
+	var sound_id = audio_play_sound(_sound,10,false,0.5);
 	return sound_id
 }
 

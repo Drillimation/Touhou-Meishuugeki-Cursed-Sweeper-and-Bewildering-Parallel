@@ -30,11 +30,8 @@ function scr_enemy_remove_life(){
 				system_AddScore(round((timer * 100) + (global.main_stats.stage * 1000)),i);
 			}
 		}
-		var drop = irandom(array_length(item_drop) - 1);
-		if drop != 0 {
-			for(var i = 0; i < array_length(item_drop); i++) {
-				item_CreateItemA2(item_drop[i],x,y,x + irandom_range(-16,16),y + irandom_range(-16,16),0);
-			}
+		for(var i = 0; i < array_length(item_drop); i++) {
+			item_CreateItemA2(item_drop[i],x,y,x + irandom_range(-16,16),y + irandom_range(-16,16),0);
 		}
 	}
 	else {

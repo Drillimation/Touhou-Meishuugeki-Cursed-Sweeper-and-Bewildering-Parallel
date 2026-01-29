@@ -113,7 +113,7 @@ function move_ObjMove_SetDestAtSpeed(_id,_x,_y,_speed) {
 		x_tar = _x;
 		y_tar = _y;
 		move_mode = true;
-		direction = point_direction(x_pos,y_pos,xview + _x,yview + _y);
+		direction = point_direction(x,y,xview + _x,yview + _y);
 		speed = _speed;
 	}
 }

@@ -4,21 +4,21 @@ xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 switch(end_path_function) {
 	case "MIDBOSS": 
-		var inst = instance_create_layer(xview + 128,yview + 96,"Enemies",obj_spawn_midboss);
+		var inst = instance_create_layer(xview + 128,yview + 96,"Instances",obj_spawn_midboss);
 		with(inst) {
 			sprite_index = other.midboss_sprite;
 			midboss = other.midboss;
 		}
 		break;
 	case "CUTSCENE": 
-		var load_file2 = scr_json_load_file(string(cutscene_index) + string(global.suf) + ".json");
-		var cutscene = scr_json_load_file(string(cutscene_index) + ".json")
+		var load_file2 = scr_json_load_file("cutscenes/" + string(cutscene_index) + string(global.suf) + ".json");
+		var cutscene = scr_json_load_file("cutscenes/" + string(cutscene_index) + ".json")
 		s_scene_info = cutscene.t_scene_info;
-		scr_create_cutscene(s_scene_info);
+		scr_create_cutscene(s_scene_info,obj_cutscene_textbox);
 		break;
 }
 
-with(obj_bullet_enemy) {
+with(obj_enemy_bullet) {
 	instance_destroy();
 }
 

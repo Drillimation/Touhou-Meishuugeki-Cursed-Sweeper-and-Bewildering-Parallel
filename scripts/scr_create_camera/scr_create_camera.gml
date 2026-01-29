@@ -1,16 +1,14 @@
 function scr_create_camera(_camera){
-	var load_array = scr_json_load_file("main/camera_properties.json");
-	var ss = struct_get(load_array,_camera)
-	
-	stage_speed = ss.stage_speed;
-	end_path_function = ss.end_path_function;
-	midboss = asset_get_index(ss.midboss);
-	midboss_sprite = asset_get_index(ss.midboss_sprite);
-	camera_path = asset_get_index(ss.camera_path)
-	cutscene_index = string(global.player_stats[0].character) + string(ss.cutscene_index);
-	
 	var inst = instance_create_layer(0,0,"Instances",obj_camera)
 	with(inst) {
-		path_start(other.camera_path,other.stage_speed,path_action_stop,true)
+		var load_array = scr_json_load_file("main/camera_properties.json");
+		var ss = struct_get(load_array,_camera)
+		stage_speed = ss.stage_speed;
+		end_path_function = ss.end_path_function;
+		midboss = asset_get_index(ss.midboss);
+		midboss_sprite = asset_get_index(ss.midboss_sprite);
+		camera_path = asset_get_index(ss.camera_path)
+		cutscene_index = string(global.player_stats[0].character) + string(ss.cutscene_index);
+		path_start(camera_path,stage_speed,path_action_stop,true)
 	}
 }

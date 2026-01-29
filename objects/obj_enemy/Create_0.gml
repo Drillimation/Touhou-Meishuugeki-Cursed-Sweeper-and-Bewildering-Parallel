@@ -12,11 +12,11 @@ move_mode = false;
 x_tar = x_pos;
 y_tar = y_pos;
 speedcap = false;
-acceleration = 0.01;
+acceleration = 0;
 maxspeed = 1;
 
 item_drop = [spr_point_item,spr_power_item_l,spr_power_item_s];
-array_shuffle(item_drop,0,array_length(item_drop))
+item_drop = array_shuffle(item_drop)
 
 count = 0;
 count2 = 0;

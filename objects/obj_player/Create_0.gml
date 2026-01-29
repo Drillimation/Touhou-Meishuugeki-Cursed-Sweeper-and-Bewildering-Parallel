@@ -13,11 +13,11 @@ xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 x_pos = global.player_stats[play_id].start_x;
 y_pos = global.player_stats[play_id].start_y;
-clip_x1 = global.playing_field.x1;
-clip_y1 = global.playing_field.y1;
-clip_x2 = global.playing_field.x2;
-clip_y2 = global.playing_field.y2;
-itemcollectline = 64;
+clip_x1 = global.playing_field.x1 + 4;
+clip_y1 = global.playing_field.y1 + 20;
+clip_x2 = global.playing_field.x2 - 4;
+clip_y2 = global.playing_field.y2 - 20;
+itemcollectline = 80;
 
 invultime = 0;
 respawn_time = 60;

@@ -38,10 +38,12 @@ if jitter == true {
 }
 
 if autohome == true {
-	if collision_rectangle(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2,enemy_target,true,false) and
-	instance_exists(enemy_target) {
-		var nearest_target = instance_nearest(x,y,enemy_target);
-		direction = point_direction(x_pos,y_pos,nearest_target.x,nearest_target.y);
+	if collision_rectangle(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2,enemy_target,false,true) {
+		if instance_exists(enemy_target) {
+			var ex = instance_nearest(x,y,enemy_target).x;
+			var ey = instance_nearest(x,y,enemy_target).y;
+			direction = point_direction(x,y,ex,ey);
+		}
 	}
 }
 

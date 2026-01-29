@@ -3,7 +3,8 @@ function scr_main_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,128,0);
+	var sprite_font = font_add_sprite(spr_font,32,false,0);
+	draw_set_font(sprite_font);
 	//Top Part
 	//High score text
 	var highscore = global.highscores[0].score;
@@ -85,7 +86,8 @@ function scr_enemy_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,128,0);
+	var sprite_font = font_add_sprite(spr_font,32,false,0);
+	draw_set_font(sprite_font)
 	var cur_health = (life * start_hp) + hp;
 	var max_health = (max_hp * start_hp);
 	draw_healthbar(xview + 0,yview + 16,xview + 239,yview + 23,(cur_health / max_health) * 100,c_black,c_white,c_white,0,true,false);
@@ -156,7 +158,8 @@ function scr_spell_bonus_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,128,0);
+	var sprite_font = font_add_sprite(spr_font,32,false,0);
+	draw_set_font(sprite_font)
 	draw_set_halign(fa_center);
 	draw_set_color(make_color_rgb(255,216,0));
 	switch(captured) {

@@ -16,6 +16,17 @@ global.font_effects = {
 	shd5 : scribble_font_bake_shadow("font_misaki","drp_shd5",1,1,make_color_rgb(0,0,0),1,0,false),
 }
 
+if file_exists("highscores.save") {
+	var _load_data = scr_json_load_file("highscores.save");
+	global.highscores = [];
+	array_copy(global.highscores,0,_load_data.default_table,0,array_length(_load_data.default_table))
+}
+else {
+	var _load_data = scr_json_load_file("main/default_highscores.json");
+	global.highscores = [];
+	array_copy(global.highscores,0,_load_data.default_table,0,array_length(_load_data.default_table))
+}
+
 if !file_exists("options.save") {
 	global.game_options = {
 		language : 0,
@@ -29,9 +40,6 @@ if !file_exists("options.save") {
 	instance_create_depth(0,0,0,obj_language_select_first);
 	scr_json_save_file(global.game_options,"options.save")
 	audio_group_set_gain(audiogroup_default,global.game_options.sfx_volume,0);
-	var _load_data = scr_json_load_file("main/default_highscores.json");
-	global.highscores = [];
-	array_copy(global.highscores,0,_load_data.default_table,0,array_length(_load_data.default_table))
 }
 else {
 	global.game_options = scr_json_load_file("options.save");

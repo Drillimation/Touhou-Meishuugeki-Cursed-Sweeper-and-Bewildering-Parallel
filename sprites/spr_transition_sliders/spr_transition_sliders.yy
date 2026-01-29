@@ -11,20 +11,23 @@
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
-  "frames":[],
+  "frames":[
+    {"$GMSpriteFrame":"v1","%Name":"c38a28ba-29eb-4eb6-bef7-3adae97bd491","name":"c38a28ba-29eb-4eb6-bef7-3adae97bd491","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2554892d-93a1-4d2c-a328-49bccfc44a0b","name":"2554892d-93a1-4d2c-a328-49bccfc44a0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+  ],
   "gridX":0,
   "gridY":0,
   "height":288,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"dc006a58-bcc2-4688-9be3-532cf7151fed","blendMode":0,"displayName":"default","isLocked":false,"name":"dc006a58-bcc2-4688-9be3-532cf7151fed","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"05baf1dc-cbc5-4a84-9ec2-2120c2028f24","blendMode":0,"displayName":"default","isLocked":false,"name":"05baf1dc-cbc5-4a84-9ec2-2120c2028f24","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_transition_sliders",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Miscellaneous",
-    "path":"folders/Sprites/Miscellaneous.yy",
+    "name":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel",
+    "path":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -47,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":0.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -65,7 +68,14 @@
     "showBackdropImage":false,
     "timeUnits":1,
     "tracks":[
-      {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
+      {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c38a28ba-29eb-4eb6-bef7-3adae97bd491","path":"sprites/spr_transition_sliders/spr_transition_sliders.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"51615ea6-e70c-4d40-8196-c917b8186f59","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2554892d-93a1-4d2c-a328-49bccfc44a0b","path":"sprites/spr_transition_sliders/spr_transition_sliders.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"97bbd7d5-a45e-496e-a9ad-a185944a180e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,

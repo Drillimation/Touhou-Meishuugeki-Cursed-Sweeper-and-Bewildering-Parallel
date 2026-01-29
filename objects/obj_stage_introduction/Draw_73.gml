@@ -5,6 +5,10 @@ yview = camera_get_view_y(view_camera[0]);
 if count >= 60 {
 	scribble_object[0] = scribble(stage_start_number)
 		.starting_format("drp_shd3",make_color_rgb(255,255,255))
+		.align(fa_left,fa_top)
+		.outline(make_color_rgb(0,0,0))
+		.shadow(make_color_rgb(0,0,0),1)
+		.gradient(make_color_rgb(127,127,255),1)
 		.wrap(240)
 		.line_spacing(16)
 		.draw(xview + (8), yview + (104),typist[0])

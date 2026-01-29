@@ -1,0 +1,13 @@
+xview = camera_get_view_x(view_camera[0]);
+yview = camera_get_view_y(view_camera[0]);
+
+x = xview + x_pos;
+y = yview + y_pos;
+
+layer_sequence_x(_sequence,x);
+layer_sequence_y(_sequence,y);
+
+if layer_sequence_is_finished(_sequence) != 0 {
+	layer_sequence_destroy(_sequence);
+	instance_destroy();
+}

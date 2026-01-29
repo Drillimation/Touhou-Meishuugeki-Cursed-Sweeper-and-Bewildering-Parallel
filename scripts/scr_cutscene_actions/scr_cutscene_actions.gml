@@ -11,9 +11,6 @@ function scr_cutscene_end_action() {
 	scene++;
 	if (scene >= array_length(scene_info)) {
 		instance_destroy();
-		//var load_file2 = scr_json_load_file("main/rolp_plan.json");
-		//var inst = instance_create_depth(0,0,0,obj_fade_out);
-		//inst.target = asset_get_index(load_file2.dream_plan[global.global_stats.stage - 1][0]);
 		exit;
 	}
 	event_perform(ev_other,ev_user0);

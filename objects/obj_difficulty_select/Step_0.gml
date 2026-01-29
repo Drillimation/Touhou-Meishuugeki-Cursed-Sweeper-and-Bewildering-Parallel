@@ -30,7 +30,7 @@ if delay <= 0 {
 		if (a_button) or clicked == true {
 			scr_one_channel_sound(snd_menuconfirm);
 			instance_destroy();
-			//global.global_stats.difficulty = y_pos;
+			global.main_stats.difficulty = y_pos;
 			//instance_create_depth(656,32,0,obj_mode_select)
 			instance_create_depth(0,0,0,obj_tutorial)
 		}

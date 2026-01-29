@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel",
-    "path":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel.yyp",
+    "name":"Menu Assets",
+    "path":"folders/Menu Assets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -11,5 +11,11 @@
         "SPELL_KOTORI_03" : "Air Lift \"Out For Delivery\"",
         "SPELL_KOTORI_04" : "Air Raid \"Wild Flight\"",
         "SPELL_KOTORI_05" : "Mail Sign \"Infinite Backlog of Lost Letters\""
+    },
+    "char_names" : {
+        "CHAR_KOTORI" : "Kotori Tegami"
+    },
+    "char_desc" : {
+        "CHAR_KOTORI" : "Kozankyo's Clumsy Mail Courier"
     }
 }

@@ -2,8 +2,8 @@
     "STAGE_01_DAY_MID" : {
         "stage_speed" : 0.5,
         "end_path_function" : "MIDBOSS",
-        "midboss" : "",
-        "midboss_sprite" : "",
+        "midboss" : "spr_kotori_midboss",
+        "midboss_sprite" : "spr_kotori",
         "camera_path" : "path_scroll_h1",
         "cutscene_index" : "_stage_1_prebattle"
     }

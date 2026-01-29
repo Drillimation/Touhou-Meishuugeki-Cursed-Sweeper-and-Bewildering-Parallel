@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel",
-    "path":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel.yyp",
+    "name":"Characters",
+    "path":"folders/Driller Engine/Sprite Assets/Characters.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

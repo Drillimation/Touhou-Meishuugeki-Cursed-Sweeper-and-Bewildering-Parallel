@@ -1,0 +1,36 @@
+enum _shot_type {
+	TYPE_ALL,
+	TYPE_SHOT,
+	TYPE_CHILD
+}
+	
+enum _delete_type {
+	TYPE_IMMEDIATE,
+	TYPE_FADE,
+	TYPE_ITEM
+}
+
+enum _target_type {
+	TARGET_ALL,
+	TARGET_ENEMY,
+	TARGET_PLAYER
+}
+
+enum _info_type {
+	INFO_RECT,
+	INFO_DELAY_COLOR,
+	INFO_BLEND,
+	INFO_COLLISION,
+	INFO_COLLISION_LIST
+}
+
+enum _item_type {
+	ITEM_1UP,
+	ITEM_1UP_S,
+	ITEM_SPELL,
+	ITEM_SPELL_S,
+	ITEM_POINT,
+	ITEM_POINT_S,
+	ITEM_POWER,
+	ITEM_POWER_S
+}

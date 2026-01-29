@@ -1,0 +1,15 @@
+{
+    "stage_start_number" : {
+        "STAGE_01_DAY" : "ステージ1",
+        "STAGE_02_DAY" : "ステージ2",
+        "STAGE_03_DAY" : "ステージ3",
+        "STAGE_04_DAY" : "ステージ4",
+        "STAGE_05_DAY" : "ステージ5",
+        "STAGE_06_DAY" : "ラストステージ",
+        "STAGE_07" : "エキストラステージ",
+        "STAGE_08" : "ファンタズムステージ"
+    },
+    "stage_names" : {
+        "STAGE_01_DAY" : "噂の捜索の始まり"
+    }
+}

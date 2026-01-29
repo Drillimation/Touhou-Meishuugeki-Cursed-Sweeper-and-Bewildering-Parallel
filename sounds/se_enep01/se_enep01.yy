@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"se_enep01",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.6093423,
+  "exportDir":"",
+  "name":"se_enep01",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Driller Engine/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"se_enep01.wav",
+  "volume":1.0,
+}

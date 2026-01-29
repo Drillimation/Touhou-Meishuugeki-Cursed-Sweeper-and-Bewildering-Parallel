@@ -11,5 +11,11 @@
         "SPELL_KOTORI_03" : "運び出し「配送中」",
         "SPELL_KOTORI_04" : "空襲「乱れ飛び」",
         "SPELL_KOTORI_05" : "郵便符「紛失した手紙の無限の残務」"
+    },
+    "char_names" : {
+        "CHAR_KOTORI" : "手神コトリ"
+    },
+    "char_desc" : {
+        "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者"
     }
 }

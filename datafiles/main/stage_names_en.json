@@ -1,0 +1,15 @@
+{
+    "stage_start_number" : {
+        "STAGE_01_DAY" : "STAGE 1",
+        "STAGE_02_DAY" : "STAGE 2",
+        "STAGE_03_DAY" : "STAGE 3",
+        "STAGE_04_DAY" : "STAGE 4",
+        "STAGE_05_DAY" : "STAGE 5",
+        "STAGE_06_DAY" : "FINAL STAGE",
+        "STAGE_07" : "EXTRA STAGE",
+        "STAGE_08" : "PHANTASM STAGE"
+    },
+    "stage_names" : {
+        "STAGE_01_DAY" : "Beginning of the Search for a Rumor"
+    }
+}

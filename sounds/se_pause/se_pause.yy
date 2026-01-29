@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"se_pause",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.515102,
+  "exportDir":"",
+  "name":"se_pause",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Driller Engine/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"se_pause.wav",
+  "volume":1.0,
+}

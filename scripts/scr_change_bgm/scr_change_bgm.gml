@@ -1,5 +1,6 @@
 function scr_change_bgm(_bgm){
-	if global.bgm_fadeout == true { 
+	if global.bgm_fadeout == true {
+		fmod_channel_control_stop(global.bgm_channel);
 		global.bgm_channel = undefined;
 		global.current_bgm = undefined;
 		struct_remove(self,"current_volume");

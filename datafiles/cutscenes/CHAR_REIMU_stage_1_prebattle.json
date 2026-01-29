@@ -32,6 +32,7 @@
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_prebattle",17],
         ["scr_cutscene_set_portrait","spr_reimu_portrait",0,0,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_prebattle",18],
+        ["scr_cutscene_fade_bgm"],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_prebattle",19],
         ["scr_cutscene_change_bgm","bgm/boss_01.it"],
         ["scr_cutscene_set_portrait","spr_reimu_portrait",2,0,16],

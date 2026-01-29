@@ -167,14 +167,17 @@ function scr_spell_bonus_hud() {
 		case true: 
 			draw_text(xview + 128,yview + 40,"SPELL CARD BONUS"); 
 			scribble_object[0] = scribble(spell_value)
-				.starting_format("drp_shd5",make_color_rgb(255,255,255))
+				.starting_format("drp_shd3",make_color_rgb(255,0,0))
+				.outline(make_color_rgb(0,0,0))
+				.shadow(make_color_rgb(0,0,0),1)
+				.gradient(make_color_rgb(127,0,0),1)
 				.align(fa_center,fa_top)
 				.wrap(240)
 				.line_spacing(16)
 				.draw(xview + 128,yview + 48)
 			break;
 		case false: 
-			draw_text(xview + 128,yview + 24,"SPELL BONUS FAILED"); 
+			draw_text(xview + 128,yview + 40,"SPELL BONUS FAILED"); 
 			break;
 	}
 }

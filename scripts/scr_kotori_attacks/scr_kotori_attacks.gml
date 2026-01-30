@@ -282,7 +282,7 @@ function scr_kotori_attacks(){
 			move_mode = false;
 		}
 		if count >= 60 {
-			if count mod 19 - (global.main_stats.difficulty * 3) == 0 {
+			if count mod (19 - (global.main_stats.difficulty * 3)) == 0 {
 				sound_ObjSound_Play(se_tan01);
 				var ex = 16;
 				repeat(7) {

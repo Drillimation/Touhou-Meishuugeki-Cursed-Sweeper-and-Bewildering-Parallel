@@ -15,7 +15,7 @@ if entered == true {
 	}
 	
 	if count >= 30 and count <= 180 {
-		if count mod 15 == 0 {
+		if count mod 30 - (global.main_stats.difficulty * 5) == 0 {
 			var angleT = player_GetAngleToPlayer(self);
 			angleT -= dan_count * 5
 			sound_ObjSound_Play(se_tan02);

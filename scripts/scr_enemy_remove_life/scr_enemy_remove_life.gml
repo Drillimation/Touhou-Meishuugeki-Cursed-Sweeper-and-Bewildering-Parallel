@@ -16,6 +16,7 @@ function scr_enemy_remove_life(){
 			}
 			array_push(global.main_stats.spells_captured,attack_name);
 		}
+		global.main_stats.time_orbs += round(item_val / 100)
 		if instance_exists(obj_spell_bonus) { instance_destroy(obj_spell_bonus); }
 		var inst = instance_create_depth(0,0,0,obj_spell_bonus);
 		inst.captured = captured;

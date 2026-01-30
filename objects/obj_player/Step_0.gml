@@ -39,7 +39,7 @@ else {
 
 ///Bombing
 if (action_bomb) and can_bomb == true {
-	if global.player_stats[play_id].cur_bombs >= 1 and global.player_stats[play_id].power_items >= 10 and !instance_exists(obj_spell_card_player) {
+	if global.player_stats[play_id].cur_bombs >= 1 and global.player_stats[play_id].power_items >= 10 and !instance_exists(obj_spell_card_player) and !instance_exists(obj_cutscene_textbox) {
 		player_SetPlayerInvincibilityFrame(300,play_id);
 		player_SetPlayerPower(-10,play_id,true);
 		if deathbomb_time >= 1 {
@@ -71,6 +71,7 @@ if collision_circle(x,y,16,obj_enemy_bullet,true,false) {
 					system_AddGraze(1,other.play_id);
 					system_AddScore(50,other.play_id);
 					grazable = false;
+					global.main_stats.time_orbs += 1;
 				}
 			}
 		}
@@ -99,3 +100,11 @@ if count2 mod 300 == 0 {
 	count2 = 0;
 }
 count2++;
+
+//Pausing
+if (action_pause) {
+	var inst = instance_create_layer(0,0,"Effects",obj_pause);
+	instance_activate_object(obj_pause);
+	inst._id = play_id;
+	with(inst) { event_perform(ev_other,ev_user0); }
+}

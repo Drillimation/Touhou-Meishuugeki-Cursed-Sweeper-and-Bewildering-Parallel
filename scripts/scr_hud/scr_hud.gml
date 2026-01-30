@@ -22,10 +22,12 @@ function scr_main_hud() {
 		case "CHAR_YUKARI": draw_set_color(make_color_rgb(128,0,255)); break;
 		case "CHAR_KAGUYA": draw_set_color(make_color_rgb(255,128,192)); break;
 	}
-	draw_text(xview + 16,yview + 0,"1UP");
+	draw_text(xview + 0,yview + 0,"1UP");
 	draw_set_halign(fa_right);
 	draw_set_color(make_color_rgb(255,255,255));
 	draw_text(xview + 56,yview + 8,global.player_stats[0].cur_score);
+	draw_sprite(spr_heart_icon,0,xview + 32,yview + 0);
+	draw_text(xview + 56,yview + 0,global.player_stats[0].cur_health);
 	
 	//Player 2
 	if array_length(global.player_stats) == 2 {
@@ -36,10 +38,12 @@ function scr_main_hud() {
 			case "CHAR_YUKARI": draw_set_color(make_color_rgb(128,0,255)); break;
 			case "CHAR_KAGUYA": draw_set_color(make_color_rgb(255,128,192)); break;
 		}
-		draw_text(xview + 216,yview + 0,"2UP");
+		draw_text(xview + 200,yview + 0,"2UP");
 		draw_set_halign(fa_right);
 		draw_set_color(make_color_rgb(255,255,255));
 		draw_text(xview + 256,yview + 8,global.player_stats[1].cur_score);
+		draw_sprite(spr_heart_icon,0,xview + 232,yview + 0);
+		draw_text(xview + 256,yview + 0,global.player_stats[0].cur_health);
 	}
 	else {
 		var p2_attract = ["CONNECT\nGAMEPAD","PUSH 2P\nSTART"]
@@ -58,15 +62,25 @@ function scr_main_hud() {
 	draw_text(xview + 24,yview + 280,global.player_stats[0].cur_bombs);
 	draw_text(xview + 72,yview + 272,global.player_stats[0].graze);
 	draw_text(xview + 72,yview + 280,global.player_stats[0].power_items);
+	draw_text(xview + 120,yview + 280,global.player_stats[0].point_items);
 	
 	if array_length(global.player_stats) == 2 {
 		draw_text(xview + 256,yview + 272,global.player_stats[1].cur_lives - 1);
 		draw_text(xview + 256,yview + 280,global.player_stats[1].cur_bombs);
 		draw_text(xview + 224,yview + 272,global.player_stats[1].graze);
 		draw_text(xview + 224,yview + 280,global.player_stats[1].power_items);
+		draw_text(xview + 176,yview + 280,global.player_stats[1].point_items);
 	}
 	
+	if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
+		draw_set_color(make_color_rgb(255,216,0));
+	}
+	else {
+		draw_set_color(make_color_rgb(255,255,255));
+	}
+	draw_text(xview + 128,yview + 272,global.main_stats.time_orbs);
 	draw_set_color(make_color_rgb(255,255,255));
+	draw_text(xview + 176,yview + 272,global.main_stats.orb_requirement);
 	
 	/*draw_set_halign(fa_left);
 	draw_text(xview + 0,yview + 0,global.player_stats[0].cur_score);
@@ -91,6 +105,7 @@ function scr_enemy_hud() {
 	var max_health = (max_hp * start_hp);
 	draw_healthbar(xview + 0,yview + 16,xview + 239,yview + 23,(cur_health / max_health) * 100,c_black,c_white,c_white,0,true,false);
 	draw_set_halign(fa_right);
+	draw_set_colour(make_colour_rgb(255,255,255))
 	draw_text(xview + 256,yview + 16,ceil(timer));
 	draw_set_alpha(0.5)
 	draw_sprite_stretched(hbar,0,xview + 0,yview + 16,240,8);

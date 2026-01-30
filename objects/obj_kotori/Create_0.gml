@@ -33,3 +33,5 @@ hbar = spr_boss_health_5;
 for(var i = 0; i < 16; i++) {
 	scribble_object[i] = undefined;
 }
+
+invultime = 15;

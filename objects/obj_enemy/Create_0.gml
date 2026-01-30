@@ -21,3 +21,5 @@ item_drop = array_shuffle(item_drop)
 count = 0;
 count2 = 0;
 face = 0;
+
+invultime = 15;

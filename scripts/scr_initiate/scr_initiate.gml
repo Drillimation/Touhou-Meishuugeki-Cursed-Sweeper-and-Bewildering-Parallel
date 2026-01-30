@@ -20,8 +20,11 @@ function scr_system_initiate(_no_of_players = 1){
 		stage : 1,
 		continues_used : 0,
 		spells_captured : [],
-		max_health : 30
+		max_health : 30,
+		time_orbs : 0,
+		orb_requirement : 1000
 	}
+	global.main_stats.orb_requirement = 1000 * global.main_stats.stage;
 	for(var i = 0; i < _no_of_players; i++) {
 		global.player_stats[i] = {
 			character : "CHAR_REIMU",

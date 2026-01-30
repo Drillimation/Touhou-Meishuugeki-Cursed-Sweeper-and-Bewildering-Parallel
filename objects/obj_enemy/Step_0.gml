@@ -27,4 +27,6 @@ if point_in_rectangle(x,y,xview + global.playing_field.x1,yview + global.playing
 			move_mode = false;
 		}
 	}
+	invultime--;
+	invultime = clamp(invultime,0,9999);
 }

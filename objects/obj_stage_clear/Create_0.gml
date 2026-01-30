@@ -7,6 +7,7 @@ bonuses = [
 ];
 for(var i = 0; i < array_length(global.player_stats); i++) {
 	var bonuses_to_give = [
+		global.main_stats.difficulty * 1000,
 		global.player_stats[0].cur_lives * 1000,
 		global.player_stats[0].cur_health * 100,
 		global.player_stats[0].point_items * 100,

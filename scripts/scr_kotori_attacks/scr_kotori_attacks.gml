@@ -190,7 +190,7 @@ function scr_kotori_attacks(){
 			timer = 30;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_01)
+			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_01,spr_kotori_spell)
 			speed = 0;
 			move_mode = false;
 		}
@@ -244,7 +244,7 @@ function scr_kotori_attacks(){
 			timer = 30;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_02)
+			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_02,spr_kotori_spell)
 			x_pos = 128;
 			y_pos = 128;
 			speed = 0;
@@ -275,14 +275,14 @@ function scr_kotori_attacks(){
 			timer = 30;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_03)
+			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_03,spr_kotori_spell)
 			x_pos = 128;
 			y_pos = 48;
 			speed = 0;
 			move_mode = false;
 		}
 		if count >= 60 {
-			if count mod 10 == 0 {
+			if count mod 19 - (global.main_stats.difficulty * 3) == 0 {
 				sound_ObjSound_Play(se_tan01);
 				var ex = 16;
 				repeat(7) {
@@ -300,7 +300,7 @@ function scr_kotori_attacks(){
 			timer = 30;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_04)
+			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_04,spr_kotori_spell)
 			speed = 0;
 			move_mode = false;
 		}
@@ -344,7 +344,7 @@ function scr_kotori_attacks(){
 			timer = 30;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_05)
+			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_05,spr_kotori_spell)
 			x_pos = 128;
 			y_pos = 96;
 			speed = 0;

@@ -3,3 +3,6 @@ draw_y = clamp(draw_y,-144,144);
 
 x_pos -= 8;
 x_pos = clamp(x_pos,248,512);
+
+back_opac += 0.01;
+back_opac = clamp(back_opac,0,1);

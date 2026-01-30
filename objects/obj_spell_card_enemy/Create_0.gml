@@ -2,6 +2,8 @@ user_type = "ENEMY";
 attack_name = "";
 associated_object = undefined;
 captured = true;
+back_image = undefined;
+back_opac = 0;
 
 count = 300;
 

@@ -449,7 +449,7 @@ function shot_GetShotDataInfoA1(_graphic,_targetshotsheet,_infotype) {
 	}
 }
 
-function shot_CreateSpellCard(_type,_sprite,_subimg,_name) {
+function shot_CreateSpellCard(_type,_sprite,_subimg,_name,_back = undefined) {
 	/// @functionshot_CreateSpellCard(_type,_sprite,_subimg,_name)
 	/// @description Declares a spell card, complete with a cut-in.
 	/// @param {string} _type The type of spell card to use. Must be a string; only "PLAYER" or "ENEMY" are accepted.
@@ -471,5 +471,6 @@ function shot_CreateSpellCard(_type,_sprite,_subimg,_name) {
 		image_index = _subimg;
 		attack_name = _name;
 		associated_object = other;
+		back_image = _back
 	}
 }

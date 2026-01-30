@@ -1,0 +1,25 @@
+{
+    "pause_text" : "PAUSE",
+    "gui_who_paused" : [
+        "Player 1 paused the game.",
+        "Player 2 paused the game."
+    ],
+    "menu_options_p1" : [
+        "Continue",
+        "Return to Menu"
+    ],
+    "menu_description_p1" : [
+        "Continue the game.",
+        "End the game and return to the main menu. Any progress you've made up to this point will be lost."
+    ],
+    "menu_options_p2" : [
+        "Continue",
+        "Drop Out",
+        "Return to Menu"
+    ],
+    "menu_description_p2" : [
+        "Continue the game.",
+        "Drop out of the game. You can drop back in at any time.",
+        "End the game and return to the main menu. Any progress you've made up to this point will be lost."
+    ]
+}

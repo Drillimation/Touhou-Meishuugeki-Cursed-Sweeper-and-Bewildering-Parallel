@@ -1,4 +1,4 @@
-if count == 300 {
+if count == 600 {
 	scr_change_bgm("bgm/ending.it");
 	var xview = camera_get_view_x(view_camera[1]);
 	var yview = camera_get_view_y(view_camera[1]);

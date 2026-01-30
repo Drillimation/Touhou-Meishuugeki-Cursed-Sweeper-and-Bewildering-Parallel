@@ -14,6 +14,7 @@ function scr_get_input(_player){
 		action_shoot = gamepad_button_check(_player, gp_face1);
 		action_focus = gamepad_button_check(_player,gp_face2) || gamepad_button_check(_player,gp_shoulderl) || gamepad_button_check(_player,gp_shoulderlb);
 		action_bomb = gamepad_button_check_pressed(_player,gp_face3) || gamepad_button_check_pressed(_player,gp_shoulderr) || gamepad_button_check_pressed(_player,gp_shoulderrb);
+		action_pause = gamepad_button_check_pressed(_player,gp_start);
 	}
 	else {
 		rKey = max(keyboard_check(vk_right),keyboard_check(ord("D")),0)
@@ -27,6 +28,7 @@ function scr_get_input(_player){
 		action_shoot = keyboard_check(ord("Z"));
 		action_focus = keyboard_check(vk_shift);
 		action_bomb = keyboard_check_pressed(ord("X"));
+		action_pause = keyboard_check_pressed(vk_escape);
 	}
 	
 	//Saving inputs to replay

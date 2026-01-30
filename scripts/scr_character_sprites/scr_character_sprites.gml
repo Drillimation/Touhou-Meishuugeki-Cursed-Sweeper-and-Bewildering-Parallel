@@ -32,7 +32,8 @@ function scr_character_sprites(){
 				reload++;
 			}
 			bomb_sequence = function() {
-				shot_CreateSpellCard("PLAYER",spr_reimu_portrait,0,"Spirit Sign \"Fantasy Seal\"");
+				var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+				shot_CreateSpellCard("PLAYER",spr_reimu_portrait,0,_load_file.player_spell.CHAR_REIMU);
 				sound_ObjSound_Play(se_cat00);
 				sound_ObjSound_Play(se_nep00);
 				var inst = playermain_CreatePlayerShotA1(x,y,3,0,1,9999,spr_reimu_bomb_1,-1)
@@ -100,6 +101,8 @@ function scr_character_sprites(){
 				reload++;
 			}
 			bomb_sequence = function() {
+				var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+				shot_CreateSpellCard("PLAYER",spr_marisa_portrait,0,_load_file.player_spell.CHAR_MARISA);
 				sound_ObjSound_Play(se_cat00);
 				sound_ObjSound_Play(se_nep00);
 				var inst = playermain_CreatePlayerShotA1(x,y,0,90,1,9999,spr_marisa_bomb_1,-1)

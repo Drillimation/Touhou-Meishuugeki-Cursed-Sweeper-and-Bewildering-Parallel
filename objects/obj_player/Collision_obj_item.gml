@@ -8,6 +8,7 @@ switch(other.sprite_index) {
 		else {
 			item_val = 10
 		}
+		scr_create_subscore_display(item_val);
 		system_AddScore(item_val,play_id);
 		player_SetPlayerPower(1,play_id,true);
 		global.player_stats[play_id].power_collected += 1;
@@ -20,6 +21,7 @@ switch(other.sprite_index) {
 		else {
 			item_val = 50
 		}
+		scr_create_subscore_display(item_val);
 		system_AddScore(item_val,play_id);
 		player_SetPlayerPower(5,play_id,true);
 		global.player_stats[play_id].power_collected += 1;
@@ -32,6 +34,7 @@ switch(other.sprite_index) {
 		else {
 			item_val = (abs(round((y_pos / 10) - 30)) * 10)
 		}
+		scr_create_subscore_display(item_val);
 		system_AddScore(item_val,play_id);
 		system_AddPoint(1,play_id);
 		global.player_stats[play_id].point_collected += 1;
@@ -39,12 +42,14 @@ switch(other.sprite_index) {
 	case spr_full_item:
 		sound_ObjSound_Play(se_item00);
 		system_AddScore(1000,play_id);
+		scr_create_subscore_display(1000);
 		player_SetPlayerPower(100,play_id);
 		global.player_stats[play_id].power_collected += 1;
 		break;
 	case spr_bomb_item:
 		sound_ObjSound_Play(se_cardget);
 		system_AddScore(1000,play_id);
+		scr_create_subscore_display(1000);
 		player_SetPlayerSpell(1,play_id,true);
 		break;
 	case spr_life_item:

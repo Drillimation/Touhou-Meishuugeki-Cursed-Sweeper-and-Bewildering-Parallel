@@ -1,0 +1,8 @@
+scribble_object[0] = scribble("GAME OVER")
+	.starting_format("drp_shd3",make_color_rgb(255,0,0))
+	.align(fa_center,fa_middle)
+	.outline(make_color_rgb(0,0,0))
+	.shadow(make_color_rgb(0,0,0),1)
+	.gradient(make_color_rgb(127,0,0),1)
+	.wrap(640)
+	.draw(320,180)

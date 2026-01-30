@@ -112,6 +112,13 @@ function scr_kotori_attacks(){
 		if count == 360 {
 			count = 1;
 		}
+		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
+			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+		}
+		else {
+			speed = 0;
+			move_mode = false;
+		}
 	}
 	attack_kotori_main_2 = function() {
 		if count == 0 { timer = 30; x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
@@ -167,6 +174,13 @@ function scr_kotori_attacks(){
 		}
 		if count == 420 {
 			count = 1;
+		}
+		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
+			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+		}
+		else {
+			speed = 0;
+			move_mode = false;
 		}
 	}
 

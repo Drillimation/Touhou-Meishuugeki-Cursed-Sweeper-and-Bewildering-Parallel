@@ -5,6 +5,7 @@ if hp <= 0 {
 	sound_ObjSound_Play(se_enep00);
 	system_AddScore(50,other.play_id);
 	instance_destroy();
+	instance_create_depth(x,y,-1000,obj_enemy_explosion);
 	//var drop = irandom(array_length(item_drop) - 1);
 	//if drop != 0 {
 	//for(var i = 0; i < drop; i++) {

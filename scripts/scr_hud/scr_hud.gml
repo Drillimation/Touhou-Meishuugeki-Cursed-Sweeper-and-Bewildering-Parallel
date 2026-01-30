@@ -167,7 +167,7 @@ function scr_spell_bonus_hud() {
 		case true: 
 			draw_text(xview + 128,yview + 40,"SPELL CARD BONUS"); 
 			scribble_object[0] = scribble(spell_value)
-				.starting_format("drp_shd3",make_color_rgb(255,0,0))
+				.starting_format("drp_shd2",make_color_rgb(255,0,0))
 				.outline(make_color_rgb(0,0,0))
 				.shadow(make_color_rgb(0,0,0),1)
 				.gradient(make_color_rgb(127,0,0),1)

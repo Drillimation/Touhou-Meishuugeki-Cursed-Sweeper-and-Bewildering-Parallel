@@ -1,0 +1,6 @@
+scribble_object = scribble(display_score)
+	.starting_format("drp_shd5",make_color_rgb(255,255,255))
+	.align(fa_center,fa_middle)
+	.wrap(240)
+	.line_spacing(16)
+	.draw(xview + x_pos, yview + y_pos)

@@ -7,3 +7,4 @@ str = "GAME OVER"
 for(var i = 0; i < 16; i++) {
 	scribble_object[i] = undefined;
 }
+count = 0;

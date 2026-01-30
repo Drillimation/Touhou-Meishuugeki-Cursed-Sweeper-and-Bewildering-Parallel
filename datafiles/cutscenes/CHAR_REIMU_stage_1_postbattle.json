@@ -1,7 +1,7 @@
 {
     "t_scene_info" : [
         ["scr_cutscene_set_portrait","spr_reimu_portrait",3,0,16],
-        ["scr_cutscene_set_portrait","spr_kotori_portrait",8,0,16],
+        ["scr_cutscene_set_portrait","spr_kotori_portrait",8,128,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_postbattle",0],
         ["scr_cutscene_set_portrait","spr_reimu_portrait",2,0,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_postbattle",1],

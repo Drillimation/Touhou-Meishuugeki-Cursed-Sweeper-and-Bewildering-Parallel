@@ -15,11 +15,11 @@ if entered == true {
 	}
 	
 	if count >= 30 and count <= 180 {
-		if count mod 30 - (global.main_stats.difficulty * 5) == 0 {
+		if count mod 25 - (global.main_stats.difficulty * 5) == 0 {
 			var angleT = player_GetAngleToPlayer(self);
 			angleT -= dan_count * 5
 			sound_ObjSound_Play(se_tan02);
-			repeat(dan_count + 1) {
+			repeat(dan_count) {
 				shot_CreateShotA1(x,y,1,angleT,spr_danmaku_seed_s,1.5,8);
 				angleT += 10;
 			}

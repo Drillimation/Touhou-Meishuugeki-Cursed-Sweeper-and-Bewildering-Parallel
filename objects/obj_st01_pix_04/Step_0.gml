@@ -10,7 +10,7 @@ if entered == true {
 	}
 	
 	if count >= 5 {
-		if count mod (12 - global.main_stats.difficulty) == 0 {
+		if count mod (30 - (global.main_stats.difficulty * 5)) == 0 {
 			var angleT = player_GetAngleToPlayer(self);
 			sound_ObjSound_Play(se_tan02);
 			shot_CreateShotA1(x,y,1,angleT,spr_danmaku_ball_s1,2,8);

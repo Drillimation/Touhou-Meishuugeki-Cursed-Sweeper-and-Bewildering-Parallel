@@ -5,14 +5,30 @@
         "midboss" : "obj_kotori_midboss",
         "midboss_sprite" : "spr_kotori",
         "camera_path" : "path_scroll_h1",
-        "cutscene_index" : "_stage_1_prebattle"
+        "cutscene_index" : "_stage_1_day_prebattle"
     },
     "STAGE_01_DAY" : {
         "stage_speed" : 0.5,
         "end_path_function" : "CUTSCENE",
-        "midboss" : "obj_kotori",
+        "midboss" : "obj_kotori_day",
         "midboss_sprite" : "spr_kotori",
         "camera_path" : "path_scroll_h2",
-        "cutscene_index" : "_stage_1_prebattle"
+        "cutscene_index" : "_stage_1_day_prebattle"
+    },
+    "STAGE_02_DAY_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_ritsuu_midboss",
+        "midboss_sprite" : "spr_ritsuu",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_2_day_prebattle"
+    },
+    "STAGE_02_DAY" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_koko",
+        "midboss_sprite" : "spr_koko",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_2_day_prebattle"
     }
 }

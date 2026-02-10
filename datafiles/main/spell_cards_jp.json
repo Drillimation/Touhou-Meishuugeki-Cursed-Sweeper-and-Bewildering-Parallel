@@ -10,12 +10,26 @@
         "SPELL_KOTORI_02" : "天狗の弾「燕返し」",
         "SPELL_KOTORI_03" : "運び出し「配送中」",
         "SPELL_KOTORI_04" : "空襲「乱れ飛び」",
-        "SPELL_KOTORI_05" : "郵便符「紛失した手紙の無限の残務」"
+        "SPELL_KOTORI_05" : "郵便符「紛失した手紙の無限の残務」",
+        "SPELL_KOKO_01" : "狐符「朝日の浄化」",
+        "SPELL_KOKO_02" : "狐符「彷徨う狐火」",
+        "SPELL_KOKO_03" : "祭儀「聖なる神楽舞」",
+        "SPELL_KOKO_04" : "幻惑「迷い家の隠し道」",
+        "SPELL_KOKO_05" : "狐符「狐子の惑わす境界」",
+        "SPELL_RITSUU_01" : "狸符「木の葉変化の術」",
+        "SPELL_RITSUU_02" : "変化「真夜中の影真似」",
+        "SPELL_RITSUU_03" : "野符「迷い家横断」",
+        "SPELL_RITSUU_04" : "狸符「幻想百鬼夜行」",
+        "SPELL_RITSUU_05" : "通過「結界を通り抜ける狸」"
     },
     "char_names" : {
-        "CHAR_KOTORI" : "手神コトリ"
+        "CHAR_KOTORI" : "手神コトリ",
+        "CHAR_KOKO" : "赤下ココ",
+        "CHAR_RITSUU" : "緑上リツウ"
     },
     "char_desc" : {
-        "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者"
+        "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者",
+        "CHAR_KOKO" : "迷ひ家の狐の巫女",
+        "CHAR_RITSUU" : "迷ひ家の夜行性の狸"
     }
 }

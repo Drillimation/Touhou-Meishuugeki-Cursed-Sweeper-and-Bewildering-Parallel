@@ -10,6 +10,7 @@
         "STAGE_08" : "PHANTASM STAGE"
     },
     "stage_names" : {
-        "STAGE_01_DAY" : "Beginning of the Search for a Rumor"
+        "STAGE_01_DAY" : "Beginning of the Search for a Rumor",
+        "STAGE_02_DAY" : "A Million Secrets That No One Knows"
     }
 }

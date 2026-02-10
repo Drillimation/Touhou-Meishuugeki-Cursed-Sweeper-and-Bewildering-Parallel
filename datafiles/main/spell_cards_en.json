@@ -10,12 +10,26 @@
         "SPELL_KOTORI_02" : "Tengu Shot \"Aerial Ace\"",
         "SPELL_KOTORI_03" : "Air Lift \"Out For Delivery\"",
         "SPELL_KOTORI_04" : "Air Raid \"Wild Flight\"",
-        "SPELL_KOTORI_05" : "Mail Sign \"Infinite Backlog of Lost Letters\""
+        "SPELL_KOTORI_05" : "Mail Sign \"Infinite Backlog of Lost Letters\"",
+        "SPELL_KOKO_01" : "Fox Sign \"Morning Sun Purification\"",
+        "SPELL_KOKO_02" : "Kitsune Sign \"Wandering Fox-Fire\"",
+        "SPELL_KOKO_03" : "Ritual \"Sacred Kagura Dance\"",
+        "SPELL_KOKO_04" : "Illusion \"Mayohiga's Hidden Path\"",
+        "SPELL_KOKO_05" : "Fox Sign \"Fox Child's Bewildering Boundary\"",
+        "SPELL_RITSUU_01" : "Tanuki Sign \"Leaf Transformation Trick\"",
+        "SPELL_RITSUU_02" : "Shapeshift \"Midnight Shadow Mimic\"",
+        "SPELL_RITSUU_03" : "Wild Sign \"Mayohiga Crossing\"",
+        "SPELL_RITSUU_04" : "Tanuki Sign \"Illusionary Night Parade\"",
+        "SPELL_RITSUU_05" : "Passage \"The Tanuki Who Passes Through the Barrier\""
     },
     "char_names" : {
-        "CHAR_KOTORI" : "Kotori Tegami"
+        "CHAR_KOTORI" : "Kotori Tegami",
+        "CHAR_KOKO" : "Koko Akashita",
+        "CHAR_RITSUU" : "Ritsuu Midoriue"
     },
     "char_desc" : {
-        "CHAR_KOTORI" : "Kozankyo's Clumsy Mail Courier"
+        "CHAR_KOTORI" : "Kozankyo's Clumsy Mail Courier",
+        "CHAR_KOKO" : "The Kitsune Shrine Maiden of Mayohiga",
+        "CHAR_RITSUU" : "The Nocturnal Tanuki of Mayohiga"
     }
 }

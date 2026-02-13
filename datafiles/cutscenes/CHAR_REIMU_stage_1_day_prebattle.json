@@ -39,6 +39,6 @@
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_day_prebattle",20],
         ["scr_cutscene_set_portrait","spr_kotori_portrait",2,128,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_1_day_prebattle",21],
-        ["scr_cutscene_create_instance",128,96,"Instances","obj_kotori"]
+        ["scr_cutscene_create_instance",128,96,"Instances","obj_kotori_day"]
     ]
 }

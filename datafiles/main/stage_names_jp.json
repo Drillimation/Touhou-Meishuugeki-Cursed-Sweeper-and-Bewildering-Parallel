@@ -6,6 +6,12 @@
         "STAGE_04_DAY" : "ステージ4",
         "STAGE_05_DAY" : "ステージ5",
         "STAGE_06_DAY" : "ラストステージ",
+        "STAGE_01_NIGHT" : "ステージ1",
+        "STAGE_02_NIGHT" : "ステージ2",
+        "STAGE_03_NIGHT" : "ステージ3",
+        "STAGE_04_NIGHT" : "ステージ4",
+        "STAGE_05_NIGHT" : "ステージ5",
+        "STAGE_06_NIGHT" : "ラストステージ",
         "STAGE_07" : "エキストラステージ",
         "STAGE_08" : "ファンタズムステージ"
     },

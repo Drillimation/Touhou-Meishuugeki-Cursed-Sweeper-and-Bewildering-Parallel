@@ -4,8 +4,8 @@ if room != room_debug {
 	}
 	var inst = instance_create_depth(x,y,-1000,obj_defeated_boss);
 	inst.index_sprite = spr_kotori_defeat;
-	var load_file2 = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_1_postbattle" + string(global.suf) + ".json");
-	var cutscene = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_1_postbattle.json")
+	var load_file2 = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_1_day_postbattle" + string(global.suf) + ".json");
+	var cutscene = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_1_day_postbattle.json")
 	s_scene_info = cutscene.t_scene_info;
 	scr_create_cutscene(s_scene_info,obj_cutscene_textbox);
 }

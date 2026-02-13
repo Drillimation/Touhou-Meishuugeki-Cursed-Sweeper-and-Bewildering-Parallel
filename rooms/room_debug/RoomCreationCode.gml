@@ -14,8 +14,8 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 }
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
-var inst = instance_create_layer(xview + 128,yview + 96,"Instances",obj_spawn_midboss);
+var inst = instance_create_layer(xview + 128,yview + 64,"Instances",obj_spawn_midboss);
 	with(inst) {
-		sprite_index = spr_ritsuu;
-		midboss = obj_ritsuu_midboss;
+		sprite_index = spr_koko;
+		midboss = obj_koko;
 	}

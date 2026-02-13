@@ -6,6 +6,12 @@
         "STAGE_04_DAY" : "STAGE 4",
         "STAGE_05_DAY" : "STAGE 5",
         "STAGE_06_DAY" : "FINAL STAGE",
+        "STAGE_01_NIGHT" : "STAGE 1",
+        "STAGE_02_NIGHT" : "STAGE 2",
+        "STAGE_03_NIGHT" : "STAGE 3",
+        "STAGE_04_NIGHT" : "STAGE 4",
+        "STAGE_05_NIGHT" : "STAGE 5",
+        "STAGE_06_NIGHT" : "FINAL STAGE",
         "STAGE_07" : "EXTRA STAGE",
         "STAGE_08" : "PHANTASM STAGE"
     },

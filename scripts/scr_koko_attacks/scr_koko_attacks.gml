@@ -61,35 +61,35 @@ function scr_koko_attacks(){
 			y_pos = 64; 
 			speed = 0; 
 			move_mode = false;
+		}
+		
+		if count == 15 {
 			if x_pos >= 128 { ex = 16 } else { ex = 240 }
 			ey = irandom_range(32,144)
 			move_ObjMove_SetDestAtSpeed(self,ex,ey,2);
 		}
 		
-		if count mod 120 == 0 {
-			if x_pos >= 128 { ex = 16 } else { ex = 240 }
-			ey = irandom_range(32,144)
-			move_ObjMove_SetDestAtSpeed(self,ex,ey,2);
-		}
-		
-		if point_distance(x_pos,y_pos,ex,ey) > 4 {
-			if count mod (6 - global.main_stats.difficulty) {
-				sound_ObjSound_Play(se_tan02)
-				var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s2,5,10);
-				with(inst) {
-					set_function = function() {
-						if count == 120 {
-							sound_ObjSound_Play(se_kira02);
-							direction = point_direction(x,y,obj_player.x,obj_player.y) + random_range(-5,5);
-							speed = 2;
+		if count >= 16 {
+			if point_distance(x_pos,y_pos,ex,ey) > 4 {
+				if count mod (6 - global.main_stats.difficulty) == 0 {
+					sound_ObjSound_Play(se_tan02)
+					var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s2,5,10);
+					with(inst) {
+						set_function = function() {
+							if count == 120 {
+								sound_ObjSound_Play(se_kira02);
+								direction = point_direction(x,y,obj_player.x,obj_player.y) + random_range(-5,5);
+								speed = 2;
+							}
 						}
 					}
 				}
 			}
-		}
-		else {
-			move_mode = false;
-			speed = 0;
+			else {
+				move_mode = false;
+				speed = 0;
+				count = 10;
+			}
 		}
 	}
 	
@@ -187,10 +187,10 @@ function scr_koko_attacks(){
 						if count mod 40 == 0 {
 							set_function = function() {
 								if count >= 0 and count <= 29 {
-									direction += 1;
+									direction += 3;
 								}
 								if count >= 30 and count <= 59 {
-									direction -= 1;
+									direction -= 3;
 								}
 								if count == 60 {
 									count = 0;
@@ -200,10 +200,10 @@ function scr_koko_attacks(){
 						else {
 							set_function = function() {
 								if count >= 0 and count <= 29 {
-									direction -= 1;
+									direction -= 2;
 								}
 								if count >= 30 and count <= 59 {
-									direction += 1;
+									direction += 2;
 								}
 								if count == 60 {
 									count = 0;
@@ -242,7 +242,7 @@ function scr_koko_attacks(){
 		
 		if count >= 60 {
 			if count mod 60 == 0 {
-				repeat(3 + global.main_stats.difficulty) {
+				repeat(5 + global.main_stats.difficulty) {
 					sound_ObjSound_Play(se_tan02)
 					var inst = shot_CreateShotA1(8,irandom_range(24,264),0,0,spr_danmaku_seed_s,5,0);
 					with(inst) {

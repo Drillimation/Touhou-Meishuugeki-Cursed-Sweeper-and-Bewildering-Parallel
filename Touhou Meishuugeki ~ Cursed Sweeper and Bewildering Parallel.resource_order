@@ -103,6 +103,7 @@
     {"name":"room_language_select","order":6,"path":"rooms/room_language_select/room_language_select.yy",},
     {"name":"room_setup","order":11,"path":"rooms/room_setup/room_setup.yy",},
     {"name":"room_stage_1","order":21,"path":"rooms/room_stage_1/room_stage_1.yy",},
+    {"name":"room_stage_2","order":41,"path":"rooms/room_stage_2/room_stage_2.yy",},
     {"name":"room_title","order":10,"path":"rooms/room_title/room_title.yy",},
     {"name":"room_transition_1","order":25,"path":"rooms/room_transition_1/room_transition_1.yy",},
     {"name":"__scribble_class_event","order":1,"path":"scripts/__scribble_class_event/__scribble_class_event.yy",},

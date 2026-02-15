@@ -20,7 +20,7 @@ if entered == true {
 			angleT -= dan_count * 5
 			sound_ObjSound_Play(se_tan02);
 			repeat(dan_count) {
-				shot_CreateShotA1(x,y,1,angleT,spr_danmaku_seed_s,1.5,8);
+				shot_CreateShotA1(x,y,1,angleT,spr_danmaku_seed_s,15,8);
 				angleT += 10;
 			}
 			dan_count += 1;

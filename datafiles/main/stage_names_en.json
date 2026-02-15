@@ -1,4 +1,5 @@
 {
+    "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
     "stage_start_number" : {
         "STAGE_01_DAY" : "STAGE 1",
         "STAGE_02_DAY" : "STAGE 2",

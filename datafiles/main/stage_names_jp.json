@@ -1,4 +1,5 @@
 {
+    "menu_prompt" : "↑↓ 選択  %au 確認  %bu 戻る",
     "stage_start_number" : {
         "STAGE_01_DAY" : "ステージ1",
         "STAGE_02_DAY" : "ステージ2",

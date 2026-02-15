@@ -267,7 +267,7 @@ function scr_koko_attacks(){
 							}
 						}
 					}
-					var inst = shot_CreateShotA1(248,irandom_range(24,264),0,180,spr_danmaku_seed_s,5,2);
+					inst = shot_CreateShotA1(248,irandom_range(24,264),0,180,spr_danmaku_seed_s,5,2);
 					with(inst) {
 						set_function = function(){
 							if count == 0 { angleT = 0 }

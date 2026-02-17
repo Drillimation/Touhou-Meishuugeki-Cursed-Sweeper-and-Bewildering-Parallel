@@ -68,19 +68,24 @@ function scr_character_sprites(){
 						angleT -= (nrmT)
 					}
 				}
-				if global.player_stats[play_id].power_items >= 12 and reload mod 240 == 0 {
+				if global.player_stats[play_id].power_items >= 12 and reload > 0 and reload mod 240 == 0 {
 					var inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,turret_pos),y + lengthdir_y(8,turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
 					prop_ObjShot_SetDeleteFrame(inst,120);
 					//show_debug_message(inst.y_pos / inst.sprite_width);
 					with(inst) {
 						set_function = function() {
-							with(obj_player) {
-								if sprite_index == spr_marisa { other.tag_along = id }
+							if instance_exists(obj_player) {
+								with(obj_player) {
+									if sprite_index == spr_marisa { other.tag_along = id }
+								}
+								//show_debug_message(y_pos / sprite_get_width(sprite_index));
+								image_xscale = y_pos / sprite_get_width(sprite_index);
+								x_pos = tag_along.x_pos + lengthdir_x(16,tag_along.turret_pos)
+								y_pos = tag_along.y_pos + lengthdir_y(8,tag_along.turret_pos)
 							}
-							//show_debug_message(y_pos / sprite_get_width(sprite_index));
-							image_xscale = y_pos / sprite_get_width(sprite_index);
-							x_pos = tag_along.x_pos + lengthdir_x(16,tag_along.turret_pos)
-							y_pos = tag_along.y_pos + lengthdir_y(8,tag_along.turret_pos)
+							else {
+								instance_destroy();
+							}
 						}
 					}
 					inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,180 - turret_pos),y + lengthdir_y(8,180 - turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
@@ -88,13 +93,18 @@ function scr_character_sprites(){
 					//show_debug_message(inst.y_pos / inst.sprite_width);
 					with(inst) {
 						set_function = function() {
-							with(obj_player) {
-								if sprite_index == spr_marisa { other.tag_along = id }
+							if instance_exists(obj_player) {
+								with(obj_player) {
+									if sprite_index == spr_marisa { other.tag_along = id }
+								}
+								//show_debug_message(y_pos / sprite_get_width(sprite_index));
+								image_xscale = y_pos / sprite_get_width(sprite_index);
+								x_pos = tag_along.x_pos + lengthdir_x(16,180 - tag_along.turret_pos)
+								y_pos = tag_along.y_pos + lengthdir_y(8,180 - tag_along.turret_pos)
 							}
-							//show_debug_message(y_pos / sprite_get_width(sprite_index));
-							image_xscale = y_pos / sprite_get_width(sprite_index);
-							x_pos = tag_along.x_pos + lengthdir_x(16,180 - tag_along.turret_pos)
-							y_pos = tag_along.y_pos + lengthdir_y(8,180 - tag_along.turret_pos)
+							else {
+								instance_destroy();
+							}
 						}
 					}
 				}

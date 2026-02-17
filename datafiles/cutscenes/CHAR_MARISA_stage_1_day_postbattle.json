@@ -1,0 +1,14 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_set_portrait","spr_kotori_portrait",8,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",2],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",3],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",7,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",4],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_1_day_postbattle",5],
+        ["scr_cutscene_stage_clear"]
+    ]
+}

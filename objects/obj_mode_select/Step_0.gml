@@ -38,6 +38,7 @@ if delay <= 0 {
 		}
 		
 		if (b_button) or count == 1800 {
+			scr_one_channel_sound(snd_menucancel);
 			instance_destroy();
 			scr_system_close();
 			var inst = instance_create_depth(0,0,0,obj_fade_out);

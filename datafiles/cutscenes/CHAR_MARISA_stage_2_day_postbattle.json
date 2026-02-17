@@ -1,0 +1,17 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",2,0,16],
+        ["scr_cutscene_set_portrait","spr_koko_portrait",9,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",1],
+        ["scr_cutscene_set_portrait","spr_koko_portrait",8,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",2],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",3],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",4],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",5],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",4,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_day_postbattle",6],
+        ["scr_cutscene_stage_clear"]
+    ]
+}

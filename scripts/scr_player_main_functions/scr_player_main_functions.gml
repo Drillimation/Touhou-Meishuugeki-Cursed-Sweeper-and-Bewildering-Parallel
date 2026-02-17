@@ -10,7 +10,7 @@ function playermain_CreatePlayerShotA1(_x,_y,_speed,_angle,_damage,_penetration,
 	/// @param {real} _graphic The sprite to use for the danmaku.
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
-	var inst = instance_create_layer(_x,_y,"Danmaku",obj_player_bullet,{
+	var inst = instance_create_layer(_x,_y,"Instances",obj_player_bullet,{
 		speed : _speed,
 		direction : _angle,
 		sprite_index : _graphic,

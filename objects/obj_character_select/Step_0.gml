@@ -27,39 +27,29 @@ if delay <= 0 {
 	}
 
 	if x <= 32 {
-		if (a_button) {
+		if (a_button) or clicked == true {
 			scr_one_channel_sound(snd_menuconfirm);
 			instance_destroy();
-			scr_stop_bgm();
-			global.main_stats.stage = y_pos + 1;
-			global.main_stats.orb_requirement = global.main_stats.stage * 1000;
+			//instance_create_depth(656,32,0,obj_mode_select)
 			switch(y_pos) {
-				case 0: room_goto(room_transition_1); break;
-				case 1:
-					for(var i = 0; i < array_length(global.player_stats); i++) {
-						player_SetPlayerPower(100,i);
-					}
-					room_goto(room_transition_2); 
-					break;
+				case 0: global.player_stats[0].character = "CHAR_REIMU"; break;
+				case 1: global.player_stats[0].character = "CHAR_MARISA"; break;
 			}
+			instance_create_depth(0,0,0,obj_tutorial)
 		}
+		
 		if (b_button) {
 			scr_one_channel_sound(snd_menucancel);
 			instance_destroy();
-			instance_create_depth(656,32,0,obj_character_select);
+			instance_create_depth(656,32,0,obj_difficulty_select)
 		}
-		if keyboard_check_pressed(vk_f1) {
-			instance_destroy();
-			scr_stop_bgm();
-			//var inst = instance_create_depth(0,0,0,obj_fade_out);
-			//inst.target = asset_get_index(room_transition_1);
-			room_goto(room_debug);
-		}
+		
 		if count == 1800 {
 			instance_destroy();
+			scr_system_close();
 			var inst = instance_create_depth(0,0,0,obj_fade_out);
 			inst.target = asset_get_index(room_title);
 		}
-		count++;
+		count++
 	}
 }

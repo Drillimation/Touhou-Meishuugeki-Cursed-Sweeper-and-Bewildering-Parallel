@@ -1,0 +1,20 @@
+{
+    "dialogue_texts" : [
+        ["Marisa","It's been a while since I've been at Mayohiga."],
+        ["Marisa","Usually, things are a bit more lively, but it feels like the trees themselves are avoiding me."],
+        ["???","Hmph. That voice must be the \"Queen\" herself. What has brought you here, my Majesty?"],
+        ["Marisa","I'm on a royal investigation. There's a nasty rumor about some \"glohm\" substance."],
+        ["Marisa","Have you seen anything suspicious?"],
+        ["???","If any of that filth reaches Mayohiga, I will purify it myself."],
+        ["Koko","Y'know, a shrine maiden's work will never be finished."],
+        ["Marisa","A kitsune shrine maiden, eh? Chief Justice Reimu's gonna have some competition with you."],
+        ["Koko","I just train to protect my town."],
+        ["Koko","Speaking of which, you're looking a bit stiff, my Majesty. Do you need any purification?"],
+        ["Marisa","I'm your queen, so please do so."],
+        ["Koko","Well, I was just being sarcastic."],
+        ["Marisa","What?"],
+        ["Koko","This \"purification\" will be done with danmaku."],
+        ["Marisa","Hey, you're not supposed to treat a member of royalty like that!"],
+        ["Koko","Let the morning sun and I burn away your doubts!"]
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "dialogue_texts" : [
+        ["Marisa","Things seem to look a little \"unroyal\" here in Kozankyo."],
+        ["Marisa","How did all of this \"mail\" get on the ground?"],
+        [" ","Argh... No... Confound it! Where have they all gone?"],
+        ["Marisa","What was that voice?"],
+        ["Marisa","Oof! What in the..."],
+        ["???","Oh! Sorry, My Majesty. Very sorry. I didn't notice you were standing in my way!"],
+        ["Marisa","I accept your apology. You almost made me fall off my broom!"],
+        ["Marisa","Anyway, do you have an idea how all this mail was scattered in the city?"],
+        ["???","I was trying to gather all of the mail I need to deliver and I wasn't watching where I was going."],
+        ["Marisa","Do you know how this happened?"],
+        ["???","As a junior high schooler, I tend to get clumsy and lose the mail that I need to deliver."],
+        ["???","I also didn't take the chance to introduce myself."],
+        ["Kotori","The name's Kotori Tegami - a tengu who delivers the mail to Kozankyo's residents."],
+        ["Marisa","You're a little too young to be doing that. You'll get better as you get older."],
+        ["Kotori","I'm normally a perfect postgirl, but I'm having trouble trying to get all the mail back in my pouch."],
+        ["Marisa","I don't have time to help because of a rumor from the Gensokyo Socialite Order I'm pursuing."],
+        ["Kotori","Rumor? Wouldn't you know it - I don't want to get persecuted by the Order..."],
+        ["Marisa","As the queen, my mission is to protect Kozankyo and prevent the Order from resurfacing."],
+        ["Kotori","I would have to halt my job in that case..."],
+        ["Kotori","I'll be searching thoroughly for a while..."],
+        ["Marisa","Well, I have to go, so I'll leave it to you."],
+        ["Kotori","I can't, I have a crucial deadline approaching."],
+        ["Kotori","I'm getting desperate here..."],
+        ["Kotori","Time is money... you'll see me fired without it!"]
+    ]
+}

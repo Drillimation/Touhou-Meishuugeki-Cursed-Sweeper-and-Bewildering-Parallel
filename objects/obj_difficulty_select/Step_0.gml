@@ -32,10 +32,11 @@ if delay <= 0 {
 			instance_destroy();
 			global.main_stats.difficulty = y_pos;
 			//instance_create_depth(656,32,0,obj_mode_select)
-			instance_create_depth(0,0,0,obj_tutorial)
+			instance_create_depth(656,32,0,obj_character_select)
 		}
 		
 		if (b_button) {
+			scr_one_channel_sound(snd_menucancel);
 			instance_destroy();
 			instance_create_depth(656,32,0,obj_mode_select)
 		}

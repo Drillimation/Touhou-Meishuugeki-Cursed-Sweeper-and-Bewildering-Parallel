@@ -12,7 +12,7 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 		global.player_stats[0].cur_health * 100,
 		global.player_stats[0].point_items * 100,
 		global.player_stats[0].power_items * 100,
-		global.player_stats[0].cur_bombs * 100
+		global.player_stats[0].cur_bombs * 500
 	]
 	var total = 0;
 	for(var j = 0; j < array_length(bonuses_to_give); j++) {

@@ -10,7 +10,7 @@ if entered == true {
 	}
 	
 	if count < 60 {
-		if count mod 6 == 0 {
+		if count mod 10 == 0 {
 			sound_ObjSound_Play(se_tan02);
 			var ee = floor(global.main_stats.difficulty / 2) * 30;
 			var angleT = point_direction(x,y,obj_player.x,obj_player.y) - ee;

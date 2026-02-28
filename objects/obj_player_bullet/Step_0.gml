@@ -9,7 +9,7 @@ y = yview + y_pos;
 x_pos += hspeed;
 y_pos += vspeed;
 
-depth = -y;
+depth = 5000 - y;
 
 //Damage Delay
 if damage_delay >= 1 {

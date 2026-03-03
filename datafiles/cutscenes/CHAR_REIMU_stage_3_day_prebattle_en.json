@@ -1,0 +1,19 @@
+{
+    "dialogue_texts" : [
+        ["Reimu","The air in these woods is just as heavy as that shrine maiden warned me."],
+        ["Reimu","It feels stagnant, like the trees themselves are holding their breath."],
+        ["???","Oh, hello there! Isn't the golden canopy just spectacular?"],
+        ["???","It’s finally time for the transformation!"],
+        ["Reimu","A fairy? You don't look like you're suffering from that \"glohm\" curse."],
+        ["Reimu","If anything, you're a bit too energetic for this gloom."],
+        ["???","Glohm? I don't know about any about that!"],
+        ["Helene","Anyway, I'm Helene Black, and I'm here to announce that autumn has officially arrived, eh?"],
+        ["Reimu","Listen up, Herald of Autumn."],
+        ["Reimu","I'm the Chief Justice of the Federal Kingdom of Gensokyo Supreme Court, and I'm on urgent business."],
+        ["Reimu","I need to get to the mansion near Yumemura, so please move aside."],
+        ["Helene","Not yet. You can't just rush through the harvest festival's invitation."],
+        ["Helene","You need to appreciate the golden leaves first!"],
+        ["Reimu","Sorry, but I don't have time for a nature walk. If you still won't move, I'll have to clear the path myself!"],
+        ["Helene","Then let's see if you can handle the magic of the falling leaves!"]
+    ]
+}

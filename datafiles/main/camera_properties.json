@@ -30,5 +30,21 @@
         "midboss_sprite" : "spr_koko",
         "camera_path" : "path_scroll_h2",
         "cutscene_index" : "_stage_2_day_prebattle"
+    },
+    "STAGE_03_DAY_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_helene_midboss",
+        "midboss_sprite" : "spr_helene",
+        "camera_path" : "path_scroll_s_h1",
+        "cutscene_index" : "_stage_3_day_prebattle"
+    },
+    "STAGE_03_DAY" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_helene_day",
+        "midboss_sprite" : "spr_helene",
+        "camera_path" : "path_scroll_s_h2",
+        "cutscene_index" : "_stage_3_day_prebattle"
     }
 }

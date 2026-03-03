@@ -20,12 +20,20 @@
         "SPELL_RITSUU_02" : "変化「真夜中の影真似」",
         "SPELL_RITSUU_03" : "野符「迷い家横断」",
         "SPELL_RITSUU_04" : "狸符「幻想百鬼夜行」",
-        "SPELL_RITSUU_05" : "通過「結界を通り抜ける狸」"
+        "SPELL_RITSUU_05" : "通過「結界を通り抜ける狸」",
+        "SPELL_HELENE_01" : "秋符「黄金の葉の訪れ」",
+        "SPELL_HELENE_02" : "霜符「彼岸の初霜」",
+        "SPELL_HELENE_03" : "告報「色づく季節の使者」",
+        "SPELL_HELENE_04" : "楓符「紅蓮の天蓋降下」",
+        "SPELL_HELENE_05" : "魔符「森を金色に変える魔法」",
+        "SPELL_HELENE_06" : "夜符「名月の優しい輝き」",
+        "SPELL_HELENE_07" : "秋霊「大祭への招待状」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",
         "CHAR_KOKO" : "赤下ココ",
-        "CHAR_RITSUU" : "緑上リツウ"
+        "CHAR_RITSUU" : "緑上リツウ",
+        "CHAR_HELENE" : "ヘレン・ブラック"
     },
     "char_desc" : {
         "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者",

@@ -132,8 +132,8 @@ function move_ObjMove_SetDestAtFrame(_id,_x,_y,_frames) {
 		x_tar = _x;
 		y_tar = _y;
 		move_mode = true;
-		direction = point_direction(x_pos,y_pos,xview + _x,yview + _y);
-		var length = point_distance(x_pos,y_pos,xview + _x,yview + _y);
+		direction = point_direction(x,y,xview + _x,yview + _y);
+		var length = point_distance(x,y,xview + _x,yview + _y);
 		speed = length / _frames;
 	}
 }
@@ -155,7 +155,7 @@ function move_ObjMove_SetDestAtWeight(_id,_x,_y,_weight,_maxspeed) {
 		speedcap = true;
 		acceleration = _weight;
 		maxspeed = _maxspeed;
-		direction = point_direction(x_pos,y_pos,xview + _x,yview + _y);
+		direction = point_direction(x,y,xview + _x,yview + _y);
 	}
 }
 

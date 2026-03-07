@@ -1,0 +1,29 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",2,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",2],
+        ["scr_cutscene_set_portrait","spr_helene_portrait",3,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",3],
+        ["scr_cutscene_reveal_name","CHAR_HELENE"],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",4],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",5],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",0,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",6],
+        ["scr_cutscene_set_portrait","spr_helene_portrait",0,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",7],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",8],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",9],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",10],
+        ["scr_cutscene_set_portrait","spr_helene_portrait",7,128,16],
+        ["scr_cutscene_fade_bgm"],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",11],
+        ["scr_cutscene_change_bgm","bgm/boss_02_day.it"],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_3_day_prebattle",12],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",0,0,16],
+        ["scr_cutscene_create_instance",128,96,"Instances","obj_helene_day"]
+    ]
+}

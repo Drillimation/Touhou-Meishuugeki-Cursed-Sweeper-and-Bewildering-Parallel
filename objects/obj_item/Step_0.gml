@@ -10,8 +10,8 @@ x_pos += hspeed;
 y_pos += vspeed;
 
 if move_mode == true {
-	if point_distance(x_pos,y_pos,x_tar,y_tar) >= 1 {
-		direction = point_direction(x_pos,y_pos,x_tar,y_tar);
+	if point_distance(x_pos,y_pos,x_tar,y_tar) >= speed {
+		//direction = point_direction(x_pos,y_pos,x_tar,y_tar);
 		speed = 2;
 	}
 	else {

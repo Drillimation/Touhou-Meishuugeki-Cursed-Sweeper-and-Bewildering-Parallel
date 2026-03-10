@@ -41,6 +41,12 @@ if delay <= 0 {
 					}
 					room_goto(room_transition_2); 
 					break;
+				case 2:
+					for(var i = 0; i < array_length(global.player_stats); i++) {
+						player_SetPlayerPower(100,i);
+					}
+					room_goto(room_transition_3); 
+					break;
 			}
 		}
 		if (b_button) {

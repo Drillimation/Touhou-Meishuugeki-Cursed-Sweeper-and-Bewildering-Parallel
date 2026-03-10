@@ -27,7 +27,8 @@ function item_CreateItemA2(_type,_x1,_y1,_x2,_y2,_score,_speed = 0.5,_subimg = 0
 	/// @param {real} _score The value to add to the score of the player who collects it.
 	/// @param {real} _speed (OPTIONAL) The speed at which the items will fly.
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
-	
+	xview = camera_get_view_x(view_camera[0]);
+	yview = camera_get_view_y(view_camera[0]);
 	var inst = instance_create_layer(_x1,_y1,"Instances",obj_item,{
 		sprite_index : _type,
 		image_index : _subimg,

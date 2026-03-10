@@ -30,7 +30,9 @@ function scr_cutscene_play_sound(_sound) {
 }
 
 function scr_cutscene_create_instance(_x,_y,_layer,_obj,_return = false) {
-	var inst = instance_create_layer(_x,_y,_layer,asset_get_index(_obj));
+	xview = camera_get_view_x(view_camera[0]);
+	yview = camera_get_view_y(view_camera[0]);
+	var inst = instance_create_layer(xview + _x,yview + _y,_layer,asset_get_index(_obj));
 	if _return == true {
 		scr_cutscene_end_action();
 		return inst;

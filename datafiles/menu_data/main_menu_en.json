@@ -1,5 +1,7 @@
 {
     "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
+    "title_prompt" : "↑↓ Select  %au Confirm",
+    "copyr_notice" : "©2026 Drillimation Systems Co., Ltd./E. Enthusiasm.\nCharacters © Team Shanghai Alice/Drillimation/E. Enthusiasm",
     "menu_options" : [
         "Arcade",
         "Free Play",

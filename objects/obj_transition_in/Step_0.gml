@@ -10,6 +10,8 @@ layer_sequence_y(_sequence,y);
 if layer_sequence_is_finished(_sequence) != 0 {
 	layer_sequence_destroy(_sequence);
 	instance_destroy();
+	global.main_stats.time_orbs = 0;
+	global.main_stats.orb_requirement = global.main_stats.stage * 1000;
 	switch(global.main_stats.stage) {
 		case 1: room_goto(room_transition_1); break;
 		case 2: room_goto(room_transition_2); break;

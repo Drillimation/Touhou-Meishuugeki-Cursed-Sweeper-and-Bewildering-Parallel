@@ -35,9 +35,9 @@
     {"name":"Sequences","order":9,"path":"folders/Sequences.yy",},
     {"name":"Sounds","order":7,"path":"folders/Sounds.yy",},
     {"name":"Stage Enemies","order":28,"path":"folders/Stage Enemies.yy",},
-    {"name":"Stage 3","order":3,"path":"folders/Stage Enemies/Stage 3.yy",},
     {"name":"Stage 1","order":1,"path":"folders/Stage Enemies/Stage 1.yy",},
     {"name":"Stage 2","order":2,"path":"folders/Stage Enemies/Stage 2.yy",},
+    {"name":"Stage 3","order":3,"path":"folders/Stage Enemies/Stage 3.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"FMOD","order":2,"path":"extensions/FMOD/FMOD.yy",},
@@ -73,6 +73,7 @@
     {"name":"obj_kotori_midboss","order":25,"path":"objects/obj_kotori_midboss/obj_kotori_midboss.yy",},
     {"name":"obj_language_select_first","order":4,"path":"objects/obj_language_select_first/obj_language_select_first.yy",},
     {"name":"obj_loading","order":27,"path":"objects/obj_loading/obj_loading.yy",},
+    {"name":"obj_main_menu","order":45,"path":"objects/obj_main_menu/obj_main_menu.yy",},
     {"name":"obj_mode_select","order":31,"path":"objects/obj_mode_select/obj_mode_select.yy",},
     {"name":"obj_pause","order":39,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_player_bullet","order":8,"path":"objects/obj_player_bullet/obj_player_bullet.yy",},

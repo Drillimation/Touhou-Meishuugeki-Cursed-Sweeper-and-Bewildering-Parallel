@@ -5,7 +5,9 @@
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
-    "children":[],
+    "children":[
+      {"children":[],"name":"kiosk",},
+    ],
     "name":"Default",
   },
   "defaultScriptType":1,
@@ -45,9 +47,9 @@
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage Enemies","folderPath":"folders/Stage Enemies.yy","name":"Stage Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Stage 3","folderPath":"folders/Stage Enemies/Stage 3.yy","name":"Stage 3","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 1","folderPath":"folders/Stage Enemies/Stage 1.yy","name":"Stage 1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 2","folderPath":"folders/Stage Enemies/Stage 2.yy","name":"Stage 2","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Stage 3","folderPath":"folders/Stage Enemies/Stage 3.yy","name":"Stage 3","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
@@ -159,6 +161,7 @@
     {"id":{"name":"obj_kotori_midboss","path":"objects/obj_kotori_midboss/obj_kotori_midboss.yy",},},
     {"id":{"name":"obj_language_select_first","path":"objects/obj_language_select_first/obj_language_select_first.yy",},},
     {"id":{"name":"obj_loading","path":"objects/obj_loading/obj_loading.yy",},},
+    {"id":{"name":"obj_main_menu","path":"objects/obj_main_menu/obj_main_menu.yy",},},
     {"id":{"name":"obj_mode_select","path":"objects/obj_mode_select/obj_mode_select.yy",},},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player_bullet","path":"objects/obj_player_bullet/obj_player_bullet.yy",},},

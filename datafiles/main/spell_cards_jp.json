@@ -38,6 +38,7 @@
     "char_desc" : {
         "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者",
         "CHAR_KOKO" : "迷ひ家の狐の巫女",
-        "CHAR_RITSUU" : "迷ひ家の夜行性の狸"
+        "CHAR_RITSUU" : "迷ひ家の夜行性の狸",
+        "CHAR_HELENE" : "秋の伝令"
     }
 }

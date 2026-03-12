@@ -5,7 +5,8 @@
     "menu_options" : [
         "Arcade",
         "Free Play",
-        "Replay Menu",
+        "[#FF8080]Replay Menu",
+        "[#FF8080]Music Room",
         "Fork on GitHub",
         "Drillipedia",
         "Options",
@@ -15,6 +16,7 @@
         "Play the story mode.",
         "Freely play on any stage you have unlocked.",
         "Watch replays you have saved.",
+        "Listen to the game's soundtrack.",
         "Open this game's GitHub page (will open a browser window).",
         "Open Drillipedia (will open a browser window).",
         "Adjust the game's settings.",

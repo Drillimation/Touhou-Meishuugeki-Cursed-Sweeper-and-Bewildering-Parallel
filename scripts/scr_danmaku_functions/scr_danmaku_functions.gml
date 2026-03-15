@@ -468,6 +468,7 @@ function shot_CreateSpellCard(_type,_sprite,_subimg,_name,_back = undefined) {
 	/// @param {real} _sprite The sprite where to get the cut-in from.
 	/// @param {real} _subimg The subimage of the sprite to use, if not animated.
 	/// @param {string} _name The name of the attack, as a string.
+	/// @param {string} _back The sprite to use as a background.
 	
 	if _type != "PLAYER" and _type != "ENEMY" {
 		show_error("\"PLAYER\" and \"ENEMY\" are only accepted.",true);

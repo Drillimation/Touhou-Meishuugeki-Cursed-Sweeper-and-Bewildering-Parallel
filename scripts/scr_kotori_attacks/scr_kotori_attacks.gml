@@ -191,6 +191,7 @@ function scr_kotori_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_01,spr_kotori_spell)
+			global.main_stats.current_spell = "SPELL_KOTORI_01";
 			speed = 0;
 			move_mode = false;
 		}
@@ -245,6 +246,7 @@ function scr_kotori_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_02,spr_kotori_spell)
+			global.main_stats.current_spell = "SPELL_KOTORI_02";
 			x_pos = 128;
 			y_pos = 128;
 			speed = 0;
@@ -276,6 +278,7 @@ function scr_kotori_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_03,spr_kotori_spell)
+			global.main_stats.current_spell = "SPELL_KOTORI_03";
 			x_pos = 128;
 			y_pos = 48;
 			speed = 0;
@@ -301,6 +304,7 @@ function scr_kotori_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_04,spr_kotori_spell)
+			global.main_stats.current_spell = "SPELL_KOTORI_04";
 			speed = 0;
 			move_mode = false;
 		}
@@ -345,6 +349,7 @@ function scr_kotori_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_05,spr_kotori_spell)
+			global.main_stats.current_spell = "SPELL_KOTORI_05";
 			x_pos = 128;
 			y_pos = 96;
 			speed = 0;

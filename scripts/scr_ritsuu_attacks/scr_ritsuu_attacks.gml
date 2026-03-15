@@ -12,6 +12,7 @@ function scr_ritsuu_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ritsuu_portrait,0,_load_file.enemy_spell.SPELL_RITSUU_01,spr_ritsuu_spell)
+			global.main_stats.current_spell = "SPELL_RITSUU_01"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
 			speed = 0;
@@ -61,6 +62,7 @@ function scr_ritsuu_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ritsuu_portrait,0,_load_file.enemy_spell.SPELL_RITSUU_03,spr_ritsuu_spell)
+			global.main_stats.current_spell = "SPELL_RITSUU_03"
 			speed = 0;
 			move_mode = false;
 			move_ObjMove_SetX(self,128);

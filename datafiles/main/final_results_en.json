@@ -1,0 +1,21 @@
+{
+    "menu_prompt" : "↑↓ Select  %au Continue",
+    "main_texts" : {
+        "text_final_results" : "FINAL RESULTS",
+        "text_rank" : "Difficulty",
+        "text_continues_used" : "Continues used",
+        "text_deaths" : "Deaths",
+        "text_final_score" : "Final score",
+        "text_bombs_used" : "Bombs used",
+        "text_spells_captured" : "Spell cards captured",
+        "text_graze" : "Graze",
+        "text_power_items" : "Power items collected",
+        "text_point_items" : "Point items collected"
+    },
+    "difficulty_options" : [
+        "Easy",
+        "Normal",
+        "Difficult",
+        "Lunatic"
+    ]
+}

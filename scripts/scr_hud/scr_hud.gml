@@ -167,6 +167,21 @@ function scr_enemy_spell_card_hud() {
 				.draw((xview + x_pos) - 100,yview + 24)
 			break;
 	}
+	
+	var inst = struct_get(global.spellcard_statistics,global.main_stats.current_spell)
+	if is_nan(round(inst.encounters / inst.captures)) {
+		inst = 0;
+	}
+	else {
+		inst = round(inst.encounters / inst.captures);
+	}
+	
+	scribble_object[2] = scribble(inst)
+		.starting_format("drp_shd5",make_color_rgb(255,255,255))
+		.align(fa_right,fa_top)
+		.wrap(240)
+		.line_spacing(16)
+		.draw(xview + x_pos,yview + 24)
 }
 
 function scr_spell_bonus_hud() {

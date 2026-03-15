@@ -1,0 +1,21 @@
+{
+    "menu_prompt" : "↑↓ 選択  %au 進む",
+    "main_texts" : {
+        "text_final_results" : "さいしゅうけっか",
+        "text_rank" : "ランク",
+        "text_continues_used" : "コンティニュー回数",
+        "text_deaths" : "ミス回数",
+        "text_final_score" : "最終得点",
+        "text_bombs_used" : "ボム使用回数",
+        "text_spells_captured" : "スペルカードボーナス回数",
+        "text_graze" : "グレイズ",
+        "text_power_items" : "Ｐアイテム収集回数",
+        "text_point_items" : "点アイテム収集回数"
+    },
+    "difficulty_options" : [
+        "かんたん",
+        "ふつう",
+        "むずかしい",
+        "おに"
+    ]
+}

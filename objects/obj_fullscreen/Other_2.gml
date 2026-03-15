@@ -27,6 +27,29 @@ else {
 	array_copy(global.highscores,0,_load_data.default_table,0,array_length(_load_data.default_table))
 }
 
+if file_exists("spell_card_statistics.save") {
+	var _load_data = scr_json_load_file("spell_card_statistics.save");
+	global.spellcard_statistics = _load_data;
+	_load_data = scr_json_load_file("main/spell_card_order.json");
+	var spell_card_order = _load_data;
+	for(var i = 0; i < array_length(spell_card_order.spell_card_order); i++) {
+		if !struct_exists(global.spellcard_statistics,spell_card_order.spell_card_order[i]) {
+			struct_set(global.spellcard_statistics,spell_card_order.spell_card_order[i],{ encounters : 0, captures : 0 })
+		}
+	}
+}
+else {
+	global.spellcard_statistics = {};
+	var _load_data = scr_json_load_file("main/spell_card_order.json");
+	var spell_card_order = _load_data;
+	for(var i = 0; i < array_length(spell_card_order.spell_card_order); i++) {
+		if !struct_exists(global.spellcard_statistics,spell_card_order.spell_card_order[i]) {
+			struct_set(global.spellcard_statistics,spell_card_order.spell_card_order[i],{ encounters : 0, captures : 0 })
+		}
+	}
+	scr_json_save_file(global.spellcard_statistics,"spell_card_statistics.save");
+}
+
 if !file_exists("options.save") {
 	global.game_options = {
 		language : 0,

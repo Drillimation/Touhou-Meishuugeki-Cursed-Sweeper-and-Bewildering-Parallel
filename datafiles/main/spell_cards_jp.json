@@ -1,4 +1,10 @@
 {
+    "menu_prompt" : "↑↓ 選択  %bu 戻る",
+    "statistics_headers": {
+        "encountered" : "遭遇",
+        "captured" : "習得",
+        "success_rate" : "成功率"
+    },
     "player_spell" : {
         "CHAR_REIMU" : "霊符「夢想封印」",
         "CHAR_MARISA" : "恋符「マスタースパーク」",

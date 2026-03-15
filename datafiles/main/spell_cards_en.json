@@ -1,4 +1,10 @@
 {
+    "menu_prompt" : "↑↓ Select  %bu Back",
+    "statistics_headers": {
+        "encountered" : "Encountered",
+        "captured" : "Captured",
+        "success_rate" : "Success Rate"
+    },
     "player_spell" : {
         "CHAR_REIMU" : "Spirit Sign \"Fantasy Seal\"",
         "CHAR_MARISA" : "Love Sign \"Master Spark\"",

@@ -22,7 +22,8 @@ function scr_system_initiate(_no_of_players = 1){
 		spells_captured : [],
 		max_health : 30,
 		time_orbs : 0,
-		orb_requirement : 1000
+		orb_requirement : 1000,
+		current_spell : ""
 	}
 	global.main_stats.orb_requirement = 1000 * global.main_stats.stage;
 	for(var i = 0; i < _no_of_players; i++) {

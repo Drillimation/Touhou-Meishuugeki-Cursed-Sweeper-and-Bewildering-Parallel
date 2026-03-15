@@ -14,7 +14,9 @@ function scr_enemy_remove_life(){
 			for(var i = 0; i < array_length(global.player_stats); i++) {
 				system_AddScore(item_val,i);
 			}
-			array_push(global.main_stats.spells_captured,attack_name);
+		}
+		if global.replay_mode == false {
+			array_push(global.main_stats.spells_captured,[global.main_stats.current_spell,captured]);
 		}
 		global.main_stats.time_orbs += round(item_val / 100)
 		if instance_exists(obj_spell_bonus) { instance_destroy(obj_spell_bonus); }

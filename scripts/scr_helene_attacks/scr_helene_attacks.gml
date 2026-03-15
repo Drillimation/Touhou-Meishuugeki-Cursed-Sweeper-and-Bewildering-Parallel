@@ -110,6 +110,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_01,spr_helene_spell)
+			global.main_stats.current_spell = "SPELL_HELENE_01"
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;
@@ -151,6 +152,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_03,spr_helene_spell)
+			global.main_stats.current_spell = "SPELL_HELENE_03"
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;
@@ -192,6 +194,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_05,spr_helene_spell)
+			global.main_stats.current_spell = "SPELL_HELENE_05"
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;
@@ -227,6 +230,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_05,spr_helene_spell)
+			global.main_stats.current_spell = "SPELL_HELENE_07"
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;

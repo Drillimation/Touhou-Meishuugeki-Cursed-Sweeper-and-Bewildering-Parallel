@@ -33,20 +33,13 @@ if delay <= 0 {
 			scr_stop_bgm();
 			global.main_stats.stage = y_pos + 1;
 			global.main_stats.orb_requirement = global.main_stats.stage * 1000;
+			for(var i = 0; i < array_length(global.player_stats); i++) {
+				player_SetPlayerPower(100,i);
+			}
 			switch(y_pos) {
 				case 0: room_goto(room_transition_1); break;
-				case 1:
-					for(var i = 0; i < array_length(global.player_stats); i++) {
-						player_SetPlayerPower(100,i);
-					}
-					room_goto(room_transition_2); 
-					break;
-				case 2:
-					for(var i = 0; i < array_length(global.player_stats); i++) {
-						player_SetPlayerPower(100,i);
-					}
-					room_goto(room_transition_3); 
-					break;
+				case 1: room_goto(room_transition_2); break;
+				case 2: room_goto(room_transition_3); break;
 			}
 		}
 		if (b_button) {

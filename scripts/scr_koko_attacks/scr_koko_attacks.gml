@@ -100,6 +100,7 @@ function scr_koko_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_koko_portrait,0,_load_file.enemy_spell.SPELL_KOKO_01,spr_koko_spell)
+			global.main_stats.current_spell = "SPELL_KOKO_01"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
 			speed = 0;
@@ -170,6 +171,7 @@ function scr_koko_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_koko_portrait,0,_load_file.enemy_spell.SPELL_KOKO_03,spr_koko_spell)
+			global.main_stats.current_spell = "SPELL_KOKO_03"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
 			speed = 0;
@@ -234,6 +236,7 @@ function scr_koko_attacks(){
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_koko_portrait,0,_load_file.enemy_spell.SPELL_KOKO_05,spr_koko_spell)
+			global.main_stats.current_spell = "SPELL_KOKO_05"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,144);
 			speed = 0;

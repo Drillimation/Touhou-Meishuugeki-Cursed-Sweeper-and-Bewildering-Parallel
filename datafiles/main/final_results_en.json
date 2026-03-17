@@ -1,5 +1,6 @@
 {
-    "menu_prompt" : "↑↓ Select  %au Continue",
+    "menu_prompt" : "%au Continue",
+    "input_prompt" : "↑↓←→ Select  %au Insert  %bu Erase  %startu Confirm",
     "main_texts" : {
         "text_final_results" : "FINAL RESULTS",
         "text_rank" : "Difficulty",

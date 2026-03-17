@@ -10,7 +10,7 @@ scribble_object[0] = scribble("STAGE " + string(global.main_stats.stage) + " CLE
 	.wrap(640)
 	.draw(xview + 128,yview + 16)
 
-var sprite_font = font_add_sprite(spr_font,32,false,0);
+draw_set_font(sprite_font);
 draw_set_color(make_color_rgb(255,255,255));
 draw_set_halign(fa_left);
 for(var i = 0; i < array_length(bonuses[0]); i++) {

@@ -1,5 +1,6 @@
 {
-    "menu_prompt" : "↑↓ 選択  %au 進む",
+    "menu_prompt" : "%au 進む",
+    "input_prompt" : "↑↓←→ 選択  %au 入力  %bu 削除  %startu 確認",
     "main_texts" : {
         "text_final_results" : "さいしゅうけっか",
         "text_rank" : "ランク",

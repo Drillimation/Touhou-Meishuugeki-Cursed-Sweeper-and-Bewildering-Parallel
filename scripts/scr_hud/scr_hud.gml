@@ -176,7 +176,7 @@ function scr_enemy_spell_card_hud() {
 		inst = round(inst.encounters / inst.captures);
 	}
 	
-	scribble_object[2] = scribble(inst)
+	scribble_object[2] = scribble(string(inst) + "%")
 		.starting_format("drp_shd5",make_color_rgb(255,255,255))
 		.align(fa_right,fa_top)
 		.wrap(240)

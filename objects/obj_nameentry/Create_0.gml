@@ -45,13 +45,15 @@ if global.player_stats[player_index].cur_score < global.highscores[9].score {
 	if player_index > array_length(global.player_stats) - 1 {
 		instance_destroy();
 		ds_grid_destroy(score_grid);
-		for(var i = 0; i < array_length(global.spellcard_statistics); i++) {
+		for(var i = 0; i < array_length(global.main_stats.spells_captured); i++) {
 			if struct_exists(global.spellcard_statistics,global.main_stats.spells_captured[i][0]) {
 				var _ss = struct_get(global.spellcard_statistics,global.main_stats.spells_captured[i][0])
-				_ss += global.main_stats.spells_captured[i][1]
+				_ss.captures += global.main_stats.spells_captured[i][1]
+				_ss.encounters++;
 				struct_set(global.spellcard_statistics,global.main_stats.spells_captured[i][0],_ss)
 			}
 		}
+		scr_json_save_file(global.spellcard_statistics,"spell_card_statistics.save");
 		scr_system_close();
 		instance_create_depth(0,0,0,obj_true_gameover);
 	}

@@ -12,11 +12,15 @@ y_pos += vspeed;
 if move_mode == true {
 	if point_distance(x_pos,y_pos,x_tar,y_tar) >= speed {
 		//direction = point_direction(x_pos,y_pos,x_tar,y_tar);
-		speed = 2;
+		speed += acceleration;
 	}
 	else {
 		direction = 270;
 		speed = 1.5;
 		move_mode = false;
 	}
+}
+else {
+	direction = 270;
+	speed = 1.5;
 }

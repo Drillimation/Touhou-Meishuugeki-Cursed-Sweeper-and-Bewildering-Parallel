@@ -34,7 +34,9 @@ function scr_enemy_remove_life(){
 			}
 		}
 		for(var i = 0; i < array_length(item_drop); i++) {
-			item_CreateItemA2(item_drop[i],x,y,x + irandom_range(-16,16),y + irandom_range(-16,16),0);
+			var inst = item_CreateItemA1(item_drop[i],x,y,0,2);
+			move_ObjMove_SetDestAtSpeed(inst,x_pos + irandom_range(-16,16),y_pos + irandom_range(-16,16),2);
+			//item_CreateItemA2(item_drop[i],x,y,x_pos + irandom_range(-16,16),y_pos + irandom_range(-16,16),0);
 		}
 	}
 	else {

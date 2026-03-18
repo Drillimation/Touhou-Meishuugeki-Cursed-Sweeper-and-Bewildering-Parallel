@@ -32,11 +32,11 @@ for(var i = 0; i < _ss; i++) {
 		.draw(512,(i * 32) + 64)
 		
 	var inst;
-	if is_nan(round(description[inventory_scroll[0] + i].encounters / description[inventory_scroll[0] + i].captures)) {
+	if is_nan(round(description[inventory_scroll[0] + i].captures / description[inventory_scroll[0] + i].encounters)) {
 		inst = 0;
 	}
 	else {
-		inst = round(description[inventory_scroll[0] + i].encounters / description[inventory_scroll[0] + i].captures);
+		inst = round(description[inventory_scroll[0] + i].captures / description[inventory_scroll[0] + i].encounters) * 100;
 	}
 	scribble_object[i + (_ss * 3)] = scribble(string(inst) + "%")
 		.starting_format("drp_shd",make_color_rgb(255,255,255))

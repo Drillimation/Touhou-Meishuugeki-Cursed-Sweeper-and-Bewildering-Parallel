@@ -14,6 +14,7 @@ global.font_effects = {
 	shd3 : scribble_font_bake_outline_and_shadow("font_dice_condensed","drp_shd3",1,1,SCRIBBLE_OUTLINE.FOUR_DIR,0,false),
 	shd4 : scribble_font_bake_shadow("font_chicago","drp_shd4",1,1,make_color_rgb(0,0,0),1,0,false),
 	shd5 : scribble_font_bake_shadow("font_misaki","drp_shd5",1,1,make_color_rgb(0,0,0),1,0,false),
+	sprite_font : font_add_sprite(spr_font,32,false,0)
 }
 
 if file_exists("highscores.save") {

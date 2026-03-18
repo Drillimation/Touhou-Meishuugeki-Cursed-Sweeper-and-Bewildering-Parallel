@@ -25,7 +25,7 @@ scribble_object[60] = scribble(global.main_stats.continues_used)
 	.wrap(608)
 	.draw(624,80)
 
-scribble_object[59] = scribble(array_length(global.main_stats.spells_captured))
+scribble_object[59] = scribble(captured_spells)
 	.starting_format("drp_shd",make_color_rgb(255,255,255))
 	.align(fa_right,fa_top)
 	.wrap(608)

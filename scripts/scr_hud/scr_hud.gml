@@ -3,8 +3,7 @@ function scr_main_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,false,0);
-	draw_set_font(sprite_font);
+	draw_set_font(global.font_effects.sprite_font);
 	//Top Part
 	//High score text
 	draw_set_halign(fa_center);
@@ -99,8 +98,7 @@ function scr_enemy_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,false,0);
-	draw_set_font(sprite_font)
+	draw_set_font(global.font_effects.sprite_font)
 	var cur_health = (life * start_hp) + hp;
 	var max_health = (max_hp * start_hp);
 	draw_healthbar(xview + 0,yview + 16,xview + 239,yview + 23,(cur_health / max_health) * 100,c_black,c_white,c_white,0,true,false);
@@ -169,11 +167,11 @@ function scr_enemy_spell_card_hud() {
 	}
 	
 	var inst = struct_get(global.spellcard_statistics,global.main_stats.current_spell)
-	if is_nan(round(inst.encounters / inst.captures)) {
+	if is_nan(round(inst.captures / inst.encounters)) {
 		inst = 0;
 	}
 	else {
-		inst = round(inst.encounters / inst.captures);
+		inst = round(inst.captures / inst.encounters) * 100;
 	}
 	
 	scribble_object[2] = scribble(string(inst) + "%")
@@ -189,8 +187,7 @@ function scr_spell_bonus_hud() {
 	xview = camera_get_view_x(view_camera[0]);
 	yview = camera_get_view_y(view_camera[0]);
 	
-	var sprite_font = font_add_sprite(spr_font,32,false,0);
-	draw_set_font(sprite_font)
+	draw_set_font(global.font_effects.sprite_font)
 	draw_set_halign(fa_center);
 	draw_set_color(make_color_rgb(255,216,0));
 	switch(captured) {

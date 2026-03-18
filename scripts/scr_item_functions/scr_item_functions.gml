@@ -1,6 +1,6 @@
 function item_CreateItemA1(_type,_x,_y,_score,_speed = 0.5,_subimg = 0) {
 	/// @function item_CreateItemA1(_type,_x,_y,_score,_speed,_subimg)
-	/// @description Creates an item at the specified coordinates.
+	/// @description Creates an item at the specified coordinates, and returns the ID of the item.
 	/// @param {real} _type The type of item to create. Must be a sprite.
 	/// @param {real} _x The x coordinate where to place the item.
 	/// @param {real} _y The y coordinate where to place the item.
@@ -14,6 +14,7 @@ function item_CreateItemA1(_type,_x,_y,_score,_speed = 0.5,_subimg = 0) {
 		speed : _speed
 	})
 	inst.score_value = _score;
+	return inst;
 }
 
 function item_CreateItemA2(_type,_x1,_y1,_x2,_y2,_score,_speed = 0.5,_subimg = 0) {
@@ -32,13 +33,15 @@ function item_CreateItemA2(_type,_x1,_y1,_x2,_y2,_score,_speed = 0.5,_subimg = 0
 	var inst = instance_create_layer(_x1,_y1,"Instances",obj_item,{
 		sprite_index : _type,
 		image_index : _subimg,
-		direction : point_direction(_x1,_y1,_x2,_y2),
+		direction : point_direction(_x1,_y1,xview + _x2,yview + _y2),
 		speed : _speed
 	})
-	inst.score_value = _score;
-	inst.move_mode = true;
-	inst.x_tar = _x2;
-	inst.y_tar = _y2;
+	with(inst) {
+		score_value = _score;
+		move_mode = true;
+		x_tar = _x2;
+		y_tar = _y2;
+	}
 }
 
 function item_CollectAllItems(_player = 0,_speed = 4) {
@@ -51,6 +54,7 @@ function item_CollectAllItems(_player = 0,_speed = 4) {
 		with(obj_item) {
 			direction = point_direction(x,y,other.x,other.y)
 			speed = _speed
+			auto_collect = true;
 		}
 	}
 }

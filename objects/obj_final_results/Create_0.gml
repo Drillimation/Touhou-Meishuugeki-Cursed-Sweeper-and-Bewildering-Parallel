@@ -38,3 +38,9 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 for(var i = 0; i < 64; i++) {
 	scribble_object[i] = undefined;
 }
+captured_spells = 0
+for(var i = 0; i < array_length(global.main_stats.spells_captured); i++) {
+	if global.main_stats.spells_captured[i][1] == 1 {
+		captured_spells++;
+	}
+}

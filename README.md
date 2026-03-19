@@ -15,7 +15,7 @@ A cursed maid, caused by an unseen enemy.
 
 ## Installation
 You can download the game for free here:
-- itch.io: https://drillimation.itch.io/touhou-meijinka-song-of-divine-tempest/
+- itch.io: https://drillimation.itch.io/touhou-meishuugeki-cursed-sweeper-and-bewildering-parallel
 
 ## Tools used to make this game:
 - GameMaker Studio (the game itself)

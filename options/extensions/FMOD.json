@@ -7,7 +7,11 @@
         "value": "C:\\\\Program Files (x86)\\\\FMOD SoundSystem\\\\FMOD Studio API Windows"
       }
     },
-    "aff0f052-c04f-4ea7-9c53-c10ef775761d": null,
+    "aff0f052-c04f-4ea7-9c53-c10ef775761d": {
+      "Default": {
+        "value": "/Users/drillimationsystems/Downloads/FMOD Programmers API"
+      }
+    },
     "56095c61-1b68-47e5-8371-cd33dc182612": null,
     "b6788195-a70c-47ef-9e3a-71d3164e6811": null,
     "87fb1cc8-413d-4d16-adc8-4d5ab4bdda24": null,

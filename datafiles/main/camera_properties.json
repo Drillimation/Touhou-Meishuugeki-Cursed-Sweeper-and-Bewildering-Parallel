@@ -46,5 +46,21 @@
         "midboss_sprite" : "spr_helene",
         "camera_path" : "path_scroll_s_h2",
         "cutscene_index" : "_stage_3_day_prebattle"
+    },
+    "STAGE_04_DAY_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_ryuuko_midboss",
+        "midboss_sprite" : "spr_ryuuko",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_4_day_prebattle"
+    },
+    "STAGE_04_DAY" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_saika",
+        "midboss_sprite" : "spr_saika",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_4_day_prebattle"
     }
 }

@@ -33,18 +33,40 @@
         "SPELL_HELENE_04" : "楓符「紅蓮の天蓋降下」",
         "SPELL_HELENE_05" : "魔符「森を金色に変える魔法」",
         "SPELL_HELENE_06" : "夜符「名月の優しい輝き」",
-        "SPELL_HELENE_07" : "秋霊「大祭への招待状」"
+        "SPELL_HELENE_07" : "秋霊「大祭への招待状」",
+        "SPELL_RYUUKO_01" : "火符「火葬場の青い燐光」",
+        "SPELL_RYUUKO_02" : "憤怒「カーララトリの漆黒」",
+        "SPELL_RYUUKO_03" : "蛇符「断腕の腰帯」",
+        "SPELL_RYUUKO_04" : "時符「グヒヤ・カーリーの隠された劫」",
+        "SPELL_SAIKA_01" : "火符「破壊神の舞踏（タンダヴァ）」",
+        "SPELL_SAIKA_02" : "憤怒「ラクタヴィージャの断罪」",
+        "SPELL_SAIKA_03" : "蛇符「髑髏の火炎輪」",
+        "SPELL_SAIKA_04" : "時符「マハーカーリーの暴食」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",
         "CHAR_KOKO" : "赤下ココ",
         "CHAR_RITSUU" : "緑上リツウ",
-        "CHAR_HELENE" : "ヘレン・ブラック"
+        "CHAR_HELENE" : "ヘレン・ブラック",
+        "CHAR_RYUUKO" : "龍丸リュウコ",
+        "CHAR_SAIKA" : "龍丸サイカ",
+        "CHAR_FUSANA" : "緑川フサナ",
+        "CHAR_BERENICE" : "ベレニス・グリーグ",
+        "CHAR_VERONICA" : "ベロニカ・グリーグ",
+        "CHAR_KOAKUMA" : "コアクマ",
+        "CHAR_CAMILLE" : "カミール・スカーレット"
     },
     "char_desc" : {
         "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者",
         "CHAR_KOKO" : "迷ひ家の狐の巫女",
         "CHAR_RITSUU" : "迷ひ家の夜行性の狸",
-        "CHAR_HELENE" : "秋の伝令"
+        "CHAR_HELENE" : "秋の伝令",
+        "CHAR_RYUUKO" : "影の深淵の渦",
+        "CHAR_SAIKA" : "破壊の燃え盛る蛇",
+        "CHAR_FUSANA" : "白金館のメイド",
+        "CHAR_BERENICE" : "絶縁体の掃除人",
+        "CHAR_VERONICA" : "ベレニスの不可解な類似点",
+        "CHAR_KOAKUMA" : "秩序の四天王の会員",
+        "CHAR_CAMILLE" : "紅悪魔の未亡人の妃"
     }
 }

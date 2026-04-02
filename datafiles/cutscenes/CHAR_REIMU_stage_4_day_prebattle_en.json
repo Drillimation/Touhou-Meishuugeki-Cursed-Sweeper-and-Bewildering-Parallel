@@ -1,0 +1,24 @@
+{
+    "dialogue_texts" : [
+        ["Reimu","Yumemura is surely a strange village. It doesn't appear to be as lively as Kozankyo..."],
+        ["Reimu","And is this the mansion I'm looking for?"],
+        [" ","What are you looking for?"],
+        ["Reimu","Glohm."],
+        ["???","What are you trying to do with it?"],
+        ["Reimu","You don't look like that serpent creature I fought just now..."],
+        ["???","What have you done with my sister Ryuuko!?"],
+        ["Reimu","Is that the one?"],
+        ["Saika","Yes. I am her sister Saika Tatsumaru."],
+        ["Reimu","Are you two part of a specific species of humanoid-snake hybrids?"],
+        ["Saika","Yes, we are. This is how we've been since the two of us hatched out of our eggs."],
+        ["Reimu","So, tell me here. Is this the very mansion containing a person infected with glohm? I think this is it."],
+        ["Saika","Both my sister and I are the pets of Berenice Grieg."],
+        ["Saika","We are tasked with defending her and her now glohmed maid."],
+        ["Reimu","There's someone with glohm inside? I must be getting close."],
+        ["Saika","The mansion is Order territory and off-limits to non-members."],
+        ["Reimu","Of course you'd say that. From the start, I knew you wouldn't let me in."],
+        ["Saika","Berenice didn't invite any guests, and if you went in anyway, you'll just be glohmed."],
+        ["Reimu","I will let my own danmaku decide who can go in."],
+        ["Saika","Let me see if you can survive the heat of my serpentine flame."]
+    ]
+}

@@ -33,18 +33,40 @@
         "SPELL_HELENE_04" : "Maple Sign \"Crimson Canopy Descent\"",
         "SPELL_HELENE_05" : "Magic Sign \"Turning the Forest Gold\"",
         "SPELL_HELENE_06" : "Night Sign \"Harvest Moon's Gentle Glow\"",
-        "SPELL_HELENE_07" : "Autumn Spirit \"The Grand Festival's Invitation\""
+        "SPELL_HELENE_07" : "Autumn Spirit \"The Grand Festival's Invitation\"",
+        "SPELL_RYUUKO_01" : "Fire Sign \"Blue Flame of the Smashana\"",
+        "SPELL_RYUUKO_02" : "Wrath Sign \"Darkness of the Kalaratri\"",
+        "SPELL_RYUUKO_03" : "Serpent Sign \"Girdle of the Severed Hands\"",
+        "SPELL_RYUUKO_04" : "Time Sign \"Guya Kali's Hidden Eon\"",
+        "SPELL_SAIKA_01" : "Fire Sign \"Dance of the Tandava\"",
+        "SPELL_SAIKA_02" : "Wrath Sign \"Severed Ego of Raktabija\"",
+        "SPELL_SAIKA_03" : "Serpent Sign \"Mundamala's Fiery Coil\"",
+        "SPELL_SAIKA_04" : "Time Sign \"Mahakali's Devouring Maw\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",
         "CHAR_KOKO" : "Koko Akashita",
         "CHAR_RITSUU" : "Ritsuu Midoriue",
-        "CHAR_HELENE" : "Helene Black"
+        "CHAR_HELENE" : "Helene Black",
+        "CHAR_RYUUKO" : "Ryuuko Tatsumaru",
+        "CHAR_SAIKA" : "Saika Tatsumaru",
+        "CHAR_FUSANA" : "Fusana Midorigawa",
+        "CHAR_BERENICE" : "Berenice Grieg",
+        "CHAR_VERONICA" : "Veronica Grieg",
+        "CHAR_KOAKUMA" : "Koakuma",
+        "CHAR_CAMILLE" : "Camille Scarlet"
     },
     "char_desc" : {
         "CHAR_KOTORI" : "Kozankyo's Clumsy Mail Courier",
         "CHAR_KOKO" : "The Kitsune Shrine Maiden of Mayohiga",
         "CHAR_RITSUU" : "The Nocturnal Tanuki of Mayohiga",
-        "CHAR_HELENE" : "The Herald of Autumn"
+        "CHAR_HELENE" : "The Herald of Autumn",
+        "CHAR_RYUUKO" : "The Abyssal Coil of the Shadows",
+        "CHAR_SAIKA" : "The Blazing Serpent of Destruction",
+        "CHAR_FUSANA" : "The Maid of the Shirogane Manor",
+        "CHAR_BERENICE" : "The Cursed Sweeper",
+        "CHAR_VERONICA" : "Berenice's Bewildering Parallel",
+        "CHAR_KOAKUMA" : "Member of the Order's Elite Four",
+        "CHAR_CAMILLE" : "The Widowed Consort of the Scarlet Devil"
     }
 }

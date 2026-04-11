@@ -61,7 +61,7 @@ function move_ObjMove_SetAcceleration(_id,_accel) {
 	/// @param {real} _accel The acceleration to set.
 	
 	with(_id) {
-		accel = _accel;
+		acceleration = _accel;
 	}
 }
 

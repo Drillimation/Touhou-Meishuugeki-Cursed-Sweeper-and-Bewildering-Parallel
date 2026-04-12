@@ -193,6 +193,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_ritsuu_midboss","path":"objects/obj_ritsuu_midboss/obj_ritsuu_midboss.yy",},},
     {"id":{"name":"obj_ryuuko_midboss","path":"objects/obj_ryuuko_midboss/obj_ryuuko_midboss.yy",},},
+    {"id":{"name":"obj_saika","path":"objects/obj_saika/obj_saika.yy",},},
     {"id":{"name":"obj_spawn_midboss","path":"objects/obj_spawn_midboss/obj_spawn_midboss.yy",},},
     {"id":{"name":"obj_spell_bonus","path":"objects/obj_spell_bonus/obj_spell_bonus.yy",},},
     {"id":{"name":"obj_spell_card_enemy","path":"objects/obj_spell_card_enemy/obj_spell_card_enemy.yy",},},

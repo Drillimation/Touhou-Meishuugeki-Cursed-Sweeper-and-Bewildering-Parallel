@@ -16,6 +16,6 @@ xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 var inst = instance_create_layer(xview + 128,yview + 64,"Instances",obj_spawn_midboss);
 	with(inst) {
-		sprite_index = spr_ryuuko;
-		midboss = obj_ryuuko_midboss;
+		sprite_index = spr_saika;
+		midboss = obj_saika;
 	}

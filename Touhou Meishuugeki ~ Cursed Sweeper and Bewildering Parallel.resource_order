@@ -85,6 +85,7 @@
     {"name":"obj_player","order":14,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_ritsuu_midboss","order":27,"path":"objects/obj_ritsuu_midboss/obj_ritsuu_midboss.yy",},
     {"name":"obj_ryuuko_midboss","order":31,"path":"objects/obj_ryuuko_midboss/obj_ryuuko_midboss.yy",},
+    {"name":"obj_saika","order":32,"path":"objects/obj_saika/obj_saika.yy",},
     {"name":"obj_spawn_midboss","order":29,"path":"objects/obj_spawn_midboss/obj_spawn_midboss.yy",},
     {"name":"obj_spell_bonus","order":15,"path":"objects/obj_spell_bonus/obj_spell_bonus.yy",},
     {"name":"obj_spell_card_enemy","order":16,"path":"objects/obj_spell_card_enemy/obj_spell_card_enemy.yy",},

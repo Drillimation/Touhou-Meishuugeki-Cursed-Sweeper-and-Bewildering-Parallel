@@ -222,7 +222,7 @@ function scr_saika_attacks(){
 						if count == 61 {
 							sound_ObjSound_Play(se_kira00)
 							var inst2 = shot_CreateShotA1(x,y,0,irandom_range(0,360),spr_danmaku_ball_s1,20,1)
-							move_ObjMove_SetAcceleration(inst2,0.01);
+							move_ObjMove_SetAcceleration(inst2,0.005);
 							move_ObjMove_SetMaxSpeed(inst2,0.5);
 							with(inst2) {
 								if count = 240 { instance_destroy(); }
@@ -253,11 +253,12 @@ function scr_saika_attacks(){
 		
 		if count > 60 {
 			if count mod 20 == 0 {
+				sound_ObjSound_Play(se_tan02)
 				var baseAngle = irandom_range(0,360);
 				repeat(20 + (global.main_stats.difficulty * 4)) {
 					var angleT = baseAngle + count
 					shot_CreateShotA1(x,y,1,angleT,spr_danmaku_amulet,20,12);
-					baseAngle += 360 / 20;
+					baseAngle += 360 / (20 + (global.main_stats.difficulty * 4));
 				}
 			}
 			
@@ -266,8 +267,8 @@ function scr_saika_attacks(){
 					if xaxis == 0 and yaxis == 0 {
 						var suction_angle = point_direction(obj_saika.x,obj_saika.y,x,y);
 						var suction_length = point_distance(obj_saika.x,obj_saika.y,x,y);
-						x_pos = obj_saika.x_pos + lengthdir_x(suction_length - 0.02,suction_angle)
-						y_pos = obj_saika.y_pos + lengthdir_y(suction_length - 0.02,suction_angle)
+						x_pos = obj_saika.x_pos + lengthdir_x(suction_length - 0.05,suction_angle)
+						y_pos = obj_saika.y_pos + lengthdir_y(suction_length - 0.05,suction_angle)
 					}
 				}
 			}

@@ -11,17 +11,20 @@ var load_array = scr_json_load_file("main/stage_names" + string(global.suf) + ".
 option = [
 	load_array.stage_start_number.STAGE_01_DAY,
 	load_array.stage_start_number.STAGE_02_DAY,
-	load_array.stage_start_number.STAGE_03_DAY
+	load_array.stage_start_number.STAGE_03_DAY,
+	load_array.stage_start_number.STAGE_04_DAY
 ]
 description = [
 	load_array.stage_names.STAGE_01_DAY,
 	load_array.stage_names.STAGE_02_DAY,
-	load_array.stage_names.STAGE_03_DAY
+	load_array.stage_names.STAGE_03_DAY,
+	load_array.stage_names.STAGE_04_DAY
 ]
 img = [
 	spr_kotori_portrait,
 	spr_koko_portrait,
 	spr_helene_portrait,
+	spr_saika_portrait
 ]
 
 //array_copy(option,0,load_array.difficulty_select.menu_options,0,array_length(load_array.difficulty_select.menu_options));

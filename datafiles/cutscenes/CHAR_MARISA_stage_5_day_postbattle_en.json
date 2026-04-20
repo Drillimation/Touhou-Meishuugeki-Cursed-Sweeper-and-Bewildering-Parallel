@@ -1,0 +1,22 @@
+{
+    "dialogue_texts" : [
+        ["Fusana","*cough*"],
+        ["Fusana","It feels like I can breathe freely again. But what is going on? Are you the Queen of the kingdom?"],
+        ["Marisa","Yes, I am. What just came out of you wasn't just some random curse."],
+        ["Marisa","This heavy, suffocating texture is known as \"glohm\". It has the Order's name written all over it."],
+        ["Fusana","Glohm? What's that!?"],
+        ["Marisa","A type of curse that turns people into living statues so they don't interfere with their music."],
+        ["Marisa","And I think I know the one who did this to you."],
+        ["Marisa","I can't remember exactly, but it was probably Berenice Grieg?"],
+        ["Fusana","Berenice Grieg? She's probably an Order admin who used my own desire for isolation against me."],
+        ["Fusana","She's waiting further inside."],
+        ["Marisa","She's now on the Royal Most Wanted list."],
+        ["Marisa","She probably saw your silence as a perfect canvas."],
+        ["Marisa","She didn't just put you to sleep; she painted you right out of existence."],
+        ["Fusana","How cruel... she simply took someone's heart just to complete a song."],
+        ["Marisa","That's Berenice for ya - a high-class talent with bottom-shelf ethics."],
+        ["Marisa","But she made one mistake: she set up a stronghold here without a permit."],
+        ["Marisa","I'm going to have a word with the composer."],
+        ["Marisa","I think her next movement needs a lot more explosions!"]
+    ]
+}

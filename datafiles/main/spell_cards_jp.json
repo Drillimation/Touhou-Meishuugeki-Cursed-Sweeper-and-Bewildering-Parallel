@@ -41,7 +41,14 @@
         "SPELL_SAIKA_01" : "火符「破壊神の舞踏（タンダヴァ）」",
         "SPELL_SAIKA_02" : "憤怒「ラクタヴィージャの断罪」",
         "SPELL_SAIKA_03" : "蛇符「髑髏の火炎輪」",
-        "SPELL_SAIKA_04" : "時符「マハーカーリーの暴食」"
+        "SPELL_SAIKA_04" : "時符「マハーカーリーの暴食」",
+        "SPELL_FUSANA_01" : "侍女符「清浄なる屋敷の掃除」",
+        "SPELL_FUSANA_02" : "姫符「黄昏の王室ワルツ」",
+        "SPELL_FUSANA_03" : "憂鬱符「腐敗した心の孤立」",
+        "SPELL_FUSANA_04" : "月民符「銀月の夜会服」",
+        "SPELL_FUSANA_05" : "魔符「屋敷の黄金の輝き」",
+        "SPELL_FUSANA_06" : "月符「月の姫君の降臨」",
+        "SPELL_FUSANA_07" : "変化「白昼の奉公、真夜中の君主」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",

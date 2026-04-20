@@ -1,0 +1,21 @@
+{
+    "dialogue_texts" : [
+        ["Fusana","*cough*"],
+        ["Fusana","Oof, my head. It feels like a heavy curtain was pulled back."],
+        ["Fusana","I recognize that face. Are you the shrine maiden of the Hakurei Shrine?"],
+        ["Reimu","And the Chief Justice. Don't forget the title."],
+        ["Reimu","We need to talk about what you've been through."],
+        ["Reimu","That red aura which dissipated is called \"glohm\". It didn't appear on its own."],
+        ["Fusana","Glohm? What's that!?"],
+        ["Reimu","A potent substance forces anyone infected to isolate."],
+        ["Reimu","Somebody told me that a woman named Berenice Grieg may be behind this."],
+        ["Fusana","Berenice Grieg? She's probably an Order admin who used my own desire for isolation against me."],
+        ["Fusana","She's waiting further inside."],
+        ["Reimu","The Order's admins cause enough trouble in my book."],
+        ["Reimu","Stay put because I'll deal with the one who signed the warrant for this mess."],
+        ["Fusana","She isn't just using magic, but the hearts of those she corrupts."],
+        ["Fusana","Don't let her find a crack in yours."],
+        ["Reimu","Hah! My heart is made of donation-box wood and tax laws."],
+        ["Reimu","She won't find anything there but a 'Keep Out' sign."]
+    ]
+}

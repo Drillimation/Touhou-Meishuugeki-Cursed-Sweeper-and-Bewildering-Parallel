@@ -41,7 +41,14 @@
         "SPELL_SAIKA_01" : "Fire Sign \"Dance of the Tandava\"",
         "SPELL_SAIKA_02" : "Wrath Sign \"Severed Ego of Raktabija\"",
         "SPELL_SAIKA_03" : "Serpent Sign \"Mundamala's Fiery Coil\"",
-        "SPELL_SAIKA_04" : "Time Sign \"Mahakali's Devouring Maw\""
+        "SPELL_SAIKA_04" : "Time Sign \"Mahakali's Devouring Maw\"",
+        "SPELL_FUSANA_01" : "Maid Sign \"Pristine Manor Sweep\"",
+        "SPELL_FUSANA_02" : "Princess Sign \"Royal Twilight Waltz\"",
+        "SPELL_FUSANA_03" : "Gloom Sign \"Corruptive Heart's Isolation\"",
+        "SPELL_FUSANA_04" : "Lunarian Sign \"Silver Moonlight\"",
+        "SPELL_FUSANA_05" : "Magic Sign \"Manor's Golden Radiance\"",
+        "SPELL_FUSANA_06" : "Moon Sign \"Lunar Princess's Descent\"",
+        "SPELL_FUSANA_07" : "Transformation \"Daylight Servant, Midnight Sovereign\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",

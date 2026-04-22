@@ -62,5 +62,21 @@
         "midboss_sprite" : "spr_saika",
         "camera_path" : "path_scroll_h2",
         "cutscene_index" : "_stage_4_day_prebattle"
+    },
+    "STAGE_05_DAY_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_spite_bulb",
+        "midboss_sprite" : "spr_spite_bulb",
+        "camera_path" : "path_scroll_m_h1",
+        "cutscene_index" : "_stage_5_day_prebattle"
+    },
+    "STAGE_05_DAY" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_fusana_day",
+        "midboss_sprite" : "spr_fusana_day",
+        "camera_path" : "path_scroll_m_h2",
+        "cutscene_index" : "_stage_5_day_prebattle"
     }
 }

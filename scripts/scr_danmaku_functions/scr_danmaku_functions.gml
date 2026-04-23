@@ -147,7 +147,7 @@ function shot_CreateShotA2(_x,_y,_speed,_angle,_accel,_maxspeed,_graphic,_delay,
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
-	inst.accel = _accel;
+	inst.acceleration = _accel;
 	inst.maxspeed = _maxspeed;
 	inst.delay = _delay;
 	return inst

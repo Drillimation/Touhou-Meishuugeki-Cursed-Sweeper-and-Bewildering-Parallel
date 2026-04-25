@@ -24,7 +24,7 @@ function prop_ObjShot_SetDeleteFrame(_id,_time) {
 	/// @function prop_ObjShot_SetDeleteFrame(_id,_time)
 	/// @description Removes a danmaku object after a specified number of frames.
 	/// @param {real} _id The ID of the instance to remove.
-	/// @param {real} _speed The time before the instance is removed.
+	/// @param {real} _time The time before the instance is removed.
 	
 	with(_id) {
 		frame_delete = true;

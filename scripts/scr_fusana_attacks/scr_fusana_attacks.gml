@@ -224,6 +224,7 @@ function scr_fusana_attacks(){
 					}
 				}
 				if count2 == 300 {
+					sprite_index = spr_fusana_night;
 					time_of_day = "NIGHT"
 					count2 = 0;
 				}
@@ -233,6 +234,7 @@ function scr_fusana_attacks(){
 					shot_CreateShotA1(x,y,2.5,irandom_range(0,360),spr_danmaku_bullet,5,12);
 				}
 				if count2 == 300 {
+					sprite_index = spr_fusana_day;
 					time_of_day = "DAY"
 					count2 = 0;
 				}

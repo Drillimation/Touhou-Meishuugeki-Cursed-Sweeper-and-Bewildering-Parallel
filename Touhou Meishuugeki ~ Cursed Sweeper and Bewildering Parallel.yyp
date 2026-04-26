@@ -612,6 +612,7 @@
     {"id":{"name":"spr_full_item","path":"sprites/spr_full_item/spr_full_item.yy",},},
     {"id":{"name":"spr_fusana_cursed_portrait","path":"sprites/spr_fusana_cursed_portrait/spr_fusana_cursed_portrait.yy",},},
     {"id":{"name":"spr_fusana_day","path":"sprites/spr_fusana_day/spr_fusana_day.yy",},},
+    {"id":{"name":"spr_fusana_night","path":"sprites/spr_fusana_night/spr_fusana_night.yy",},},
     {"id":{"name":"spr_fusana_portrait","path":"sprites/spr_fusana_portrait/spr_fusana_portrait.yy",},},
     {"id":{"name":"spr_fusana_spell","path":"sprites/spr_fusana_spell/spr_fusana_spell.yy",},},
     {"id":{"name":"spr_heart_icon","path":"sprites/spr_heart_icon/spr_heart_icon.yy",},},

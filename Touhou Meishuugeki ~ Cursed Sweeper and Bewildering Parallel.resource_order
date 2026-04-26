@@ -460,6 +460,7 @@
     {"name":"spr_full_item","order":1,"path":"sprites/spr_full_item/spr_full_item.yy",},
     {"name":"spr_fusana_cursed_portrait","order":4,"path":"sprites/spr_fusana_cursed_portrait/spr_fusana_cursed_portrait.yy",},
     {"name":"spr_fusana_day","order":31,"path":"sprites/spr_fusana_day/spr_fusana_day.yy",},
+    {"name":"spr_fusana_night","order":34,"path":"sprites/spr_fusana_night/spr_fusana_night.yy",},
     {"name":"spr_fusana_portrait","order":30,"path":"sprites/spr_fusana_portrait/spr_fusana_portrait.yy",},
     {"name":"spr_fusana_spell","order":12,"path":"sprites/spr_fusana_spell/spr_fusana_spell.yy",},
     {"name":"spr_heart_icon","order":40,"path":"sprites/spr_heart_icon/spr_heart_icon.yy",},

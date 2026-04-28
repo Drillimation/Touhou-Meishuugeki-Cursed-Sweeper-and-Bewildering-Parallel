@@ -7,6 +7,7 @@ function scr_fusana_attacks(){
 	attack_fusana_main_01 = function() {
 		if count == 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,128),60);
+			timer = 50;
 		}
 		
 		if count mod 60 == 0 {
@@ -40,6 +41,11 @@ function scr_fusana_attacks(){
 	
 	}
 	attack_fusana_main_02 = function() {
+		if count == 0 {
+			timer = 50;
+			speed = 0;
+			move_mode = false;
+		}
 		if count mod 60 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			for(var i = 0; i < 4; i++) {
@@ -69,6 +75,9 @@ function scr_fusana_attacks(){
 	attack_fusana_main_03 = function() {
 		if count == 0 {
 			baseAngle = 0;
+			timer = 50;
+			speed = 0;
+			move_mode = false;
 		}
 		if count mod 30 == 0 {
 			sound_ObjSound_Play(se_tan01);
@@ -111,7 +120,7 @@ function scr_fusana_attacks(){
 			if count mod 6 == 0 {
 				sound_ObjSound_Play(se_tan01);
 				for(var i = -2 - global.main_stats.difficulty; i <= 2 + global.main_stats.difficulty; i++) {
-					var inst = shot_CreateShotA1(x + (i * 16),8,1,angleT + (i * 2),spr_danmaku_ball_s1,10,15);
+					var inst = shot_CreateShotA1(x_pos + (i * 16),8,1,angleT + (i * 2),spr_danmaku_ball_s1,10,15);
 					with(inst) {
 						set_function = function() {
 							image_xscale -= 0.0015;
@@ -157,8 +166,8 @@ function scr_fusana_attacks(){
 				sound_ObjSound_Play(se_tan01);
 				for(var i = 0; i < 12 + (global.main_stats.difficulty * 4); i++) {
 					var angle = angleT + (i * (360 / (12 + (global.main_stats.difficulty * 4))))
-					var shotX = x + (radius * cos(angle))
-					var shotY = y + (radius * sin(angle))
+					var shotX = x_pos + (radius * cos(angle))
+					var shotY = y_pos + (radius * sin(angle))
 					
 					var inst = shot_CreateShotA1(shotX,shotY,0.25,angle + 180,spr_danmaku_ball_m1,20,12);
 				}

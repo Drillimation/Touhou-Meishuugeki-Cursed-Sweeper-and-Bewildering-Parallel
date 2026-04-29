@@ -30,9 +30,9 @@ if entered == true {
 						set_function = function() {
 							if count == 0 {
 								angleT = point_direction(x,y,obj_player.x,obj_player.y);
-								if direction > angleT { direction--; }
-								if direction < angleT { direction++; }
 							}
+							if direction > angleT { direction--; }
+							if direction < angleT { direction++; }
 						}
 					}
 					inst = shot_CreateShotA1(x,y,1.25,(angleT - 165) + (10 * i),spr_danmaku_kunai,5,0);
@@ -40,9 +40,9 @@ if entered == true {
 						set_function = function() {
 							if count == 0 {
 								angleT = point_direction(x,y,obj_player.x,obj_player.y);
-								if direction > angleT { direction--; }
-								if direction < angleT { direction++; }
 							}
+							if direction > angleT { direction--; }
+							if direction < angleT { direction++; }
 						}
 					}
 				}

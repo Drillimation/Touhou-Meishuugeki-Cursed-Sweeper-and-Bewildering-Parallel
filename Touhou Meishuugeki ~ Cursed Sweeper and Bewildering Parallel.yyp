@@ -47,11 +47,11 @@
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage Enemies","folderPath":"folders/Stage Enemies.yy","name":"Stage Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Stage 5","folderPath":"folders/Stage Enemies/Stage 5.yy","name":"Stage 5","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 1","folderPath":"folders/Stage Enemies/Stage 1.yy","name":"Stage 1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 2","folderPath":"folders/Stage Enemies/Stage 2.yy","name":"Stage 2","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 3","folderPath":"folders/Stage Enemies/Stage 3.yy","name":"Stage 3","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 4","folderPath":"folders/Stage Enemies/Stage 4.yy","name":"Stage 4","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Stage 5","folderPath":"folders/Stage Enemies/Stage 5.yy","name":"Stage 5","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[

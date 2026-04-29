@@ -35,11 +35,11 @@
     {"name":"Sequences","order":9,"path":"folders/Sequences.yy",},
     {"name":"Sounds","order":7,"path":"folders/Sounds.yy",},
     {"name":"Stage Enemies","order":28,"path":"folders/Stage Enemies.yy",},
-    {"name":"Stage 5","order":5,"path":"folders/Stage Enemies/Stage 5.yy",},
     {"name":"Stage 1","order":1,"path":"folders/Stage Enemies/Stage 1.yy",},
     {"name":"Stage 2","order":2,"path":"folders/Stage Enemies/Stage 2.yy",},
     {"name":"Stage 3","order":3,"path":"folders/Stage Enemies/Stage 3.yy",},
     {"name":"Stage 4","order":4,"path":"folders/Stage Enemies/Stage 4.yy",},
+    {"name":"Stage 5","order":5,"path":"folders/Stage Enemies/Stage 5.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"FMOD","order":2,"path":"extensions/FMOD/FMOD.yy",},

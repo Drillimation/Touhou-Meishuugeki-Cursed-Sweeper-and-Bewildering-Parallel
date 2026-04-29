@@ -171,7 +171,7 @@ function scr_enemy_spell_card_hud() {
 		inst = 0;
 	}
 	else {
-		inst = round(inst.captures / inst.encounters) * 100;
+		inst = round((inst.captures / inst.encounters) * 100);
 	}
 	
 	scribble_object[2] = scribble(string(inst) + "%")

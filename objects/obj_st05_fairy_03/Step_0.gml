@@ -22,7 +22,7 @@ if entered == true {
 			baseAngle = 0;
 			var angleT = 0;
 			repeat(12) {
-				shot_CreateShotA1(x,y,1.5,angleT,spr_danmaku_kunai,5,0);
+				shot_CreateShotA1(x,y,1.5,baseAngle + angleT,spr_danmaku_kunai,5,0);
 				angleT += 360 / 12
 			}
 			baseAngle += 7.5;

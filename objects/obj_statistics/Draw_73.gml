@@ -36,7 +36,7 @@ for(var i = 0; i < _ss; i++) {
 		inst = 0;
 	}
 	else {
-		inst = round(description[inventory_scroll[0] + i].captures / description[inventory_scroll[0] + i].encounters) * 100;
+		inst = round((description[inventory_scroll[0] + i].captures / description[inventory_scroll[0] + i].encounters) * 100);
 	}
 	scribble_object[i + (_ss * 3)] = scribble(string(inst) + "%")
 		.starting_format("drp_shd",make_color_rgb(255,255,255))

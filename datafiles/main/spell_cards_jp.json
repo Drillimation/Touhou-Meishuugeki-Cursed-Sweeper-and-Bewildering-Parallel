@@ -49,7 +49,14 @@
         "SPELL_FUSANA_04" : "月民符「銀月の夜会服」",
         "SPELL_FUSANA_05" : "魔符「屋敷の黄金の輝き」",
         "SPELL_FUSANA_06" : "月符「月の姫君の降臨」",
-        "SPELL_FUSANA_07" : "変化「白昼の奉公、真夜中の君主」"
+        "SPELL_FUSANA_07" : "変化「白昼の奉公、真夜中の君主」",
+        "SPELL_BERENICE_01" : "呪符「ガーデン・オブ・マリス」",
+        "SPELL_BERENICE_02" : "濁符「灰色の絶望の方向」",
+        "SPELL_BERENICE_03" : "侍女「エレガント・ゴシック・アリストクラット」",
+        "SPELL_BERENICE_04" : "秩序「エンドレス・レイン」",
+        "SPELL_BERENICE_05" : "災厄「ガゼット・オブ・グルーミー・サンデー」",
+        "SPELL_BERENICE_06" : "禁符「世界の終わりのナイトメア」",
+        "SPELL_BERENICE_07" : "熟達「ベルサイユの亡霊の聖歌隊」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",

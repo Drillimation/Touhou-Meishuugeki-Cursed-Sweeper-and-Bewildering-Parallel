@@ -49,7 +49,14 @@
         "SPELL_FUSANA_04" : "Lunarian Sign \"Silver Moonlight\"",
         "SPELL_FUSANA_05" : "Magic Sign \"Manor's Golden Radiance\"",
         "SPELL_FUSANA_06" : "Moon Sign \"Lunar Princess's Descent\"",
-        "SPELL_FUSANA_07" : "Transformation \"Daylight Servant, Midnight Sovereign\""
+        "SPELL_FUSANA_07" : "Transformation \"Daylight Servant, Midnight Sovereign\"",
+        "SPELL_BERENICE_01" : "Curse Sign \"Garden of Malice\"",
+        "SPELL_BERENICE_02" : "Glohm Sign \"Direction of Grey Despair\"",
+        "SPELL_BERENICE_03" : "Maid Sign \"Elegant Gothic Aristocrat\"",
+        "SPELL_BERENICE_04" : "Order Sign \"Endless Rain\"",
+        "SPELL_BERENICE_05" : "Calamity \"The Gazette of Gloomy Sunday\"",
+        "SPELL_BERENICE_06" : "Forbidden Sign \"Nightmare of the World's End\"",
+        "SPELL_BERENICE_07" : "Mastery Sign \"Revenant Choir of Versailles\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",

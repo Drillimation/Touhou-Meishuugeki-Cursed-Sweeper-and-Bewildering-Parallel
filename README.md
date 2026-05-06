@@ -26,12 +26,12 @@ You can download the game for free here:
 - OpenMPT (for the game's soundtrack)
 
 ## Legal lines
-© 2026 Drillimation Systems Co., Ltd./E. Enthusiasm. Characters © Team Shanghai Alice/Drillimation/E. Enthusiasm.
-Touhou Project is a trademark of Team Shanghai Alice.
-The source code for this game is licensed under the GPLv3 license.
+© 2026 Drillimation Systems Co., Ltd./E. Enthusiasm. Characters © Team Shanghai Alice/Drillimation/E. Enthusiasm.  
+Touhou Project is a trademark of Team Shanghai Alice.  
+The source code for this game is licensed under the GPLv3 license.  
 All audiovisual asset rights are reserved.  
-This game makes use of the Scribble Text Rendering Engine, licensed under the MIT License.
-Stock images provided courtesy of Pexels and Wikimedia Commons. 
+This game makes use of the Scribble Text Rendering Engine, licensed under the MIT License.  
+Stock images provided courtesy of Pexels and Wikimedia Commons.  
 This game uses the FMOD Sound Engine, used under license from Firelight Technologies.
 
 ## External links

@@ -43,6 +43,7 @@
     {"$GMTileAnimation":"","%Name":"animation_14","frames":[267,331,395,459,],"name":"animation_14","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"animation_15","frames":[28,29,30,31,],"name":"animation_15","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"animation_16","frames":[92,93,94,95,],"name":"animation_16","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"animation_17","frames":[3787,3788,3851,3852,],"name":"animation_17","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
   ],
   "tileAnimationSpeed":12.0,
   "tileHeight":16,

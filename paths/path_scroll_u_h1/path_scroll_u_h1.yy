@@ -1,0 +1,22 @@
+{
+  "$GMPath":"",
+  "%Name":"path_scroll_u_h1",
+  "closed":false,
+  "kind":0,
+  "name":"path_scroll_u_h1",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":128.0,"y":1136.0,},
+    {"speed":100.0,"x":128.0,"y":144.0,},
+    {"speed":100.0,"x":640.0,"y":144.0,},
+    {"speed":100.0,"x":640.0,"y":1136.0,},
+    {"speed":100.0,"x":1152.0,"y":1136.0,},
+    {"speed":100.0,"x":1152.0,"y":880.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

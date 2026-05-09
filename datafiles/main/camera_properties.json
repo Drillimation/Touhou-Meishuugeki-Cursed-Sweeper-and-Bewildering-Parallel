@@ -78,5 +78,21 @@
         "midboss_sprite" : "spr_fusana_day",
         "camera_path" : "path_scroll_m_h2",
         "cutscene_index" : "_stage_5_day_prebattle"
+    },
+    "STAGE_06_DAY_MID" : {
+        "stage_speed" : 0.75,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_spite_bulb_2",
+        "midboss_sprite" : "spr_spite_bulb",
+        "camera_path" : "path_scroll_u_h1",
+        "cutscene_index" : "_stage_6_day_prebattle"
+    },
+    "STAGE_06_DAY" : {
+        "stage_speed" : 0.75,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_berenice_day",
+        "midboss_sprite" : "spr_berenice_day",
+        "camera_path" : "path_scroll_u_h2",
+        "cutscene_index" : "_stage_6_day_prebattle"
     }
 }

@@ -343,6 +343,7 @@
     {"id":{"name":"ExtBufferIO","path":"scripts/ExtBufferIO/ExtBufferIO.yy",},},
     {"id":{"name":"Fmod_Definitions","path":"scripts/Fmod_Definitions/Fmod_Definitions.yy",},},
     {"id":{"name":"Fmod_Functions","path":"scripts/Fmod_Functions/Fmod_Functions.yy",},},
+    {"id":{"name":"scr_berenice_attacks","path":"scripts/scr_berenice_attacks/scr_berenice_attacks.yy",},},
     {"id":{"name":"scr_button_menu","path":"scripts/scr_button_menu/scr_button_menu.yy",},},
     {"id":{"name":"scr_change_bgm","path":"scripts/scr_change_bgm/scr_change_bgm.yy",},},
     {"id":{"name":"scr_change_language","path":"scripts/scr_change_language/scr_change_language.yy",},},

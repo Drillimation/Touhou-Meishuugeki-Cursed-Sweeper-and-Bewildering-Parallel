@@ -89,6 +89,65 @@ function scr_berenice_attacks(){
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,128),60);
 		}
 	}
+	attack_berenice_main_04 = function() {
+		if count == 0 {
+			timer = 60;
+			speed = 0;
+			move_mode = false;
+			angleT = 0;
+			angleX = 1;
+		}
+		if count mod 5 == 0 {
+			sound_ObjSound_Play(se_tan02)
+			repeat(20 + (global.main_stats.difficulty * 4)) {
+				shot_CreateShotA1(x,y,1,angleT + angleX,spr_danmaku_ball_s1,10,15);
+				angleT += 360 / (20 + (global.main_stats.difficulty * 4))
+			}
+			angleX += 1;
+		}
+	}
+	attack_berenice_main_05 = function() {
+		if count == 0 {
+			timer = 60;
+			speed = 0;
+			move_mode = false;
+		}
+		if count mod (8 - global.main_stats.difficulty) == 0 {
+			sound_ObjSound_Play(se_tan02)
+			var baseAngle = point_direction(x,y,obj_player.x,obj_player.y)
+			repeat(10) {
+				shot_CreateShotA1(x,y,random_range(0.75,1.5),baseAngle + irandom_range(-60,60),spr_danmaku_shard,5,12)
+				shot_CreateShotA1(irandom_range(8,248),0,1,270,spr_danmaku_bullet,20,12);
+			}
+		}
+	}
+	attack_berenice_main_06 = function() {
+		if count == 0 {
+			timer = 60;
+			speed = 0;
+			move_mode = false;
+			angleT = 0;
+		}
+		if count mod 4 == 0 {
+			sound_ObjSound_Play(se_tan02)
+			repeat(4 + global.main_stats.difficulty) {
+				shot_CreateShotA1(x,y,0.6,angleT,spr_danmaku_butterfly,20,0);
+				angleT += 360 / (4 + global.main_stats.difficulty);
+			}
+			angleT += 2.5;
+		}
+		if count mod 60 == 0 {
+			sound_ObjSound_Play(se_kira00)
+			var baseAngle = point_direction(x,y,obj_player.x,obj_player.y);
+			var speedT = 2;
+			repeat(4) {
+				for(var i = -1 - global.main_stats.difficulty; i < 2 + global.main_stats.difficulty; i++) {
+					shot_CreateShotA1(x,y,speedT,baseAngle + (i * 10),spr_danmaku_dagger,0,12)
+				}
+				speedT -= 0.25;
+			}
+		}
+	}
 	
 	//Spell cards
 	spell_card_berenice_01 = function() {
@@ -207,6 +266,161 @@ function scr_berenice_attacks(){
 						angular_velocity = 30 / 60;
 					}
 				}
+			}
+		}
+	}
+	spell_card_berenice_04 = function() {
+		if count == 0 {
+			timer = 70;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_04,spr_grieg_spell)
+			global.main_stats.current_spell = "SPELL_BERENICE_04"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 64;
+		}
+		
+		if count >= 60 {
+			if count mod 2 == 0 {
+				sound_ObjSound_Play(se_tan02)
+				repeat(global.main_stats.difficulty + 1) {
+					var startX = irandom_range(0,255);
+					var speedT = random_range(1.5,3);
+					shot_CreateShotA1(startX,0,speedT,270,spr_danmaku_arrowhead,10,10);
+				}
+			}
+			if count mod 60 == 0 {
+				sound_ObjSound_Play(se_tan01)
+				var way = 6 + (global.main_stats.difficulty * 2);
+				var baseAngle = 90 + (20 * sin(count * 0.5))
+				repeat(way) {
+					shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_ball_m1,20,10);
+					baseAngle += 360 / way;
+				}
+			}
+		}
+	}
+	spell_card_berenice_05 = function() {
+		if count == 0 {
+			timer = 70;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_05,spr_grieg_spell)
+			global.main_stats.current_spell = "SPELL_BERENICE_05"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 64;
+		}
+		if count >= 60 {
+			if count mod 45 == 0 {
+				sound_ObjSound_Play(se_tan02)
+				var baseAngle = count * 0.7;
+				repeat(4 + global.main_stats.difficulty) {
+					var inst = shot_CreateShotA1(x,y,2,baseAngle,spr_danmaku_ball_l,10,15);
+					with(inst) {
+						set_function = function() {
+							set_function = function() {
+								if count == 30 {
+									move_ObjMove_SetSpeed(self,0);
+								}
+								if count == 50 {
+									sound_ObjSound_Play(se_kira00)
+									var bloomAngle = irandom_range(0,360);
+									repeat(12) {
+										shot_CreateShotA1(x,y,0.75,bloomAngle,spr_danmaku_shard,5,12);
+										bloomAngle = 360 / 12;
+									}
+									instance_destroy();
+								}
+							}
+						}
+					}
+					baseAngle += 360 / (4 + global.main_stats.difficulty);
+				}
+			}
+		}
+	}
+	spell_card_berenice_06 = function() {
+		if count == 0 {
+			timer = 70;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_06,spr_grieg_spell)
+			global.main_stats.current_spell = "SPELL_BERENICE_06"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 64;
+		}
+		
+		if count >= 60 {
+			if count mod 10 == 0 {
+				sound_ObjSound_Play(se_tan02)
+				var way = 12;
+				var baseAngle = count * 0.5;
+				sound_ObjSound_Play(se_tan02)
+				repeat(way) {
+					var inst = shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_ball_m2,15,12);
+					with(inst) {
+						set_function = function() {
+							if count == 60 {
+								sound_ObjSound_Play(se_kira02)
+								move_ObjMove_SetAcceleration(self,0.025);
+								move_ObjMove_SetMaxSpeed(self,2.5);
+								
+								var drift = 0.8 * sin(direction * 2);
+								move_ObjMove_SetAngularVelocity(self,drift);
+								prop_ObjShot_SetGraphic(self,spr_danmaku_ball_m2,0)
+							}
+						}
+					}
+					baseAngle += 360 / way;
+				}
+			}
+		}
+	}
+	spell_card_berenice_07 = function() {
+		if count == 0 {
+			timer = 70;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_07,spr_grieg_spell)
+			global.main_stats.current_spell = "SPELL_BERENICE_07"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 64;
+		}
+		if count >= 60 {
+			if count mod 4 == 0 {
+				var way = 5;
+				var baseAngle = count * 1.5;
+				repeat(way) {
+					shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_butterfly,10,0);
+					shot_CreateShotA1(x,y,0.75,baseAngle + 5,spr_danmaku_butterfly,10,12);
+					baseAngle += 360 / way;
+				}
+			}
+			
+			if count >= 120 and count < 220 {
+				if count mod 5 == 0 {
+					var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+					var inst = shot_CreateShotA1(x,y,0,angleT + irandom_range(-30,30),spr_danmaku_bullet,5,15);
+					with(inst) {
+						set_function = function() {
+							if count == 30 {
+								move_ObjMove_SetSpeed(self,2.5);
+								move_ObjMove_SetAcceleration(self,0.05);
+							}
+						}
+					}
+				}
+			}
+			if count == 240 {
+				count = 60;
 			}
 		}
 	}

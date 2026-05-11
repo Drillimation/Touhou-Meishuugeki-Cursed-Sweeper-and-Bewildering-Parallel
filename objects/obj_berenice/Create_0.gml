@@ -1,11 +1,11 @@
 can_attack = false;
 entered = false;
-start_hp = 2500;
+start_hp = 3000;
 hp = start_hp;
 hurt_on_collide = false;
-life = 6;
+life = 13;
 max_hp = life + 1;
-timer = 50;
+timer = 60;
 tick = 0;
 
 xview = camera_get_view_x(view_camera[0]);
@@ -27,8 +27,8 @@ count = 0;
 count2 = 0;
 face = 0;
 
-scr_fusana_attacks();
-hbar = spr_boss_health_7;
+scr_berenice_attacks();
+hbar = spr_boss_health_13;
 
 for(var i = 0; i < 16; i++) {
 	scribble_object[i] = undefined;

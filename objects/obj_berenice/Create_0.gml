@@ -3,7 +3,7 @@ entered = false;
 start_hp = 3000;
 hp = start_hp;
 hurt_on_collide = false;
-life = 13;
+life = 12;
 max_hp = life + 1;
 timer = 60;
 tick = 0;
@@ -35,4 +35,3 @@ for(var i = 0; i < 16; i++) {
 }
 
 invultime = 15;
-image_blend = make_colour_rgb(255,191,191);

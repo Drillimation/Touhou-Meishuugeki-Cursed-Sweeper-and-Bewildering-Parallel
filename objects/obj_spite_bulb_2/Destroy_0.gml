@@ -4,6 +4,6 @@ move_ObjMove_SetDestAtSpeed(inst,x_pos + irandom_range(-16,16),y_pos + irandom_r
 for (var i = 0; i < array_length(global.player_stats); i++) {
 	system_AddScore(round(75000),i);
 }
-if room != room_debug { scr_create_camera("STAGE_05_DAY"); }
+if room != room_debug { scr_create_camera("STAGE_06_DAY"); }
 inst = instance_create_depth(x,y,-1000,obj_defeated_boss);
 inst.index_sprite = spr_sprite_bulb;

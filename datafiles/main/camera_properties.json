@@ -80,7 +80,7 @@
         "cutscene_index" : "_stage_5_day_prebattle"
     },
     "STAGE_06_DAY_MID" : {
-        "stage_speed" : 0.75,
+        "stage_speed" : 0.625,
         "end_path_function" : "MIDBOSS",
         "midboss" : "obj_spite_bulb_2",
         "midboss_sprite" : "spr_spite_bulb",

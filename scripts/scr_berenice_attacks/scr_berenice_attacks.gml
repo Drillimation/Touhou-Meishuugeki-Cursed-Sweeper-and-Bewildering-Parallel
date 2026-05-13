@@ -265,7 +265,7 @@ function scr_berenice_attacks(){
 			if count mod 120 == 0 {
 				var baseAngle = irandom_range(0,360);
 				for(var i = 0; i < 8; i++) {
-					var angleT = baseAngle + (i * 90);
+					var angleT = baseAngle + (i * 45);
 					var inst = shot_CreateStraightLaserA1(x,y,angleT,32,1,60,spr_danmaku_laser,20,12);
 					with(inst) {
 						angular_velocity = 30 / 60;

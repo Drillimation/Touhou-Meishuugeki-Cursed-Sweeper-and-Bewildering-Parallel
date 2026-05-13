@@ -12,7 +12,6 @@
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_6_day_prebattle",6],
         ["scr_cutscene_set_portrait","spr_fusana_portrait",7,128,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_6_day_prebattle",7],
-
         ["scr_cutscene_set_portrait","spr_marisa_portrait",2,0,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_6_day_prebattle",8],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_6_day_prebattle",9],

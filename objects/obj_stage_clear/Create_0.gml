@@ -3,16 +3,17 @@ yview = camera_get_view_y(view_camera[0]);
 scr_change_bgm("bgm/stage_clear.it")
 
 bonuses = [
-	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","TOTAL"]
+	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","TIME ORBS","TOTAL"]
 ];
 for(var i = 0; i < array_length(global.player_stats); i++) {
 	var bonuses_to_give = [
 		global.main_stats.difficulty * 1000,
-		global.player_stats[0].cur_lives * 1000,
-		global.player_stats[0].cur_health * 100,
-		global.player_stats[0].point_items * 100,
-		global.player_stats[0].power_items * 100,
-		global.player_stats[0].cur_bombs * 500
+		global.player_stats[i].cur_lives * 1000,
+		global.player_stats[i].cur_health * 100,
+		global.player_stats[i].point_items * 100,
+		global.player_stats[i].power_items * 100,
+		round(global.main_stats.time_orbs / 10) * 10,
+		global.player_stats[i].cur_bombs * 500
 	]
 	var total = 0;
 	for(var j = 0; j < array_length(bonuses_to_give); j++) {
@@ -25,6 +26,13 @@ instance_deactivate_object(obj_player,false);
 
 for(var i = 0; i < 16; i++) {
 	scribble_object[i] = undefined;
+}
+
+if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
+	global.main_stats.hours_passed += 1;
+}
+else {
+	global.main_stats.hours_passed += 2;
 }
 
 count = 0;

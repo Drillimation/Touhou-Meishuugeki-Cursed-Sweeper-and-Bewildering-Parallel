@@ -16,6 +16,13 @@ draw_set_halign(fa_left);
 for(var i = 0; i < array_length(bonuses[0]); i++) {
 	draw_text(xview + 8,(yview + 56) + (16 * i),bonuses[0][i])
 }
+draw_set_halign(fa_center);
+if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
+	draw_text(xview + 128,yview + 200,"TIME ORB REQUIREMENT MET\n" + string(global.main_stats.hours_passed) + " HOURS SINCE OUTBREAK BEGAN")
+}
+else {
+	draw_text(xview + 128,yview + 200,"TIME ORB REQUIREMENT NOT MET" + string(global.main_stats.hours_passed) + " HOURS SINCE OUTBREAK BEGAN")
+}
 draw_set_color(make_color_rgb(255,255,255));
 draw_set_halign(fa_right);
 for(var i = 0; i < array_length(global.player_stats); i++) {

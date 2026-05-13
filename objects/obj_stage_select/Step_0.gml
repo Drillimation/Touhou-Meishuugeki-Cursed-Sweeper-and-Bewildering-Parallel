@@ -42,6 +42,7 @@ if delay <= 0 {
 				case 2: room_goto(room_transition_3); break;
 				case 3: room_goto(room_transition_4); break;
 				case 4: room_goto(room_transition_5); break;
+				case 5: room_goto(room_transition_6); break;
 			}
 		}
 		if (b_button) {

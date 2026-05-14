@@ -1,0 +1,15 @@
+{
+    "dialogue_texts" : [
+        ["Berenice","Muh huh huh... Did you think all of my attacks were enough? You're already witnessing the rebirth of the Order..."],
+        ["Marisa","Ugh, your air is thicker than it was far away. I thought I finished the sweeping."],
+        ["Berenice","It appears your \"magic\" hasn't left any residue. The glohm wasn't simply purged - it's moving."],
+        ["Marisa","Moved? To where? It's not like it can get any weirder than it already is."],
+        ["Berenice","Look at yourself. It's already feeding on your discarded magic."],
+        ["Marisa","You have to be kidding me - the glohm is now taking me over!?"],
+        ["Berenice","You have failed to choose a reality, and society will now abandon you. You are now a resident of the Order."],
+        ["Marisa","I can't start all over from scratch..."],
+        ["Berenice","I will learn to control your soul soon enough. The Order's power is not yet fully restored, but it will come in time."],
+        ["Berenice","If you will become my faithful servant, I will not harm you."],
+        [" ","Too bad! Bad ending! To see the good ending, clear the game without using a continue or letting nine hours pass."]
+    ]
+}

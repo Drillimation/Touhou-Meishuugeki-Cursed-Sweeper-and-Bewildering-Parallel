@@ -1,0 +1,22 @@
+{
+    "dialogue_texts" : [
+        ["Fusana","*cough*"],
+        ["Fusana","Oof, my head. My hands have regained control. Was I fighting uncontrollably?"],
+        ["Fusana","Explain to me, was my mind clouded in a crimson fog?"],
+        ["Yukari","It was a psychological parasite."],
+        ["Yukari","You were suffering from a localized collapse of your mental boundaries known as \"glohm\"."],
+        ["Fusana","\"Glohm\"? I've never heard of such a thing."],
+        ["Fusana","I thought I had finally found a way to stop the world from being so loud."],
+        ["Fusana","A lady in gothic clothing promised me a permanent holiday from feeling."],
+        ["Yukari","Who was this unauthorized travel agent?"],
+        ["Fusana","She called herself Berenice Grieg."],
+        ["Fusana","She's in the inner sanctum now, \"filing away\" the rest of this world's messy emotions."],
+        ["Fusana","She said my isolation was the first step toward a perfect Order."],
+        ["Yukari","Filing them away? How dreadful."],
+        ["Yukari","The Order is maintained through the balance of chaos."],
+        ["Yukari","I think it's time I revoked her operating license."],
+        ["Fusana","Please, My Majesty... don't let her turn the whole continent into a silent room."],
+        ["Fusana","Even if it's noisy, I'd think I'd rather be able to hear my own heart."],
+        ["Yukari","Don't worry. I will go in and fix the plumbing."]
+    ]
+}

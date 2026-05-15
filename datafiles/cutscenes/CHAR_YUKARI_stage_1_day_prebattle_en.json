@@ -1,0 +1,30 @@
+{
+    "dialogue_texts" : [
+        ["Yukari","I just got here yesterday, so..."],
+        ["Yukari","How did I hear rumors about this \"glohm\" starting its work on Gensokyo's infrastructure?"],
+        [" ","Argh... No... Confound it! Where have they all gone?"],
+        ["Yukari","Who was that? Is it someone who lost something?"],
+        ["Yukari","Oh my! Who just bumped into me?"],
+        ["???","Oh! Sorry. Very sorry. I didn't notice you were standing in my way!"],
+        ["Yukari","You should be more careful next time, little one."],
+        ["Yukari","If you stumble into the path of a sage and queen, you'll find yourself in unexpected destinations."],
+        ["???","I'm trying to deliver all of the mail to Kozankyo's residents, and I've lost so much of it."],
+        ["Yukari","How did this all happen?"],
+        ["???","I tend to be clumsy and often lose the things I'm trying to deliver."],
+        ["???","I also didn't take the chance to introduce myself."],
+        ["Kotori","The name's Kotori Tegami - a tengu who delivers the mail to Kozankyo's residents."],
+        ["Yukari","Even if you know me through woodblock prints, you might not recognize my costume or hairstyle."],
+        ["Kotori","You told me earlier that you're a queen? You don't look like Queen Marisa..."],
+        ["Yukari","I don't look like her because I'm Queen Yukari of the Democratic Kingdom of Gensokyo."],
+        ["Yukari","Anyway, I'm afraid that I don't have the time to find your lost mail."],
+        ["Yukari","There's a certain toxic rumor I need to silence before it slips through the gaps and enters Kozankyo."],
+        ["Kotori","I don't know about this \"toxic rumor\" you're talking about."],
+        ["Kotori","If it's a disease, I certainly don't want to get sick!"],
+        ["Yukari","It is unfortunately a disease, and it's the dirty work of the Gensokyo Socialite Order."],
+        ["Kotori","I don't want to get sick at the worst time..."],
+        ["Kotori","I would have to halt my job in that case..."],
+        ["Yukari","Anyway, see ya."],
+        ["Kotori","I can't, I have a crucial deadline approaching."],
+        ["Kotori","Time is money... you'll see me fired without it!"]
+    ]
+}

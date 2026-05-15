@@ -1,0 +1,21 @@
+{
+    "dialogue_texts" : [
+        ["Yukari","My birthplace Mayohiga... it's been quite some time."],
+        ["Yukari","The boundaries here feel unusually rigid today, as if the village itself is holding its breath."],
+        ["???","Well, if it's not Queen Yukari of Western Gensokyo..."],
+        ["Yukari","Uh, excuse me, but when you address royalty, the correct way is \"Your Majesty\"."],
+        ["???","Oh, whoops. Didn't realize that. Thanks for reminding me."],
+        ["???","To what do we owe the honor of a royal visit to our humble village?"],
+        ["Yukari","I am tracking a certain \"glohm\" substance that threatens the balance of the kingdoms."],
+        ["Yukari","It's a dirty problem, and I intend to sweep it away."],
+        ["???","\"Glohm,\" you say? If that filth tries to settle here, I'll purify every last drop of it."],
+        ["Koko","A shrine maiden's duty is to keep her home clean, after all."],
+        ["Yukari","A kitsune acting as a shrine maiden... How delightful."],
+        ["Yukari","I wonder if your \"purification\" can handle a true queen's standards."],
+        ["Koko","You look a bit tense from all that royal posturing, my Majesty."],
+        ["Yukari","While I'm here, what do you want to do?"],
+        ["Koko","How about a little \"training\" to loosen those boundaries of yours?"],
+        ["Yukari","I suppose a brief demonstration of power is in order. Show me your best ritual."],
+        ["Koko","Let the morning sun and I burn away those royal doubts!"]
+    ]
+}

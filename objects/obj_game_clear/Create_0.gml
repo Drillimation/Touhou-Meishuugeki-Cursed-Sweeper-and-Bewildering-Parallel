@@ -1,9 +1,9 @@
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
-scr_change_bgm("bgm/stage_clear.it")
+scr_change_bgm("bgm/game_clear.it")
 
 bonuses = [
-	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","TIME ORBS","TOTAL"]
+	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","TIME ORBS","GRAZE", "TOTAL"]
 ];
 for(var i = 0; i < array_length(global.player_stats); i++) {
 	var bonuses_to_give = [
@@ -13,6 +13,7 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 		global.player_stats[i].point_items * 100,
 		global.player_stats[i].power_items * 100,
 		global.player_stats[i].cur_bombs * 500,
+		global.player_stats[i].graze * 100,
 		round(global.main_stats.time_orbs / 10) * 10
 	]
 	var total = 0;

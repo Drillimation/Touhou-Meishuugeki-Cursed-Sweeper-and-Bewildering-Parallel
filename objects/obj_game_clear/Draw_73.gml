@@ -1,7 +1,7 @@
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 
-scribble_object[0] = scribble("STAGE " + string(global.main_stats.stage) + " CLEARED!")
+scribble_object[0] = scribble("GAME CLEARED!")
 	.starting_format("drp_shd3",make_color_rgb(192,0,0))
 	.align(fa_center,fa_top)
 	.outline(make_color_rgb(0,0,0))

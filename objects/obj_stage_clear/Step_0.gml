@@ -1,6 +1,6 @@
 if count == 600 {
 	instance_destroy();
-	if global.freeplaymode == true or os_get_config() == "kiosk" or global.main_stats.stage == 3 {
+	if global.freeplaymode == true {
 		scr_change_bgm("bgm/ending.it");
 		xview = camera_get_view_x(view_camera[1]);
 		yview = camera_get_view_y(view_camera[1]);

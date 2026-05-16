@@ -18,6 +18,21 @@ if keyboard_check_pressed(vk_f1) {
 	//inst.target = asset_get_index(room_transition_1);
 	room_goto(room_debug);
 }
+if keyboard_check_pressed(vk_f2) {
+	instance_destroy();
+	scr_change_bgm("bgm/ending.it");
+	//var inst = instance_create_depth(0,0,0,obj_fade_out);
+	//inst.target = asset_get_index(room_transition_1);
+	room_goto(room_ending);
+}
+if keyboard_check_pressed(vk_f3) {
+	instance_destroy();
+	scr_change_bgm("bgm/ending.it");
+	//var inst = instance_create_depth(0,0,0,obj_fade_out);
+	//inst.target = asset_get_index(room_transition_1);
+	global.main_stats.continues_used = 1;
+	room_goto(room_ending);
+}
 if count == 1800 {
 	instance_destroy();
 	var inst = instance_create_depth(0,0,0,obj_fade_out);

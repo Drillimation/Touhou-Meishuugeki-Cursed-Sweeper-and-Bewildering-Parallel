@@ -1,0 +1,63 @@
+[#FFFFFF]Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel
+
+[#FF0000]Director
+[#FFFFFF]Susumu Takajima
+
+[#FF0000]Producer
+[#FFFFFF]Susumu Takajima
+
+[#FF0000]General Designers
+[#FFFFFF]Susumu Takajima
+
+[#FF0000]Character Designers
+[#FFFFFF]Susumu Takajima
+E. Enthusiasm
+
+[#FF0000]Screenwriter
+[#FFFFFF]Susumu Takajima
+
+[#FF0000]Lead Programmer
+[#FFFFFF]Susumu Takajima
+
+[#FF0000]Graphical Artists
+[#FFFFFF]Susumu Takajima
+E. Enthusiasm
+
+Stock images provided courtesy of Pexels and Wikimedia Commons
+This image uses the Scribble Text Rendering Engine, licensed under the MIT License.
+The fonts used in this game are provided courtesy of Drillimation Systems, Ricoh, Dynacomware, and Adobe Systems.
+
+[#FF0000]Soundtrack
+[#FFFFFF]Susumu Takajima
+
+This game uses the FMOD sound engine, used under license from Firelight Technologies.
+Soundtrack available from Drillimation Records
+
+[#FF0000]Original Touhou Project Themes
+[#FFFFFF]Jun'ya Ohta
+
+[#FF0000]Sound Mixing and Editing
+[#FFFFFF]Susumu Takajima
+
+Stock sound effects provided courtesy of Freesound, licensed under Creative Commons.
+
+[#FF0000]Special Thanks
+[#FFFFFF]Emiko Hosokawa (Studio Emiko)
+Julian Adams
+
+[#FF0000]Executive Producer
+[#FFFFFF]Susumu Takajima
+
+©2026 Drillimation Systems Co., Ltd./E. Enthusiasm
+Characters © Team Shanghai Alice/Drillimation/Studio Emiko/E. Enthusiasm
+
+Drillimation Systems and E. Enthusiasm are the authors of this software for the purposes of copyright under the Berne Convention and all national laws giving effect thereto.
+
+The source code for this game is licensed under the GPLv3 license.
+All of the characters, graphical artwork, and soundtrack are protected under the copyright laws of the United States and other countries. Unauthorized reproduction, distribution, or exhibition is punishable under civil liability and criminal prosecution.
+
+The story, all names, characters, and events portrayed in this game are fictitious. All resemblances are purely coincidental.
+
+All rights in this work are reserved for the purpose of laws in all jurisdictions pertaining to data mining or AI training, including but not limited to Article 4(3) of Directive (EU) 2019/790, and this work may not be used to train AI.
+
+Regardless of any of the above mentioned, the original concept for the character of Veronika Grieg, reserved by Studio Emiko.

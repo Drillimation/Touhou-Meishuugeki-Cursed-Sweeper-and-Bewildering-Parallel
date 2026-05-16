@@ -1,0 +1,29 @@
+{
+    "dialogue_texts" : [
+        ["Kaguya","What a peculiar sight for a festive time."],
+        ["Kaguya","Kozankyo is usually so meticulous, and yet here is a trail of paper like the falling leaves."],
+        [" ","Argh... No... Confound it! Where have they all gone?"],
+        ["Kaguya","It seems the \"glohm\" I was warned about has already begun to disrupt the simple task of delivery."],
+        ["Kaguya","Or perhaps a very disorganized person."],
+        ["Kaguya","Oh! Is it the one?"],
+        ["???","Oh! Sorry. Very sorry. I didn't notice you were standing in my way!"],
+        ["Kaguya","You should mind your surroundings, little one!"],
+        ["Kaguya","The Empress doesn't simply 'stand in the way'. I am the path itself."],
+        ["???","I'm trying to deliver the mail to the residents, but I've lost so much of it."],
+        ["Kaguya","A tragic loss for the residents, I'm sure."],
+        ["???","I tend to be clumsy and often lose the things I'm trying to deliver."],
+        ["???","I also didn't take the chance to introduce myself."],
+        ["Kotori","The name's Kotori Tegami - a tengu who delivers the mail to Kozankyo's residents."],
+        ["Kaguya","And I'm Empress Kaguya of the People's Kingdom of Gensokyo."],
+        ["Kotori","Now I know which ruler you are! Why are you in Kozankyo?"],
+        ["Kaguya","I have a more pressing engagement with a 'toxic rumor' that is threatening the upcoming festival."],
+        ["Kotori","So this means you can't help me?"],
+        ["Kaguya","Unfortunately, yes..."],
+        ["Kotori","I'll be searching thoroughly for a while..."],
+        ["Kaguya","I gotta go..."],
+        ["Kotori","I can't, I have a crucial deadline approaching."],
+        ["Kaguya","If time is your currency, let me see if you can afford a duel with me."],
+        ["Kotori","I'm getting desperate here..."],
+        ["Kotori","Time is money... you'll see me fired without it!"]
+    ]
+}

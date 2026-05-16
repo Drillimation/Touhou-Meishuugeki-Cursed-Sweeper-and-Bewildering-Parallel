@@ -1,0 +1,20 @@
+{
+    "dialogue_texts" : [
+        ["Kaguya","Mayohiga... a place of lost things and hidden paths."],
+        ["Kaguya","It feels unusually stagnant today, as if the air itself is refusing to flow."],
+        ["???","Well now, if it isn't the Empress herself. To what do we owe the honor of a royal visit to our humble village?"],
+        ["Kaguya","I am tracing a certain \"glohm\" substance that threatens the balance of the kingdoms, including my own."],
+        ["Kaguya","It is a dull matter, but one that requires my personal attention."],
+        ["Koko","\"Glohm,\" you say? If that filth tries to settle here, I'll purify every last drop of it."],
+        ["Koko","A shrine maiden's duty is to keep her home clean, after all."],
+        ["Kaguya","A kitsune acting as a shrine maiden... How quaint."],
+        ["Kaguya","I wonder if your \"purification\" can handle the standards of the Eternal Night."],
+        ["Koko","You look a bit tense from all that royal posturing, my Majesty."],
+        ["Kaguya","Will you purify me?"],
+        ["Koko","Actually, no. I will have you do a little \"training\" to loosen your imperial nerves."],
+        ["Kaguya","If you wish to test the endurance of an immortal, I shall grant you your request."],
+        ["Koko","Oho! I'm just praying things won't be lethal for me."],
+        ["Kaguya","Show me your ritual."],
+        ["Koko","Let the morning sun and I burn away those royal doubts!"]
+    ]
+}

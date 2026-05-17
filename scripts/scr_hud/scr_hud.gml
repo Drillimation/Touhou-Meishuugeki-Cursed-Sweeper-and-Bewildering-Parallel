@@ -131,6 +131,16 @@ function scr_game_over_hud() {
 		.draw(xview + 128,yview + 144)
 		
 	draw_sprite_stretched(spr_textbox,0,xview + 0,yview + 192,256,80);
+	
+	draw_sprite(spr_menu_cursor,0,xview + 8,(yview + 200) + (16 * y_pos))
+
+	for(var i = 0; i < array_length(option); i++) {
+		scribble_object[i + 1] = scribble(option[i])
+			.starting_format(global.gui_font,make_color_rgb(255,255,255))
+			.align(fa_left,fa_top)
+			.wrap(240)
+			.draw(xview + 24,(yview + 200) + (16 * i))
+	}
 }
 
 function scr_enemy_spell_card_hud() {

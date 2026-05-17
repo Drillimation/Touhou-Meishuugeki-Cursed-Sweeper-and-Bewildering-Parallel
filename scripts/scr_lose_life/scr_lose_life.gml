@@ -5,6 +5,8 @@ function scr_lose_life(){
 	player_SetPlayerLife(-1,play_id,true);
 	player_SetPlayerInvincibilityFrame(300,play_id);
 	player_SetPlayerDeathbombFrame(15,play_id);
+	global.main_stats.time_orbs -= 500;
+	global.main_stats.time_orbs = clamp(global.main_stats.time_orbs,0,99999);
 	global.player_stats[play_id].deaths += 1;
 	if global.player_stats[play_id].cur_lives >= 1 {
 		//Respawn the player if any lives are remaining

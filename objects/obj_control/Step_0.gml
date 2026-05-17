@@ -10,4 +10,12 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 	if global.player_stats[i].cur_score > highscore {
 		highscore = global.player_stats[i].cur_score;
 	}
+	
+	if global.player_stats[i].cur_score >= global.player_stats[i].bombscore {
+		sound_ObjSound_Play(se_extend);
+		global.player_stats[i].cur_lives++;
+		global.player_stats[i].cur_bombs++;
+		global.player_stats[i].received++;
+		global.player_stats[i].bombscore += global.player_stats[i].received * 100000
+	}
 }

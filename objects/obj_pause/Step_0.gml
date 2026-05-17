@@ -83,7 +83,7 @@ if delay == 0 {
 	}
 }
 
-if count == 1800 {
+/*if count == 1800 {
 	instance_destroy();
 	scr_system_close();
 	var xview2 = camera_get_view_x(view_camera[1]);
@@ -91,5 +91,5 @@ if count == 1800 {
 	var inst = instance_create_layer(xview2 + 0,yview2 + 0,"Effects",obj_fade_out);
 	instance_activate_object(obj_fade_out);
 	inst.target = asset_get_index(room_intro);
-}
+}*/
 count++;

@@ -3,7 +3,7 @@ yview = camera_get_view_y(view_camera[0]);
 scr_change_bgm("bgm/game_clear.it")
 
 bonuses = [
-	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","TIME ORBS","GRAZE", "TOTAL"]
+	["RANK","LIVES","HEALTH","POINT","POWER","BOMBS","GRAZE","TIME ORBS","TOTAL"]
 ];
 for(var i = 0; i < array_length(global.player_stats); i++) {
 	var bonuses_to_give = [
@@ -21,7 +21,8 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 		total += bonuses_to_give[j]
 	}
 	array_push(bonuses_to_give,total);
-	array_push(bonuses,bonuses_to_give)
+	array_push(bonuses,bonuses_to_give);
+	system_AddScore(0,total);
 }
 instance_deactivate_object(obj_player,false);
 

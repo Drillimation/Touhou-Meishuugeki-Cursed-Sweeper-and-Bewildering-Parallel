@@ -180,7 +180,7 @@ function scr_character_sprites(){
 				sound_ObjSound_Play(se_nep00);
 				var angleT = 0;
 				repeat(4) {
-					var inst = playermain_CreatePlayerShotA1(x,y,0,0,1,9999,spr_yukari_bomb_1,-1)
+					var inst = playermain_CreatePlayerShotA1(x,y,0,angleT,1,9999,spr_yukari_bomb_1,-1)
 					prop_ObjShot_SetEraseShot(inst,true)
 					prop_ObjShot_SetDeleteFrame(inst,300);
 					with(inst) {
@@ -193,6 +193,7 @@ function scr_character_sprites(){
 							image_yscale += 0.01;
 							x_pos = tag_along.x_pos
 							y_pos = tag_along.y_pos
+							direction++;
 						}
 					}
 					angleT += 22.5

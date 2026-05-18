@@ -34,6 +34,7 @@ if delay <= 0 {
 			switch(y_pos) {
 				case 0: global.player_stats[0].character = "CHAR_REIMU"; break;
 				case 1: global.player_stats[0].character = "CHAR_MARISA"; break;
+				case 2: global.player_stats[0].character = "CHAR_YUKARI"; break;
 			}
 			instance_create_depth(0,0,0,obj_tutorial)
 		}

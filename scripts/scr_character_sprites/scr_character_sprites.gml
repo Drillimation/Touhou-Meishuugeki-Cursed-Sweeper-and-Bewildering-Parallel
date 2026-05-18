@@ -22,9 +22,9 @@ function scr_character_sprites(){
 					var twistT = floor(global.player_stats[play_id].power_items / 50);
 					var angleT = (90 + (twistT * sm_nrmT))
 					repeat(1 + twistT) {
-						var inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,turret_pos),y + lengthdir_y(8,turret_pos),4,angleT,1,1,spr_reimu_amulet_2,-1)
+						var inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,turret_pos),y_pos + lengthdir_y(8,turret_pos),4,angleT,1,1,spr_reimu_amulet_2,-1)
 						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
-						inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,180 - turret_pos),y + lengthdir_y(8,180 - turret_pos),4,angleT,1,1,spr_reimu_amulet_2,-1)
+						inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,180 - turret_pos),y_pos + lengthdir_y(8,180 - turret_pos),4,angleT,1,1,spr_reimu_amulet_2,-1)
 						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
 						angleT -= (nrmT)
 					}
@@ -64,12 +64,12 @@ function scr_character_sprites(){
 					var twistT = floor(global.player_stats[play_id].power_items / 25);
 					var angleT = (90 + (twistT * sm_nrmT))
 					repeat(1 + twistT) {
-						playermain_CreatePlayerShotA1(x + lengthdir_x(16,angleT),y + lengthdir_y(16,angleT),4,90,5,1,spr_marisa_amulet_1,-1)
+						playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,angleT),y_pos + lengthdir_y(16,angleT),4,90,5,1,spr_marisa_amulet_1,-1)
 						angleT -= (nrmT)
 					}
 				}
 				if global.player_stats[play_id].power_items >= 12 and reload > 0 and reload mod 240 == 0 {
-					var inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,turret_pos),y + lengthdir_y(8,turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
+					var inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,turret_pos),y_pos + lengthdir_y(8,turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
 					prop_ObjShot_SetDeleteFrame(inst,120);
 					//show_debug_message(inst.y_pos / inst.sprite_width);
 					with(inst) {
@@ -88,7 +88,7 @@ function scr_character_sprites(){
 							}
 						}
 					}
-					inst = playermain_CreatePlayerShotA1(x + lengthdir_x(16,180 - turret_pos),y + lengthdir_y(8,180 - turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
+					inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,180 - turret_pos),y_pos + lengthdir_y(8,180 - turret_pos),0,90,1,9999,spr_marisa_amulet_2,-1)
 					prop_ObjShot_SetDeleteFrame(inst,120);
 					//show_debug_message(inst.y_pos / inst.sprite_width);
 					with(inst) {
@@ -128,6 +128,74 @@ function scr_character_sprites(){
 						x_pos = tag_along.x_pos
 						y_pos = tag_along.y_pos
 					}
+				}
+			}
+			break;
+		case "CHAR_YUKARI":
+			sprite_index = spr_yukari;
+			turret_index = spr_yukari_turret;
+			shoot_sequence = function() {
+				if (action_focus) {
+					if lock_position == false {
+						lock_position = true
+						turret_shoot_1 = x_pos - 16;
+						turret_shoot_2 = x_pos + 16;
+						turret_shoot_3 = y_pos;
+					}
+				}
+				else {
+					lock_position = false;
+					turret_shoot_1 = x_pos + lengthdir_x(16,turret_pos)
+					turret_shoot_2 = x_pos + lengthdir_x(16,180 - turret_pos)
+					turret_shoot_3 = y_pos
+				}
+				if reload mod 9 == 0 {
+					sound_ObjSound_Play(se_plst00);
+					var nrmT = 30 - (action_focus * 15)
+					var sm_nrmT = 15 - (action_focus * 7.5)
+					var twistT = floor(global.player_stats[play_id].power_items / 25);
+					var angleT = (90 + (twistT * sm_nrmT))
+					repeat(1 + twistT) {
+						playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,angleT),y_pos + lengthdir_y(16,angleT),4,90,5,1,spr_yukari_amulet_1,-1)
+						angleT -= (nrmT)
+					}
+				}
+				if global.player_stats[play_id].power_items >= 12 and reload mod 10 == 5 {
+					var nrmT = 30 - (action_focus * 15)
+					var sm_nrmT = 15 - (action_focus * 7.5)
+					var twistT = floor(global.player_stats[play_id].power_items / 50);
+					var angleT = (90 + (twistT * sm_nrmT))
+					repeat(1 + twistT) {
+						var inst = playermain_CreatePlayerShotA1(turret_shoot_1 + lengthdir_x(16,angleT),turret_shoot_3 + lengthdir_y(16,angleT),4,90,1,1,spr_yukari_amulet_2,-1)
+						inst = playermain_CreatePlayerShotA1(turret_shoot_2 + lengthdir_x(16,angleT),turret_shoot_3 + lengthdir_y(16,angleT),4,90,1,1,spr_yukari_amulet_2,-1)
+						angleT -= (nrmT)
+					}
+				}
+				reload++;
+			}
+			bomb_sequence = function() {
+				var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+				shot_CreateSpellCard("PLAYER",spr_yukari_portrait,0,_load_file.player_spell.CHAR_YUKARI);
+				sound_ObjSound_Play(se_cat00);
+				sound_ObjSound_Play(se_nep00);
+				var angleT = 0;
+				repeat(4) {
+					var inst = playermain_CreatePlayerShotA1(x,y,0,0,1,9999,spr_yukari_bomb_1,-1)
+					prop_ObjShot_SetEraseShot(inst,true)
+					prop_ObjShot_SetDeleteFrame(inst,300);
+					with(inst) {
+						set_function = function() {
+							with(obj_player) {
+								if sprite_index == spr_yukari { other.tag_along = id }
+							}
+							//show_debug_message(y_pos / sprite_get_width(sprite_index));
+							image_xscale += 0.01;
+							image_yscale += 0.01;
+							x_pos = tag_along.x_pos
+							y_pos = tag_along.y_pos
+						}
+					}
+					angleT += 22.5
 				}
 			}
 			break;

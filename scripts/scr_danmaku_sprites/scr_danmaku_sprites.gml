@@ -24,8 +24,11 @@ function scr_danmaku_sprites(){
 		case spr_reimu_amulet_2: image_angle = 0; image_speed = 1; break;
 		case spr_marisa_amulet_1: image_angle = direction; image_speed = 1; break;
 		case spr_marisa_amulet_2: image_angle = direction; image_speed = 1; break;
+		case spr_yukari_amulet_1: image_angle = direction; image_speed = 1; break;
+		case spr_yukari_amulet_2: image_angle = direction; image_speed = 1; break;
 		
 		case spr_reimu_bomb_1: image_angle = 0; image_speed = 1; break;
 		case spr_marisa_bomb_1: image_angle = direction; image_speed = 1; break;
+		case spr_yukari_bomb_1: image_angle++; image_speed = 0; break;
 	}
 }

@@ -8,11 +8,20 @@ delay = 10;
 
 var load_array = scr_json_load_file("menu_data/main_menu" + string(global.suf) + ".json");
 
-option = [load_array.character_select.menu_options[0],load_array.character_select.menu_options[1]]
-description = [load_array.character_select.menu_description[0],load_array.character_select.menu_description[1]]
+option = [
+	load_array.character_select.menu_options[0],
+	load_array.character_select.menu_options[1],
+	load_array.character_select.menu_options[2],
+]
+description = [
+	load_array.character_select.menu_description[0],
+	load_array.character_select.menu_description[1],
+	load_array.character_select.menu_description[2],
+]
 img = [
 	spr_reimu_portrait,
-	spr_marisa_portrait
+	spr_marisa_portrait,
+	spr_yukari_portrait
 ]
 
 //array_copy(option,0,load_array.character_select.menu_options,0,array_length(load_array.character_select.menu_options));

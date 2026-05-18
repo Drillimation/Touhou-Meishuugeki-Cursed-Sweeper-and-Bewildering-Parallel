@@ -22,7 +22,7 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 	}
 	array_push(bonuses_to_give,total);
 	array_push(bonuses,bonuses_to_give);
-	system_AddScore(0,total);
+	system_AddScore(total,0);
 }
 instance_deactivate_object(obj_player,false);
 

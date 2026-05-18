@@ -41,7 +41,7 @@ if delay == 0 {
 						var xview2 = camera_get_view_x(view_camera[1]);
 						var yview2 = camera_get_view_y(view_camera[1]);
 						var inst = instance_create_layer(xview2 + 0,yview2 + 0,"Effects",obj_fade_out);
-						inst.target = asset_get_index(room_intro);
+						inst.target = asset_get_index(room_title);
 						break;
 				}
 				break;

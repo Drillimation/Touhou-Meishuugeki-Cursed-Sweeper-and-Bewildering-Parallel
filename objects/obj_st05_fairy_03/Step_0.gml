@@ -11,6 +11,7 @@ if entered == true {
 		y_pos = irandom_range(32,96);
 		direction = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-45,45);
 		speed = 0;
+		baseAngle = 0;
 	}
 	
 	if count < 50 {
@@ -19,7 +20,6 @@ if entered == true {
 	if count >= 50 and count <= 130 {
 		if count mod 5 == 0 {
 			sound_ObjSound_Play(se_tan01);
-			baseAngle = 0;
 			var angleT = 0;
 			repeat(12) {
 				shot_CreateShotA1(x,y,1.5,baseAngle + angleT,spr_danmaku_kunai,5,0);

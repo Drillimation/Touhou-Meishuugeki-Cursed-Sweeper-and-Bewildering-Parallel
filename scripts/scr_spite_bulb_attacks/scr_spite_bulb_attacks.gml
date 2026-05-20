@@ -85,11 +85,11 @@ function scr_spite_bulb_attacks(){
 			if count == 60 {
 				repeat(10 + (global.main_stats.difficulty * 2)) {
 					var speedT = 2;
-					for(var i = 0; i < 18; i++) {
+					for(var i = 0; i < 12; i++) {
 						shot_CreateShotA1(x,y,speedT,angleT,spr_danmaku_ball_s1,10,0)
-						angleT += 360 / 18;
 						speedT -= 0.1;
 					}
+					angleT += 360 / (10 + (global.main_stats.difficulty * 2));
 				}
 				angleT += 13;
 			}

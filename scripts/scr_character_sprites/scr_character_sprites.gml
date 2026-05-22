@@ -200,5 +200,65 @@ function scr_character_sprites(){
 				}
 			}
 			break;
+		case "CHAR_KAGUYA":
+			sprite_index = spr_kaguya;
+			turret_index = spr_kaguya_turret;
+			shoot_sequence = function() {
+				if reload mod 9 == 0 {
+					sound_ObjSound_Play(se_plst00);
+					var nrmT = 5 - (action_focus * 2.5)
+					var sm_nrmT = 2.5 - (action_focus * 1.25)
+					var twistT = floor(global.player_stats[play_id].power_items / 25);
+					var angleT = (90 + (twistT * sm_nrmT))
+					repeat(1 + twistT) {
+						playermain_CreatePlayerShotA1(x,y,4,angleT,5,1,spr_kaguya_amulet_1,-1);
+						angleT -= (nrmT)
+					}
+				}
+				if global.player_stats[play_id].power_items >= 12 and reload mod 10 == 5 {
+					var nrmT = 10 - (action_focus * 5)
+					var sm_nrmT = 5
+					var twistT = floor(global.player_stats[play_id].power_items / 50);
+					var angleT = 0
+					repeat(1 + twistT) {
+						var inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,turret_pos),y_pos + lengthdir_y(8,turret_pos),4,90 - angleT,1,1,spr_kaguya_amulet_2,-1)
+						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
+						inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,180 - turret_pos),y_pos + lengthdir_y(8,180 - turret_pos),4,90 + angleT,1,1,spr_kaguya_amulet_2,-1)
+						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
+						angleT += (nrmT)
+					}
+				}
+				reload++;
+			}
+			bomb_sequence = function() {
+				var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+				shot_CreateSpellCard("PLAYER",spr_kaguya_portrait,0,_load_file.player_spell.CHAR_KAGUYA);
+				sound_ObjSound_Play(se_cat00);
+				sound_ObjSound_Play(se_nep00);
+				var angleT = 0;
+				var lasercol = [0,2,5,9,12]
+				var i = 0;
+				repeat(5) {
+					var inst = playermain_CreatePlayerShotA1(x,y,0,angleT,1,9999,spr_danmaku_laser,lasercol[i])
+					prop_ObjShot_SetEraseShot(inst,true)
+					prop_ObjShot_SetDeleteFrame(inst,300);
+					
+					with(inst) {
+						image_xscale = 16;
+						set_function = function() {
+							with(obj_player) {
+								if sprite_index == spr_kaguya { other.tag_along = id }
+							}
+							//show_debug_message(y_pos / sprite_get_width(sprite_index));
+							x_pos = tag_along.x_pos
+							y_pos = tag_along.y_pos
+							direction += 3;
+						}
+					}
+					angleT += 72
+					i++;
+				}
+			}
+			break;
 	}
 }

@@ -222,9 +222,7 @@ function scr_character_sprites(){
 					var angleT = 0
 					repeat(1 + twistT) {
 						var inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,turret_pos),y_pos + lengthdir_y(8,turret_pos),4,90 - angleT,1,1,spr_kaguya_amulet_2,-1)
-						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
 						inst = playermain_CreatePlayerShotA1(x_pos + lengthdir_x(16,180 - turret_pos),y_pos + lengthdir_y(8,180 - turret_pos),4,90 + angleT,1,1,spr_kaguya_amulet_2,-1)
-						move_ObjMove_SetAngleAtTarget(inst,obj_enemy);
 						angleT += (nrmT)
 					}
 				}

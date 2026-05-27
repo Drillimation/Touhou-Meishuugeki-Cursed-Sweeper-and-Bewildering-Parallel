@@ -1,0 +1,24 @@
+{
+    "dialogue_texts" : [
+        ["Marisa","Phew. Things are getting tougher than it looks, but it doesn't change my reason to keep searching for her."],
+        [" ","Who are you looking for?"],
+        ["Marisa","Camille, is that you!?"],
+        ["???","The Scarlet Devil isn't looking to speak with anyone at the moment."],
+        ["???","More importantly, I'm looking for the one who assassinated my husband nine months ago."],
+        ["Marisa","King Kourin was responsible for vanquishing the one who killed my mother when I was two."],
+        ["Camille","Did you think that killing my husband would stop the spread of Crimsonitism?"],
+        ["Camille","Yet his legacy will live on via his wife and the mother of Remilia and Flandre Scarlet."],
+        ["Camille","My grunts are hoping to bring vengeance over the love of my life."],
+        ["Marisa","I'm not here for a lecture on family hierarchy. I'm here for answers."],
+        ["Camille","I think that if you're who I think you are, I won't tell you where Flandre is. She is not in the mansion right now."],
+        ["Marisa","Are you kidding me? There should be a deflection in finding her."],
+        ["Camille","I'm afraid I can't tell you."],
+        ["Marisa","That's a shame. I guess I'll have to learn the hard way."],
+        ["Camille","You speak of my daughters as if they are mere subjects to be managed."],
+        ["Camille","Perhaps you've forgotten your place, shrine maiden."],
+        ["Marisa","I'm not staying in what I experienced in the timespan between the deaths of my mother and your husband."],
+        ["Marisa","I'm sure you're asking me for a rematch."],
+        ["Camille","Then let me see if your skills match your arrogance."],
+        ["Camille","If you want the truth, you'll have to earn it."]
+    ]
+}

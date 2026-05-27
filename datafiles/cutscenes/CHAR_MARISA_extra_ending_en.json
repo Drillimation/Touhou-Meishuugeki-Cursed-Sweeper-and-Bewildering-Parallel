@@ -1,0 +1,23 @@
+{
+    "dialogue_texts" : [
+        ["Marisa","Well, everything I went through today has been a headache. At least the mansion is quiet again."],
+        ["Marisa","First, I hear about the rumors of the glohm which turned out to be true..."],
+        ["Marisa","And now a day at the Scarlet Devil Mansion hoping to find Flandre led to me coming home with nothing."],
+        ["Marisa","I should head back to the Kozankyo Imperial Palace. I've had enough extra for one day."],
+        [" ","Later that night..."],
+        ["Marisa","What a grumpy 24 hours it has been. I definitely deserved that dance break with Kourin. I'm going to sleep..."],
+        [" ","Uhh, My Majesty?"],
+        ["Marisa","Yeah, yeah, I hear you. What is it this time?"],
+        [" ","You have to return to the Shirogane Manor."],
+        ["Marisa","Back again? What has happened now? I swear it's becoming a magnet for trouble."],
+        [" ","Fusana's been glohmed again."],
+        ["Marisa","Infected again already!? I thought I cleared the source of that mess yesterday. Who's done it now?"],
+        ["","No clue. While I was on the way to the shrine, I noticed some other individuals had been infected!"],
+        ["Marisa","That sounds worse than before. If more people are actually getting sick, we've got to move fast."],
+        ["","This is so serious that I'm going with you this time."],
+        ["Marisa","Looks like the glohm isn't just a curse anymore - it's becoming a full-blown epidemic."],
+        ["","Exactly! There have been confirmed cases of human-to-human transmission."],
+        ["Marisa","I'm definitely in. Let's head back to your home so I can find the cause and put a stop to it, one way or another."],
+        [" ","To be continued in The Bewildering Parallel..."]
+    ]
+}

@@ -70,7 +70,8 @@
         "CHAR_BERENICE" : "Berenice Grieg",
         "CHAR_VERONICA" : "Veronica Grieg",
         "CHAR_KOAKUMA" : "Koakuma",
-        "CHAR_CAMILLE" : "Camille Scarlet"
+        "CHAR_CAMILLE" : "Camille Scarlet",
+        "CHAR_DOROMI" : "Doromi Akatsuki"
     },
     "char_desc" : {
         "CHAR_KOTORI" : "Kozankyo's Clumsy Mail Courier",
@@ -83,6 +84,7 @@
         "CHAR_BERENICE" : "The Cursed Sweeper",
         "CHAR_VERONICA" : "Berenice's Bewildering Parallel",
         "CHAR_KOAKUMA" : "Member of the Order's Elite Four",
-        "CHAR_CAMILLE" : "The Widowed Consort of the Scarlet Devil"
+        "CHAR_CAMILLE" : "The Widowed Consort of the Scarlet Devil",
+        "CHAR_DOROMI" : "Dhampir of the Twilight"
     }
 }

@@ -70,7 +70,8 @@
         "CHAR_BERENICE" : "ベレニス・グリーグ",
         "CHAR_VERONICA" : "ベロニカ・グリーグ",
         "CHAR_KOAKUMA" : "コアクマ",
-        "CHAR_CAMILLE" : "カミール・スカーレット"
+        "CHAR_CAMILLE" : "カミール・スカーレット",
+        "CHAR_DOROMI" : "赤月ドロミ"
     },
     "char_desc" : {
         "CHAR_KOTORI" : "鉱山京の不器用な天狗の宅配者",
@@ -83,6 +84,7 @@
         "CHAR_BERENICE" : "絶縁体の掃除人",
         "CHAR_VERONICA" : "ベレニスの不可解な類似点",
         "CHAR_KOAKUMA" : "秩序の四天王の会員",
-        "CHAR_CAMILLE" : "紅悪魔の未亡人の妃"
+        "CHAR_CAMILLE" : "紅悪魔の未亡人の妃",
+        "CHAR_DOROMI" : "黄昏のダンピール"
     }
 }

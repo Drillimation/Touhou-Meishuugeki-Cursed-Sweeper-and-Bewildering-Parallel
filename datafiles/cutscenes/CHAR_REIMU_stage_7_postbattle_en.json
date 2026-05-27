@@ -1,0 +1,16 @@
+{
+    "dialogue_texts" : [
+        ["Reimu","Is that it? I've got things to do and a shrine to get back to."],
+        ["Reimu","Are you going to talk, or do we go for round two?"],
+        ["Camille","You have a tenacity that is as annoying as it is effective, shrine maiden."],
+        ["Camille","Very well. My daughter isn't missing in the way you fear."],
+        ["Reimu","Stop the cryptic games. Where is she?"],
+        ["Camille","She is currently in no man's land, where the barrier is thinnest."],
+        ["Camille","She's trying to understand why you rubbed the curse of glohm off some maid."],
+        ["Reimu","Typical. Always making things more complicated than they need to be."],
+        ["Camille","At the very edge of the world, she isn't just looking for answers."],
+        ["Reimu","No man's land isn't an actual location. I have no time to do extra searching."],
+        ["Reimu","In that case, I'll just go back to the Hakurei Shrine and call it \"solved.\""],
+        ["Camille","You shouldn't celebrate too early because the wounded Berenice is calling for help."]
+    ]
+}

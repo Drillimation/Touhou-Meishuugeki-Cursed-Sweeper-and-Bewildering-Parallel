@@ -1,0 +1,24 @@
+{
+    "dialogue_texts" : [
+        ["Reimu","Unhelpful. Totally unhelpful."],
+        ["Reimu","And that \"day off\" Koakuma mentioned, I don't even know where Flandre may be."],
+        [" ","Who are you looking for?"],
+        ["Reimu","Uhh, who are you?"],
+        ["???","The Scarlet Devil isn't looking to speak with anyone at the moment."],
+        ["???","More importantly, I'm looking for the one who assassinated my husband nine months ago."],
+        ["Reimu","Your husband... that has to be Vladrouge Scarlet."],
+        ["Camille","Correct. I am his wife and the mother of Remilia and Flandre Scarlet."],
+        ["Camille","My grunts are hoping to bring vengeance over the love of my life."],
+        ["Reimu","I'm not in the mood for listening to your sob story. Koakuma was no help in explaining her whereabouts."],
+        ["Camille","I think that if you're who I think you are, I won't tell you where Flandre is. She is not in the mansion right now."],
+        ["Reimu","What!? What do you mean she's not here? Tell me where she is at once."],
+        ["Camille","I'm afraid I can't tell you."],
+        ["Reimu","If she's gone into hiding without proper order, she's just making a bigger mess for the kingdom to clean up."],
+        ["Camille","You speak of my daughters as if they are mere subjects to be managed."],
+        ["Camille","Perhaps you've forgotten your place, shrine maiden."],
+        ["Reimu","I know exactly where my place is."],
+        ["Reimu","The Hakurei Shrine insists all tell the truth before things get complicated."],
+        ["Camille","Then let me see if your skills match your arrogance."],
+        ["Camille","If you want the truth, you'll have to earn it."]
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "dialogue_texts" : [
+        ["Yukari","Even in the quietest corners of the world, there are echoes."],
+        ["Yukari","Meeting those rumors and truth of glohm yesterday reminded me that silence is a demand to be broken."],
+        ["Yukari","And today's attempt at finding Flandre... ended in failure."],
+        ["Yukari","I simply can’t go back to Yakumoshi..."],
+        [" ","Later that night..."],
+        ["Yukari","Sleep... a time I love from the hours from sunset to sunrise..."],
+        [" ","Uhh, My Majesty?"],
+        ["Yukari","Sir, I don’t wish to be disturbed at this hour. What is it?"],
+        [" ","You have to return to the Shirogane Manor."],
+        ["Yukari","Must I!? I just finished putting things back in order. What could possibly have gone wrong so quickly?"],
+        [" ","Fusana's been glohmed again."],
+        ["Yukari","Again? Does that mean glohm is persistent? It seems someone else is quite intent on making my habit of chasing evil a permanent job. Anyway, who has done it now?"],
+        ["","No clue. While I was on the way to the shrine, I noticed some other individuals had been infected!"],
+        ["Yukari","Then it seems my work is never truly done."],
+        ["","This is so serious that I'm going with you this time."],
+        ["Yukari","If they want to test the patience of a queen, I shall be happy to provide a lesson on how reality handles pests."],
+        ["","Exactly! There have been confirmed cases of human-to-human transmission."],
+        ["Yukari","Very well then - let us return."],
+        [" ","To be continued in The Bewildering Parallel..."]
+    ]
+}

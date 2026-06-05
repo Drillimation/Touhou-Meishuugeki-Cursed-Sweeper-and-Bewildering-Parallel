@@ -5,7 +5,7 @@ hp = start_hp;
 hurt_on_collide = false;
 life = 1;
 max_hp = life + 1;
-timer = 45;
+timer = 60;
 tick = 0;
 
 xview = camera_get_view_x(view_camera[0]);

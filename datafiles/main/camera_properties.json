@@ -94,5 +94,21 @@
         "midboss_sprite" : "spr_berenice_day",
         "camera_path" : "path_scroll_u_h2",
         "cutscene_index" : "_stage_6_day_prebattle"
+    },
+    "STAGE_07_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_koakuma_extra",
+        "midboss_sprite" : "spr_koakuma",
+        "camera_path" : "path_scroll_u_h1",
+        "cutscene_index" : "_stage_7_midbattle"
+    },
+    "STAGE_07" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_camille",
+        "midboss_sprite" : "spr_camille",
+        "camera_path" : "path_scroll_u_h2",
+        "cutscene_index" : "_stage_7_prebattle"
     }
 }

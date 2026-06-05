@@ -57,7 +57,9 @@
         "SPELL_BERENICE_04" : "秩序「エンドレス・レイン」",
         "SPELL_BERENICE_05" : "災厄「ガゼット・オブ・グルーミー・サンデー」",
         "SPELL_BERENICE_06" : "禁符「世界の終わりのナイトメア」",
-        "SPELL_BERENICE_07" : "熟達「ベルサイユの亡霊の聖歌隊」"
+        "SPELL_BERENICE_07" : "熟達「ベルサイユの亡霊の聖歌隊」",
+        "SPELL_KOAKUMA_01" : "秘書「クリムゾン・アーカイブの頁」",
+        "SPELL_KOAKUMA_02" : "禁書「混沌と翻るページ」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",

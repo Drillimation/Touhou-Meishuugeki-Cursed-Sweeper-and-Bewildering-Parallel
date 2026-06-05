@@ -57,7 +57,9 @@
         "SPELL_BERENICE_04" : "Order Sign \"Endless Rain\"",
         "SPELL_BERENICE_05" : "Calamity \"The Gazette of Gloomy Sunday\"",
         "SPELL_BERENICE_06" : "Forbidden Sign \"Nightmare of the World's End\"",
-        "SPELL_BERENICE_07" : "Mastery Sign \"Revenant Choir of Versailles\""
+        "SPELL_BERENICE_07" : "Mastery Sign \"Revenant Choir of Versailles\"",
+        "SPELL_KOAKUMA_01" : "Secret Book \"Pages of the Crimson Archive\"",
+        "SPELL_KOAKUMA_02" : "Forbidden Text \"Flapping Pages of Chaos\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",

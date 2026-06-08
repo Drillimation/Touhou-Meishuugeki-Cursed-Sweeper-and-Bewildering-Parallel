@@ -59,7 +59,16 @@
         "SPELL_BERENICE_06" : "禁符「世界の終わりのナイトメア」",
         "SPELL_BERENICE_07" : "熟達「ベルサイユの亡霊の聖歌隊」",
         "SPELL_KOAKUMA_01" : "秘書「クリムゾン・アーカイブの頁」",
-        "SPELL_KOAKUMA_02" : "禁書「混沌と翻るページ」"
+        "SPELL_KOAKUMA_02" : "禁書「混沌と翻るページ」",
+        "SPELL_CAMILLE_01" : "礼儀「真紅応接」",
+        "SPELL_CAMILLE_02" : "社交「幻想郷上級仕様 」",
+        "SPELL_CAMILLE_03" : "貴族「上流社会のガラスの天井」",
+        "SPELL_CAMILLE_04" : "血統「キルバーンの清流」",
+        "SPELL_CAMILLE_05" : "真紅主義「純血の哲学」",
+        "SPELL_CAMILLE_06" : "秩序「闘争的な優しさ」",
+        "SPELL_CAMILLE_07" : "緋紅「ブラドルージュの威光」",
+        "SPELL_CAMILLE_08" : "狂捜「お嬢様はいずこに」",
+        "SPELL_CAMILLE_09" : "禁徳「絶対なる君主」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",

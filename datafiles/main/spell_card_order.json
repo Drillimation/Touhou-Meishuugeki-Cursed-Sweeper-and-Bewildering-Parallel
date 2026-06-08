@@ -46,7 +46,23 @@
         "SPELL_BERENICE_05",
         "SPELL_BERENICE_06",
         "SPELL_BERENICE_07",
+        "SPELL_VERONICA_01",
+        "SPELL_VERONICA_02",
+        "SPELL_VERONICA_03",
+        "SPELL_VERONICA_04",
+        "SPELL_VERONICA_05",
+        "SPELL_VERONICA_06",
+        "SPELL_VERONICA_07",
         "SPELL_KOAKUMA_01",
-        "SPELL_KOAKUMA_02"
+        "SPELL_KOAKUMA_02",
+        "SPELL_CAMILLE_01",
+        "SPELL_CAMILLE_02",
+        "SPELL_CAMILLE_03",
+        "SPELL_CAMILLE_04",
+        "SPELL_CAMILLE_05",
+        "SPELL_CAMILLE_06",
+        "SPELL_CAMILLE_07",
+        "SPELL_CAMILLE_08",
+        "SPELL_CAMILLE_09"
     ]
 }

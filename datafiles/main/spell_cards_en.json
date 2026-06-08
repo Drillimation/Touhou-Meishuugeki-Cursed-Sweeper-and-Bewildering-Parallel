@@ -59,7 +59,16 @@
         "SPELL_BERENICE_06" : "Forbidden Sign \"Nightmare of the World's End\"",
         "SPELL_BERENICE_07" : "Mastery Sign \"Revenant Choir of Versailles\"",
         "SPELL_KOAKUMA_01" : "Secret Book \"Pages of the Crimson Archive\"",
-        "SPELL_KOAKUMA_02" : "Forbidden Text \"Flapping Pages of Chaos\""
+        "SPELL_KOAKUMA_02" : "Forbidden Text \"Flapping Pages of Chaos\"",
+        "SPELL_CAMILLE_01" : "Etiquette Sign \"The Crimson Reception\"",
+        "SPELL_CAMILLE_02" : "Socialite Sign \"Gensokyo Elite Protocol\"",
+        "SPELL_CAMILLE_03" : "Aristocracy \"The Glass Ceiling of High Society\"",
+        "SPELL_CAMILLE_04" : "Lineage Sign \"The Cool Stream of Kilburne\"",
+        "SPELL_CAMILLE_05" : "Crimsonitism \"Philosophy of the Pure Bloodline\"",
+        "SPELL_CAMILLE_06" : "Order Sign \"Militant Grace\"",
+        "SPELL_CAMILLE_07" : "Scarlet Sign \"Grand Authority of Vladrouge\"",
+        "SPELL_CAMILLE_08" : "Frantic Search \"Where is the Mistress?\"",
+        "SPELL_CAMILLE_09" : "Forbidden Virtue \"The Absolute Sovereign\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",

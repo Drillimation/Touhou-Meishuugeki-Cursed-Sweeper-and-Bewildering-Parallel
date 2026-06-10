@@ -746,6 +746,8 @@
     {"id":{"name":"spr_boss_health_5","path":"sprites/spr_boss_health_5/spr_boss_health_5.yy",},},
     {"id":{"name":"spr_boss_health_7","path":"sprites/spr_boss_health_7/spr_boss_health_7.yy",},},
     {"id":{"name":"spr_boss_spell_2","path":"sprites/spr_boss_spell_2/spr_boss_spell_2.yy",},},
+    {"id":{"name":"spr_camille_portrait","path":"sprites/spr_camille_portrait/spr_camille_portrait.yy",},},
+    {"id":{"name":"spr_camille_spell","path":"sprites/spr_camille_spell/spr_camille_spell.yy",},},
     {"id":{"name":"spr_camille","path":"sprites/spr_camille/spr_camille.yy",},},
     {"id":{"name":"spr_danmaku_amulet","path":"sprites/spr_danmaku_amulet/spr_danmaku_amulet.yy",},},
     {"id":{"name":"spr_danmaku_arrowhead","path":"sprites/spr_danmaku_arrowhead/spr_danmaku_arrowhead.yy",},},

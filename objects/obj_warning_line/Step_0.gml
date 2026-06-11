@@ -7,8 +7,9 @@ y = yview + y_pos;
 x_pos += hspeed;
 y_pos += vspeed;
 
-depth = -y;
+depth = 5000 - y;
 direction += angular_velocity;
+image_angle = direction;
 
 if delay == 0 {
 	sound_ObjSound_Play(se_lazer00);

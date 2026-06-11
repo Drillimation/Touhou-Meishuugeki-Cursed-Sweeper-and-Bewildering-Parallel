@@ -1,11 +1,11 @@
 can_attack = false;
 entered = false;
-start_hp = 2500;
+start_hp = 3000;
 hp = start_hp;
 hurt_on_collide = false;
 life = 16;
 max_hp = life + 1;
-timer = 50;
+timer = 60;
 tick = 0;
 
 xview = camera_get_view_x(view_camera[0]);

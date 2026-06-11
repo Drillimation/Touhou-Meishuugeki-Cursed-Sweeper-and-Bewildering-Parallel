@@ -27,6 +27,7 @@ function scr_camille_attacks(){
 		if count == 0 {
 			x_pos = 128;
 			y_pos = 48;
+			timer = 60;
 		}
 		if count mod 8 == 0 {
 			sound_ObjSound_Play(se_tan01);
@@ -43,6 +44,9 @@ function scr_camille_attacks(){
 		}
 	}
 	attack_camille_03 = function() {
+		if count == 0 {
+			timer = 60;
+		}
 		if count mod 80 == 0 {
 			sound_ObjSound_Play(se_kira00);
 			repeat(4 + global.main_stats.difficulty) {
@@ -64,7 +68,10 @@ function scr_camille_attacks(){
 		}
 	}
 	attack_camille_04 = function() {
-		if count mod 120 == 0 {
+		if count == 0 {
+			timer = 60;
+		}
+		if count mod 180 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			var speedT = 2.5
 			var angleT = point_direction(x,y,obj_player.x,obj_player.y)
@@ -85,6 +92,9 @@ function scr_camille_attacks(){
 		}
 	}
 	attack_camille_05 = function() {
+		if count == 0 {
+			timer = 60;
+		}
 		if count mod 60 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			var angleT = irandom_range(0,360);
@@ -103,7 +113,7 @@ function scr_camille_attacks(){
 							sound_ObjSound_Play(se_kira00);
 							direction = point_direction(x,y,obj_camille.x,obj_camille.y);
 							move_ObjMove_SetAcceleration(self,0.05);
-							move_ObjMove_SetMaxSpeed(self,2.5);
+							move_ObjMove_SetMaxSpeed(self,2);
 						}
 						if count == 135 {
 							prop_ObjShot_SetAutoDelete(self,true)
@@ -118,8 +128,11 @@ function scr_camille_attacks(){
 		if count == 0 {
 			x_pos = 128;
 			y_pos = 48;
+			speed = 0;
+			move_mode = false;
+			timer = 60;
 		}
-		if count mod 140 == 0 {
+		if count mod 70 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			var angleT = irandom_range(0,360);
 			repeat(12 + (global.main_stats.difficulty * 2)) {
@@ -128,13 +141,12 @@ function scr_camille_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count > 50 {
-							move_ObjMove_SetAngle(self,direction + (0.8 * direction));
+							direction += 1.6;
 						}
 						if count == 50 {
 							speed = 0;
 						}
 						if count == 70 {
-							sound_ObjSound_Play(se_lazer00);
 							var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							shot_CreateStraightLaserA1(x,y,angleT,60,1,30,spr_danmaku_laser,60,image_index);
 							instance_destroy(self)
@@ -145,13 +157,12 @@ function scr_camille_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count > 50 {
-							move_ObjMove_SetAngle(self,direction + (0.8 * direction));
+							direction -= 1.6;
 						}
 						if count == 50 {
 							speed = 0;
 						}
 						if count == 70 {
-							sound_ObjSound_Play(se_lazer00);
 							var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							shot_CreateStraightLaserA1(x,y,angleT,60,1,30,spr_danmaku_laser,60,image_index);
 							instance_destroy(self)
@@ -164,58 +175,54 @@ function scr_camille_attacks(){
 	}
 	attack_camille_07 = function() {
 		if count == 0 {
+			timer = 60;
 			x_pos = 128;
 			y_pos = 144;
+			speed = 0;
+			move_mode = false;
 			var angleT = 0;
-			sound_ObjSound_Play(se_lazer00);
 			repeat(4) {
 				var inst = shot_CreateStraightLaserA1(x,y,angleT,30,1,9999,spr_danmaku_laser,30,0);
-				with(inst) {
-					set_function = function() {
-						move_ObjMove_SetAngularVelocity(self,0.4);
-					}
-				}
+				move_ObjMove_SetAngularVelocity(inst,0.4);
 				angleT += 360 / 4;
 			}
 			startAngle = choose(45,135);
 		}
-		if count mod 6 == 0 {
+		if count mod 12 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			repeat(5 + global.main_stats.difficulty) {
 				for(var i = -2; i < 3; i++) {
-					shot_CreateShotA1(x,y,1.6,startAngle + (i * 4),spr_danmaku_arrowhead,10,0)
+					shot_CreateShotA1(x,y,1.6,startAngle + (i * 2),spr_danmaku_arrowhead,10,0)
 				}
 				startAngle += 360 / (5 + global.main_stats.difficulty);
 			}
-			startAngle += 22.5;
+			startAngle += 2.5;
 		}
 	}
 	attack_camille_08 = function() {
 		if count == 0 {
 			offset = [0,255]
 			k = 0;
+			timer = 60;
+			offs = 0;
 		}
-		if count mod 40 == 0 {
+		if count mod 10 == 0 {
 			sound_ObjSound_Play(se_tan01);
-			var yx = -48;
+			var yx = -36;
 			repeat(4) {
 				shot_CreateShotA1(offset[k],obj_player.y_pos + yx,1.75,k * 180,spr_danmaku_ball_m1,10,10);
+				yx += 24;
 			}
 			if k == 0 { k = 1 }
 			if k == 1 { k = 0 }
-			yx += 32;
-			
-			
+		}
+		if count mod 10 == 0 {
+			var angleT = 0
 			repeat(12 + (global.main_stats.difficulty * 2)) {
-				var centerAngle = 270;
-				var spreadAngle = 60;
-				var bulletCount = 12 + (global.main_stats.difficulty * 2);
-				var i = 0;
-				var angleT = (centerAngle - spreadAngle / 2) + (i * (spreadAngle / (bulletCount - 1)));
-				
-				shot_CreateShotA1(x,y,0.9 + random_range(-0.1,0.1),angleT,spr_danmaku_pellet,15,12)
-				i++;
+				shot_CreateShotA1(x,y,0.9 + random_range(-0.1,0.1),angleT + offs,spr_danmaku_pellet,15,12)
+				angleT += 360 / (12 + (global.main_stats.difficulty * 2))
 			}
+			offs += 5;
 		}
 	}
 	
@@ -292,7 +299,7 @@ function scr_camille_attacks(){
 		if count > 60 {
 			if count mod 16 - global.main_stats.difficulty == 0 {
 				sound_ObjSound_Play(se_tan01);
-				for(var i = 0; i < 6; i++) {
+				for(var i = 0; i < 7; i++) {
 					shot_CreateShotA1((8 + (40 * i)) + irandom_range(-10,10),144,1.6,270,spr_danmaku_ball_s1,5,0);
 				}
 			}
@@ -377,8 +384,8 @@ function scr_camille_attacks(){
 		if count mod 160 == 0 {
 			var spacing = -36;
 			repeat(4) {
-				shot_CreateStraightLaserA1(obj_player.x_pos + spacing,0,75,38.4,1,60,spr_danmaku_laser,100,10);
-				shot_CreateStraightLaserA1(obj_player.x_pos + spacing,0,115,38.4,1,60,spr_danmaku_laser,100,10);
+				shot_CreateStraightLaserA1(obj_player.x_pos + spacing,0,255,38.4,1,60,spr_danmaku_laser,100,10);
+				shot_CreateStraightLaserA1(obj_player.x_pos + spacing,0,285,38.4,1,60,spr_danmaku_laser,100,10);
 				spacing += 24;
 			}
 		}
@@ -430,7 +437,7 @@ function scr_camille_attacks(){
 							sound_ObjSound_Play(se_kira00);
 							direction = point_direction(x,y,obj_camille.x,obj_camille.y);
 							move_ObjMove_SetAcceleration(self,0.05);
-							move_ObjMove_SetMaxSpeed(self,2.5);
+							move_ObjMove_SetMaxSpeed(self,2);
 						}
 						if count == 165 {
 							prop_ObjShot_SetAutoDelete(self,true)
@@ -448,20 +455,20 @@ function scr_camille_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_camille_portrait,0,_load_file.enemy_spell.SPELL_CAMILLE_06,spr_camille_spell)
 			global.main_stats.current_spell = "SPELL_CAMILLE_06"
-			move_ObjMove_SetX(self,128);
-			move_ObjMove_SetY(self,96);
+			x_pos = 128;
+			y_pos = 96;
 			speed = 0;
 			move_mode = false;
 			dir = 0;
 		}
 		
-		if count mod 140 == 0 {
+		if count >= 60 and count mod 70 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			var angleT = irandom_range(0,360);
 			repeat(14 + (global.main_stats.difficulty * 2)) {
 				var lasercolor = [14,2,8,5];
 				var inst = shot_CreateShotA1(x,y,1.25,angleT,spr_danmaku_ball_s1,10,lasercolor[irandom_range(0,3)]);
-				move_ObjMove_SetAngularVelocity(inst,0.6);
+				move_ObjMove_SetAngularVelocity(inst,6);
 				with(inst) {
 					set_function = function() {
 						if count == 75 {
@@ -469,13 +476,15 @@ function scr_camille_attacks(){
 							move_ObjMove_SetAngularVelocity(self,0);
 						}
 						if count == 115 {
+							speed = 1;
+							direction += 180;
 							sound_ObjSound_Play(se_lazer00);
 							var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							var laser = shot_CreateLooseLaserA1(x,y,1,angleT,1,1,spr_danmaku_laser,25,image_index);
 							with(laser) {
 								set_function = function() {
 									if count < 10 {
-										image_xscale += 0.5;
+										image_xscale += 0.1;
 									}
 								}
 							}
@@ -483,7 +492,7 @@ function scr_camille_attacks(){
 					}
 				}
 				inst = shot_CreateShotA1(x,y,1.25,angleT,spr_danmaku_ball_s1,10,lasercolor[irandom_range(0,3)]);
-				move_ObjMove_SetAngularVelocity(inst,-0.6);
+				move_ObjMove_SetAngularVelocity(inst,-6);
 				with(inst) {
 					set_function = function() {
 						if count == 75 {
@@ -491,19 +500,22 @@ function scr_camille_attacks(){
 							move_ObjMove_SetAngularVelocity(self,0);
 						}
 						if count == 115 {
+							speed = 1;
+							direction += 180;
 							var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							var laser = shot_CreateLooseLaserA1(x,y,1,angleT,1,1,spr_danmaku_laser,25,image_index);
 							with(laser) {
 								set_function = function() {
 									if count < 10 {
-										image_xscale += 0.5;
+										image_xscale += 0.1;
 									}
 								}
 							}
 						}
 					}
 				}
-				angleT = 360 / (14 + (global.main_stats.difficulty * 2))
+				angleT += 360 / (14 + (global.main_stats.difficulty * 2))
+				move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),60);
 			}
 		}
 	}
@@ -527,19 +539,15 @@ function scr_camille_attacks(){
 			var angleT = 0;
 			repeat(4) {
 				var inst = shot_CreateStraightLaserA1(x,y,angleT,30,1,9999,spr_danmaku_laser,30,0);
-				with(inst) {
-					set_function = function() {
-						move_ObjMove_SetAngularVelocity(self,-0.4);
-					}
-				}
+				move_ObjMove_SetAngularVelocity(inst,0.8);
 				angleT += 360 / 4;
 			}
 			startAngle = choose(45,135);
 		}
 		if count >= 60 {
-			if count mod 12 == 0 {
+			if count mod 24 == 0 {
 				sound_ObjSound_Play(se_tan01);
-				repeat(6 + (global.main_stats.difficulty * 2)) {
+				repeat(3 + global.main_stats.difficulty) {
 					shot_CreateShotA1(irandom_range(16,240),16,random_range(0.75,1.25),270 + irandom_range(-5,5),spr_danmaku_ball_l,15,0)
 				}
 			}
@@ -547,7 +555,7 @@ function scr_camille_attacks(){
 	}
 	spell_card_camille_08 = function() {
 		if count == 0 {
-			timer = 45;
+			timer = 60;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_camille_portrait,0,_load_file.enemy_spell.SPELL_CAMILLE_08,spr_camille_spell)
@@ -557,6 +565,7 @@ function scr_camille_attacks(){
 			x_pos = 128;
 			y_pos = 144;
 			invultime = 7200;
+			dir = 0;
 		}
 		if count < 100 {
 			image_alpha -= 0.01;
@@ -564,31 +573,24 @@ function scr_camille_attacks(){
 		}
 		
 		if count >= 60 {
-			if count mod 15 == 0 {
+			if count mod 30 == 0 {
 				sound_ObjSound_Play(se_tan01);
-				var startAngle = 240;
-				var sweepRange = 120;
-				var total_pulses = (5 + global.main_stats.difficulty)
-				for(var p = 0; p < total_pulses; p++) {
-					var pulseAngle = startAngle + (1 * (p * sweepRange / (total_pulses - 1)));
-					for (var i = -1; i < 2; i++) {
-						var finalAngle = pulseAngle + (i * 5);
-						shot_CreateShotA1(x,y,2.1,finalAngle,spr_danmaku_arrowhead,10,0);
+				var angleT = 0;
+				repeat(5 + global.main_stats.difficulty) {
+					for(var i = -2; i < 3; i++) {
+						shot_CreateShotA1(x,y,1.5,dir + (angleT + (i * 5)),spr_danmaku_arrowhead,10,0);
 					}
+					angleT += 360 / (5 + global.main_stats.difficulty)
 				}
+				dir += 2.5;
 			}
 			
-			if count mod 45 == 0 {
+			if count mod 90 == 0 {
 				sound_ObjSound_Play(se_kira00);
-				var startAngle = 240;
-				var sweepRange = 120;
-				var total_pulses = (5 + global.main_stats.difficulty)
-				for(var p = 0; p < total_pulses; p++) {
-					var pulseAngle = startAngle + (-1 * (p * sweepRange / (total_pulses - 1)));
-					for (var i = -1; i < 2; i++) {
-						var finalAngle = pulseAngle + (i * 5);
-						shot_CreateShotA1(x,y,2.1,finalAngle,spr_danmaku_arrowhead,10,0);
-					}
+				var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+				repeat(9 + (global.main_stats.difficulty * 3)) {
+					shot_CreateShotA1(x,y,1.5,angleT,spr_danmaku_ball_m1,10,10);
+					angleT += 360 / (9 + (global.main_stats.difficulty * 3));
 				}
 			}
 		}
@@ -599,7 +601,8 @@ function scr_camille_attacks(){
 		}
 	}
 	spell_card_camille_09 = function() {
-		if count == 0 { 
+		if count == 5 {
+			invultime = 0;
 			timer = 60;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
@@ -607,22 +610,27 @@ function scr_camille_attacks(){
 			global.main_stats.current_spell = "SPELL_CAMILLE_09"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
+			image_alpha = 1;
 			speed = 0;
 			move_mode = false;
 			waveCounter = 0;
 			matrixSpeed = 0;
 		}
-		waveCounter++;
-		matrixSpeed += 0.0012;
-		if count mod 16 == 0 {
-			sound_ObjSound_Play(se_tan01);
-			var baseAngle = 270;
-			var spreadAngle = 80;
-			for(var i = 0; i < 12 + global.main_stats.difficulty; i++) {
-				var angleT = ((baseAngle - spreadAngle) / 2) + (i * spreadAngle / (waveCounter - 1));
-			
-				var inst = shot_CreateShotA1(x,y,matrixSpeed,angleT,spr_danmaku_pellet,10,choose(0,12));
-				move_ObjMove_SetAcceleration(inst,0.01);
+		
+		if count >= 60 {
+			waveCounter++;
+			matrixSpeed += 0.0012;
+			if count mod 8 == 0 {
+				sound_ObjSound_Play(se_tan01);
+				var baseAngle = 270;
+				var spreadAngle = 80;
+				var angleT = waveCounter;
+				for(var i = 0; i < 12 + global.main_stats.difficulty; i++) {
+					var inst = shot_CreateShotA1(x,y,matrixSpeed,angleT + (i * 5),spr_danmaku_pellet,10,choose(0,12));
+					move_ObjMove_SetAcceleration(inst,0.01);
+					inst = shot_CreateShotA1(x,y,matrixSpeed,(angleT + 180) + (i * 5),spr_danmaku_pellet,10,choose(0,12));
+					move_ObjMove_SetAcceleration(inst,0.01);
+				}
 			}
 		}
 	}

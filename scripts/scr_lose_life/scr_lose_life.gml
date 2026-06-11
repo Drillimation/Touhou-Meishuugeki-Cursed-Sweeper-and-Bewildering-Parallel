@@ -10,11 +10,11 @@ function scr_lose_life(){
 	global.player_stats[play_id].deaths += 1;
 	if global.player_stats[play_id].cur_lives >= 1 {
 		//Respawn the player if any lives are remaining
-		if global.player_stats[play_id].cur_lives >= 12 {
+		if global.player_stats[play_id].power_items >= 12 {
 			repeat(4) {
-				item_CreateItemA2(spr_power_item_s,x,y,irandom_range(8,248),irandom_range(24,120),10,4)
+				item_CreateItemA2(spr_power_item_s,x_pos,y_pos,irandom_range(8,248),irandom_range(24,120),10,4)
 			}
-			item_CreateItemA2(spr_power_item_l,x,y,irandom_range(8,248),irandom_range(24,120),50,4)
+			item_CreateItemA2(spr_power_item_l,x_pos,y_pos,irandom_range(8,248),irandom_range(24,120),50,4)
 		}
 		player_SetPlayerPower(-12,play_id,true);
 		player_SetPlayerHealth(global.main_stats.max_health,play_id,false);

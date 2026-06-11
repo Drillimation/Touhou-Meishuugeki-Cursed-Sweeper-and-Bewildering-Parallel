@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"se_enep01.wav",
-  "volume":1.0,
+  "volume":0.5,
 }

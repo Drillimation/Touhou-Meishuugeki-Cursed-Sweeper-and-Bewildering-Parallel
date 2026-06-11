@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_warning_laser",
+    "path":"sprites/spr_warning_laser/spr_warning_laser.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

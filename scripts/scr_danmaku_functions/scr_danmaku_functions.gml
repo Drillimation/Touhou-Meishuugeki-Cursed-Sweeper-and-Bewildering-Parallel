@@ -259,7 +259,13 @@ function shot_CreateLooseLaserA1(_x,_y,_speed,_angle,_length,_width,_graphic,_de
 	/// @param {real} _delay The number of frames before the danmaku is allowed to hit the player.
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
-	var inst = instance_create_layer(_x,_y,"Danmaku",obj_enemy_bullet,{
+	xview = camera_get_view_x(view_camera[0]);
+	yview = camera_get_view_y(view_camera[0]);
+	var ex, ey
+	if _x != x { ex = xview + _x } else { ex = x }
+	if _y != y { ey = yview + _y } else { ey = y }
+	
+	var inst = instance_create_layer(ex,ey,"Danmaku",obj_enemy_bullet,{
 		speed : _speed,
 		direction : _angle,
 		sprite_index : _graphic,
@@ -284,7 +290,13 @@ function shot_CreateStraightLaserA1(_x,_y,_angle,_length,_width,_deletetime,_gra
 	/// @param {real} _delay The number of frames before the laser is actually fired.
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
-	var inst = instance_create_layer(_x,_y,"Danmaku",obj_warning_line,{
+	xview = camera_get_view_x(view_camera[0]);
+	yview = camera_get_view_y(view_camera[0]);
+	var ex, ey
+	if _x != x { ex = xview + _x } else { ex = x }
+	if _y != y { ey = yview + _y } else { ey = y }
+	
+	var inst = instance_create_layer(ex,ey,"Danmaku",obj_warning_line,{
 		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg,

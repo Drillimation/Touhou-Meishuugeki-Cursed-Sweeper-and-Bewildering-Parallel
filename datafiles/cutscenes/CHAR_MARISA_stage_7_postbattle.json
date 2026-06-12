@@ -1,0 +1,22 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",0,0,16],
+        ["scr_cutscene_set_portrait","spr_camille_portrait",8,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",2],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",3],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",4],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",5],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",6],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",7],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",8],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",2,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",9],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",10],
+        ["scr_cutscene_remove_portrait","spr_marisa_portrait"],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_postbattle",11],
+        ["scr_cutscene_game_clear"]
+    ]
+}

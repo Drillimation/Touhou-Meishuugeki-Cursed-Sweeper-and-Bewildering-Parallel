@@ -34,7 +34,12 @@ if delay <= 0 {
 				case 1: global.main_stats.max_health = 30; break;
 			}
 			instance_destroy();
-			instance_create_depth(656,32,0,obj_difficulty_select)
+			if global.freeplaymode == true {
+				instance_create_depth(656,32,0,obj_difficulty_select)
+			}
+			else {
+				instance_create_depth(656,32,0,obj_episode_select)
+			}
 		}
 		
 		if (b_button) or count == 1800 {

@@ -8,7 +8,10 @@ if (a_button) {
 	}
 	else {
 		scr_stop_bgm();
-		room_goto(room_transition_1);
+		switch(global.main_stats.stage) {
+			case 1:	room_goto(room_transition_1); break;
+			case 7: room_goto(room_transition_7); break;
+		}
 	}
 }
 if keyboard_check_pressed(vk_f1) {

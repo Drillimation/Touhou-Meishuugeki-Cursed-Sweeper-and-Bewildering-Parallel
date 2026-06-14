@@ -21,7 +21,7 @@ if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
 	draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
 }
 else {
-	draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT NOT MET" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
+	draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT NOT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
 }
 draw_set_color(make_color_rgb(255,255,255));
 draw_set_halign(fa_right);

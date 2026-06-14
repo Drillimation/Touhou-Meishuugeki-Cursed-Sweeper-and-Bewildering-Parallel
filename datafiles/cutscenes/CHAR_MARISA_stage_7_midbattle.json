@@ -5,14 +5,14 @@
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",1],
         ["scr_cutscene_set_portrait","spr_marisa_portrait",4,0,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",2],
-        ["scr_cutscene_set_portrait","spr_koakuma_portrait",0,0,16],
+        ["scr_cutscene_set_portrait","spr_koakuma_portrait",0,128,16],
         ["scr_cutscene_reveal_name","CHAR_KOAKUMA"],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",3],
         ["scr_cutscene_set_portrait","spr_marisa_portrait",0,0,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",4],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",5],
-        ["scr_cutscene_set_portrait","spr_koakuma_portrait",2,0,16],
+        ["scr_cutscene_set_portrait","spr_koakuma_portrait",2,128,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_7_midbattle",6],
-        ["scr_cutscene_create_instance",128,96,"Instances","obj_koakuma"]
+        ["scr_cutscene_create_instance",128,96,"Instances","obj_koakuma_extra"]
     ]
 }

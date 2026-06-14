@@ -12,6 +12,7 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 		event_perform(ev_create,0);
 	}
 }
+/*
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 var inst = instance_create_layer(xview + 128,yview + 64,"Instances",obj_spawn_midboss);
@@ -19,3 +20,8 @@ with(inst) {
 	sprite_index = spr_camille;
 	midboss = obj_camille;
 }
+*/
+var load_file2 = scr_json_load_file("cutscenes/CHAR_KAGUYA_stage_7_postbattle" + string(global.suf) + ".json");
+var cutscene = scr_json_load_file("cutscenes/CHAR_KAGUYA_stage_7_postbattle.json")
+s_scene_info = cutscene.t_scene_info;
+scr_create_cutscene(s_scene_info,obj_cutscene_textbox);

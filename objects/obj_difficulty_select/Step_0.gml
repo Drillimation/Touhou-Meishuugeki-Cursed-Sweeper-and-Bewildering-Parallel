@@ -38,7 +38,12 @@ if delay <= 0 {
 		if (b_button) {
 			scr_one_channel_sound(snd_menucancel);
 			instance_destroy();
-			instance_create_depth(656,32,0,obj_mode_select)
+			if global.freeplaymode == true {
+				instance_create_depth(656,32,0,obj_mode_select)
+			}
+			else {
+				instance_create_depth(656,32,0,obj_episode_select)
+			}
 		}
 		
 		if count == 1800 {

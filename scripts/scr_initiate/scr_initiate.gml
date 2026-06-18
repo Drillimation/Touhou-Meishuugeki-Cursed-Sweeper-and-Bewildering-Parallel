@@ -44,7 +44,7 @@ function scr_system_initiate(_no_of_players = 1){
 			point_collected : 0,
 			power_collected : 0,
 			start_x : (global.playing_field.x1 + 64) + (i * 128),
-			start_y : global.playing_field.y1 + 192,
+			start_y : global.playing_field.y1 + 208,
 			bombscore : 100000,
 			received : 1
 		}

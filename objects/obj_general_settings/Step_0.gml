@@ -51,6 +51,8 @@ if delay <= 0 {
 		for(var i = 0; i < 12; i++) {
 			fmod_sound_set_music_channel_volume(global.bgm,i,global.game_options.bgm_volume);
 		}
+		if global.game_options.bgm_volume != 0 { scr_change_bgm("bgm/title.it") }
+		else { scr_stop_bgm() }
 		global.game_options.sfx_volume = option_values[1];
 		audio_group_set_gain(audiogroup_default,global.game_options.sfx_volume,0);
 		global.game_options.fullscreen = option_values[2];

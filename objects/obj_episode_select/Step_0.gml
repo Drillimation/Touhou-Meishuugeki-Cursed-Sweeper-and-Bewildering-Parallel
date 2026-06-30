@@ -40,6 +40,10 @@ if delay <= 0 {
 						player_SetPlayerPower(100,i);
 					}
 					break;
+				case 2: 
+					global.main_stats.stage = 1; 
+					global.main_stats.time_of_day = "NIGHT";
+					break;
 			}
 			instance_destroy();
 			instance_create_depth(656,32,0,obj_difficulty_select)

@@ -45,9 +45,9 @@
     },
     "episode_select" : {
         "menu_options" : [
-            "THE CURSED SWEEPER",
+            "CURSED SWEEPER",
             "EXTRA STAGE",
-            "THE BEWILDERING PARALLEL",
+            "BEWILDERING PARALLEL",
             "PHANTASM STAGE"
         ],
         "menu_description" : [

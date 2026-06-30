@@ -39,7 +39,7 @@ if delay <= 0 {
 			scr_one_channel_sound(snd_menucancel);
 			instance_destroy();
 			if global.freeplaymode == true {
-				instance_create_depth(656,32,0,obj_mode_select)
+				instance_create_depth(656,32,0,obj_free_play_episode_select)
 			}
 			else {
 				instance_create_depth(656,32,0,obj_episode_select)

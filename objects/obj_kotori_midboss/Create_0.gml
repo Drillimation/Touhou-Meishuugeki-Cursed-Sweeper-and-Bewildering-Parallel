@@ -35,3 +35,7 @@ for(var i = 0; i < 16; i++) {
 }
 
 invultime = 15;
+
+if global.main_stats.time_of_day == "NIGHT" {
+	image_blend = make_colour_rgb(255,191,191);
+}

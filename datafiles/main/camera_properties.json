@@ -110,5 +110,101 @@
         "midboss_sprite" : "spr_camille",
         "camera_path" : "path_scroll_h2",
         "cutscene_index" : "_stage_7_prebattle"
+    },
+    "STAGE_01_NIGHT_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_kotori_midboss",
+        "midboss_sprite" : "spr_kotori",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_1_night_prebattle"
+    },
+    "STAGE_01_NIGHT" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_kotori_night",
+        "midboss_sprite" : "spr_kotori",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_1_night_prebattle"
+    },
+    "STAGE_02_NIGHT_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_koko_midboss",
+        "midboss_sprite" : "spr_koko",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_2_night_midbattle"
+    },
+    "STAGE_02_NIGHT" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_ritsuu",
+        "midboss_sprite" : "spr_ritsuu",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_2_night_prebattle"
+    },
+    "STAGE_03_NIGHT_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_helene_midboss",
+        "midboss_sprite" : "spr_helene",
+        "camera_path" : "path_scroll_s_h1",
+        "cutscene_index" : "_stage_3_night_prebattle"
+    },
+    "STAGE_03_NIGHT" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_helene_night",
+        "midboss_sprite" : "spr_helene",
+        "camera_path" : "path_scroll_s_h2",
+        "cutscene_index" : "_stage_3_night_prebattle"
+    },
+    "STAGE_04_NIGHT_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_saika_midboss",
+        "midboss_sprite" : "spr_saika",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_4_night_midbattle"
+    },
+    "STAGE_04_NIGHT" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_ryuuko",
+        "midboss_sprite" : "spr_ryuuko",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_4_night_prebattle"
+    },
+    "STAGE_05_NIGHT_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_spite_bulb",
+        "midboss_sprite" : "spr_spite_bulb",
+        "camera_path" : "path_scroll_m_h1",
+        "cutscene_index" : "_stage_5_night_prebattle"
+    },
+    "STAGE_05_NIGHT" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_fusana_night",
+        "midboss_sprite" : "spr_fusana_night",
+        "camera_path" : "path_scroll_m_h2",
+        "cutscene_index" : "_stage_5_night_prebattle"
+    },
+    "STAGE_06_NIGHT_MID" : {
+        "stage_speed" : 0.625,
+        "end_path_function" : "MIDBOSS",
+        "midboss" : "obj_spite_bulb_2",
+        "midboss_sprite" : "spr_spite_bulb",
+        "camera_path" : "path_scroll_u_h1",
+        "cutscene_index" : "_stage_6_night_prebattle"
+    },
+    "STAGE_06_NIGHT" : {
+        "stage_speed" : 0.75,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_veronica_day",
+        "midboss_sprite" : "spr_veronica_day",
+        "camera_path" : "path_scroll_u_h2",
+        "cutscene_index" : "_stage_6_night_prebattle"
     }
 }

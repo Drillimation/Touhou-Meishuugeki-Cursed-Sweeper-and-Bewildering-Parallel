@@ -310,37 +310,33 @@ function scr_kotori_attacks(){
 		}
 		
 		if count == 60 {
-			if x_pos > 128 { ex = 16 }
+			if x_pos >= 128 { ex = 16 }
 			else { ex = 240 }
 			ey = irandom_range(32,144)
-			move_ObjMove_SetDestAtSpeed(self,ex,ey,4);
+			move_ObjMove_SetDestAtFrame(self,ex,ey,60);
 		}
-		if count >= 61 {
-			if point_distance(x_pos,y_pos,ex,ey) > 4 {
-				if count mod 10 == 0 {
-					var angleT = irandom_range(0,360);
-					sound_ObjSound_Play(se_tan01);
-					repeat(4 + (global.main_stats.difficulty * 2)) {
-						shot_CreateShotA1(x,y,1.25,angleT,spr_danmaku_amulet,5,15);
-						angleT += 10;
-						var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
-						with(inst) {
-							set_function = function() {
-								if count == 10 { direction += 90 }
-								if count == 20 { 
-									direction -= 90; 
-									count = 0; 
-								}
+		if count >= 60 {
+			if count mod 10 == 0 {
+				var angleT = irandom_range(0,360);
+				sound_ObjSound_Play(se_tan01);
+				repeat(4 + (global.main_stats.difficulty * 2)) {
+					shot_CreateShotA1(x,y,1.25,angleT,spr_danmaku_amulet,5,15);
+					angleT += 10;
+					var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
+					with(inst) {
+						set_function = function() {
+							if count == 10 { direction += 90 }
+							if count == 20 { 
+								direction -= 90; 
+								count = 0; 
 							}
 						}
 					}
 				}
 			}
-			else {
-				move_mode = false;
-				speed = 0;
-				count = 50;
-			}
+		}
+		if count == 120 {
+			count = 50;
 		}
 	}
 	spell_card_kotori_05 = function() {

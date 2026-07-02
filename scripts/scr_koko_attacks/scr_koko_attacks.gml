@@ -165,6 +165,44 @@ function scr_koko_attacks(){
 			count = 59;
 		}
 	}
+	spell_card_koko_02 = function() {
+		if count == 0 { 
+			timer = 40;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_koko_portrait,0,_load_file.enemy_spell.SPELL_KOKO_02,spr_koko_spell)
+			global.main_stats.current_spell = "SPELL_KOKO_02"
+			move_ObjMove_SetX(self,128);
+			move_ObjMove_SetY(self,48);
+			speed = 0;
+			move_mode = false;
+		}
+		
+		if count >= 60 {
+			sound_ObjSound_Play(se_tan02)
+			if count mod 20 == 0 {
+				repeat(3 + global.main_stats.difficulty) {
+					var inst = shot_CreateShotA1(x,y,random_range(0.75,1.5),irandom_range(0,360),spr_danmaku_ball_m1,10,10);
+					with(inst) {
+						set_function = function() {
+							if count mod 15 == 0 {
+								direction += irandom_range(-20,20);
+								speed += random_range(-0.25,0.25);
+								speed = clamp(speed,0.5,2);
+							}
+							if count mod 3 == 0 {
+								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
+								prop_ObjShot_FadeDelete(inst,0.005);
+							}
+						}
+					}
+				}
+			}
+		}
+		if count mod 180 == 0 {
+			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
+		}
+	}
 	spell_card_koko_03 = function() {
 		if count == 0 { 
 			timer = 40;
@@ -228,6 +266,52 @@ function scr_koko_attacks(){
 				move_mode = false;
 				count = 59;
 			}
+		}
+	}
+	spell_card_koko_04 = function() {
+		if count == 0 { 
+			timer = 40;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_koko_portrait,0,_load_file.enemy_spell.SPELL_KOKO_04,spr_koko_spell)
+			global.main_stats.current_spell = "SPELL_KOKO_04"
+			move_ObjMove_SetX(self,128);
+			move_ObjMove_SetY(self,48);
+			speed = 0;
+			move_mode = false;
+		}
+		
+		if count >= 60 {
+			sound_ObjSound_Play(se_tan02)
+			if count mod 20 == 0 {
+				repeat(3 + global.main_stats.difficulty) {
+					var inst = shot_CreateShotA1(x,y,random_range(0.75,1.5),irandom_range(0,360),spr_danmaku_ball_m1,10,10);
+					with(inst) {
+						set_function = function() {
+							if count mod 15 == 0 {
+								direction += irandom_range(-20,20);
+								speed += random_range(-0.25,0.25);
+								speed = clamp(speed,0.5,2);
+							}
+							if count mod 3 == 0 {
+								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
+								prop_ObjShot_FadeDelete(inst,0.005);
+							}
+						}
+					}
+				}
+			}
+		}
+		if count mod 300 == 0 {
+			sound_ObjSound_Play(se_boon01)
+			invultime = 120;
+			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),120);
+		}
+		if invultime >= 1 {
+			image_alpha = 0;
+		}
+		else {
+			image_alpha = 1;
 		}
 	}
 	spell_card_koko_05 = function() {

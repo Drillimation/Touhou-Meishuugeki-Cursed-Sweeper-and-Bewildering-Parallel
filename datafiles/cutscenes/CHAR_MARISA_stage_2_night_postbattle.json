@@ -1,0 +1,27 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",0,0,16],
+        ["scr_cutscene_set_portrait","spr_ritsuu_portrait",9,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",0],
+        ["scr_cutscene_set_portrait","spr_ritsuu_portrait",8,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",2],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",3],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",4],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",5],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",6],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",7],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",8],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",9],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",10],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",11],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",12],
+        ["scr_cutscene_set_portrait","spr_marisa_portrait",3,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",13],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",14],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",15],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_MARISA_stage_2_night_postbattle",16],
+        ["scr_cutscene_stage_clear"]
+    ]
+}

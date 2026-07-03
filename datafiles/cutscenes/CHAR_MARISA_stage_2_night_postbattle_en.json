@@ -1,0 +1,21 @@
+{
+    "dialogue_texts" : [
+        ["Ritsuu","Ugh... your magic is completely absurd."],
+        ["Ritsuu","Brute-forcing your way through shifting axes with raw firepower shouldn't even be possible..."],
+        ["Marisa","Heh, if a door's locked and the key keeps changing, you just gotta blow down the whole wall!"],
+        ["Marisa","Now, spill it. Why are you messing with the pathways around here?"],
+        ["Ritsuu","I am trying to prevent an architectural collapse, you dense thief."],
+        ["Ritsuu","This manor is caught in a severe temporal drift, slipping through multiple parallel timelines at once."],
+        ["Hiroyuki","A temporal drift..."],
+        ["Hiroyuki","That explains why the surrounding coordinates felt completely detached from the local geography."],
+        ["Ritsuu","Exactly."],
+        ["Ritsuu","I deployed the inversion charms to keep the glohm from crushing the inner grounds before the core stabilizes."],
+        ["Ritsuu","But since you've completely shattered my boundaries, the way to the center of the anomaly is wide open."],
+        ["Marisa","Perfect."],
+        ["Marisa","Sounds like there's some seriously rare treasure or a massive magic source waiting at the center."],
+        ["Marisa","Thanks for paving the way!"],
+        ["Hiroyuki","Don't lower your guard, My Majesty."],
+        ["Hiroyuki","If the temporal anomaly is deep enough to warp reality this heavily..."],
+        ["Hiroyuki","Whatever is causing it at the center won't be easily managed."]
+    ]
+}

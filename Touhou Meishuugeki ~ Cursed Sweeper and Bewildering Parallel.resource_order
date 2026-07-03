@@ -82,6 +82,7 @@
     {"name":"obj_helene_midboss","order":29,"path":"objects/obj_helene_midboss/obj_helene_midboss.yy",},
     {"name":"obj_item","order":12,"path":"objects/obj_item/obj_item.yy",},
     {"name":"obj_koakuma_extra","order":38,"path":"objects/obj_koakuma_extra/obj_koakuma_extra.yy",},
+    {"name":"obj_koko_midboss","order":41,"path":"objects/obj_koko_midboss/obj_koko_midboss.yy",},
     {"name":"obj_koko","order":28,"path":"objects/obj_koko/obj_koko.yy",},
     {"name":"obj_kotori_day","order":13,"path":"objects/obj_kotori_day/obj_kotori_day.yy",},
     {"name":"obj_kotori_midboss","order":25,"path":"objects/obj_kotori_midboss/obj_kotori_midboss.yy",},

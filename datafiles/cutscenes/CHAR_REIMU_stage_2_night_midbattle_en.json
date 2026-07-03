@@ -1,0 +1,14 @@
+{
+    "dialogue_texts" : [
+        ["Koko","Why have you returned, Your Honor? Also, who's this?"],
+        ["Hiroyuki","Hiroyuki Shirogane, head of the Shirogane Manor."],
+        ["Koko","So some cool man just shows up and he's part of your group?"],
+        ["Reimu","Look, we don't have time to argue about who's in the party."],
+        ["Reimu","The night is stretching out indefinitely, and the mist is getting thicker."],
+        ["Hiroyuki","She's right. The glohm ahead is fluctuating wildly."],
+        ["Hiroyuki","Something, or someone, is deliberately distorting the paths around the manor."],
+        ["Koko","Oh, you think you're just gonna stroll past?"],
+        ["Koko","I don't care if you brought a fancy bodyguard, Your Honor."],
+        ["Koko","Nobody passes the courtyard without a cleaning inspection!"]
+    ]
+}

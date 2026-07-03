@@ -179,8 +179,8 @@ function scr_koko_attacks(){
 		}
 		
 		if count >= 60 {
-			sound_ObjSound_Play(se_tan02)
 			if count mod 20 == 0 {
+				sound_ObjSound_Play(se_tan02)
 				repeat(3 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,y,random_range(0.75,1.5),irandom_range(0,360),spr_danmaku_ball_m1,10,10);
 					with(inst) {
@@ -190,17 +190,17 @@ function scr_koko_attacks(){
 								speed += random_range(-0.25,0.25);
 								speed = clamp(speed,0.5,2);
 							}
-							if count mod 3 == 0 {
+							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
-								prop_ObjShot_FadeDelete(inst,0.005);
+								prop_ObjShot_FadeDelete(inst,-0.01);
 							}
 						}
 					}
 				}
 			}
-		}
-		if count mod 180 == 0 {
-			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
+			if count mod 180 == 0 {
+				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
+			}
 		}
 	}
 	spell_card_koko_03 = function() {
@@ -282,8 +282,8 @@ function scr_koko_attacks(){
 		}
 		
 		if count >= 60 {
-			sound_ObjSound_Play(se_tan02)
 			if count mod 20 == 0 {
+				sound_ObjSound_Play(se_tan02)
 				repeat(3 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,y,random_range(0.75,1.5),irandom_range(0,360),spr_danmaku_ball_m1,10,10);
 					with(inst) {
@@ -293,20 +293,21 @@ function scr_koko_attacks(){
 								speed += random_range(-0.25,0.25);
 								speed = clamp(speed,0.5,2);
 							}
-							if count mod 3 == 0 {
+							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
-								prop_ObjShot_FadeDelete(inst,0.005);
+								prop_ObjShot_FadeDelete(inst,-0.01);
 							}
 						}
 					}
 				}
 			}
+			if count mod 300 == 0 {
+				sound_ObjSound_Play(se_boon01)
+				invultime = 120;
+				move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),120);
+			}
 		}
-		if count mod 300 == 0 {
-			sound_ObjSound_Play(se_boon01)
-			invultime = 120;
-			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),120);
-		}
+		
 		if invultime >= 1 {
 			image_alpha = 0;
 		}

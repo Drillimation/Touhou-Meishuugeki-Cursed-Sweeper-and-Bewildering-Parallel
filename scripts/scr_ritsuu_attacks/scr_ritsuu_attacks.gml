@@ -210,7 +210,7 @@ function scr_ritsuu_attacks(){
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),60);
 		}
 	}
-	spell_card_ritsuu_05() = function() {
+	spell_card_ritsuu_05 = function() {
 		if count == 0 { 
 			timer = 40;
 			sound_ObjSound_Play(se_cat00);

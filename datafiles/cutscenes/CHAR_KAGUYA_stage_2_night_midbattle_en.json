@@ -1,0 +1,13 @@
+{
+    "dialogue_texts" : [
+        ["Koko","Why have you returned, My Majesty? Also, who's this?"],
+        ["Hiroyuki","Hiroyuki Shirogane, head of the Shirogane Manor."],
+        ["Koko","So some cool man just shows up and he's part of your group?"],
+        ["Kaguya","Fufufu, the Empress requires a proper entourage when exploring such an endless, delightful night."],
+        ["Kaguya","Besides, Shirogane-sama here possesses quite a fascinating understanding of this labyrinth."],
+        ["Hiroyuki","Don't treat this as a casual stroll, My Majesty."],
+        ["Hiroyuki","The spiritual matrix of this entire courtyard is twisting. It's a deliberate spatial inversion."],
+        ["Koko","Exactly! This courtyard is under strict orders to stay locked down."],
+        ["Koko","I don't care if you're royalty from the moon or whatever - nobody gets past my broom without a thorough sweeping!"]
+    ]
+}

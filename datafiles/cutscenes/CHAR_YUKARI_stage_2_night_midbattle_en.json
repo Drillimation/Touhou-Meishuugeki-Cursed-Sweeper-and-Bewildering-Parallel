@@ -1,0 +1,14 @@
+{
+    "dialogue_texts" : [
+        ["Koko","Why have you returned, My Majesty? Also, who's this?"],
+        ["Hiroyuki","Hiroyuki Shirogane, head of the Shirogane Manor."],
+        ["Koko","So some cool man just shows up and he's part of your group?"],
+        ["Yukari","My, what an unruly little sweeper."],
+        ["Yukari","I simply brought him along because he understands the architecture of this lovely maze."],
+        ["Yukari","It saves me the trouble of breaking down every door."],
+        ["Hiroyuki","Do not underestimate the situation, My Majesty."],
+        ["Hiroyuki","The spiritual framework of the courtyard is twisting violently. We are dealing with an intentional inversion."],
+        ["Koko","Exactly! And you're not shifting any of your creepy gaps in my courtyard!"],
+        ["Koko","I don't care if you're some legendary youkai queen - you're just clutter in the path of my broom!"]
+    ]
+}

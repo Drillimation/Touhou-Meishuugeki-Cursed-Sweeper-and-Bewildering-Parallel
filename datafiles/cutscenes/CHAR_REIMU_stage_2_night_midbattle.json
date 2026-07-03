@@ -1,0 +1,21 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_koko_portrait",0,128,16],
+        ["scr_cutscene_set_portrait","spr_reimu_portrait",0,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",2],
+        ["scr_cutscene_set_portrait","spr_reimu_portrait",5,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",3],
+        ["scr_cutscene_set_portrait","spr_reimu_portrait",2,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",4],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",5],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",6],
+        ["scr_cutscene_set_portrait","spr_koko_portrait",3,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",7],
+        ["scr_cutscene_set_portrait","spr_koko_portrait",0,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",8],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_2_night_midbattle",9],
+        ["scr_cutscene_create_instance",128,96,"Instances","obj_koko_midboss"]
+    ]
+}

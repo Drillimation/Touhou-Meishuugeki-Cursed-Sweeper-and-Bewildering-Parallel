@@ -12,7 +12,7 @@ function scr_ritsuu_attacks(){
 				var graphic;
 				if i mod 2 == 0 { graphic = 5 } else { graphic = 2 }
 				
-				var inst = shot_CreateShotA1(x,y,1,(360 / (12 + (global.main_stats.difficulty * 4))) * i,spr_danmaku_seed_s,10,graphic);
+				var inst = shot_CreateShotA1(x,y,1,baseAngle + ((360 / (12 + (global.main_stats.difficulty * 4))) * i),spr_danmaku_seed_s,10,graphic);
 				with(inst) {
 					set_function = function() {
 						if count == 40 {
@@ -34,7 +34,8 @@ function scr_ritsuu_attacks(){
 	attack_ritsuu_main_02 = function() {
 		if count == 0 { image_alpha = 1; }
 		if count mod 45 == 0 {
-			repeat(12 + (global.main_stats.difficulty * 4)) {
+			sound_ObjSound_Play(se_tan01)
+			repeat(6 + (global.main_stats.difficulty * 2)) {
 				var leftAngle = 225 + irandom_range(10,50);
 				var rightAngle = 315 - irandom_range(10,50);
 				
@@ -132,6 +133,7 @@ function scr_ritsuu_attacks(){
 		
 		if count >= 60 {
 			if count mod 6 == 0 {
+				sound_ObjSound_Play(se_tan01)
 				repeat(global.main_stats.difficulty + 1) {
 					var inst = shot_CreateShotA1(random_range(8,248),8,random_range(0.5,1),270 + irandom_range(-15,15),spr_danmaku_ball_m1,10,choose(10,12,15))
 					inst_Obj_SetVisible(inst,0.5);
@@ -188,10 +190,11 @@ function scr_ritsuu_attacks(){
 		}
 		
 		if count mod 25 == 0 {
+			sound_ObjSound_Play(se_tan01)
 			var angleT = 0;
 			var i = 0;
 			repeat(18 + (global.main_stats.difficulty * 6)) {
-				var inst = shot_CreateShotA1(x,y,0.5 + (i * 0.2),baseAngle + angleT,spr_danmaku_ball_s1,10,0);
+				var inst = shot_CreateShotA1(x,y,0.5 + (i * 0.05),baseAngle + angleT,spr_danmaku_ball_s1,10,0);
 				with(inst) {
 					set_function = function() {
 						if count == 30 {
@@ -206,7 +209,7 @@ function scr_ritsuu_attacks(){
 				baseAngle += 13.7;
 			}
 		}
-		if count mod 100 = 0 {
+		if count >= 60 and count mod 100 = 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),60);
 		}
 	}
@@ -224,8 +227,9 @@ function scr_ritsuu_attacks(){
 			baseAngle = 270;
 		}
 		if count mod 30 == 0 {
+			sound_ObjSound_Play(se_tan01)
 			repeat(6 + (global.main_stats.difficulty * 2)) {
-				var inst = shot_CreateShotA1(x,y,random_range(1,1.75),baseAngle + irandom_range(-45,45),spr_danmaku_ball_m1,10,choose(8,15))
+				var inst = shot_CreateShotA1(x,y,random_range(0.5,1.25),baseAngle + irandom_range(-45,45),spr_danmaku_ball_m1,10,choose(8,15))
 				prop_ObjShot_SetAutoDelete(inst,false)
 				with(inst) {
 					maxWraps = 3;

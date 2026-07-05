@@ -160,18 +160,22 @@ function scr_helene_attacks(){
 		}
 		if count >= 60 {
 			if count mod 160 == 0 {
+				sound_ObjSound_Play(se_kira00);
 				var gapPositions = 45
 				repeat(4) {
 					var baseAngle = irandom_range(0,360);
 					for(var i = 0; i < 18 + (global.main_stats.difficulty * 6); i++) {
-						shot_CreateShotA1(x_pos + lengthdir_x(24,gapPositions),y_pos + lengthdir_y(24,gapPositions),1,baseAngle + (360 / (i * (18 + (global.main_stats.difficulty * 6)))),spr_danmaku_ball_s1,10,10)
+						var ex = x_pos + lengthdir_x(24,gapPositions);
+						var ey = y_pos + lengthdir_y(24,gapPositions);
+						shot_CreateShotA1(ex,ey,1,baseAngle + ((360 / (18 + (global.main_stats.difficulty * 6))) * i),spr_danmaku_ball_s1,10,10)
 					}
 					gapPositions += 90;
 				}
 			}
 			if count mod 25 == 0 {
-				repeat(3 + global.main_stats.difficulty) {
-					shot_CreateShotA1(x_pos + irandom_range(-48,48),y_pos + irandom_range(-8,8),random_range(1.75,3),irandom_range(235,315),spr_danmaku_arrowhead,5,15);
+				sound_ObjSound_Play(se_tan01);
+				repeat(6 + (global.main_stats.difficulty * 2)) {
+					shot_CreateShotA1(x_pos + irandom_range(-48,48),y_pos + irandom_range(-8,8),random_range(0.75,2),irandom_range(235,315),spr_danmaku_arrowhead,5,15);
 				}
 			}
 			if count mod 80 == 0 {
@@ -236,6 +240,7 @@ function scr_helene_attacks(){
 		
 		if count >= 45 {
 			if count mod 45 == 0 {
+				sound_ObjSound_Play(se_tan01);
 				var offsetX = 8;
 				repeat(15) {
 					for(var i = 0; i < 4; i++) {
@@ -302,32 +307,35 @@ function scr_helene_attacks(){
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;
-			y_pos = 96;
+			y_pos = 144;
 			angleT = 0;
 		}
 		
 		if count >= 60 {
-			if count mod 4 == 0 {
+			if count mod 16 == 0 {
+				sound_ObjSound_Play(se_tan02);
 				repeat(3 + global.main_stats.difficulty) {
 					var speedT = random_range(0.4,0.9)
 					var targetAngle = angleT + irandom_range(-10,10)
-					shot_CreateShotA1(x,y,speedT,targetAngle,spr_danmaku_ball_l,20,2)
+					shot_CreateShotA1(x,y,speedT,targetAngle,spr_danmaku_ball_m2,20,2)
 					shot_CreateShotA1(x,y,speedT * 0.7,targetAngle + 180,spr_danmaku_star_m,20,2)
-					angle += 360 / (3 + global.main_stats.difficulty)
+					angleT += 360 / (3 + global.main_stats.difficulty)
 				}
-				angle += 2.3;
+				angleT += 2.3;
 			}
 		}
-		if count == 240 { angleToPlayer = arctan2(obj_player.y - y,obj_player.x - x); }
+		//if count == 240 { angleToPlayer = arctan2(obj_player.y - y,obj_player.x - x); }
 		if count >= 240 and count < 270 {
 			if count mod 12 == 0 {
+				angleToPlayer = point_direction(x,y,obj_player.x,obj_player.y)
+				sound_ObjSound_Play(se_kira00);
 				for(var i = -40; i <= 40; i+=10) {
 					shot_CreateShotA1(x,y,2.25,angleToPlayer + i,spr_danmaku_bullet,5,1);
 				}
 			}
 		}
 		if count == 280 {
-			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,96),60);
+			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,144),60);
 			count = 60;
 		}
 	}

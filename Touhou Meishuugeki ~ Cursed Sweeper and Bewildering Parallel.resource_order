@@ -80,6 +80,7 @@
     {"name":"obj_general_settings","order":48,"path":"objects/obj_general_settings/obj_general_settings.yy",},
     {"name":"obj_helene_day","order":30,"path":"objects/obj_helene_day/obj_helene_day.yy",},
     {"name":"obj_helene_midboss","order":29,"path":"objects/obj_helene_midboss/obj_helene_midboss.yy",},
+    {"name":"obj_helene_night","order":43,"path":"objects/obj_helene_night/obj_helene_night.yy",},
     {"name":"obj_item","order":12,"path":"objects/obj_item/obj_item.yy",},
     {"name":"obj_koakuma_extra","order":38,"path":"objects/obj_koakuma_extra/obj_koakuma_extra.yy",},
     {"name":"obj_koko_midboss","order":41,"path":"objects/obj_koko_midboss/obj_koko_midboss.yy",},

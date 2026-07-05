@@ -13,6 +13,9 @@ if global.main_stats.time_of_day == "NIGHT" {
 			tilemap_tileset(tile_id, tileset_night);
 		}
 	}
+	var lay_id = layer_get_id("Background");
+	var back_id = layer_background_get_id(lay_id);
+	layer_background_blend(back_id, make_color_rgb(32,26,20));
 }
 
 for(var i = 0; i < array_length(global.player_stats); i++) {

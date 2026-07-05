@@ -1,0 +1,12 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_saika_portrait",2,128,16],
+        ["scr_cutscene_set_portrait","spr_reimu_portrait",2,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_4_night_midbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_4_night_midbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_4_night_midbattle",2],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_4_night_midbattle",3],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_REIMU_stage_4_night_midbattle",4],
+        ["scr_cutscene_create_instance",128,96,"Instances","obj_saika_midboss"]
+    ]
+}

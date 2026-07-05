@@ -4,6 +4,34 @@ function scr_saika_attacks(){
 	char_name = _load_file.char_names.CHAR_SAIKA
 	
 	//Main attacks
+	attack_saika_mid = function() {
+		if count mod 30 == 0 {
+			sound_ObjSound_Play(se_tan01)
+			var baseAngle = irandom_range(0,360);
+			repeat(12 + (global.main_stats.difficulty * 4)) {
+				var inst = shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_ball_m1,10,0);
+				with(inst) {
+					set_function = function() {
+						if count == 30 {
+							speed += 0.5;
+						}
+					}
+				}
+				baseAngle += 360 / (12 + (global.main_stats.difficulty * 4))
+			}
+		}
+		if count mod 120 >= 30 and count mod 120 <= 70 and count mod 4 == 0 {
+			sound_ObjSound_Play(se_kira00);
+			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+			var waveOffset = 20 * sin(count * 15);
+			
+			shot_CreateShotA1(x,y,1.75,angleT + waveOffset,spr_danmaku_bullet,5,2);
+			shot_CreateShotA1(x,y,1.75,angleT - waveOffset,spr_danmaku_bullet,5,5);
+		}
+		if count mod 240 == 0 {
+			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,144),60);
+		}
+	}
 	attack_saika_01 = function() {
 		if count == 0 { timer = 50; }
 		if count mod 60 == 0 {

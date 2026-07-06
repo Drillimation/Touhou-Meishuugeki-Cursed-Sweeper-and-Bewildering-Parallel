@@ -92,7 +92,7 @@ function scr_saika_attacks(){
 	attack_saika_03 = function() {
 		x_pos = 128 + lengthdir_x(64,count);
 		y_pos = 96 + lengthdir_y(32,count);
-		timer = 50;
+		if count == 0 { timer = 50; }
 		//move_ObjMove_SetDestAtFrame(self,128 + (60 * sin(count * 2)),64,1);
 		
 		if count mod 5 == 0 {

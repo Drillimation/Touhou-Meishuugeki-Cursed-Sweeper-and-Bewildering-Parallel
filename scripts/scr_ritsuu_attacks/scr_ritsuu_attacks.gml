@@ -32,7 +32,7 @@ function scr_ritsuu_attacks(){
 		}
 	}
 	attack_ritsuu_main_02 = function() {
-		if count == 0 { image_alpha = 1; }
+		if count == 0 { timer = 30; image_alpha = 1; }
 		if count mod 45 == 0 {
 			sound_ObjSound_Play(se_tan01)
 			repeat(6 + (global.main_stats.difficulty * 2)) {

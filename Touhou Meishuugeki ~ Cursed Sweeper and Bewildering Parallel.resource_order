@@ -101,6 +101,7 @@
     {"name":"obj_ritsuu_midboss","order":27,"path":"objects/obj_ritsuu_midboss/obj_ritsuu_midboss.yy",},
     {"name":"obj_ritsuu","order":42,"path":"objects/obj_ritsuu/obj_ritsuu.yy",},
     {"name":"obj_ryuuko_midboss","order":31,"path":"objects/obj_ryuuko_midboss/obj_ryuuko_midboss.yy",},
+    {"name":"obj_ryuuko","order":45,"path":"objects/obj_ryuuko/obj_ryuuko.yy",},
     {"name":"obj_saika_midboss","order":44,"path":"objects/obj_saika_midboss/obj_saika_midboss.yy",},
     {"name":"obj_saika","order":32,"path":"objects/obj_saika/obj_saika.yy",},
     {"name":"obj_spawn_midboss","order":29,"path":"objects/obj_spawn_midboss/obj_spawn_midboss.yy",},

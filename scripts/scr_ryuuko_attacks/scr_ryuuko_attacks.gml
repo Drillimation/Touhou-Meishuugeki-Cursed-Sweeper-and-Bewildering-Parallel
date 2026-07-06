@@ -65,6 +65,7 @@ function scr_ryuuko_attacks(){
 		}
 	}
 	attack_ryuuko_02 = function() {
+		if count == 0 { timer = 40; }
 		if count mod 15 == 0 {
 			sound_ObjSound_Play(se_tan01);
 			var baseAngle = 270;
@@ -88,7 +89,7 @@ function scr_ryuuko_attacks(){
 			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 			var speedT = 1.9;
 			repeat(3 + (global.main_stats.difficulty * 2)) {
-				shot_CreateShotA1(x_pos - 32,y_pos + 8,speedT,angleT,spr_danmaku_ball_s1,5,10);
+				shot_CreateShotA1(x_pos + 32,y_pos + 8,speedT,angleT,spr_danmaku_ball_s1,5,10);
 				speedT -= 0.15;
 			}
 		}
@@ -97,17 +98,18 @@ function scr_ryuuko_attacks(){
 		}
 	}
 	attack_ryuuko_03 = function() {
+		if count == 0 { timer = 40; }
 		if count == 1 {
 			spinAngle = 0;
 		}
 		
-		if count mod 4 == 0 and count > 0 {
+		if count mod 8 == 0 and count > 0 {
 			sound_ObjSound_Play(se_tan02);
 			var speedT = 1.4;
 			repeat(1 + global.main_stats.difficulty) {
 				shot_CreateShotA1(x_pos - 40,y_pos + 16,speedT,45 + spinAngle,spr_danmaku_ball_s1,10,10);
 				shot_CreateShotA1(x_pos + 40,y_pos + 16,speedT,135 - spinAngle,spr_danmaku_ball_s1,10,10);
-				speedT -= 1.25;
+				speedT -= 0.125;
 			}
 			spinAngle += 11.5;
 		}
@@ -116,11 +118,11 @@ function scr_ryuuko_attacks(){
 			var baseAngle = irandom_range(0,360);
 			repeat(20 + (global.main_stats.difficulty * 4)) {
 				shot_CreateShotA1(x,y,2,baseAngle,spr_danmaku_shard,10,12);
-				baseAngle = 360 / (20 + (global.main_stats.difficulty * 4));
+				baseAngle += 360 / (20 + (global.main_stats.difficulty * 4));
 			}
 		}
 		if count mod 150 == 0 and count > 0 {
-			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(32,144),1);
+			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(32,96),1);
 		}
 	}
 	
@@ -168,7 +170,7 @@ function scr_ryuuko_attacks(){
 				var baseAngle = irandom_range(0,360);
 				repeat(20 + (global.main_stats.difficulty * 4)) {
 					shot_CreateShotA1(x,y,1.1,baseAngle,spr_danmaku_bullet,10,12);
-					baseAngle = 360 / (20 + (global.main_stats.difficulty * 4));
+					baseAngle += 360 / (20 + (global.main_stats.difficulty * 4));
 				}
 			}
 		}
@@ -187,6 +189,7 @@ function scr_ryuuko_attacks(){
 		}
 		if count >= 60 {
 			if count mod 30 == 0 {
+				sound_ObjSound_Play(se_tan01);
 				var baseAngle = count * 0.7;
 				repeat(12 + (global.main_stats.difficulty * 2)) {
 					var inst = shot_CreateShotA1(x,y,1.5,baseAngle,spr_danmaku_ball_m2,15,12);
@@ -205,10 +208,14 @@ function scr_ryuuko_attacks(){
 				}
 			}
 			if count mod 12 == 0 {
+				sound_ObjSound_Play(se_kira01);
 				var playerAngle = point_direction(x,y,obj_player.x,obj_player.y);
-				
-				for(var i = -2; i < 3; i++) {
-					shot_CreateShotA1(x,y,1.5,playerAngle + (i * 4),spr_danmaku_bullet,0,12);
+				var speedT = 1.5;
+				repeat(4) {
+					for(var i = -2; i < 3; i++) {
+						shot_CreateShotA1(x,y,speedT,playerAngle + (i * 10),spr_danmaku_bullet,0,12);
+					}
+					speedT -= 0.125;
 				}
 			}
 		}
@@ -226,13 +233,21 @@ function scr_ryuuko_attacks(){
 			y_pos = 96;
 			t = 0;
 			waveAngle = 0;
+			self_timer = 0;
+			spd = 0.025; // Adjust this to change the speed of the loop
+			x_radius = 72; // Width of the infinity loop
+			y_radius = 0; // Height of the infinity loop
 		}
 		if count > 0 {
-			x_pos = 128 + (sin(t) * 80);
-			t += 1.5;
+			// Increment the timer
+			self_timer += spd;
+
+			// Calculate Figure-8 (Lemniscate) using trigonometry
+			x_pos = 128 + (x_radius * cos(self_timer));
+			y_pos = 96 + (y_radius * sin(self_timer * 2)) / 2;
 		}
 		if count >= 60 {
-			if count mod 3 == 0 {
+			if count mod 20 == 0 {
 				sound_ObjSound_Play(se_tan02);
 				var leftAngle = 270 + (sin(waveAngle) * 35);
 				shot_CreateShotA1(x_pos - 20,y,1,leftAngle,spr_danmaku_shard,8,12);
@@ -240,7 +255,7 @@ function scr_ryuuko_attacks(){
 				shot_CreateShotA1(x_pos + 20,y,1,rightAngle,spr_danmaku_shard,8,12);
 				waveAngle += 8;
 			}
-			if count mod 80 == 0 {
+			if count mod 120 == 0 {
 				sound_ObjSound_Play(se_kira01);
 				repeat(1 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(8,irandom_range(24,264),0,0,spr_danmaku_ball_l,10,10);
@@ -248,12 +263,14 @@ function scr_ryuuko_attacks(){
 						set_function = function() {
 							if count == 45 {
 								sound_ObjSound_Play(se_kira01);
-								var baseAngle = point_direction(x,y,obj_player.x,obj_player.y);
+								//var baseAngle = point_direction(x,y,obj_player.x,obj_player.y);
+								var baseAngle = 0;
 								for(var i = -2; i < 3; i++) {
 									for(var j = 0; j < 3; j++) {
 										shot_CreateShotA1(x,y,1.2 - (j * 0.2),baseAngle + (i * 12),spr_danmaku_ball_s1,5,10)
 									}
 								}
+								instance_destroy();
 							}
 						}
 					}
@@ -262,12 +279,14 @@ function scr_ryuuko_attacks(){
 						set_function = function() {
 							if count == 45 {
 								sound_ObjSound_Play(se_kira01);
-								var baseAngle = point_direction(x,y,obj_player.x,obj_player.y);
+								//var baseAngle = point_direction(x,y,obj_player.x,obj_player.y);
+								var baseAngle = 180;
 								for(var i = -2; i < 3; i++) {
 									for(var j = 0; j < 3; j++) {
 										shot_CreateShotA1(x,y,1.2 - (j * 0.2),baseAngle + (i * 12),spr_danmaku_ball_s1,5,10)
 									}
 								}
+								instance_destroy();
 							}
 						}
 					}
@@ -291,8 +310,8 @@ function scr_ryuuko_attacks(){
 		if count >= 60 {
 			if count mod 6 == 0 {
 				sound_ObjSound_Play(se_tan02);
-				var angleT = 0
-				repeat(4) {
+				var angleT = 0;
+				repeat(3 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,y,1,clockAngle + angleT,spr_danmaku_ball_s1,10,10);
 					with(inst) {
 						set_function = function() {
@@ -310,11 +329,11 @@ function scr_ryuuko_attacks(){
 							}
 						}
 					}
+					angleT += 360 / (3 + global.main_stats.difficulty)
 				}
 				clockAngle += 4.5;
 			}
 			if count mod 240 == 180 {
-				sound_ObjSound_Play(se_kira02);
 				sound_ObjSound_Play(se_tan01);
 				with(obj_enemy_bullet) {
 					isFrozen = 1;
@@ -338,7 +357,7 @@ function scr_ryuuko_attacks(){
 					shot_CreateShotA1(x,y,2.25,playerAngle + (i * 10),spr_danmaku_bullet,0,12);
 				}
 			}
-			if count mod 240 == 240 {
+			if count mod 240 == 235 {
 				sound_ObjSound_Play(se_kira01);
 				with(obj_enemy_bullet) {
 					isFrozen = 2;

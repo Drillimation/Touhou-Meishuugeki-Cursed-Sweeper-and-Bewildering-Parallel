@@ -145,6 +145,55 @@ function scr_fusana_attacks(){
 			}
 		}
 	}
+	spell_card_fusana_02 = function() {
+		if count == 0 { 
+			timer = 60;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_02,spr_fusana_spell)
+			global.main_stats.current_spell = "SPELL_FUSANA_02"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 96;
+		}
+		if count >= 60 {
+			if count mod 180 == 0 {
+				move_ObjMove_SetDestAtFrame(self,irandom_range(24,232),irandom_range(80,140),60);
+			}
+			if count mod 12 == 0 {
+				sound_ObjSound_Play(se_tan01);
+				var baseAngle = count * 0.5;
+				var angleT = baseAngle;
+				repeat(3 + global.main_stats.difficulty) {
+					var inst = shot_CreateShotA1(x,y,1,angleT,spr_danmaku_star_m,10,1);
+					move_ObjMove_SetAngularVelocity(inst,0.2);
+					angleT += 360 / (3 + global.main_stats.difficulty);
+				}
+			}
+			if count mod 45 == 0 {
+				sound_ObjSound_Play(se_kira00);
+				var baseAngle = irandom_range(0,360);
+				repeat(16) {
+					for(var i = 0; i < 3; i++) {
+						var speedT = 0.75 + (i * 0.2);
+						var inst = shot_CreateShotA1(x,y,speedT,baseAngle,spr_danmaku_shard,5,12);
+						with(inst) {
+							set_function = function() {
+								if count mod 90 == 0 {
+									move_ObjMove_SetAngularVelocity(inst,-0.15);
+								}
+								if count mod 90 == 45 {
+									move_ObjMove_SetAngularVelocity(inst,0.15);
+								}
+							}
+						}
+					}
+					baseAngle += 360 / 16;
+				}
+			}
+		}
+	}
 	spell_card_fusana_03 = function() {
 		if count == 0 { 
 			timer = 60;
@@ -190,6 +239,47 @@ function scr_fusana_attacks(){
 			if count == 180 {
 				move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,96),60);
 				count = 60;
+			}
+		}
+	}
+	spell_card_fusana_04 = function() {
+		if count == 0 { 
+			timer = 60;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_04,spr_fusana_spell)
+			global.main_stats.current_spell = "SPELL_FUSANA_04"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 96;
+		}
+		if count >= 60 {
+			if count mod 4 == 0 {
+				repeat(2) {
+					var inst = shot_CreateShotA1(x_pos + irandom_range(-24,24),y,random_range(0.75,1.75),irandom_range(250,290),spr_danmaku_star_s,5,15);
+					with(inst) {
+						set_function = function() {
+							if count mod 10 < 5 {
+								image_alpha = 0.5;
+							}
+							else {
+								image_alpha = 1;
+							}
+						}
+					}
+				}
+			}
+			if count mod 80 == 0 {
+				var baseAngle = irandom_range(0,360);
+				repeat(12 + (global.main_stats.difficulty * 4)) {
+					shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_star_m,20,10)
+					shot_CreateShotA1(x,y,0.8,baseAngle + 5,spr_danmaku_star_m,20,8)
+					baseAngle += 360 / (12 + (global.main_stats.difficulty * 4))
+				}
+			}
+			if count mod 200 == 0 {
+				move_ObjMove_SetDestAtFrame(self,irandom_range(24,232),irandom_range(80,140),60);
 			}
 		}
 	}
@@ -252,12 +342,63 @@ function scr_fusana_attacks(){
 			}
 		}
 	}
+	spell_card_fusana_06 = function() {
+		if count == 0 { 
+			timer = 60;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_06,spr_fusana_spell)
+			global.main_stats.current_spell = "SPELL_FUSANA_06"
+			speed = 0;
+			move_mode = false;
+			x_pos = 128;
+			y_pos = 96;
+		}
+		if count >= 60 {
+			if count mod 90 == 0 {
+				sound_ObjSound_Play(se_tan01);
+				var baseAngle = irandom_range(0,360);
+				repeat(20 + (global.main_stats.difficulty * 4)) {
+					var inst = shot_CreateShotA1(x,y,1.25,baseAngle,spr_danmaku_ball_m1,15,10);
+					with(inst) {
+						set_function = function() {
+							if count == 40 {
+								sound_ObjSound_Play(se_kira01)
+								speed = 0;
+							}
+							if count == 60 {
+								sound_ObjSound_Play(se_kira00)
+								direction = 270;
+								speed = 0.6;
+							}
+						}
+					}
+					baseAngle += 360 / (20 + (global.main_stats.difficulty * 4))
+				}
+			}
+			if count mod 15 == 0 {
+				sound_ObjSound_Play(se_tan01);
+				var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+				for(var i = -2; i < 3; i++) {
+					shot_CreateShotA1(x,y,1.6,angleT + (i * 15),spr_danmaku_star_s,5,2);
+					shot_CreateShotA1(x,y,1.4,(angleT + (i * 15)) + 7.5,spr_danmaku_star_s,5,8);
+				}
+			}
+		}
+	}
 	spell_card_fusana_07 = function() {
 		if count == 0 { 
 			timer = 60;
 			sound_ObjSound_Play(se_cat00);
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
-			shot_CreateSpellCard("ENEMY",spr_fusana_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_07,spr_fusana_spell)
+			var timeGraphic;
+			if global.main_stats.time_of_day == "DAY" {
+				timeGraphic = spr_fusana_portrait;
+			}
+			else {
+				timeGraphic = spr_fusana_night_portrait;
+			}
+			shot_CreateSpellCard("ENEMY",timeGraphic,0,_load_file.enemy_spell.SPELL_FUSANA_07,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_07"
 			speed = 0;
 			move_mode = false;

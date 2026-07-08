@@ -206,5 +206,21 @@
         "midboss_sprite" : "spr_veronica_day",
         "camera_path" : "path_scroll_u_h2",
         "cutscene_index" : "_stage_6_night_prebattle"
+    },
+    "STAGE_08_MID" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_koakuma_extra",
+        "midboss_sprite" : "spr_koakuma",
+        "camera_path" : "path_scroll_h1",
+        "cutscene_index" : "_stage_8_midbattle"
+    },
+    "STAGE_08" : {
+        "stage_speed" : 0.5,
+        "end_path_function" : "CUTSCENE",
+        "midboss" : "obj_doromi",
+        "midboss_sprite" : "spr_doromi",
+        "camera_path" : "path_scroll_h2",
+        "cutscene_index" : "_stage_8_prebattle"
     }
 }

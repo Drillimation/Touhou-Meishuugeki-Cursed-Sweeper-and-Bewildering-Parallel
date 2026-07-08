@@ -75,6 +75,7 @@
     {"name":"obj_free_play_episode_select","order":61,"path":"objects/obj_free_play_episode_select/obj_free_play_episode_select.yy",},
     {"name":"obj_fullscreen","order":5,"path":"objects/obj_fullscreen/obj_fullscreen.yy",},
     {"name":"obj_fusana_day","order":34,"path":"objects/obj_fusana_day/obj_fusana_day.yy",},
+    {"name":"obj_fusana_night","order":46,"path":"objects/obj_fusana_night/obj_fusana_night.yy",},
     {"name":"obj_game_clear","order":37,"path":"objects/obj_game_clear/obj_game_clear.yy",},
     {"name":"obj_game_over","order":11,"path":"objects/obj_game_over/obj_game_over.yy",},
     {"name":"obj_general_settings","order":48,"path":"objects/obj_general_settings/obj_general_settings.yy",},

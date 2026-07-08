@@ -9,7 +9,7 @@ if entered == true {
 		image_alpha = 0;
 		x_pos = irandom_range(16,240);
 		y_pos = irandom_range(32,96);
-		direction = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-45,45);
+		direction = irandom_range(0,180);
 		speed = 0;
 		baseAngle = 0;
 	}

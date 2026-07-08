@@ -163,10 +163,10 @@ function scr_fusana_attacks(){
 			}
 			if count mod 12 == 0 {
 				sound_ObjSound_Play(se_tan01);
-				var baseAngle = count * 0.5;
+				var baseAngle = count;
 				var angleT = baseAngle;
 				repeat(3 + global.main_stats.difficulty) {
-					var inst = shot_CreateShotA1(x,y,1,angleT,spr_danmaku_star_m,10,1);
+					var inst = shot_CreateShotA1(x,y,1,angleT,spr_danmaku_star_s,10,1);
 					move_ObjMove_SetAngularVelocity(inst,0.2);
 					angleT += 360 / (3 + global.main_stats.difficulty);
 				}
@@ -181,10 +181,10 @@ function scr_fusana_attacks(){
 						with(inst) {
 							set_function = function() {
 								if count mod 90 == 0 {
-									move_ObjMove_SetAngularVelocity(inst,-0.15);
+									move_ObjMove_SetAngularVelocity(self,-0.15);
 								}
 								if count mod 90 == 45 {
-									move_ObjMove_SetAngularVelocity(inst,0.15);
+									move_ObjMove_SetAngularVelocity(self,0.15);
 								}
 							}
 						}
@@ -255,9 +255,10 @@ function scr_fusana_attacks(){
 			y_pos = 96;
 		}
 		if count >= 60 {
-			if count mod 4 == 0 {
+			if count mod 8 == 0 {
+				sound_ObjSound_Play(se_tan01);
 				repeat(2) {
-					var inst = shot_CreateShotA1(x_pos + irandom_range(-24,24),y,random_range(0.75,1.75),irandom_range(250,290),spr_danmaku_star_s,5,15);
+					var inst = shot_CreateShotA1(x_pos + irandom_range(-24,24),y,random_range(0.75,1.75),irandom_range(180,360),spr_danmaku_star_s,5,15);
 					with(inst) {
 						set_function = function() {
 							if count mod 10 < 5 {
@@ -271,6 +272,7 @@ function scr_fusana_attacks(){
 				}
 			}
 			if count mod 80 == 0 {
+				sound_ObjSound_Play(se_kira00);
 				var baseAngle = irandom_range(0,360);
 				repeat(12 + (global.main_stats.difficulty * 4)) {
 					shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_star_m,20,10)
@@ -352,7 +354,7 @@ function scr_fusana_attacks(){
 			speed = 0;
 			move_mode = false;
 			x_pos = 128;
-			y_pos = 96;
+			y_pos = 144;
 		}
 		if count >= 60 {
 			if count mod 90 == 0 {
@@ -362,13 +364,16 @@ function scr_fusana_attacks(){
 					var inst = shot_CreateShotA1(x,y,1.25,baseAngle,spr_danmaku_ball_m1,15,10);
 					with(inst) {
 						set_function = function() {
+							if count == 0 {
+								baseAngle = irandom_range(0,360)
+							}
 							if count == 40 {
 								sound_ObjSound_Play(se_kira01)
 								speed = 0;
 							}
 							if count == 60 {
 								sound_ObjSound_Play(se_kira00)
-								direction = 270;
+								direction = baseAngle;
 								speed = 0.6;
 							}
 						}
@@ -378,7 +383,7 @@ function scr_fusana_attacks(){
 			}
 			if count mod 15 == 0 {
 				sound_ObjSound_Play(se_tan01);
-				var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+				var angleT = irandom_range(0,360);
 				for(var i = -2; i < 3; i++) {
 					shot_CreateShotA1(x,y,1.6,angleT + (i * 15),spr_danmaku_star_s,5,2);
 					shot_CreateShotA1(x,y,1.4,(angleT + (i * 15)) + 7.5,spr_danmaku_star_s,5,8);

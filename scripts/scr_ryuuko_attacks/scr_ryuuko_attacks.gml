@@ -209,7 +209,7 @@ function scr_ryuuko_attacks(){
 			}
 			if count mod 12 == 0 {
 				sound_ObjSound_Play(se_kira01);
-				var playerAngle = point_direction(x,y,obj_player.x,obj_player.y);
+				var playerAngle = irandom_range(0,360);
 				var speedT = 1.5;
 				repeat(4) {
 					for(var i = -2; i < 3; i++) {

@@ -1,6 +1,10 @@
 function scr_lose_life(){
 	instance_destroy(obj_player_bullet);
-	instance_destroy(obj_enemy_bullet);
+	with(obj_enemy_bullet) {
+		if item_resist == false {
+			instance_destroy();
+		}
+	}
 	sound_ObjSound_Play(se_pldead00);
 	player_SetPlayerLife(-1,play_id,true);
 	player_SetPlayerInvincibilityFrame(300,play_id);

@@ -1,0 +1,22 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_create_instance",0,0,"Effects","obj_fade_in"],
+        ["scr_cutscene_set_background","spr_blank",0],
+        ["scr_cutscene_set_background","spr_ending_day",1],
+        ["scr_cutscene_set_portrait","spr_yukari_portrait",2,64,16],
+        ["scr_cutscene_set_portrait","spr_veronica_portrait",0,448,16],
+        ["scr_cutscene_wait",60],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",0,"snd_text_blip_f"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",1,"snd_text_blip_m"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",2,"snd_text_blip_f"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",3,"snd_text_blip_f"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",4,"snd_text_blip_m"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",5,"snd_text_blip_f"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",6,"snd_text_blip_m"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",7,"snd_text_blip_f"],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",8,"snd_text_blip_m"],
+        ["scr_cutscene_set_portrait","spr_yukari_glohm_portrait",2,64,16],
+        ["scr_cutscene_show_text","cutscenes/CHAR_YUKARI_bad_ending_night",9,"snd_text_blip_m"],
+        ["scr_cutscene_room_transition","room_gameover"]
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "dialogue_texts" : [
+        ["Veronica","So, this is how the morning looks. After what has happened overnight, I expect things to be broken."],
+        ["Reimu","I pulled an all-nighter trying to solve this. I have now run out of time, and I have a massive headache to deal with."],
+        ["Veronica","You fought hard, Reimu. The glohm has adapted faster than you anticipated. It is now being pushed into you without a clear plan."],
+        ["Reimu","My goal was to put a stop to you and the Order, and now I've failed because things got too strange. It's embarrassing."],
+        ["Veronica","Our rules don't just apply here. Look at your hands - the glohm from my residue is now overtaking your body."],
+        ["Reimu","Ugh... my fragile little mind is being warped... I'm feeling heavy!"],
+        ["Veronica","What's your next move? The glohm won't just linger beyond the surface of your skin."],
+        [" ","Too bad! Bad ending! To see the good ending, clear the game without using a continue or letting nine hours pass."]
+    ]
+}

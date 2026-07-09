@@ -26,6 +26,7 @@ if keyboard_check_pressed(vk_f2) {
 	scr_change_bgm("bgm/ending.it");
 	//var inst = instance_create_depth(0,0,0,obj_fade_out);
 	//inst.target = asset_get_index(room_transition_1);
+	global.main_stats.stage = 6;
 	room_goto(room_ending);
 }
 if keyboard_check_pressed(vk_f3) {
@@ -34,6 +35,7 @@ if keyboard_check_pressed(vk_f3) {
 	//var inst = instance_create_depth(0,0,0,obj_fade_out);
 	//inst.target = asset_get_index(room_transition_1);
 	global.main_stats.continues_used = 1;
+	global.main_stats.stage = 6;
 	room_goto(room_ending);
 }
 if count == 1800 {

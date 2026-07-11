@@ -530,6 +530,7 @@
     {"name":"spr_helene_portrait","order":18,"path":"sprites/spr_helene_portrait/spr_helene_portrait.yy",},
     {"name":"spr_helene_spell","order":6,"path":"sprites/spr_helene_spell/spr_helene_spell.yy",},
     {"name":"spr_helene","order":17,"path":"sprites/spr_helene/spr_helene.yy",},
+    {"name":"spr_hiroyuki_portrait","order":27,"path":"sprites/spr_hiroyuki_portrait/spr_hiroyuki_portrait.yy",},
     {"name":"spr_hitbox","order":5,"path":"sprites/spr_hitbox/spr_hitbox.yy",},
     {"name":"spr_hud_bottom","order":32,"path":"sprites/spr_hud_bottom/spr_hud_bottom.yy",},
     {"name":"spr_intro_day","order":13,"path":"sprites/spr_intro_day/spr_intro_day.yy",},

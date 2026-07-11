@@ -1,0 +1,23 @@
+{
+    "dialogue_texts" : [
+        ["Veronica","You foolish magician queen..."],
+        ["Marisa","Heh, I like the sound of that! But you're dead wrong if you think some flashy titles are gonna save you after messing up my night."],
+        ["Veronica","You may have bested both of us, but the Order will live on under Flandre Scarlet's rule."],
+        ["Marisa","Looks like I'll have to break into the Scarlet Devil Mansion again to see what's cookin'."],
+        ["Veronica","The Crimsonite grunts will dance in the capital of your pathetic kingdom."],
+        ["Marisa","Let 'em dance until their boots wear out. If any of those Crimsonite pests show up near Kourindou or the Forest of Magic, I'll just blast 'em away with a Master Spark!"],
+        ["Veronica","Berenice and I are done for..."],
+        ["Marisa","Lying face down in the dirt suits you two way better. Just stay put while we wrap this up."],
+        ["Fusana","Thank you, My Majesty. The Federal Kingdom of Gensokyo at this time is safe."],
+        ["Marisa","I don't want 'em cluttering up my paths tomorrow."],
+        ["Fusana","I am very and truly pleased. I will attend the festival in Kozankyo."],
+        ["Marisa","Now you're talkin'!"],
+        ["Hiroyuki","I am finally happy to be reunited with Fusana. With the Grieg sisters gone, their forest of thorns has disappeared."],
+        ["Marisa","Yeah, those thorns were a real pain to navigate through on a broom. Glad to see you two back together, though. Saves me the trouble of a rescue mission!"],
+        ["Hiroyuki","They can no longer alter their fate, nor even escape and return to their own time."],
+        ["Marisa","Messing with time and fate always backfires. If you wanna change things, you gotta do it with your own two hands in the present, not by twisting reality."],
+        ["Hiroyuki","Using whatever time we have left, I can finally show you what our nights are like in the mansion."],
+        ["Marisa","Have a blast with your mansion party then."],
+        ["Hiroyuki","As I remark on the romance between myself and Fusana, our private ball begins now."]
+    ]
+}

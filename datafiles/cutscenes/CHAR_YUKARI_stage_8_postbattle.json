@@ -1,0 +1,24 @@
+{
+    "t_scene_info" : [
+        ["scr_cutscene_set_portrait","spr_yukari_portrait",0,0,16],
+        ["scr_cutscene_set_portrait","spr_doromi_portrait",8,128,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",0],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",1],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",2],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",3],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",4],
+        ["scr_cutscene_set_portrait","spr_yukari_portrait",2,0,16],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",5],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",6],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",7],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",8],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",9],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",10],
+        ["scr_cutscene_remove_portrait","spr_doromi_portrait"],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",11],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",12],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",13],
+        ["scr_cutscene_show_textbox","cutscenes/CHAR_YUKARI_stage_8_postbattle",14],
+        ["scr_cutscene_game_clear"]
+    ]
+}

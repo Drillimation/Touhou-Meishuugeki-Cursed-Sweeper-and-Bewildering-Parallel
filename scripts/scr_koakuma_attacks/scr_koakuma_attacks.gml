@@ -154,4 +154,104 @@ function scr_koakuma_attacks(){
 			count = 60;
 		}
 	}
+	spell_card_koakuma_03 = function() {
+		if count == 0 { 
+			timer = 60;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_koakuma_portrait,0,_load_file.enemy_spell.SPELL_KOAKUMA_03,spr_koakuma_spell)
+			global.main_stats.current_spell = "SPELL_KOAKUMA_03"
+			move_ObjMove_SetX(self,128);
+			move_ObjMove_SetY(self,96);
+			speed = 0;
+			move_mode = false;
+			dir = 0;
+		}
+		
+		if count mod 120 == 0 and count > 0 {
+			sound_ObjSound_Play(se_tan01);
+			var ez = 0;
+			repeat(10 + (global.main_stats.difficulty * 2)) {
+				for(var i = 0; i < 4; i++) {
+					var inst = shot_CreateShotA1(8 + (i * 8),24 + ez,0,0,spr_danmaku_ball_s1,60,15);
+					with(inst) {
+						set_function = function() {
+							if count == 120 {
+								sound_ObjSound_Play(se_kira00);
+								speed = 1;
+							}
+						}
+					}
+					inst = shot_CreateShotA1(240 - (i * 8),24 + ez,0,180,spr_danmaku_ball_s1,60,15);
+					with(inst) {
+						set_function = function() {
+							if count == 120 {
+								sound_ObjSound_Play(se_kira00);
+								speed = 1;
+							}
+						}
+					}
+					inst = shot_CreateShotA1(8 + ez,24 + (i * 8),0,270,spr_danmaku_ball_s1,60,15);
+					with(inst) {
+						set_function = function() {
+							if count == 120 {
+								sound_ObjSound_Play(se_kira00);
+								speed = 1;
+							}
+						}
+					}
+					inst = shot_CreateShotA1(8 + ez,264 - (i * 8),0,90,spr_danmaku_ball_s1,60,15);
+					with(inst) {
+						set_function = function() {
+							if count == 120 {
+								sound_ObjSound_Play(se_kira00);
+								speed = 1;
+							}
+						}
+					}
+				}
+				ez += 240 / (10 + (global.main_stats.difficulty * 2))
+			}
+		}
+		if count mod 180 == 0 and count > 0 {
+			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,144),60);
+		}
+	}
+	spell_card_koakuma_04 = function() {
+		if count == 0 { 
+			timer = 60;
+			sound_ObjSound_Play(se_cat00);
+			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
+			shot_CreateSpellCard("ENEMY",spr_koakuma_portrait,0,_load_file.enemy_spell.SPELL_KOAKUMA_04,spr_koakuma_spell)
+			global.main_stats.current_spell = "SPELL_KOAKUMA_04"
+			move_ObjMove_SetX(self,128);
+			move_ObjMove_SetY(self,144);
+			speed = 0;
+			move_mode = false;
+			dir = 0;
+			baseAngle1 = 0;
+			baseAngle2 = 0;
+		}
+		
+		if count >= 60 {
+			if count mod 10 == 0 {
+				sound_ObjSound_Play(se_tan01);
+				var angleT = 0;
+				repeat(3 + global.main_stats.difficulty) {
+					shot_CreateShotA1(x,y,1.25,baseAngle1 + angleT,spr_danmaku_ball_s1,5,0);
+					angleT += 360 / (3 + global.main_stats.difficulty);
+				}
+				baseAngle1 += 8;
+			}
+			if count mod 20 == 0 {
+				sound_ObjSound_Play(se_lazer00);
+				var angleT = 0;
+				repeat(3 + global.main_stats.difficulty) {
+					shot_CreateLooseLaserA1(x,y,1.75,baseAngle2 + angleT,1.6,1,spr_danmaku_laser,5,15)
+					angleT += 360 / (3 + global.main_stats.difficulty);
+				}
+				baseAngle2 -= 16;
+			}
+		}
+	}
 }

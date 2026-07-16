@@ -21,7 +21,7 @@ with(inst) {
 	midboss = obj_camille;
 }
 */
-var load_file2 = scr_json_load_file("cutscenes/CHAR_KAGUYA_stage_6_night_prebattle" + string(global.suf) + ".json");
-var cutscene = scr_json_load_file("cutscenes/CHAR_KAGUYA_stage_6_night_prebattle.json")
+var load_file2 = scr_json_load_file("cutscenes/"+ string(global.player_stats[0].character) + "_stage_8_midbattle" + string(global.suf) + ".json");
+var cutscene = scr_json_load_file("cutscenes/"+ string(global.player_stats[0].character) + "_stage_8_midbattle.json")
 s_scene_info = cutscene.t_scene_info;
 scr_create_cutscene(s_scene_info,obj_cutscene_textbox);

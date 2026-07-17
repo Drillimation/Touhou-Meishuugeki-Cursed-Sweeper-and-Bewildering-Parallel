@@ -753,6 +753,7 @@
     {"id":{"name":"scr_cutscene_actions","path":"scripts/scr_cutscene_actions/scr_cutscene_actions.yy",},},
     {"id":{"name":"scr_danmaku_functions","path":"scripts/scr_danmaku_functions/scr_danmaku_functions.yy",},},
     {"id":{"name":"scr_danmaku_sprites","path":"scripts/scr_danmaku_sprites/scr_danmaku_sprites.yy",},},
+    {"id":{"name":"scr_doromi_attacks","path":"scripts/scr_doromi_attacks/scr_doromi_attacks.yy",},},
     {"id":{"name":"scr_enemy_functions","path":"scripts/scr_enemy_functions/scr_enemy_functions.yy",},},
     {"id":{"name":"scr_enemy_remove_life","path":"scripts/scr_enemy_remove_life/scr_enemy_remove_life.yy",},},
     {"id":{"name":"scr_enums","path":"scripts/scr_enums/scr_enums.yy",},},

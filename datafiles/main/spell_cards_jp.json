@@ -77,7 +77,16 @@
         "SPELL_CAMILLE_06" : "秩序「闘争的な優しさ」",
         "SPELL_CAMILLE_07" : "緋紅「ブラドルージュの威光」",
         "SPELL_CAMILLE_08" : "狂捜「お嬢様はいずこに」",
-        "SPELL_CAMILLE_09" : "禁徳「絶対なる君主」"
+        "SPELL_CAMILLE_09" : "禁徳「絶対なる君主」",
+        "SPELL_DOROMI_01" : "暮符「境界の晩鐘」",
+        "SPELL_DOROMI_02" : "掃符「美しき泥の哀歌」",
+        "SPELL_DOROMI_03" : "墓符「赤き月の安息所」",
+        "SPELL_DOROMI_04" : "紗符「桃色喪服の砕け散る薔薇」",
+        "SPELL_DOROMI_05" : "後悔「静かな散歩道」",
+        "SPELL_DOROMI_06" : "半吸血鬼「光にも、影にもあらず」",
+        "SPELL_DOROMI_07" : "逢魔「鉱山京の逢魔が時」",
+        "SPELL_DOROMI_08" : "灰符「失墜せし下っ端の墓標」",
+        "SPELL_DOROMI_09" : "幻想郷夕方の鐘「最後の落日」"
     },
     "char_names" : {
         "CHAR_KOTORI" : "手神コトリ",

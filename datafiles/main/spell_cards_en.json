@@ -77,7 +77,16 @@
         "SPELL_CAMILLE_06" : "Order Sign \"Militant Grace\"",
         "SPELL_CAMILLE_07" : "Scarlet Sign \"Grand Authority of Vladrouge\"",
         "SPELL_CAMILLE_08" : "Frantic Search \"Where is the Mistress?\"",
-        "SPELL_CAMILLE_09" : "Forbidden Virtue \"The Absolute Sovereign\""
+        "SPELL_CAMILLE_09" : "Forbidden Virtue \"The Absolute Sovereign\"",
+        "SPELL_DOROMI_01" : "Dusk Sign \"Evening Bell of the Boundary\"",
+        "SPELL_DOROMI_02" : "Sweeper Sign \"Lament of the Beautiful Mud\"",
+        "SPELL_DOROMI_03" : "Grave Sign \"Resting Place of the Red Moon\"",
+        "SPELL_DOROMI_04" : "Veil Sign \"Shattered Rose of Pink Mourning\"",
+        "SPELL_DOROMI_05" : "Regret \"Silent Promenade\"",
+        "SPELL_DOROMI_06" : "Dhampir \"Neither of the Light or Shadow\"",
+        "SPELL_DOROMI_07" : "Twilight \"Dreadful Meeting Hour at Kozankyo\"",
+        "SPELL_DOROMI_08" : "Ash Sign \"Cemetery of the Fallen Grunts\"",
+        "SPELL_DOROMI_09" : "Gensokyo's Evening Bell \"The Final Sunset\""
     },
     "char_names" : {
         "CHAR_KOTORI" : "Kotori Tegami",

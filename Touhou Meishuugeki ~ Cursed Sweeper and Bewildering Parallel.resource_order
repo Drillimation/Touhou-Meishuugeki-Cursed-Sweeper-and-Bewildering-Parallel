@@ -502,6 +502,8 @@
     {"name":"spr_danmaku_star_m","order":16,"path":"sprites/spr_danmaku_star_m/spr_danmaku_star_m.yy",},
     {"name":"spr_danmaku_star_s","order":17,"path":"sprites/spr_danmaku_star_s/spr_danmaku_star_s.yy",},
     {"name":"spr_defeat_daze","order":32,"path":"sprites/spr_defeat_daze/spr_defeat_daze.yy",},
+    {"name":"spr_doromi_defeat","order":55,"path":"sprites/spr_doromi_defeat/spr_doromi_defeat.yy",},
+    {"name":"spr_doromi_portrait","order":54,"path":"sprites/spr_doromi_portrait/spr_doromi_portrait.yy",},
     {"name":"spr_doromi_spell","order":21,"path":"sprites/spr_doromi_spell/spr_doromi_spell.yy",},
     {"name":"spr_doromi","order":53,"path":"sprites/spr_doromi/spr_doromi.yy",},
     {"name":"spr_drillimation_logo","order":9,"path":"sprites/spr_drillimation_logo/spr_drillimation_logo.yy",},

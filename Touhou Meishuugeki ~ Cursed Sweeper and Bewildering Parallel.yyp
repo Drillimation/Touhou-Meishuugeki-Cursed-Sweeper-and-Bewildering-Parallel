@@ -1029,6 +1029,8 @@
     {"id":{"name":"spr_danmaku_star_m","path":"sprites/spr_danmaku_star_m/spr_danmaku_star_m.yy",},},
     {"id":{"name":"spr_danmaku_star_s","path":"sprites/spr_danmaku_star_s/spr_danmaku_star_s.yy",},},
     {"id":{"name":"spr_defeat_daze","path":"sprites/spr_defeat_daze/spr_defeat_daze.yy",},},
+    {"id":{"name":"spr_doromi_defeat","path":"sprites/spr_doromi_defeat/spr_doromi_defeat.yy",},},
+    {"id":{"name":"spr_doromi_portrait","path":"sprites/spr_doromi_portrait/spr_doromi_portrait.yy",},},
     {"id":{"name":"spr_doromi_spell","path":"sprites/spr_doromi_spell/spr_doromi_spell.yy",},},
     {"id":{"name":"spr_doromi","path":"sprites/spr_doromi/spr_doromi.yy",},},
     {"id":{"name":"spr_drillimation_logo","path":"sprites/spr_drillimation_logo/spr_drillimation_logo.yy",},},

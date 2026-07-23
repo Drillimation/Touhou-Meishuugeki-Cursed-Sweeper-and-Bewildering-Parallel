@@ -49,7 +49,7 @@ function scr_system_initiate(_no_of_players = 1){
 			received : 1
 		}
 		global.replay_input[i] = {
-			replay_stage : [[],[],[],[],[],[],[]]
+			replay_stage : [[],[],[],[],[],[],[],[]]
 		}
 	}
 }

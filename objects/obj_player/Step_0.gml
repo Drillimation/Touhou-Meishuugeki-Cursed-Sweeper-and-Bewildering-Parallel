@@ -7,7 +7,7 @@ x = xview + x_pos;
 y = yview + y_pos;
 
 //Movement
-if global.replay_mode = false {
+if global.replay_mode == false {
 	scr_get_input(play_id);
 }
 else {

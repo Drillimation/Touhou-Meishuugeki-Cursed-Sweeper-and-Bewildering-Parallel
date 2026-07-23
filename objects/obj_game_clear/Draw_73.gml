@@ -17,11 +17,13 @@ for(var i = 0; i < array_length(bonuses[0]); i++) {
 	draw_text(xview + 8,(yview + 56) + (16 * i),bonuses[0][i])
 }
 draw_set_halign(fa_center);
-if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
-	draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
-}
-else {
-	draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT NOT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
+if global.main_stats.stage <= 6 or global.freeplaymode == false {
+	if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
+		draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
+	}
+	else {
+		draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT NOT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
+	}
 }
 draw_set_color(make_color_rgb(255,255,255));
 draw_set_halign(fa_right);

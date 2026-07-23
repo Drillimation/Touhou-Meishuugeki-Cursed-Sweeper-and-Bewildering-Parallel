@@ -48,7 +48,6 @@
         ["scr_cutscene_show_text","cutscenes/CHAR_KAGUYA_phantasm_ending",22,"snd_text_blip_m"],
         ["scr_cutscene_show_text","cutscenes/CHAR_KAGUYA_phantasm_ending",23,"snd_text_blip_m"],
         ["scr_cutscene_show_text","cutscenes/CHAR_KAGUYA_phantasm_ending",24,"snd_text_blip_m"],
-        ["scr_cutscene_show_text","cutscenes/CHAR_KAGUYA_phantasm_ending",25,"snd_text_blip_m"],
         ["scr_cutscene_room_transition","room_gameover"]
     ]
 }

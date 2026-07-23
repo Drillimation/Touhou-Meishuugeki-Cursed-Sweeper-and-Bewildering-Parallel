@@ -36,6 +36,7 @@ if delay <= 0 {
 					break;
 				case 1: 
 					global.main_stats.stage = 7;
+					global.main_stats.time_of_day = "DAY";
 					for(var i = 0; i < array_length(global.player_stats); i++) {
 						player_SetPlayerPower(100,i);
 					}
@@ -43,6 +44,13 @@ if delay <= 0 {
 				case 2: 
 					global.main_stats.stage = 1; 
 					global.main_stats.time_of_day = "NIGHT";
+					break;
+				case 3: 
+					global.main_stats.stage = 8;
+					global.main_stats.time_of_day = "NIGHT";
+					for(var i = 0; i < array_length(global.player_stats); i++) {
+						player_SetPlayerPower(100,i);
+					}
 					break;
 			}
 			instance_destroy();

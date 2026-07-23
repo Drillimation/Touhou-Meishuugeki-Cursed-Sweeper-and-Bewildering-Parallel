@@ -11,6 +11,7 @@ if (a_button) {
 		switch(global.main_stats.stage) {
 			case 1:	room_goto(room_transition_1); break;
 			case 7: room_goto(room_transition_7); break;
+			case 8: room_goto(room_transition_8); break;
 		}
 	}
 }

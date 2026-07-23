@@ -1,7 +1,7 @@
 {
     "t_scene_info" : [
         ["scr_cutscene_set_portrait","spr_kaguya_portrait",0,0,16],
-        ["scr_cutscene_set_portrait","spr_doromi_portrait",8,128,16],
+        ["scr_cutscene_set_portrait","spr_doromi_portrait",1,128,16],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_KAGUYA_stage_8_postbattle",0],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_KAGUYA_stage_8_postbattle",1],
         ["scr_cutscene_show_textbox","cutscenes/CHAR_KAGUYA_stage_8_postbattle",2],

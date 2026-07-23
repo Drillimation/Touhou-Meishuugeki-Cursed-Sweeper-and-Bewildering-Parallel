@@ -11,17 +11,20 @@ var load_array = scr_json_load_file("menu_data/main_menu" + string(global.suf) +
 option = [
 	load_array.episode_select.menu_options[0],
 	load_array.episode_select.menu_options[1],
-	load_array.episode_select.menu_options[2]
+	load_array.episode_select.menu_options[2],
+	load_array.episode_select.menu_options[3]
 ]
 description = [
 	load_array.episode_select.menu_description[0],
 	load_array.episode_select.menu_description[1],
-	load_array.episode_select.menu_description[2]
+	load_array.episode_select.menu_description[2],
+	load_array.episode_select.menu_description[3]
 ]
 img = [
 	spr_fusana_portrait,
 	spr_camille_portrait,
-	spr_veronica_portrait
+	spr_veronica_portrait,
+	spr_doromi_portrait
 ]
 
 //array_copy(option,0,load_array.episode_select.menu_options,0,array_length(load_array.episode_select.menu_options));

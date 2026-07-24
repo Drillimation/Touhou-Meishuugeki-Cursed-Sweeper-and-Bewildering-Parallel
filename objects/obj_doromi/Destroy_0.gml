@@ -3,7 +3,7 @@ if room != room_debug {
 		system_AddScore(round(250000),i);
 	}
 	var inst = instance_create_depth(x,y,-1000,obj_defeated_boss);
-	inst.index_sprite = spr_camille_defeat;
+	inst.index_sprite = spr_doromi_defeat;
 	var load_file2 = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_8_postbattle" + string(global.suf) + ".json");
 	var cutscene = scr_json_load_file("cutscenes/" + string(global.player_stats[0].character) + "_stage_8_postbattle.json")
 	s_scene_info = cutscene.t_scene_info;

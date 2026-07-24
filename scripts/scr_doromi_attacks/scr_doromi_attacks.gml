@@ -735,7 +735,7 @@ function scr_doromi_attacks(){
 				baseAngle += 360 / (18 + (global.main_stats.difficulty * 2))
 			}
 		}
-		if count mod 100 == 0 {
+		if count mod 50 == 0 {
 			var baseAngle = irandom_range(0,360)
 			repeat(18 + (global.main_stats.difficulty * 2)) {
 				shot_CreateShotA1(x,y,1,baseAngle,spr_danmaku_ball_m2,5,15);

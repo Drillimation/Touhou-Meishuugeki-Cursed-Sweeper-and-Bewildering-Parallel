@@ -1,0 +1,26 @@
+{
+    "bgm_list" : [
+        "bgm/title.it",
+        "bgm/stage_01.it",
+        "bgm/boss_01.it",
+        "bgm/stage_02.it",
+        "bgm/boss_02_day.it",
+        "bgm/boss_02_night.it",
+        "bgm/stage_03.it",
+        "bgm/boss_03.it",
+        "bgm/stage_04.it",
+        "bgm/boss_04.it",
+        "bgm/stage_05.it",
+        "bgm/boss_05.it",
+        "bgm/stage_06.it",
+        "bgm/boss_06_day.it",
+        "bgm/boss_06_night.it",
+        "bgm/stage_extra.it",
+        "bgm/boss_extra.it",
+        "bgm/stage_phantasm.it",
+        "bgm/boss_phantasm.it",
+        "bgm/ending.it",
+        "bgm/staff_roll.it",
+        "bgm/score.it"
+    ]
+}

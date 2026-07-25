@@ -97,6 +97,7 @@
     {"name":"obj_loading","order":27,"path":"objects/obj_loading/obj_loading.yy",},
     {"name":"obj_main_menu","order":45,"path":"objects/obj_main_menu/obj_main_menu.yy",},
     {"name":"obj_mode_select","order":31,"path":"objects/obj_mode_select/obj_mode_select.yy",},
+    {"name":"obj_music_room","order":63,"path":"objects/obj_music_room/obj_music_room.yy",},
     {"name":"obj_nameentry","order":52,"path":"objects/obj_nameentry/obj_nameentry.yy",},
     {"name":"obj_options","order":46,"path":"objects/obj_options/obj_options.yy",},
     {"name":"obj_pause","order":39,"path":"objects/obj_pause/obj_pause.yy",},

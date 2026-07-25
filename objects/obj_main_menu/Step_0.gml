@@ -46,10 +46,9 @@ if delay <= 0 {
 				inst.target = asset_get_index(room_replay_menu);*/ 
 				break;
 			case 3: 
-				sound_ObjSound_Play(se_invalid); 
-				/*global.replay_mode = true;
-				var inst = instance_create_depth(0,0,0,obj_fade_out);
-				inst.target = asset_get_index(room_music_room);*/ 
+				instance_destroy();
+				instance_destroy(obj_title);
+				instance_create_depth(0,0,0,obj_music_room);
 				break;
 			case 4: url_open_ext("https://github.com/Drillimation/Touhou-Meishuugeki-Cursed-Sweeper-and-Bewildering-Parallel/", "_blank"); break;
 			case 5: url_open_ext("https://drillipedia.fandom.com/", "_blank"); break;

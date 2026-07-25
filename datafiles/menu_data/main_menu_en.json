@@ -1,12 +1,12 @@
 {
     "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
     "title_prompt" : "↑↓ Select  %au Confirm",
-    "copyr_notice" : "©2026 Drillimation Systems Co., Ltd./E. Enthusiasm.\nCharacters © Team Shanghai Alice/Drillimation/E. Enthusiasm",
+    "copyr_notice" : "©2026 Drillimation Systems Co., Ltd./E. Enthusiasm.\nCharacters © Team Shanghai Alice/Drillimation/E. Enthusiasm/Studio Emiko",
     "menu_options" : [
         "Arcade",
         "Free Play",
         "[#FF8080]Replay Menu",
-        "[#FF8080]Music Room",
+        "Music Room",
         "Fork on GitHub",
         "Drillipedia",
         "Options",
@@ -84,5 +84,16 @@
             "The youkai-born sage and monarch of the Democratic Kingdom of Gensokyo visiting Kozankyo for the festival. With her Border Sign \"Quadruple Barrier\", she seeks to silence the rumors of the glohm before they slip through the gaps. She views the spreading glohm as not just a threat, but a lesson in boundaries.\nSpecial: Placeable narrow needle danmaku allows for strategic screen control.",
             "A former princess from the Lunar Capital who now reigns as the Empress of the People's Kingdom of Gensokyo and a guest of honor at the autumn festival. Using her Eternal Sign \"Branch of Hourai\", she investigates the disruptive trail of \"glohm\" affecting the continent's infrastructure. She refuses to let the substance overshadow the majesty of the equinox.\nSpecial: Deploys shimmering, star-like danmaku patterns that cover a wide range."
         ]
+    },
+    "save_replay" : {
+        "menu_options" : [
+            "YES",
+            "NO"
+        ],
+        "prompt" : "Would you like to save this replay?",
+        "errors" : {
+            "incompatible_replay" : "This replay was created in an older version of the game and is not compatible.",
+            "corrupt_replay" : "The replay data is corrupt and cannot be played."
+        }
     }
 }

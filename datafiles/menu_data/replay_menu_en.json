@@ -1,0 +1,22 @@
+{
+    "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
+    "table_headers" : [
+        "Player Name",
+        "Date and Time",
+        "Char",
+        "Rank",
+        "Stage"
+    ],
+    "characters" : {
+        "CHAR_REIMU" : "Reimu",
+        "CHAR_MARISA" : "Marisa",
+        "CHAR_YUKARI" : "Yukari",
+        "CHAR_KAGUYA" : "Kaguya"
+    },
+    "rank" : [
+        "Easy",
+        "Normal",
+        "Difficult",
+        "Lunatic"
+    ]
+}

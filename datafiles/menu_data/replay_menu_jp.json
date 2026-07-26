@@ -1,0 +1,22 @@
+{
+    "menu_prompt" : "↑↓ 選択  %au 確認  %bu 戻る",
+    "table_headers" : [
+        "プレイヤー名前",
+        "日付と時刻",
+        "キャラ",
+        "ランク",
+        "ステージ"
+    ],
+    "characters" : {
+        "CHAR_REIMU" : "レイム",
+        "CHAR_MARISA" : "マリサ",
+        "CHAR_YUKARI" : "ユカリ",
+        "CHAR_KAGUYA" : "カグヤ"
+    },
+    "rank" : [
+        "かんたん",
+        "ふつう",
+        "むずかしい",
+        "おに"
+    ]
+}

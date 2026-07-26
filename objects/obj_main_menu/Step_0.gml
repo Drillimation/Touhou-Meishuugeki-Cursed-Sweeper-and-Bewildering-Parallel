@@ -39,11 +39,11 @@ if delay <= 0 {
 				inst = instance_create_depth(0,0,0,obj_fade_out);
 				inst.target = asset_get_index(room_setup);
 				break;
-			case 2: 
-				sound_ObjSound_Play(se_invalid); 
-				/*global.replay_mode = true;
-				var inst = instance_create_depth(0,0,0,obj_fade_out);
-				inst.target = asset_get_index(room_replay_menu);*/ 
+			case 2:
+				instance_destroy();
+				global.replay_mode = true;
+				inst = instance_create_depth(0,0,0,obj_fade_out);
+				inst.target = asset_get_index(room_replay_menu);
 				break;
 			case 3: 
 				instance_destroy();

@@ -3,6 +3,7 @@ fmod_system_init(512,FMOD_INIT.NORMAL);
 global.bgm = undefined;
 global.bgm_channel = undefined;
 global.current_bgm = undefined;
+global.game_version = "Windows Beta V100"
 
 game_set_speed(60, gamespeed_fps);
 audio_group_load(audiogroup_default);
@@ -58,7 +59,8 @@ if !file_exists("options.save") {
 		sfx_volume : 0.8,
 		fullscreen : 1,
 		stages_cleared : 0,
-		border_brightness : 1
+		border_brightness : 1,
+		player_name : ""
 	}
 	scr_change_language();
 	instance_create_depth(0,0,0,obj_language_select_first);

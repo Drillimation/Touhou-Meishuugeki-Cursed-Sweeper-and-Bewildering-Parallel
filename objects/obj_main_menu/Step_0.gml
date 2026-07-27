@@ -30,17 +30,20 @@ if delay <= 0 {
 			case 0:
 				instance_destroy();
 				global.freeplaymode = false;
+				global.replay_mode = false;
 				inst = instance_create_depth(0,0,0,obj_fade_out);
 				inst.target = asset_get_index(room_setup);
 				break;
 			case 1:
 				instance_destroy();
 				global.freeplaymode = true;
+				global.replay_mode = false;
 				inst = instance_create_depth(0,0,0,obj_fade_out);
 				inst.target = asset_get_index(room_setup);
 				break;
 			case 2:
 				instance_destroy();
+				global.freeplaymode = false;
 				global.replay_mode = true;
 				inst = instance_create_depth(0,0,0,obj_fade_out);
 				inst.target = asset_get_index(room_replay_menu);

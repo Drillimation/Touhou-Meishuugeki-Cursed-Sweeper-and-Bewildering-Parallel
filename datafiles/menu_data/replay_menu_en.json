@@ -18,5 +18,15 @@
         "Normal",
         "Difficult",
         "Lunatic"
+    ],
+    "stage" : [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "ALL",
+        "Extra",
+        "Phantasm"
     ]
 }

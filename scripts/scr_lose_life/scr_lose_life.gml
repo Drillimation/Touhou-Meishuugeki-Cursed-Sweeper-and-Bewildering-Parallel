@@ -38,6 +38,14 @@ function scr_lose_life(){
 		instance_destroy(obj_player_bullet);
 		instance_destroy(obj_enemy_bullet);
 		instance_destroy(obj_item);
-		instance_create_layer(0,0,"Instances",obj_game_over)
+		if global.replay_mode == false {
+			instance_create_layer(0,0,"Instances",obj_game_over)
+		}
+		else {
+			var xview = camera_get_view_x(view_camera[1]);
+			var yview = camera_get_view_y(view_camera[1]);
+			var inst = instance_create_layer(xview + 0,yview + 0,"Effects",obj_fade_out);
+			inst.target = asset_get_index(room_gameover);
+		}
 	}
 }

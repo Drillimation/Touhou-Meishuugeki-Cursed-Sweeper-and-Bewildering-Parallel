@@ -98,30 +98,42 @@ load_array = scr_json_load_file("menu_data/replay_menu" + string(global.suf) + "
 //var load_order = scr_json_load_file("main/spell_card_order.json");
 
 option = []
-//description = []
+description = []
 
 //for(var i = 0; i < array_length(load_order.spell_card_order); i++) {
 	//option[i] = struct_get(load_array.enemy_spell,load_order.spell_card_order[i]);
 	//description[i] = struct_get(global.spellcard_statistics,load_order.spell_card_order[i]);
 //}
 
-array_copy(option,0,replay_list,0,array_length(replay_list));
+array_copy(option,0,load_replays,0,array_length(load_replays));
+for(var i = 0; i < array_length(replay_list); i++) {
+	var character_text = struct_get(load_array.characters,replay_input[i].replay_score[0].character)
+	var rank_text = load_array.characters[replay_input[i].replay_score[0].rank]
+	var stage_text = load_array.characters[replay_list[i].main_stats.stage]
+	array_push(description,[
+		replay_list[i].replay_info.player_name,
+		replay_list[i].replay_info.save_date,
+		character_text,
+		rank_text,
+		stage_text
+	]);
+}
 //array_copy(description,0,load_array.option_select.option_description,0,array_length(load_array.option_select.option_description));
 
 prompt = load_array.menu_prompt;
 prompt = scr_button_menu(prompt);
 
-op_length_y = array_length(option);
+op_length_y = array_length(replay_list);
 op_length_x = 1;
 
-for(var i = 0; i < 64; i++) {
+for(var i = 0; i < 128; i++) {
 	scribble_object[i] = undefined;
 }
 
 scr_get_input_menu();
 
 count = 0;
-inventory_scroll = [0,8];
+inventory_scroll = [0,19];
 scroll_clamp = 0;
-list_max_entries = 8;
+list_max_entries = 19;
 _ss = 0;

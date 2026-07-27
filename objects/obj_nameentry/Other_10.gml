@@ -37,7 +37,7 @@ if global.player_stats[player_index].cur_score < global.highscores[9].score {
 		}
 		scr_json_save_file(global.spellcard_statistics,"spell_card_statistics.save");
 		scr_system_close();
-		instance_create_depth(0,0,0,obj_true_gameover);
+		instance_create_depth(656,32,0,obj_save_replay);
 	}
 	else {
 		event_perform(ev_user0,0);

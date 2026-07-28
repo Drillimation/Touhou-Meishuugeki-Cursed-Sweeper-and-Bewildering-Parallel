@@ -37,7 +37,12 @@ if delay <= 0 {
 				case 2: global.player_stats[0].character = "CHAR_YUKARI"; break;
 				case 3: global.player_stats[0].character = "CHAR_KAGUYA"; break;
 			}
-			instance_create_depth(0,0,0,obj_tutorial)
+			if array_length(global.player_stats) == 2 {
+				instance_create_depth(656,32,0,obj_character_select_p2)
+			}
+			else {
+				instance_create_depth(0,0,0,obj_tutorial)
+			}
 		}
 		
 		if (b_button) {

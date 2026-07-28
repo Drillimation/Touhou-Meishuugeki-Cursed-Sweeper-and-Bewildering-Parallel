@@ -76,7 +76,6 @@ if delay == 0 {
 					}
 				}
 				scr_json_save_file(global.spellcard_statistics,"spell_card_statistics.save");
-				scr_system_close();
 				instance_create_depth(656,32,0,obj_save_replay);
 			}
 			else {

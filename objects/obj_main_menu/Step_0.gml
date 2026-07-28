@@ -63,6 +63,11 @@ if delay <= 0 {
 			case 7: game_end(); break;
 		}
 	}
+	if (x_button) {
+		instance_destroy();
+		instance_destroy(obj_title);
+		instance_create_depth(0,0,0,obj_first_name_entry)
+	}
 }
 
 if count == 1800 {

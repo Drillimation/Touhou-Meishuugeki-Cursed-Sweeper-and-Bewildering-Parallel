@@ -31,7 +31,7 @@ function scr_main_hud() {
 	//Player 2
 	if array_length(global.player_stats) == 2 {
 		draw_set_halign(fa_left);
-		switch(global.player_stats[0].character) {
+		switch(global.player_stats[1].character) {
 			case "CHAR_REIMU": draw_set_color(make_color_rgb(255,0,0)); break;
 			case "CHAR_MARISA": draw_set_color(make_color_rgb(255,255,0)); break;
 			case "CHAR_YUKARI": draw_set_color(make_color_rgb(128,0,255)); break;
@@ -42,13 +42,14 @@ function scr_main_hud() {
 		draw_set_color(make_color_rgb(255,255,255));
 		draw_text(xview + 256,yview + 8,global.player_stats[1].cur_score);
 		draw_sprite(spr_heart_icon,0,xview + 232,yview + 0);
-		draw_text(xview + 256,yview + 0,global.player_stats[0].cur_health);
+		draw_text(xview + 256,yview + 0,global.player_stats[1].cur_health);
 	}
 	else {
-		var p2_attract = ["CONNECT\nGAMEPAD","PUSH 2P\nSTART"]
+		//Draw nothing
+		/*var p2_attract = ["CONNECT\nGAMEPAD","PUSH 2P\nSTART"]
 		draw_set_halign(fa_center);
 		draw_set_color(make_color_rgb(255,255,255));
-		draw_text(xview + 224,yview + 0,p2_attract[gamepad_is_connected(1)]);
+		draw_text(xview + 224,yview + 0,p2_attract[gamepad_is_connected(1)]);*/
 	}
 	
 	//Bottom Part

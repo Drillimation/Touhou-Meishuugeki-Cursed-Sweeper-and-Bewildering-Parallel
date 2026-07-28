@@ -30,7 +30,6 @@ speed += acceleration;
 if speedcap == true { speed = clamp(speed,0,maxspeed); }
 if jitter == true {
 	if count mod jitter_speed == 0 {
-		randomize();
 		direction += choose(jitter_direction,-jitter_direction);
 		count = 0;
 	}

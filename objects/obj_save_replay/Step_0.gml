@@ -31,18 +31,20 @@ if delay <= 0 {
 			scr_one_channel_sound(snd_menuconfirm);
 			switch(y_pos) {
 				case 0:
-					scr_save_replay("replays/" + string(current_year) + string_repeat("0",2-string_length(string(current_month))) + string(current_month) + string_repeat("0",2-string_length(string(current_day))) + string(current_day) + " " + string_repeat("0",2-string_length(string(current_hour))) + string(current_hour) + "" + string_repeat("0",2-string_length(string(current_minute))) + string(current_minute) + string_repeat("0",2-string_length(string(current_second))) + string(current_second) + ".rpy")
+					scr_save_replay("replays/" + string(global.game_options.player_name) + " " + string(current_year) + string_repeat("0",2-string_length(string(current_month))) + string(current_month) + string_repeat("0",2-string_length(string(current_day))) + string(current_day) + " " + string_repeat("0",2-string_length(string(current_hour))) + string(current_hour) + "" + string_repeat("0",2-string_length(string(current_minute))) + string(current_minute) + string_repeat("0",2-string_length(string(current_second))) + string(current_second) + ".rpy")
 					break;
 				case 1: 
 					//Do nothing.
 					break;
 			}
+			scr_system_close();
 			instance_destroy();
 			instance_create_depth(0,0,0,obj_true_gameover);
 		}
 		
 		if (b_button) or count == 1800 {
 			scr_one_channel_sound(snd_menucancel);
+			scr_system_close();
 			instance_destroy();
 			instance_create_depth(0,0,0,obj_true_gameover);
 		}

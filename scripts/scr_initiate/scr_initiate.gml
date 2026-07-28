@@ -70,6 +70,11 @@ function scr_system_close() {
 function scr_load_replay(_file) {
 	var _replay_file = scr_json_load_file(_file);
 	global.replay_mode = true;
+	var freeplay = struct_get(_replay_file,"free_play")
+	switch(freeplay) {
+		case 0: global.freeplaymode = false; break;
+		case 1: global.freeplaymode = true; break;
+	}
 	scr_system_initiate(array_length(_replay_file));
 	global.playing_field = struct_get(_replay_file,"playing_field");
 	global.main_stats = struct_get(_replay_file,"main_stats");
@@ -79,7 +84,8 @@ function scr_load_replay(_file) {
 function scr_save_replay(_file) {
 	var save_data = {
 		replay_info : {
-			player_name : global.player_name,
+			free_play : global.freeplaymode,
+			player_name : global.game_options.player_name,
 			save_date : string(current_year) + "/" + string_repeat("0",2-string_length(string(current_month))) + string(current_month) + "/" + string_repeat("0",2-string_length(string(current_day))) + string(current_day) + " " + string_repeat("0",2-string_length(string(current_hour))) + string(current_hour) + ":" + string_repeat("0",2-string_length(string(current_minute))) + string(current_minute) + ":" + string_repeat("0",2-string_length(string(current_second))) + string(current_second),
 			version : global.game_version
 		},

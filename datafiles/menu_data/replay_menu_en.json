@@ -28,5 +28,8 @@
         "ALL",
         "Extra",
         "Phantasm"
-    ]
+    ],
+    "errors" : {
+        "no_replays" : "You haven't saved a replay yet. Create one at the end of a game first."
+    }
 }

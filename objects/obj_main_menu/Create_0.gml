@@ -17,7 +17,9 @@ array_copy(description,0,load_array.menu_description,0,array_length(load_array.m
 prompt = load_array.title_prompt;
 prompt = scr_button_menu(prompt);
 copyr_notice = load_array.copyr_notice;
-
+welcome = load_array.change_player_name;
+welcome = scr_button_menu(welcome);
+welcome = string_replace_all(welcome,"%playername%",global.game_options.player_name)
 op_length_y = array_length(option);
 op_length_x = 1;
 

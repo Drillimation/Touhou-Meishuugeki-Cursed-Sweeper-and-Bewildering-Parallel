@@ -2,10 +2,12 @@
     "menu_prompt" : "↑↓ Select  %au Confirm  %bu Back",
     "title_prompt" : "↑↓ Select  %au Confirm",
     "copyr_notice" : "©2026 Drillimation Systems Co., Ltd./E. Enthusiasm.\nCharacters © Team Shanghai Alice/Drillimation/E. Enthusiasm/Studio Emiko",
+    "welcome" : "Welcome to Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel! Please enter your name.",
+    "change_player_name" : "Welcome, [#FF8080]%playername%[#FFFFFF]! If this is not you, push %xu to change player name.",
     "menu_options" : [
         "Arcade",
         "Free Play",
-        "[#FF8080]Replay Menu",
+        "Replay Menu",
         "Music Room",
         "Fork on GitHub",
         "Drillipedia",
@@ -29,8 +31,8 @@
             "TWO PLAYERS"
         ],
         "menu_description" : [
-            "Play the game alone. A second player can join at any time.",
-            "Play the game with a friend. The second player can drop out at any time."
+            "Play the game alone.",
+            "Play the game with a friend."
         ]
     },
     "mode_select" : {
@@ -93,7 +95,8 @@
         "prompt" : "Would you like to save this replay?",
         "errors" : {
             "incompatible_replay" : "This replay was created in an older version of the game and is not compatible.",
-            "corrupt_replay" : "The replay data is corrupt and cannot be played."
+            "corrupt_replay" : "The replay data is corrupt and cannot be played.",
+            "no_replays" : "You haven't saved a replay yet. Create one at the end of a game first."
         }
     }
 }

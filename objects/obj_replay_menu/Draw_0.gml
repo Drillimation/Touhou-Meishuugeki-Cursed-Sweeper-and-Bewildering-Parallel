@@ -1,15 +1,24 @@
-if op_length_y < list_max_entries + 1 {
-	draw_sprite(spr_menu_cursor,0,0,48 + (y_pos * op_space))
-}
-else {
-	draw_sprite(spr_menu_cursor,0,0,48 + (scroll_clamp * op_space))
-}
+if array_length(replay_list) >= 1 {
+	if op_length_y < list_max_entries + 1 {
+		draw_sprite(spr_menu_cursor,0,0,48 + (y_pos * op_space))
+	}
+	else {
+		draw_sprite(spr_menu_cursor,0,0,48 + (scroll_clamp * op_space))
+	}
 
-if array_length(description) < list_max_entries + 1 {
-	_ss = array_length(description)
+	if array_length(description) < list_max_entries + 1 {
+		_ss = array_length(description)
+	}
+	else {
+		_ss = list_max_entries + 1;
+	}
 }
 else {
-	_ss = list_max_entries + 1;
+	scribble_object[121] = scribble(load_array.errors.no_replays)
+		.starting_format("drp_shd",make_color_rgb(255,255,255))
+		.align(fa_left,fa_top)
+		.wrap(608)
+		.draw(24,48)
 }
 
 for(var i = 0; i < _ss; i++) {

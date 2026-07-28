@@ -35,8 +35,3 @@ replay_frame = 0;
 turret_pos = 0;
 
 scr_character_sprites();
-
-if global.freeplaymode == false {
-	global.replay_input[play_id].replay_score[global.main_stats.stage] = global.player_stats[play_id];
-	global.replay_input[play_id].stage_played[global.main_stats.stage] = 1;
-}

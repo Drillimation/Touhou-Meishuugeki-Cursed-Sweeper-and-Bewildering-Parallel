@@ -1,1 +1,1 @@
-scr_system_initiate();
+//scr_system_initiate();

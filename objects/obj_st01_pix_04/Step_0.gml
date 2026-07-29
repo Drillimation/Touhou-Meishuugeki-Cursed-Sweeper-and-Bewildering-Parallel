@@ -27,7 +27,7 @@ if entered == true {
 	}
 	
 	if count >= 31 and count <= 119 {
-		move_ObjMove_SetAngle(self,direction + div_angle)
+		move_ObjMove_SetAngle(self,dir + div_angle)
 	}
 	
 	count++;

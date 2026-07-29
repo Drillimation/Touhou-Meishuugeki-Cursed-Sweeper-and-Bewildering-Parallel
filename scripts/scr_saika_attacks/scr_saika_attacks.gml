@@ -13,7 +13,7 @@ function scr_saika_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count == 30 {
-							speed += 0.5;
+							spd += 0.5;
 						}
 					}
 				}
@@ -77,7 +77,7 @@ function scr_saika_attacks(){
 						if count == 60 {
 							sound_ObjSound_Play(se_kira01)
 							for(var j = 0; j < 5; j++) {
-								shot_CreateShotA1(x,y,speed * 1.25,(direction - 20) + (j * 10),spr_danmaku_bullet,5,0);
+								shot_CreateShotA1(x,y,speed * 1.25,(dir - 20) + (j * 10),spr_danmaku_bullet,5,0);
 							}
 							prop_ObjShot_FadeDelete(self,-0.02);
 						}
@@ -106,7 +106,7 @@ function scr_saika_attacks(){
 						sound_ObjSound_Play(se_kira01)
 						var speedT = 1
 						repeat(floor(global.main_stats.difficulty / 2) + 1) {
-							shot_CreateShotA1(x,y,speedT,direction + 180,spr_danmaku_seed_m,5,1);
+							shot_CreateShotA1(x,y,speedT,dir + 180,spr_danmaku_seed_m,5,1);
 							speedT -= 0.5;
 						}
 						prop_ObjShot_FadeDelete(self,-0.02);
@@ -137,7 +137,7 @@ function scr_saika_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_saika_portrait,0,_load_file.enemy_spell.SPELL_SAIKA_01,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_SAIKA_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -161,7 +161,7 @@ function scr_saika_attacks(){
 									t = 0;
 								}
 								if count mod 15 == 0 {
-									direction += (30 * sin(t * 4))
+									dir += (30 * sin(t * 4))
 								}
 								t++;
 							}
@@ -180,7 +180,7 @@ function scr_saika_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_saika_portrait,0,_load_file.enemy_spell.SPELL_SAIKA_02,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_SAIKA_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -199,7 +199,7 @@ function scr_saika_attacks(){
 							if count == 60 {
 								sound_ObjSound_Play(se_kira00);
 								repeat(3) {
-									shot_CreateShotA1(x,y,2,direction + irandom_range(-20,20),spr_danmaku_pellet,5,0);
+									shot_CreateShotA1(x,y,2,dir + irandom_range(-20,20),spr_danmaku_pellet,5,0);
 								}
 								instance_destroy();
 							}
@@ -216,7 +216,7 @@ function scr_saika_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_saika_portrait,0,_load_file.enemy_spell.SPELL_SAIKA_03,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_SAIKA_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -237,15 +237,15 @@ function scr_saika_attacks(){
 						if count <= 59 {
 							if instance_exists(obj_saika) {
 								radius += 0.75;
-								direction += 5;
-								x_pos = obj_saika.x_pos + lengthdir_x(radius,direction)
-								y_pos = obj_saika.y_pos + lengthdir_y(radius,direction)
+								dir += 5;
+								x_pos = obj_saika.x_pos + lengthdir_x(radius,dir)
+								y_pos = obj_saika.y_pos + lengthdir_y(radius,dir)
 							}
 						}
 						if count == 60 {
 							var angleT = point_direction(x,y,obj_player.x,obj_player.y);
-							direction = angleT;
-							speed = 2;
+							dir = angleT;
+							spd = 2;
 						}
 						if count == 61 {
 							sound_ObjSound_Play(se_kira00)
@@ -268,7 +268,7 @@ function scr_saika_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_saika_portrait,0,_load_file.enemy_spell.SPELL_SAIKA_04,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_SAIKA_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;

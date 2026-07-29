@@ -39,7 +39,7 @@ function scr_spite_bulb_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_SPITE_BULB_01,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_SPITE_BULB_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -59,7 +59,7 @@ function scr_spite_bulb_attacks(){
 								sound_ObjSound_Play(se_kira01);
 								prop_ObjShot_SetGraphic(self,spr_danmaku_arrowhead,15);
 								if instance_exists(obj_player) {
-									direction = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-90,90);
+									dir = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-90,90);
 								}
 								//move_ObjMove_SetSpeed(self,0.75)
 								move_ObjMove_SetAcceleration(self,0);
@@ -115,7 +115,7 @@ function scr_spite_bulb_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_SPITE_BULB_02,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_SPITE_BULB_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;

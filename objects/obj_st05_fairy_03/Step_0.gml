@@ -9,8 +9,8 @@ if entered == true {
 		image_alpha = 0;
 		x_pos = irandom_range(16,240);
 		y_pos = irandom_range(32,96);
-		direction = irandom_range(0,180);
-		speed = 0;
+		dir = irandom_range(0,180);
+		spd = 0;
 		baseAngle = 0;
 	}
 	
@@ -38,7 +38,7 @@ if entered == true {
 	}
 	if count == 50 {
 		sound_ObjSound_Play(se_tan01);
-		speed = 2;
+		spd = 2;
 		repeat(16) {
 			shot_CreateShotA1(x,y,random_range(1,1.5),irandom_range(0,360),spr_danmaku_ball_m2,5,2)
 		}

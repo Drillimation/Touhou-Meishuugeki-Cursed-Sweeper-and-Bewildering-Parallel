@@ -15,7 +15,7 @@ function scr_system_initiate(_no_of_players = 1){
 		camera_priority : 80,
 		random_seed : random_get_seed()
 	}
-	random_set_seed(global.playing_field.random_seed);
+	random_set_seed(global.playing_field.random_seed,true);
 	global.main_stats = {
 		difficulty : 0,
 		stage : 1,
@@ -72,8 +72,13 @@ function scr_load_replay(_file) {
 	var _replay_file = scr_json_load_file(_file);
 	var freeplay = struct_get(_replay_file.replay_info,"free_play")
 	show_debug_message(freeplay)
-	global.freeplaymode = freeplay;
-	if global.freeplaymode == true show_debug_message("Replay created in Free Play Mode.")
+	if freeplay == 1 {
+		global.freeplaymode = true;
+		show_debug_message("Replay created in Free Play Mode.") 
+	}
+	else {
+		global.freeplaymode = false;
+	}
 	scr_system_initiate(array_length(_replay_file));
 	global.replay_mode = true;
 	global.playing_field = struct_get(_replay_file,"playing_field");

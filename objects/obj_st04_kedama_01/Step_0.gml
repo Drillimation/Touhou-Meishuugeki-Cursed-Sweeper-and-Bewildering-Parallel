@@ -9,16 +9,16 @@ if entered == true {
 		image_alpha = 0;
 		//x_pos = irandom_range(16,240);
 		y_pos = irandom_range(32,96);
-		direction = point_direction(x,y,obj_player.x,obj_player.y);
-		speed = 0;
+		dir = point_direction(x,y,obj_player.x,obj_player.y);
+		spd = 0;
 	}
 	
 	if count < 50 {
 		image_alpha += 0.02;
 	}
 	if count > 50 {
-		speed += 0.01;
-		speed = clamp(speed,0,2)
+		spd += 0.01;
+		spd = clamp(speed,0,2)
 	}
 	if count == 50 {
 		angleT = point_direction(x,y,obj_player.x,obj_player.y) - 20;

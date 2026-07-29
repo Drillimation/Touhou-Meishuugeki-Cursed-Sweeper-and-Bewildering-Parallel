@@ -5,8 +5,8 @@ event_inherited();
 if entered == true {
 	//Input action commands here
 	if count == 0 {
-		speed = 1;
-		direction = 270;
+		spd = 1;
+		dir = 270;
 		if x_pos > 128 {
 			rt_sp = 7.5;
 		}
@@ -15,16 +15,16 @@ if entered == true {
 		}
 	}
 	if count < 60 {
-		speed -= 0.0167;
+		spd -= 0.0167;
 	}
 	if count == 60 {
 		if x_pos > 128 {
-			speed = 0.1;
-			direction = 105;
+			spd = 0.1;
+			dir = 105;
 		}
 		if x_pos < 128 {
-			speed = 0.1;
-			direction = 345;
+			spd = 0.1;
+			dir = 345;
 		}
 		angleT = 0;
 		angleU = 0;

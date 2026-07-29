@@ -12,7 +12,7 @@ function scr_helene_attacks(){
 				repeat(7 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,y,random_range(0.5,1),random_range(180,360),choose(spr_danmaku_seed_s,spr_danmaku_seed_m),5,irandom_range(0,2))
 					move_ObjMove_SetAngularVelocity(inst,random_range(-1,1));
-					inst.gravity = 0.005;
+					inst.grav = 0.005;
 				}
 			}
 		}
@@ -25,7 +25,7 @@ function scr_helene_attacks(){
 	}
 	attack_helene_main_1 = function() {
 		if count == 0 {
-			speed = 0;
+			spd = 0;
 			x_pos = 128;
 			y_pos = 96;
 			move_mode = false;
@@ -37,7 +37,7 @@ function scr_helene_attacks(){
 				repeat(7 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,32,random_range(0.5,1),random_range(180,360),choose(spr_danmaku_seed_s,spr_danmaku_seed_m),5,5)
 					move_ObjMove_SetAngularVelocity(inst,random_range(-1,1));
-					inst.gravity = 0.005;
+					inst.grav = 0.005;
 					with(inst) {
 						set_function = function() {
 							if count mod 15 == 0 {
@@ -58,7 +58,7 @@ function scr_helene_attacks(){
 	}
 	attack_helene_main_2 = function() {
 		if count == 0 {
-			speed = 0;
+			spd = 0;
 			x_pos = 128;
 			y_pos = 96;
 			move_mode = false;
@@ -68,7 +68,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_tan02);
 			repeat(6 - global.main_stats.difficulty) {
 				var inst = shot_CreateShotA1(irandom_range(8,248),32,0,270,spr_danmaku_seed_s,5,choose(10,15))
-				inst.gravity = 0.01;
+				inst.grav = 0.01;
 			}
 		}
 		
@@ -81,7 +81,7 @@ function scr_helene_attacks(){
 	}
 	attack_helene_main_3 = function() {
 		if count == 0 {
-			speed = 0;
+			spd = 0;
 			x_pos = 128;
 			y_pos = 96;
 			move_mode = false;
@@ -111,7 +111,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_01,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -125,7 +125,7 @@ function scr_helene_attacks(){
 					for(var i = 0; i < global.main_stats.difficulty + 1; i++) {
 						var inst = shot_CreateShotA1(ex,32,random_range(0.5,1),random_range(180,360),spr_danmaku_seed_s,5,5)
 						move_ObjMove_SetAngularVelocity(inst,random_range(-1,1));
-						inst.gravity = 0.005;
+						inst.grav = 0.005;
 						with(inst) {
 							set_function = function() {
 								if count mod 30 == 0 {
@@ -153,7 +153,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_02,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -190,7 +190,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_03,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -204,7 +204,7 @@ function scr_helene_attacks(){
 					for(var i = 0; i < global.main_stats.difficulty + 1; i++) {
 						var inst = shot_CreateShotA1(ex,32,random_range(0.5,1),random_range(180,360),spr_danmaku_seed_m,5,5)
 						move_ObjMove_SetAngularVelocity(inst,random_range(-1,1));
-						inst.gravity = 0.005;
+						inst.grav = 0.005;
 						with(inst) {
 							set_function = function() {
 								if count mod 30 == 0 {
@@ -232,7 +232,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_04,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -248,7 +248,7 @@ function scr_helene_attacks(){
 						with(inst) {
 							set_function = function() {
 								var t = irandom_range(0,360);							
-								move_ObjMove_SetAngle(self,direction + (sin(t) * 0.8))
+								move_ObjMove_SetAngle(self,dir + (sin(t) * 0.8))
 								t += 4;
 							}
 						}
@@ -268,7 +268,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_05,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_05"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -304,7 +304,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_06,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_06"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -346,7 +346,7 @@ function scr_helene_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_helene_portrait,0,_load_file.enemy_spell.SPELL_HELENE_05,spr_helene_spell)
 			global.main_stats.current_spell = "SPELL_HELENE_07"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -358,7 +358,7 @@ function scr_helene_attacks(){
 				repeat(7 + global.main_stats.difficulty) {
 					var inst = shot_CreateShotA1(x,32,random_range(0.5,1),random_range(180,360),choose(spr_danmaku_seed_s,spr_danmaku_seed_m),5,5)
 					move_ObjMove_SetAngularVelocity(inst,random_range(-1,1));
-					inst.gravity = 0.005;
+					inst.grav = 0.005;
 					with(inst) {
 						set_function = function() {
 							if count mod 15 == 0 {
@@ -378,7 +378,7 @@ function scr_helene_attacks(){
 			sound_ObjSound_Play(se_tan02);
 			repeat(6 - global.main_stats.difficulty) {
 				var inst = shot_CreateShotA1(irandom_range(8,248),32,0,270,spr_danmaku_seed_s,5,choose(10,15))
-				inst.gravity = 0.01;
+				inst.grav = 0.01;
 			}
 		}
 		

@@ -5,13 +5,13 @@ event_inherited();
 if entered == true {
 	//Input action commands here
 	if count == 0 {
-		direction = 270;
-		speed = 2;
+		dir = 270;
+		spd = 2;
 	}
 	
 	if count < 50 {
-		speed -= 0.04;
-		speed = clamp(speed,0,2);
+		spd -= 0.04;
+		spd = clamp(speed,0,2);
 	}
 	if count == 50 {
 		sound_ObjSound_Play(se_tan02);
@@ -25,8 +25,8 @@ if entered == true {
 		}
 	}
 	if count > 50 {
-		speed += 0.04;
-		speed = clamp(speed,0,2);
+		spd += 0.04;
+		spd = clamp(speed,0,2);
 	}
 	
 	count++;

@@ -25,7 +25,7 @@ if array_length(load_replays) >= 1 {
 		if !struct_exists(replay_to_check,"main_stats") or !is_struct(replay_to_check.main_stats) { show_debug_message("\"main_stats\" not found."); continue; }
 		if !struct_exists(replay_to_check,"replay_input") or !is_array(replay_to_check.replay_input) { show_debug_message("\"replay_input\" not found."); continue; }
 		//Replay info check
-		if !struct_exists(replay_to_check.replay_info,"free_play") or !is_bool(replay_to_check.replay_info.free_play) { show_debug_message("\"free_play\" not found."); continue; }
+		if !struct_exists(replay_to_check.replay_info,"free_play") or !is_real(replay_to_check.replay_info.free_play) { show_debug_message("\"free_play\" not found."); continue; }
 		if !struct_exists(replay_to_check.replay_info,"player_name") or !is_string(replay_to_check.replay_info.player_name) { show_debug_message("\"free_play\" not found."); continue; }
 		if !struct_exists(replay_to_check.replay_info,"save_date") or !is_string(replay_to_check.replay_info.save_date) { show_debug_message("\"free_play\" not found."); continue; }
 		if !struct_exists(replay_to_check.replay_info,"version") or !is_string(replay_to_check.replay_info.version) { show_debug_message("\"free_play\" not found."); continue; }
@@ -99,7 +99,7 @@ if array_length(load_replays) >= 1 {
 	}
 }
 
-op_space = 32;
+op_space = 16;
 x_pos = 0;
 y_pos = 0;
 count = 0;

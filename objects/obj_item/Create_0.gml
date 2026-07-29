@@ -1,5 +1,10 @@
-direction = 270;
-speed = 0.5;
+dir = 270;
+spd = 0.5;
+hspd = 0;
+vspd = 0;
+len = 0;
+dir = 0;
+state = scr_move_state_enemy;
 move_mode = false;
 score_value = 0;
 auto_collect = false;

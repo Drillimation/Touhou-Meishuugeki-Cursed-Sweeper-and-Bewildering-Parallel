@@ -5,11 +5,11 @@ event_inherited();
 if entered == true {
 	//Input action commands here
 	if count == 0 {
-		direction = 270;
-		speed = 1;
+		dir = 270;
+		spd = 1;
 	}
 	if count < 50 {
-		speed -= 0.01;
+		spd -= 0.01;
 	}
 	
 	if count > 50 and count < 150 {
@@ -22,13 +22,13 @@ if entered == true {
 				with(inst) {
 					set_function = function() {
 						if count < 120 {
-							speed -= 0.01;
+							spd -= 0.01;
 						}
 						if count == 120 {
 							sound_ObjSound_Play(se_kira00);
 							image_index = 2;
-							speed = 0.6;
-							direction -= 90;
+							spd = 0.6;
+							dir -= 90;
 						}
 					}
 				}
@@ -36,13 +36,13 @@ if entered == true {
 				with(inst) {
 					set_function = function() {
 						if count < 120 {
-							speed -= 0.01;
+							spd -= 0.01;
 						}
 						if count == 120 {
 							sound_ObjSound_Play(se_kira00);
 							image_index = 2;
-							speed = 0.6;
-							direction += 90;
+							spd = 0.6;
+							dir += 90;
 						}
 					}
 				}
@@ -52,8 +52,8 @@ if entered == true {
 	}
 	
 	if count == 150 {
-		direction = 270;
-		speed = 1;
+		dir = 270;
+		spd = 1;
 	}
 	
 	count++;

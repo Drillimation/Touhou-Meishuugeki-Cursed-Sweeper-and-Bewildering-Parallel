@@ -5,12 +5,12 @@ if entered == true {
 	//Input action commands here
 	if count == 0 {
 		sound_ObjSound_Play(se_kira01)
-		direction = 270
-		speed = 2;
+		dir = 270
+		spd = 2;
 	}
 	if count < 75 {
-		speed -= 0.02;
-		speed = clamp(speed,0,1.5);
+		spd -= 0.02;
+		spd = clamp(speed,0,1.5);
 	}
 	
 	if count < 90 {
@@ -42,8 +42,8 @@ if entered == true {
 	}
 	if count == 135 {
 		if x_pos > 128 {
-			direction = 180;
-			speed = 1;
+			dir = 180;
+			spd = 1;
 		}
 	}
 	

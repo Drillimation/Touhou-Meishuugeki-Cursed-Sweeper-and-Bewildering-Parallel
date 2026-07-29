@@ -10,6 +10,6 @@ for(var i = 0; i < array_length(global.player_stats); i++) {
 	inst = instance_create_layer(0,0,"Instances",obj_player);
 	with(inst) {
 		play_id = i;
-		event_perform(ev_create,0);
+		event_perform(ev_other,ev_user0);
 	}
 }

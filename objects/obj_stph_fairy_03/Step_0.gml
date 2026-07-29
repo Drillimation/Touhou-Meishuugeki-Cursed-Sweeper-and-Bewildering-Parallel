@@ -6,8 +6,8 @@ if entered == true {
 	//Input action commands here
 	if count == 0 {
 		sound_ObjSound_Play(se_kira01)
-		direction = 270
-		speed = 1.5;
+		dir = 270
+		spd = 1.5;
 	}
 	
 	if count == 30 {

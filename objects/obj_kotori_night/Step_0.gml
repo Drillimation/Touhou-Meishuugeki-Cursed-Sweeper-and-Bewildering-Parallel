@@ -25,9 +25,9 @@ if entered == true {
 }
 
 //Animation
-if hspeed < 0 { face = 0; }
-else if hspeed == 0 { face = 1; }
-else if hspeed > 0 { face = 2; }
+if hspd < 0 { face = 0; }
+else if hspd == 0 { face = 1; }
+else if hspd > 0 { face = 2; }
 	
 if count2 mod 20 == 0 {
 	image_index = (face * 4)

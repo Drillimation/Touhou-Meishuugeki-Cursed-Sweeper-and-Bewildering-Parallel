@@ -39,7 +39,7 @@ function move_ObjMove_SetSpeed(_id,_speed) {
 	/// @param {real} _speed The speed to set.
 	
 	with(_id) {
-		speed = _speed;
+		spd = _speed;
 	}
 }
 
@@ -50,7 +50,7 @@ function move_ObjMove_SetAngle(_id,_angle) {
 	/// @param {real} _angle The direction to set.
 	
 	with(_id) {
-		direction = _angle;
+		dir = _angle;
 	}
 }
 
@@ -113,8 +113,8 @@ function move_ObjMove_SetDestAtSpeed(_id,_x,_y,_speed) {
 		x_tar = _x;
 		y_tar = _y;
 		move_mode = true;
-		direction = point_direction(x,y,xview + _x,yview + _y);
-		speed = _speed;
+		dir = point_direction(x,y,xview + _x,yview + _y);
+		spd = _speed;
 	}
 }
 
@@ -132,9 +132,9 @@ function move_ObjMove_SetDestAtFrame(_id,_x,_y,_frames) {
 		x_tar = _x;
 		y_tar = _y;
 		move_mode = true;
-		direction = point_direction(x,y,xview + _x,yview + _y);
+		dir = point_direction(x,y,xview + _x,yview + _y);
 		var length = point_distance(x,y,xview + _x,yview + _y);
-		speed = length / _frames;
+		spd = length / _frames;
 	}
 }
 
@@ -155,7 +155,7 @@ function move_ObjMove_SetDestAtWeight(_id,_x,_y,_weight,_maxspeed) {
 		speedcap = true;
 		acceleration = _weight;
 		maxspeed = _maxspeed;
-		direction = point_direction(x,y,xview + _x,yview + _y);
+		dir = point_direction(x,y,xview + _x,yview + _y);
 	}
 }
 

@@ -1,6 +1,11 @@
 display_score = 0;
 count = 0;
-vspeed = -0.25;
+spd = 0.25;
+hspd = 0;
+vspd = 0;
+len = 0;
+dir = 90;
+state = scr_move_state_enemy;
 
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);

@@ -9,7 +9,7 @@ function scr_koko_attacks(){
 			timer = 35; 
 			x_pos = 128; 
 			y_pos = 64; 
-			speed = 0; 
+			spd = 0; 
 			move_mode = false;
 			angleS = 0;
 			angleT = 0;
@@ -43,13 +43,13 @@ function scr_koko_attacks(){
 				move_ObjMove_SetAcceleration(inst,0.01);
 				angleT2 += 360 / ((global.main_stats.difficulty * 4) + 12);
 			}
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
 		}
 		
 		if count == 360 {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			count = 1;
 		}
@@ -59,7 +59,7 @@ function scr_koko_attacks(){
 			timer = 35; 
 			x_pos = 16; 
 			y_pos = 64; 
-			speed = 0; 
+			spd = 0; 
 			move_mode = false;
 		}
 		
@@ -78,8 +78,8 @@ function scr_koko_attacks(){
 						set_function = function() {
 							if count == 120 {
 								sound_ObjSound_Play(se_kira02);
-								direction = point_direction(x,y,obj_player.x,obj_player.y) + random_range(-5,5);
-								speed = 2;
+								dir = point_direction(x,y,obj_player.x,obj_player.y) + random_range(-5,5);
+								spd = 2;
 							}
 						}
 					}
@@ -87,7 +87,7 @@ function scr_koko_attacks(){
 			}
 			else {
 				move_mode = false;
-				speed = 0;
+				spd = 0;
 				count = 10;
 			}
 		}
@@ -103,7 +103,7 @@ function scr_koko_attacks(){
 			global.main_stats.current_spell = "SPELL_KOKO_01"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -119,12 +119,12 @@ function scr_koko_attacks(){
 					with(inst) {
 						set_function = function() {
 							if count < 120 {
-								speed -= 0.01;
+								spd -= 0.01;
 							}
 							if count == 120 {
 								sound_ObjSound_Play(se_kira00)
-								direction = point_direction(obj_koko.x,obj_koko.y,obj_player.x,obj_player.y);
-								speed = 0.75;
+								dir = point_direction(obj_koko.x,obj_koko.y,obj_player.x,obj_player.y);
+								spd = 0.75;
 								prop_ObjShot_SetAutoDelete(self,true)
 							}
 							if count >= 120 {
@@ -154,13 +154,13 @@ function scr_koko_attacks(){
 		}
 		
 		if count == 300 {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
 		}
 		
 		if count == 360 {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			count = 59;
 		}
@@ -174,7 +174,7 @@ function scr_koko_attacks(){
 			global.main_stats.current_spell = "SPELL_KOKO_02"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -186,9 +186,9 @@ function scr_koko_attacks(){
 					with(inst) {
 						set_function = function() {
 							if count mod 15 == 0 {
-								direction += irandom_range(-20,20);
-								speed += random_range(-0.25,0.25);
-								speed = clamp(speed,0.5,2);
+								dir += irandom_range(-20,20);
+								spd += random_range(-0.25,0.25);
+								spd = clamp(speed,0.5,2);
 							}
 							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
@@ -212,7 +212,7 @@ function scr_koko_attacks(){
 			global.main_stats.current_spell = "SPELL_KOKO_03"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -227,10 +227,10 @@ function scr_koko_attacks(){
 						if count mod 40 == 0 {
 							set_function = function() {
 								if count >= 0 and count <= 29 {
-									direction += 3;
+									dir += 3;
 								}
 								if count >= 30 and count <= 59 {
-									direction -= 3;
+									dir -= 3;
 								}
 								if count == 60 {
 									count = 0;
@@ -240,10 +240,10 @@ function scr_koko_attacks(){
 						else {
 							set_function = function() {
 								if count >= 0 and count <= 29 {
-									direction -= 2;
+									dir -= 2;
 								}
 								if count >= 30 and count <= 59 {
-									direction += 2;
+									dir += 2;
 								}
 								if count == 60 {
 									count = 0;
@@ -256,13 +256,13 @@ function scr_koko_attacks(){
 			}
 			
 			if count == 300 {
-				speed = 0;
+				spd = 0;
 				move_mode = false;
 				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
 			}
 		
 			if count == 360 {
-				speed = 0;
+				spd = 0;
 				move_mode = false;
 				count = 59;
 			}
@@ -277,7 +277,7 @@ function scr_koko_attacks(){
 			global.main_stats.current_spell = "SPELL_KOKO_04"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,48);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -289,9 +289,9 @@ function scr_koko_attacks(){
 					with(inst) {
 						set_function = function() {
 							if count mod 15 == 0 {
-								direction += irandom_range(-20,20);
-								speed += random_range(-0.25,0.25);
-								speed = clamp(speed,0.5,2);
+								dir += irandom_range(-20,20);
+								spd += random_range(-0.25,0.25);
+								spd = clamp(speed,0.5,2);
 							}
 							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
@@ -324,7 +324,7 @@ function scr_koko_attacks(){
 			global.main_stats.current_spell = "SPELL_KOKO_05"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,144);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		

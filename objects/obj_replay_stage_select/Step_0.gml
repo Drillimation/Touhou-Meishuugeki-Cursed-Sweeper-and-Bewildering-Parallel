@@ -31,7 +31,8 @@ if delay <= 0 {
 			global.main_stats.spells_captured = [];
 			global.main_stats.continues_used = 0;
 			global.main_stats.current_spell = "";
-			random_set_seed(global.playing_field.random_seed);
+			random_set_seed(selected_replay.playing_field.random_seed,true);
+			show_debug_message(selected_replay.playing_field.random_seed)
 			for(var i = 0; i < array_length(selected_replay.replay_input); i++) {
 				global.player_stats[i] = selected_replay.replay_input[i].replay_score[y_pos];
 			}

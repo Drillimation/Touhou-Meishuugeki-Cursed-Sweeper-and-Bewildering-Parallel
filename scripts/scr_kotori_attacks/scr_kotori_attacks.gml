@@ -5,7 +5,7 @@ function scr_kotori_attacks(){
 	
 	//Main attacks
 	attack_kotori_mid = function() {
-		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
+		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; spd = 0; move_mode = false; }
 		if count <= 140 {
 			if count mod 45 == 0 {
 				sound_ObjSound_Play(se_tan02);
@@ -16,7 +16,7 @@ function scr_kotori_attacks(){
 						image_xscale = 2;
 						image_yscale = 2;
 						set_function = function() {
-							direction += random_range(-5,5);
+							dir += random_range(-5,5);
 						}
 					}
 					angleT += 360 / (16 + (global.main_stats.difficulty * 2))
@@ -34,9 +34,9 @@ function scr_kotori_attacks(){
 					var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
 					with(inst) {
 						set_function = function() {
-							if count == 10 { direction += 90 }
+							if count == 10 { dir += 90 }
 							if count == 20 { 
-								direction -= 90; 
+								dir -= 90; 
 								count = 0; 
 							}
 						}
@@ -52,15 +52,15 @@ function scr_kotori_attacks(){
 			count = 1;
 		}
 		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
-			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+			dir = point_direction(x_pos,y_pos,x_tar,y_tar)
 		}
 		else {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 	}
 	attack_kotori_main_1 = function() {
-		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
+		if count == 0 { timer = 30;  x_pos = 128; y_pos = 56; spd = 0; move_mode = false; }
 		if count > 1 and count < 121 {
 			if count mod 30 == 0 {
 				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
@@ -113,15 +113,15 @@ function scr_kotori_attacks(){
 			count = 1;
 		}
 		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
-			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+			dir = point_direction(x_pos,y_pos,x_tar,y_tar)
 		}
 		else {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 	}
 	attack_kotori_main_2 = function() {
-		if count == 0 { timer = 30; x_pos = 128; y_pos = 56; speed = 0; move_mode = false; }
+		if count == 0 { timer = 30; x_pos = 128; y_pos = 56; spd = 0; move_mode = false; }
 		if count > 1 and count < 181 {
 			if count mod 30 == 0 {
 				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
@@ -176,10 +176,10 @@ function scr_kotori_attacks(){
 			count = 1;
 		}
 		if point_distance(x_pos,y_pos,x_tar,y_tar) > 4 {
-			direction = point_direction(x_pos,y_pos,x_tar,y_tar)
+			dir = point_direction(x_pos,y_pos,x_tar,y_tar)
 		}
 		else {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 	}
@@ -192,7 +192,7 @@ function scr_kotori_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_01,spr_kotori_spell)
 			global.main_stats.current_spell = "SPELL_KOTORI_01";
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count == 60 {
@@ -212,7 +212,7 @@ function scr_kotori_attacks(){
 						repeat(2 + global.main_stats.difficulty) {
 							sound_ObjSound_Play(se_tan01);
 							var inst = shot_CreateShotA1(x,y,0.5,choose(random_range(135,225),random_range(315,405)),spr_danmaku_amulet,5,15);
-							inst.gravity = 0.005;
+							inst.grav = 0.005;
 						}
 					}
 				}
@@ -249,7 +249,7 @@ function scr_kotori_attacks(){
 			global.main_stats.current_spell = "SPELL_KOTORI_02";
 			x_pos = 128;
 			y_pos = 128;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count >= 60 {
@@ -263,8 +263,8 @@ function scr_kotori_attacks(){
 							if count == 0 { choose_to_move = choose(90,105,120); }
 							if count == choose_to_move {
 								sound_ObjSound_Play(se_kira00);
-								direction += 180;
-								speed += 0.25;
+								dir += 180;
+								spd += 0.25;
 							}
 						}
 					}
@@ -281,7 +281,7 @@ function scr_kotori_attacks(){
 			global.main_stats.current_spell = "SPELL_KOTORI_03";
 			x_pos = 128;
 			y_pos = 48;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count >= 60 {
@@ -291,7 +291,7 @@ function scr_kotori_attacks(){
 				repeat(7) {
 					for(var i = 0; i < global.main_stats.difficulty + 1; i++) {
 						var inst = shot_CreateShotA1(ex,96,0.25,random_range(75,105),spr_danmaku_amulet,5,15);
-						inst.gravity = 0.005;
+						inst.grav = 0.005;
 						ex += 32;
 					}
 				}
@@ -305,7 +305,7 @@ function scr_kotori_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_kotori_portrait,0,_load_file.enemy_spell.SPELL_KOTORI_04,spr_kotori_spell)
 			global.main_stats.current_spell = "SPELL_KOTORI_04";
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -325,9 +325,9 @@ function scr_kotori_attacks(){
 					var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
 					with(inst) {
 						set_function = function() {
-							if count == 10 { direction += 90 }
+							if count == 10 { dir += 90 }
 							if count == 20 { 
-								direction -= 90; 
+								dir -= 90; 
 								count = 0; 
 							}
 						}
@@ -348,7 +348,7 @@ function scr_kotori_attacks(){
 			global.main_stats.current_spell = "SPELL_KOTORI_05";
 			x_pos = 128;
 			y_pos = 96;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		
@@ -359,7 +359,7 @@ function scr_kotori_attacks(){
 					var inst = shot_CreateShotA1(x,y,random_range(0.75,1.5),irandom_range(0,360),spr_danmaku_amulet,5,15);
 					with(inst) {
 						set_function = function() {
-							direction += random_range(-5,5);
+							dir += random_range(-5,5);
 						}
 					}
 				}
@@ -370,9 +370,9 @@ function scr_kotori_attacks(){
 					var inst = shot_CreateShotA1(x,y,0.75,irandom_range(0,360),spr_danmaku_pellet,5,15);
 					with(inst) {
 						set_function = function() {
-							if count == 10 { direction += 90 }
+							if count == 10 { dir += 90 }
 							if count == 20 { 
-								direction -= 90; 
+								dir -= 90; 
 								count = 0; 
 							}
 						}
@@ -388,7 +388,7 @@ function scr_kotori_attacks(){
 						image_xscale = 2;
 						image_yscale = 2;
 						set_function = function() {
-							direction += random_range(-5,5);
+							dir += random_range(-5,5);
 						}
 					}
 					angleT += 360 / (8 + (global.main_stats.difficulty * 2))

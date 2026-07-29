@@ -17,13 +17,15 @@ function playermain_CreatePlayerShotA1(_x,_y,_speed,_angle,_damage,_penetration,
 	if _y != y { ey = yview + _y } else { ey = y }
 	
 	var inst = instance_create_layer(ex,ey,"Instances",obj_player_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
-	inst.penetration = _penetration;
-	inst.play_id = play_id;
+	with(inst) {
+		spd = _speed;
+		dir = _angle;
+		penetration = _penetration;
+		play_id = play_id;
+	}
 	return inst
 }
 

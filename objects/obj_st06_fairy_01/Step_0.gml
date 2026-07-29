@@ -9,8 +9,8 @@ if entered == true {
 		image_alpha = 0;
 		x_pos = 128;
 		y_pos = 96;
-		//direction = 270
-		speed = 0;
+		//dir = 270
+		spd = 0;
 		angleX = 0;
 	}
 	

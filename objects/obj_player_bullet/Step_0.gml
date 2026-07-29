@@ -3,11 +3,10 @@ scr_danmaku_sprites();
 xview = camera_get_view_x(view_camera[0]);
 yview = camera_get_view_y(view_camera[0]);
 
+script_execute(state);
+
 x = xview + x_pos;
 y = yview + y_pos;
-
-x_pos += hspeed;
-y_pos += vspeed;
 
 depth = 5000 - y;
 
@@ -19,18 +18,23 @@ else {
 	damage_delay = 0;
 }
 
+//Gravity
+if grav > 0 {
+	vspd += grav;
+}
+
 //Task Functionality
 if set_function != undefined {
 	script_execute_ext(set_function);
 }
 
 //Direction Manipulation
-direction += angular_velocity;
-speed += acceleration;
-if speedcap == true { speed = clamp(speed,0,maxspeed); }
+dir += angular_velocity;
+spd += acceleration;
+if speedcap == true { spd = clamp(speed,0,maxspeed); }
 if jitter == true {
 	if count mod jitter_speed == 0 {
-		direction += choose(jitter_direction,-jitter_direction);
+		dir += choose(jitter_direction,-jitter_direction);
 		count = 0;
 	}
 	count++
@@ -41,7 +45,7 @@ if autohome == true {
 		if instance_exists(enemy_target) {
 			var ex = instance_nearest(x,y,enemy_target).x;
 			var ey = instance_nearest(x,y,enemy_target).y;
-			direction = point_direction(x,y,ex,ey);
+			dir = point_direction(x,y,ex,ey);
 		}
 	}
 }

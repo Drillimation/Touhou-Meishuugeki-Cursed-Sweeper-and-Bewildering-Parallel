@@ -13,7 +13,7 @@ function scr_koakuma_attacks(){
 			global.main_stats.current_spell = "SPELL_KOAKUMA_01"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -49,7 +49,7 @@ function scr_koakuma_attacks(){
 						with(inst) {
 							set_function = function() {
 								if count == 80 {
-									direction = irandom_range(165,345);
+									dir = irandom_range(165,345);
 									acceleration = 0.01;
 									speedcap = true;
 									maxspeed = random_range(1.5,2);
@@ -85,7 +85,7 @@ function scr_koakuma_attacks(){
 			global.main_stats.current_spell = "SPELL_KOAKUMA_02"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 			dir2 = 0;
@@ -113,13 +113,13 @@ function scr_koakuma_attacks(){
 						set_function = function() {
 							if count == 60 {
 								sound_ObjSound_Play(se_kira02)
-								speed = 0;
-								direction += 180;
+								spd = 0;
+								dir += 180;
 							}
 							if count == 80 {
 								sound_ObjSound_Play(se_kira00)
 								prop_ObjShot_SetAutoDelete(self,false)
-								speed = 1;
+								spd = 1;
 								angular_velocity = 0.5;
 							}
 						}
@@ -137,13 +137,13 @@ function scr_koakuma_attacks(){
 				with(inst) {
 					if count == 60 {
 						sound_ObjSound_Play(se_kira02)
-						speed = 0;
-						direction += 180;
+						spd = 0;
+						dir += 180;
 					}
 					if count == 80 {
 						sound_ObjSound_Play(se_kira00)
 						prop_ObjShot_SetAutoDelete(self,false)
-						speed = 1;
+						spd = 1;
 						angular_velocity = -0.5;
 					}
 				}
@@ -163,7 +163,7 @@ function scr_koakuma_attacks(){
 			global.main_stats.current_spell = "SPELL_KOAKUMA_03"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -178,7 +178,7 @@ function scr_koakuma_attacks(){
 						set_function = function() {
 							if count == 120 {
 								sound_ObjSound_Play(se_kira00);
-								speed = 1;
+								spd = 1;
 							}
 						}
 					}
@@ -187,7 +187,7 @@ function scr_koakuma_attacks(){
 						set_function = function() {
 							if count == 120 {
 								sound_ObjSound_Play(se_kira00);
-								speed = 1;
+								spd = 1;
 							}
 						}
 					}
@@ -196,7 +196,7 @@ function scr_koakuma_attacks(){
 						set_function = function() {
 							if count == 120 {
 								sound_ObjSound_Play(se_kira00);
-								speed = 1;
+								spd = 1;
 							}
 						}
 					}
@@ -205,7 +205,7 @@ function scr_koakuma_attacks(){
 						set_function = function() {
 							if count == 120 {
 								sound_ObjSound_Play(se_kira00);
-								speed = 1;
+								spd = 1;
 							}
 						}
 					}
@@ -226,7 +226,7 @@ function scr_koakuma_attacks(){
 			global.main_stats.current_spell = "SPELL_KOAKUMA_04"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,144);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 			baseAngle1 = 0;

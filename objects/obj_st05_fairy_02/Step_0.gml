@@ -9,16 +9,16 @@ if entered == true {
 		image_alpha = 0;
 		x_pos = choose(64,128,192);
 		y_pos = 96;
-		direction = irandom_range(180,360);
-		speed = 0;
+		dir = irandom_range(180,360);
+		spd = 0;
 	}
 	
 	if count < 50 {
 		image_alpha += 0.02;
 	}
 	if count > 50 {
-		speed += 0.04;
-		speed = clamp(speed,0,2)
+		spd += 0.04;
+		spd = clamp(speed,0,2)
 		
 		if count < 130 {
 			if count mod 5 == 0 {
@@ -31,8 +31,8 @@ if entered == true {
 							if count == 0 {
 								angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							}
-							if direction > angleT { direction--; }
-							if direction < angleT { direction++; }
+							if dir > angleT { dir--; }
+							if dir < angleT { dir++; }
 						}
 					}
 					inst = shot_CreateShotA1(x,y,1.25,(angleT - 165) + (10 * i),spr_danmaku_kunai,5,0);
@@ -41,8 +41,8 @@ if entered == true {
 							if count == 0 {
 								angleT = point_direction(x,y,obj_player.x,obj_player.y);
 							}
-							if direction > angleT { direction--; }
-							if direction < angleT { direction++; }
+							if dir > angleT { dir--; }
+							if dir < angleT { dir++; }
 						}
 					}
 				}
@@ -62,7 +62,7 @@ if entered == true {
 						if count == 60 {
 							sound_ObjSound_Play(se_kira00)
 							move_ObjMove_SetAcceleration(inst,0.04);
-							direction = point_direction(x,y,obj_player.x,obj_player.y);
+							dir = point_direction(x,y,obj_player.x,obj_player.y);
 						}
 					}
 				}

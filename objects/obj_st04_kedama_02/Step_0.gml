@@ -34,12 +34,12 @@ if entered == true {
 	
 	if count == 120 {
 		if x_pos < 128 {
-			direction = 330;
+			dir = 330;
 		}
 		if x_pos > 128 {
-			direction = 210;
+			dir = 210;
 		}
-		speed = 2;
+		spd = 2;
 		sound_ObjSound_Play(se_tan01)
 		
 		speedT = 2;

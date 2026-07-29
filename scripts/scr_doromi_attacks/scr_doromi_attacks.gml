@@ -29,7 +29,7 @@ function scr_doromi_attacks(){
 		}
 		if count mod 60 == 45 {
 			sound_ObjSound_Play(se_kira01)
-			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
 			for(var i = -2 - global.main_stats.difficulty; i < 3 + global.main_stats.difficulty; i++) {
 				shot_CreateShotA1(x,y,1.25,angleT + (i * 12),spr_danmaku_dagger,15,12);
 			}
@@ -40,7 +40,7 @@ function scr_doromi_attacks(){
 	}
 	attack_doromi_02 = function() {
 		if count == 0 {
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			timer = 60; 
 		}
@@ -55,7 +55,7 @@ function scr_doromi_attacks(){
 		if count mod 20 == 0 and count mod 80 < 60 {
 			sound_ObjSound_Play(se_tan01);
 			var speedT = 1.6;
-			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
 			var shotColor;
 			if count mod 40 == 0 {
 				shotColor = 0;
@@ -78,7 +78,7 @@ function scr_doromi_attacks(){
 		if count == 0 {
 			swingAngle = 0;
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 6 == 0 {
@@ -92,7 +92,7 @@ function scr_doromi_attacks(){
 		}
 		if count mod 12 == 0 {
 			sound_ObjSound_Play(se_tan01);
-			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
+			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
 			var speedT = 2.25;
 			repeat(1 + global.main_stats.difficulty) {
 				shot_CreateShotA1(x,y,speedT,angleT - 15,spr_danmaku_arrowhead,4,1);
@@ -111,7 +111,7 @@ function scr_doromi_attacks(){
 			spiralAngle1 = 0;
 			spiralAngle2 = 180;
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 6 == 0 {
@@ -154,7 +154,7 @@ function scr_doromi_attacks(){
 	attack_doromi_05 = function() {
 		if count == 0 { 
 			timer = 60; 
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 80 == 0 {
@@ -171,8 +171,8 @@ function scr_doromi_attacks(){
 						if count == 85 {
 							sound_ObjSound_Play(se_kira00);
 							move_ObjMove_SetAcceleration(self,0);
-							direction = 270 + irandom_range(-15,15);
-							speed = 0.9;
+							dir = 270 + irandom_range(-15,15);
+							spd = 0.9;
 						}
 					}
 				}
@@ -208,7 +208,7 @@ function scr_doromi_attacks(){
 		if count == 0 {
 			lightAngle = 315;
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			with(obj_warning_line) { instance_destroy() }
 		}
@@ -246,7 +246,7 @@ function scr_doromi_attacks(){
 		if count == 0 {
 			ringAngle = 0;
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 14 == 0 {
@@ -257,8 +257,8 @@ function scr_doromi_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count >= 40 {
-							if speed > 0.6 {
-								speed -= 0.05;
+							if spd > 0.6 {
+								spd -= 0.05;
 							}
 						}
 					}
@@ -279,7 +279,7 @@ function scr_doromi_attacks(){
 		if count == 0 {
 			timer = 60;
 			ashAngle = 315;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 90 == 0 {
@@ -290,8 +290,8 @@ function scr_doromi_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count >= 80 {
-							if speed > 0.2 {
-								speed -= 0.025;
+							if spd > 0.2 {
+								spd -= 0.025;
 							}
 						}
 					}
@@ -322,7 +322,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_01"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -357,7 +357,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_02"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 			sweepRange = 45;
@@ -372,7 +372,7 @@ function scr_doromi_attacks(){
 				for(var i = -2 - global.main_stats.difficulty; i < 3 + global.main_stats.difficulty; i++) {
 					var inst = shot_CreateLooseLaserA1(x,y,1,currentSweepAngle + (i * 35),5,1,spr_danmaku_laser,10,graphic);
 					with(inst) { 
-						move_ObjMove_SetAngularVelocity(self,0.4 * sin(direction)) 
+						move_ObjMove_SetAngularVelocity(self,0.4 * sin(dir)) 
 						set_function = function() {
 							if count == 300 {
 								prop_ObjShot_FadeDelete(self,0.1);
@@ -395,7 +395,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_03"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -416,9 +416,9 @@ function scr_doromi_attacks(){
 									instance_destroy();
 								}
 								else {
-									x_pos = parent_object.x_pos + lengthdir_x(16,direction);
-									y_pos = parent_object.y_pos + lengthdir_y(16,direction);
-									direction++;
+									x_pos = parent_object.x_pos + lengthdir_x(16,dir);
+									y_pos = parent_object.y_pos + lengthdir_y(16,dir);
+									dir++;
 								}
 							}
 						}
@@ -448,7 +448,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_04"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -492,7 +492,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_05"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -525,7 +525,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_06"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -561,7 +561,7 @@ function scr_doromi_attacks(){
 					}
 					var spawnY = irandom_range(16,144);
 					var speedT = 1;
-					var angleBase = point_direction(x,y,obj_player.x,obj_player.y);
+					var angleBase = point_dir(x,y,obj_player.x,obj_player.y);
 					for(var i = 0; i < 1 + global.main_stats.difficulty; i++) {
 						shot_CreateShotA1(spawnX,spawnY,speedT,angleBase,spr_danmaku_seed_m,5,12);
 						speedT -= 0.1;
@@ -582,7 +582,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_07"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -629,7 +629,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_08"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,96);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 		}
@@ -648,9 +648,9 @@ function scr_doromi_attacks(){
 								instance_destroy();
 							}
 							else {
-								x_pos = parent_object.x_pos + lengthdir_x(16,direction);
-								y_pos = parent_object.y_pos + lengthdir_y(16,direction);
-								direction++;
+								x_pos = parent_object.x_pos + lengthdir_x(16,dir);
+								y_pos = parent_object.y_pos + lengthdir_y(16,dir);
+								dir++;
 							}
 						}
 					}
@@ -664,9 +664,9 @@ function scr_doromi_attacks(){
 								instance_destroy();
 							}
 							else {
-								x_pos = parent_object.x_pos + lengthdir_x(16,direction);
-								y_pos = parent_object.y_pos + lengthdir_y(16,direction);
-								direction++;
+								x_pos = parent_object.x_pos + lengthdir_x(16,dir);
+								y_pos = parent_object.y_pos + lengthdir_y(16,dir);
+								dir++;
 							}
 						}
 					}
@@ -681,9 +681,9 @@ function scr_doromi_attacks(){
 								instance_destroy();
 							}
 							else {
-								x_pos = parent_object.x_pos + lengthdir_x(16,direction);
-								y_pos = parent_object.y_pos + lengthdir_y(16,direction);
-								direction++;
+								x_pos = parent_object.x_pos + lengthdir_x(16,dir);
+								y_pos = parent_object.y_pos + lengthdir_y(16,dir);
+								dir++;
 							}
 						}
 					}
@@ -697,9 +697,9 @@ function scr_doromi_attacks(){
 								instance_destroy();
 							}
 							else {
-								x_pos = parent_object.x_pos + lengthdir_x(16,direction);
-								y_pos = parent_object.y_pos + lengthdir_y(16,direction);
-								direction++;
+								x_pos = parent_object.x_pos + lengthdir_x(16,dir);
+								y_pos = parent_object.y_pos + lengthdir_y(16,dir);
+								dir++;
 							}
 						}
 					}
@@ -716,7 +716,7 @@ function scr_doromi_attacks(){
 			global.main_stats.current_spell = "SPELL_DOROMI_09"
 			move_ObjMove_SetX(self,128);
 			move_ObjMove_SetY(self,144);
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			dir = 0;
 			invultime = 7200;

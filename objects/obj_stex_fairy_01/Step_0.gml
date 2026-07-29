@@ -5,8 +5,8 @@ event_inherited();
 if entered == true {
 	//Input action commands here
 	if count == 0 {
-		direction = 270;
-		speed = 1;
+		dir = 270;
+		spd = 1;
 	}
 	if count < 100 {
 		if count mod 40 == 0 {

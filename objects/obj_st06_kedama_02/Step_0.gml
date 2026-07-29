@@ -8,17 +8,17 @@ if entered == true {
 		sound_ObjSound_Play(se_kira01)
 		image_alpha = 0;
 		y_pos = 80
-		//direction = 270
-		speed = 0;
+		//dir = 270
+		spd = 0;
 	}
 	
 	if count < 50 {
 		image_alpha += 0.02;
 	}
 	if count > 50 {
-		if x_pos < 128 { direction = 0; }
-		else { direction = 180; }
-		speed = 1;
+		if x_pos < 128 { dir = 0; }
+		else { dir = 180; }
+		spd = 1;
 	}
 	if count == 50 {
 		sound_ObjSound_Play(se_tan01);

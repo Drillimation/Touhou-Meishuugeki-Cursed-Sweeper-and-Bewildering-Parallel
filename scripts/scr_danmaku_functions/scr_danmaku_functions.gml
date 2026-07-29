@@ -113,11 +113,11 @@ function shot_CreateShotA1(_x,_y,_speed,_angle,_graphic,_delay,_subimg = 0) {
 	if _y != y { ey = yview + _y } else { ey = y }
 	
 	var inst = instance_create_layer(ex,ey,"Danmaku",obj_enemy_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
+	inst.dir = _angle;
+	inst.spd = _speed;
 	inst.delay = _delay;
 	return inst
 }
@@ -142,11 +142,11 @@ function shot_CreateShotA2(_x,_y,_speed,_angle,_accel,_maxspeed,_graphic,_delay,
 	if _y != y { ey = yview + _y } else { ey = y }
 	
 	var inst = instance_create_layer(ex,ey,"Danmaku",obj_enemy_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
+	inst.spd = _speed;
+	inst.dir = _angle;
 	inst.acceleration = _accel;
 	inst.maxspeed = _maxspeed;
 	inst.delay = _delay;
@@ -164,12 +164,12 @@ function shot_CreateShotOA1(_parentobj,_speed,_angle,_graphic,_delay,_subimg = 0
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
 	var inst = instance_create_layer(_parentobj.x,_parentobj.y,"Instances",obj_enemy_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
 	inst.delay = _delay;
+	inst.spd = _speed;
+	inst.dir = _angle;
 	return inst
 }
 
@@ -185,12 +185,12 @@ function shot_CreateShotB1(_x,_y,_hspeed,_vspeed,_graphic,_delay,_subimg = 0) {
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 
 	var inst = instance_create_layer(_x,_y,"Danmaku",obj_enemy_bullet,{
-		hspeed : _hspeed,
-		vspeed : _vspeed,
-		direction : point_direction(x,y,hspeed,vspeed),
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
+	inst.hspd = _hspeed;
+	inst.vspd = _vspeed;
+	inst.dir = point_direction(_x,_y,inst.hspd,inst.vspd)
 	inst.delay = _delay;
 	return inst
 }
@@ -211,12 +211,12 @@ function shot_CreateShotB2(_x,_y,_hspeed,_vspeed,_haccel,_vaccel,_maxhspeed,_max
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 
 	var inst = instance_create_layer(_x,_y,"Danmaku",obj_enemy_bullet,{
-		hspeed : _hspeed,
-		vspeed : _vspeed,
-		direction : point_direction(x,y,hspeed,vspeed),
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
+	inst.hspd = _hspeed;
+	inst.vspd = _vspeed;
+	inst.dir = point_direction(_x,_y,inst.hspd,inst.vspd);
 	inst.haccel = _haccel;
 	inst.vaccel = _vaccel;
 	inst.maxhspeed = _maxhspeed;
@@ -236,12 +236,12 @@ function shot_CreateShotOB2(_parentobj,_hspeed,_vspeed,_graphic,_delay,_subimg =
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
 	var inst = instance_create_layer(_parentobj.x,_parentobj.y,"Instances",obj_enemy_bullet,{
-		hspeed : _hspeed,
-		vspeed : _vspeed,
-		direction : point_direction(x,y,hspeed,vspeed),
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
+	inst.hspd = _hspeed;
+	inst.vspd = _vspeed;
+	inst.dir = point_direction(_x,_y,inst.hspd,inst.vspd)
 	inst.delay = _delay;
 	return inst
 }
@@ -266,13 +266,13 @@ function shot_CreateLooseLaserA1(_x,_y,_speed,_angle,_length,_width,_graphic,_de
 	if _y != y { ey = yview + _y } else { ey = y }
 	
 	var inst = instance_create_layer(ex,ey,"Danmaku",obj_enemy_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg,
 		image_xscale : _length,
 		image_yscale : _width
 	})
+	inst.spd = _speed;
+	inst.dir = _angle;
 	inst.delay = _delay;
 	return inst
 }
@@ -297,14 +297,16 @@ function shot_CreateStraightLaserA1(_x,_y,_angle,_length,_width,_deletetime,_gra
 	if _y != y { ey = yview + _y } else { ey = y }
 	
 	var inst = instance_create_layer(ex,ey,"Danmaku",obj_warning_line,{
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg,
 		image_xscale : _length,
 		image_yscale : _width
 	})
-	inst.delay = _delay;
-	inst.deletetime = _deletetime;
+	with(inst) {
+		dir = _angle;
+		delay = _delay;
+		deletetime = _deletetime;
+	}
 	return inst
 }
 
@@ -322,13 +324,13 @@ function shot_CreateCurveLaserA1(_x,_y,_speed,_angle,_length,_width,_graphic,_de
 	/// @param {real} _subimg (OPTIONAL) The subimage of the sprite to use, if not animated.
 	
 	var inst = instance_create_layer(_x,_y,"Danmaku",obj_enemy_bullet,{
-		speed : _speed,
-		direction : _angle,
 		sprite_index : _graphic,
 		image_index : _subimg,
 		image_xscale : _length,
 		image_yscale : _width
 	})
+	inst.spd = _speed;
+	inst.dir = _angle;
 	inst.delay = _delay;
 	inst.angular_velocity = 1;
 	return inst

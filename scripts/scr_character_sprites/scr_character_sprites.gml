@@ -193,7 +193,7 @@ function scr_character_sprites(){
 							image_yscale += 0.01;
 							x_pos = tag_along.x_pos
 							y_pos = tag_along.y_pos
-							direction++;
+							dir++;
 						}
 					}
 					angleT += 22.5
@@ -250,7 +250,7 @@ function scr_character_sprites(){
 							//show_debug_message(y_pos / sprite_get_width(sprite_index));
 							x_pos = tag_along.x_pos
 							y_pos = tag_along.y_pos
-							direction += 3;
+							dir += 3;
 						}
 					}
 					angleT += 72

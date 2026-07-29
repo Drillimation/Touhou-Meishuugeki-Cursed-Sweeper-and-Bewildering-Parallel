@@ -7,8 +7,8 @@ if entered == true {
 	if count == 0 {
 		x_pos = irandom_range(16,240);
 		y_pos = irandom_range(32,96);
-		direction = irandom_range(105,345);
-		speed = 0;
+		dir = irandom_range(105,345);
+		spd = 0;
 	}
 	
 	if count < 100 {
@@ -28,7 +28,7 @@ if entered == true {
 		}
 	}
 	if count > 100 {
-		speed += 0.01;
+		spd += 0.01;
 	}
 	
 	count++;

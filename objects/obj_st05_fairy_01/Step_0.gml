@@ -9,16 +9,16 @@ if entered == true {
 		image_alpha = 0;
 		x_pos = irandom_range(16,240);
 		y_pos = irandom_range(32,96);
-		direction = irandom_range(0,360);
-		speed = 0;
+		dir = irandom_range(0,360);
+		spd = 0;
 	}
 	
 	if count < 50 {
 		image_alpha += 0.02;
 	}
 	if count > 50 {
-		speed += 0.04;
-		speed = clamp(speed,0,2)
+		spd += 0.04;
+		spd = clamp(speed,0,2)
 	}
 	if count == 50 {
 		var angleT = 0;
@@ -33,7 +33,7 @@ if entered == true {
 						if count == 60 {
 							sound_ObjSound_Play(se_kira00)
 							move_ObjMove_SetAcceleration(self,0.04);
-							direction = point_direction(x,y,obj_player.x,obj_player.y);
+							dir = point_direction(x,y,obj_player.x,obj_player.y);
 						}
 					}
 				}

@@ -43,7 +43,7 @@ function scr_fusana_attacks(){
 	attack_fusana_main_02 = function() {
 		if count == 0 {
 			timer = 50;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 60 == 0 {
@@ -76,7 +76,7 @@ function scr_fusana_attacks(){
 		if count == 0 {
 			baseAngle = 0;
 			timer = 50;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 30 == 0 {
@@ -107,7 +107,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_01,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -152,7 +152,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_02,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -201,7 +201,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_03,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -249,7 +249,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_04,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -292,7 +292,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_05,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_05"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -311,7 +311,7 @@ function scr_fusana_attacks(){
 							if count <= 50 {
 								if count mod 5 == 0 {
 									sound_ObjSound_Play(se_kira01)
-									shot_CreateShotA1(x,y,random_range(0.5,1.5),direction + irandom_range(-5,5),spr_danmaku_star_s,10,2)
+									shot_CreateShotA1(x,y,random_range(0.5,1.5),dir + irandom_range(-5,5),spr_danmaku_star_s,10,2)
 								}
 							}
 						}
@@ -351,7 +351,7 @@ function scr_fusana_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_fusana_night_portrait,0,_load_file.enemy_spell.SPELL_FUSANA_06,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_06"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -369,12 +369,12 @@ function scr_fusana_attacks(){
 							}
 							if count == 40 {
 								sound_ObjSound_Play(se_kira01)
-								speed = 0;
+								spd = 0;
 							}
 							if count == 60 {
 								sound_ObjSound_Play(se_kira00)
-								direction = baseAngle;
-								speed = 0.6;
+								dir = baseAngle;
+								spd = 0.6;
 							}
 						}
 					}
@@ -405,7 +405,7 @@ function scr_fusana_attacks(){
 			}
 			shot_CreateSpellCard("ENEMY",timeGraphic,0,_load_file.enemy_spell.SPELL_FUSANA_07,spr_fusana_spell)
 			global.main_stats.current_spell = "SPELL_FUSANA_07"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;

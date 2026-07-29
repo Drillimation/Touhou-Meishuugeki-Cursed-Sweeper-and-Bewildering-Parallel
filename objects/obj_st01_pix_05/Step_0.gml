@@ -29,7 +29,7 @@ if entered == true {
 	
 	if count == 200 {
 		move_ObjMove_SetSpeed(self,1);
-		move_ObjMove_SetAngle(self,direction + 180);
+		move_ObjMove_SetAngle(self,dir + 180);
 	}
 	count++;
 	count2++;

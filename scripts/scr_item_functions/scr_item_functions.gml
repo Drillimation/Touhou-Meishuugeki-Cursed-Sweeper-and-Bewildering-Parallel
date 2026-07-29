@@ -11,8 +11,8 @@ function item_CreateItemA1(_type,_x,_y,_score,_speed = 0.5,_subimg = 0) {
 	var inst = instance_create_layer(_x,_y,"Instances",obj_item,{
 		sprite_index : _type,
 		image_index : _subimg,
-		speed : _speed
 	})
+	inst.spd = _speed;
 	inst.score_value = _score;
 	return inst;
 }
@@ -33,9 +33,9 @@ function item_CreateItemA2(_type,_x1,_y1,_x2,_y2,_score,_speed = 0.5,_subimg = 0
 	var inst = instance_create_layer(_x1,_y1,"Instances",obj_item,{
 		sprite_index : _type,
 		image_index : _subimg,
-		direction : point_direction(_x1,_y1,xview + _x2,yview + _y2),
-		speed : _speed
 	})
+	inst.dir = point_direction(_x1,_y1,xview + _x2,yview + _y2);
+	inst.spd = _speed;
 	with(inst) {
 		score_value = _score;
 		move_mode = true;
@@ -52,8 +52,8 @@ function item_CollectAllItems(_player = 0,_speed = 4) {
 	
 	if play_id == _player {
 		with(obj_item) {
-			direction = point_direction(x,y,other.x,other.y)
-			speed = _speed
+			dir = point_direction(x,y,other.x,other.y)
+			spd = _speed
 			auto_collect = true;
 		}
 	}
@@ -70,8 +70,8 @@ function item_CollectItemsByType(_type,_player = 0,_speed = 4,_subimg = 0) {
 	if play_id == _player {
 		with(obj_item) {
 			if sprite_index == _type and image_index == _subimg {
-				direction = point_direction(x_pos,y_pos,other.x_pos,other.y_pos)
-				speed = _speed
+				dir = point_direction(x_pos,y_pos,other.x_pos,other.y_pos)
+				spd = _speed
 			}
 		}
 	}
@@ -89,8 +89,8 @@ function item_CollectItemsInCircle(_x,_y,_radius,_player = 0,_speed = 4) {
 	if play_id == _player {
 		with(obj_item) {
 			if collision_circle(_x,_y,_radius,obj_player,true,false) {
-				direction = point_direction(x_pos,y_pos,other.x_pos,other.y_pos)
-				speed = _speed
+				dir = point_direction(x_pos,y_pos,other.x_pos,other.y_pos)
+				spd = _speed
 			}
 		}
 	}
@@ -102,7 +102,7 @@ function item_CancelCollectItems(_player = 0) {
 	/// @param {real} _player (OPTIONAL) The player to pull the items away from.
 	
 	with(obj_item) {
-		direction = 270;
-		speed = 0.5;
+		dir = 270;
+		spd = 0.5;
 	}
 }

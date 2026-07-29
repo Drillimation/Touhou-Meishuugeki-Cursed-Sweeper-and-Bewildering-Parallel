@@ -88,8 +88,8 @@ if global.player_stats[play_id].power_items == 100 {
 		with(obj_item) {
 			if auto_collect == true {
 				auto_collect = false;
-				direction = 270;
-				speed = 1.5;
+				dir = 270;
+				spd = 1.5;
 			}
 		}
 	}
@@ -98,8 +98,8 @@ if global.player_stats[play_id].power_items == 100 {
 if collision_circle(x,y,16,obj_item,true,false) {
 	var inst = instance_nearest(x,y,obj_item)
 	with(inst) {
-		direction = point_direction(x,y,other.x,other.y);
-		speed = 4;
+		dir = point_direction(x,y,other.x,other.y);
+		spd = 4;
 	}
 }
 

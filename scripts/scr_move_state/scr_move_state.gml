@@ -36,3 +36,18 @@ function scr_move_state(){
 	}
 	count++;
 }
+
+function scr_move_state_enemy() {
+	//Direction
+	//dir = point_direction(0,0,hspd,vspd);
+	
+	//Length
+	len = spd;
+	
+	//Get the speed variables
+	hspd = lengthdir_x(len,dir);
+	vspd = lengthdir_y(len,dir);
+	
+	x_pos += hspd;
+	y_pos += vspd;
+}

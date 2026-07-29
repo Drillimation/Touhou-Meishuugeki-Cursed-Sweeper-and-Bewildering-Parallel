@@ -9,8 +9,8 @@ if entered == true {
 		image_alpha = 0;
 		//x_pos = 128;
 		y_pos = 96;
-		direction = 270
-		speed = 0;
+		dir = 270
+		spd = 0;
 	}
 	
 	if count < 50 {
@@ -31,7 +31,7 @@ if entered == true {
 		}
 	}
 	if count == 200 {
-		speed = 1;
+		spd = 1;
 	}
 	
 	count++;

@@ -5,8 +5,8 @@ event_inherited();
 if entered == true {
 	//Input action commands here
 	if count == 0 {
-		direction = 270;
-		speed = 1.5;
+		dir = 270;
+		spd = 1.5;
 	}
 	
 	if count < 60 {
@@ -30,11 +30,11 @@ if entered == true {
 		}
 	}
 	if count > 60 {
-		if direction < dir {
-			direction++;
+		if dir < dir {
+			dir++;
 		}
-		if direction > dir {
-			direction--;
+		if dir > dir {
+			dir--;
 		}
 	}
 	

@@ -6,13 +6,13 @@ if entered == true {
 	//Input action commands here
 	if count == 0 {
 		if x_pos > 128 {
-			direction = random_range(135,225);
+			dir = random_range(135,225);
 			
 		}
 		if x_pos < 128 {
-			direction = random_range(315,405);
+			dir = random_range(315,405);
 		}
-		speed = 2;
+		spd = 2;
 	}
 	
 	if count == 50 {

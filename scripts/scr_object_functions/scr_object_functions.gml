@@ -174,7 +174,7 @@ function inst_ObjRender_SetAngle(_id,_angle) {
 	/// @param {real} _angle The angle or direction of the instance to set.
 	
 	with(_id) {
-		direction = _angle;
+		dir = _angle;
 	}
 }
 
@@ -280,7 +280,7 @@ function inst_ObjAngle(_id) {
 	/// @description Returns the direction or angle of the ID of the given instance.
 	/// @param {real} _id The ID of the instance to get the value.
 	
-	return variable_struct_get(_id,"direction")
+	return variable_struct_get(_id,"dir")
 }
 
 function inst_ObjRender_GetScaleX(_id) {

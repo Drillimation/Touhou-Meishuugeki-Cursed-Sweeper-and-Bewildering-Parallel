@@ -35,7 +35,7 @@ function scr_veronica_attacks(){
 			dir = 1;
 			x_pos = 24;
 			y_pos = 48;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			self_timer = 0;
 			spd = 0.025; // Adjust this to change the speed of the loop
@@ -58,7 +58,7 @@ function scr_veronica_attacks(){
 				move_ObjMove_SetDestAtFrame(self,24,irandom_range(48,96),60);
 			}
 		}
-		if count mod (6 - global.main_stats.difficulty) == 0 and speed > 0.5 {
+		if count mod (6 - global.main_stats.difficulty) == 0 and spd > 0.5 {
 			sound_ObjSound_Play(se_tan01)
 			var fireangle = point_direction(x,y,obj_player.x,obj_player.y);
 			shot_CreateShotA1(x_pos + (x_radius * cos(self_timer)),y_pos + (y_radius * sin(self_timer * 2)) / 2,1.25,fireangle + irandom_range(-15,15),spr_danmaku_dagger,5,0)
@@ -94,7 +94,7 @@ function scr_veronica_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count == 75 {
-							speed = 1.75;
+							spd = 1.75;
 							sprite_index = spr_danmaku_arrowhead;
 						}
 					}
@@ -206,7 +206,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_01,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -235,8 +235,8 @@ function scr_veronica_attacks(){
 								set_function = function() {
 									 if count == 45 {
 										sound_ObjSound_Play(se_kira00)
-										speed = 0.5;
-										direction = irandom_range(0,360);
+										spd = 0.5;
+										dir = irandom_range(0,360);
 									 }
 								}
 							}
@@ -264,7 +264,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_02,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -314,7 +314,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_03,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -322,10 +322,10 @@ function scr_veronica_attacks(){
 		if count mod 80 == 0 and count > 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(24,232),irandom_range(80,140),60);
 		}
-		if count mod 6 == 0 and speed > 1 {
+		if count mod 6 == 0 and spd > 1 {
 			sound_ObjSound_Play(se_tan01)
 			for(var i = -1 - global.main_stats.difficulty; i < 2 + global.main_stats.difficulty; i++) {
-				shot_CreateShotA1(x,y,0.5,(direction + 180) + ((i * 15) + irandom_range(-10,10)),spr_danmaku_bullet,5,15);
+				shot_CreateShotA1(x,y,0.5,(dir + 180) + ((i * 15) + irandom_range(-10,10)),spr_danmaku_bullet,5,15);
 			}
 		}
 		if count mod 50 == 0 {
@@ -346,10 +346,10 @@ function scr_veronica_attacks(){
 										if count == 0 { bounceCount = 2 }
 										if bounceCount >= 1 {
 											if y_pos < 24 or y_pos > 264 {
-												vspeed *= -1;
+												vspd *= -1;
 											}
 											if x_pos < 8 or x_pos > 248 {
-												hspeed *= -1;
+												hspd *= -1;
 											}
 											bounceCount--;
 										}
@@ -369,7 +369,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_04,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -388,13 +388,13 @@ function scr_veronica_attacks(){
 							if count == 45 {
 								sound_ObjSound_Play(se_kira00)
 								if spawnFrame mod 24 == 0 {
-									speed = 0.6;
+									spd = 0.6;
 								}
 								else {
-									speed = 2.4;
+									spd = 2.4;
 								}
 							}
-							direction += irandom_range(-8,8);
+							dir += irandom_range(-8,8);
 						}
 					}
 					inst = shot_CreateShotA1(x,y,1.5,baseAngle + offset + 15,spr_danmaku_amulet,10,12);
@@ -404,13 +404,13 @@ function scr_veronica_attacks(){
 							if count == 45 {
 								sound_ObjSound_Play(se_kira00)
 								if spawnFrame mod 24 == 0 {
-									speed = 0.6;
+									spd = 0.6;
 								}
 								else {
-									speed = 2.4;
+									spd = 2.4;
 								}
 							}
-							direction += irandom_range(-8,8);
+							dir += irandom_range(-8,8);
 						}
 					}
 				}
@@ -427,7 +427,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_05,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_05"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -443,7 +443,7 @@ function scr_veronica_attacks(){
 					var inst = shot_CreateShotA1(x,y,0.7,angleT,spr_danmaku_ball_m1,10,graphic);
 					with(inst) {
 						set_function = function() {
-							direction += 0.3;
+							dir += 0.3;
 							if count == 50 {
 								var sx = x_pos
 								var sy = y_pos
@@ -470,7 +470,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_06,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_06"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -530,7 +530,7 @@ function scr_veronica_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_VERONICA_07,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_VERONICA_07"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -568,7 +568,7 @@ function scr_veronica_attacks(){
 						set_function = function() {
 							if count == 0 { gravityDelay = irandom_range(40,80) }
 							if count == gravityDelay {
-								speed *= 1.5;
+								spd *= 1.5;
 							}
 						}
 					}

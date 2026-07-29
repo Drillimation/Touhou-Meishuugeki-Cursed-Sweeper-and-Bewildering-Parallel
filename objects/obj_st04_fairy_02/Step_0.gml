@@ -53,8 +53,8 @@ if entered == true {
 			speedT -= 0.1;
 			angleT -= 5;
 		}
-		speed = 1;
-		direction = 270;
+		spd = 1;
+		dir = 270;
 	}
 	
 	count++;

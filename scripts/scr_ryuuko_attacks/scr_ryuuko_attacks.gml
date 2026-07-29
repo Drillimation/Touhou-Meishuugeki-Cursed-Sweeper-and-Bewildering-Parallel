@@ -14,7 +14,7 @@ function scr_ryuuko_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count <= 299 {
-							speed = clamp(speed,0.25,2);
+							spd = clamp(speed,0.25,2);
 						}
 						if count == 300 {
 							sound_ObjSound_Play(se_kira00);
@@ -134,7 +134,7 @@ function scr_ryuuko_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ryuuko_portrait,0,_load_file.enemy_spell.SPELL_RYUUKO_01,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_RYUUKO_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -158,7 +158,7 @@ function scr_ryuuko_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count == 90 {
-							direction = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-10,10);
+							dir = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-10,10);
 							move_ObjMove_SetAcceleration(self,0.05);
 							move_ObjMove_SetMaxSpeed(self,1.5);
 						}
@@ -182,7 +182,7 @@ function scr_ryuuko_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ryuuko_portrait,0,_load_file.enemy_spell.SPELL_RYUUKO_02,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_RYUUKO_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 144;
@@ -196,7 +196,7 @@ function scr_ryuuko_attacks(){
 					with(inst) {
 						set_function = function() {
 							if count < 90 {
-								speed -= 0.0125;
+								spd -= 0.0125;
 							}
 							if count > 60 {
 								image_alpha -= 0.04;
@@ -227,7 +227,7 @@ function scr_ryuuko_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ryuuko_portrait,0,_load_file.enemy_spell.SPELL_RYUUKO_03,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_RYUUKO_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -301,7 +301,7 @@ function scr_ryuuko_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_ryuuko_portrait,0,_load_file.enemy_spell.SPELL_RYUUKO_04,spr_tatsumaru_spell)
 			global.main_stats.current_spell = "SPELL_RYUUKO_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
@@ -317,11 +317,11 @@ function scr_ryuuko_attacks(){
 						set_function = function() {
 							if count == 0 { isFrozen = 0; }
 							if isFrozen == 1 {
-								speed = 0;
+								spd = 0;
 								image_index = 12;
 							}
 							if isFrozen == 2 {
-								speed = 2.25;
+								spd = 2.25;
 								image_index = 10;
 								move_ObjMove_SetAcceleration(self,-0.04);
 								isFrozen = 0;

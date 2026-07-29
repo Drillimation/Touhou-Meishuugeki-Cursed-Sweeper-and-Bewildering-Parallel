@@ -7,7 +7,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_01 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 60 == 0 {
@@ -32,7 +32,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_02 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		x_pos = (64 * dcos(count * 1)) + 128
@@ -56,7 +56,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_03 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod 90 == 0 {
@@ -94,7 +94,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_04 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			angleT = 0;
 			angleX = 1;
@@ -112,7 +112,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_05 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 		}
 		if count mod (8 - global.main_stats.difficulty) == 0 {
@@ -127,7 +127,7 @@ function scr_berenice_attacks(){
 	attack_berenice_main_06 = function() {
 		if count == 0 {
 			timer = 60;
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			angleT = 0;
 		}
@@ -160,7 +160,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_01,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_01"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -206,7 +206,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_02,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_02"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -229,7 +229,7 @@ function scr_berenice_attacks(){
 							if count mod 30 == 0 {
 								sound_ObjSound_Play(se_kira02)
 								move_ObjMove_SetSpeed(self,speed + random_range(-0.25,0.75))
-								move_ObjMove_SetAngle(self,direction + random_range(-10,10))
+								move_ObjMove_SetAngle(self,dir + random_range(-10,10))
 							}
 						}
 					}
@@ -248,7 +248,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_03,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_03"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -281,7 +281,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_04,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_04"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -314,7 +314,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_05,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_05"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -353,7 +353,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_06,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_06"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;
@@ -374,7 +374,7 @@ function scr_berenice_attacks(){
 								move_ObjMove_SetAcceleration(self,0.025);
 								move_ObjMove_SetMaxSpeed(self,2.5);
 								
-								var drift = 0.8 * sin(direction * 2);
+								var drift = 0.8 * sin(dir * 2);
 								move_ObjMove_SetAngularVelocity(self,drift);
 								prop_ObjShot_SetGraphic(self,spr_danmaku_ball_m2,0)
 							}
@@ -392,7 +392,7 @@ function scr_berenice_attacks(){
 			var _load_file = scr_json_load_file("main/spell_cards" + string(global.suf) + ".json")
 			shot_CreateSpellCard("ENEMY",spr_font,0,_load_file.enemy_spell.SPELL_BERENICE_07,spr_grieg_spell)
 			global.main_stats.current_spell = "SPELL_BERENICE_07"
-			speed = 0;
+			spd = 0;
 			move_mode = false;
 			x_pos = 128;
 			y_pos = 64;

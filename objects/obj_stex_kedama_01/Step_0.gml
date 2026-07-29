@@ -8,15 +8,15 @@ if entered == true {
 		sound_ObjSound_Play(se_kira01)
 		image_alpha = 0;
 		y_pos = 32
-		direction = 270
-		speed = 0;
+		dir = 270
+		spd = 0;
 	}
 	
 	if count < 25 {
 		image_alpha += 0.04;
 	}
 	if count > 25 {
-		speed = 2;
+		spd = 2;
 	}
 	if count >= 20 and count < 75 and count mod 10 == 0 {
 		sound_ObjSound_Play(se_tan01);

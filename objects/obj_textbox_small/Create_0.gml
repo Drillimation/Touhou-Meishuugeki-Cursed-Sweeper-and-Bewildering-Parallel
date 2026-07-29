@@ -15,3 +15,4 @@ for(var i = 0; i < 16; i++) {
 //shd = scribble_font_bake_shadow("font_ms_gothic","drp_shd",1,1,make_color_rgb(0,0,0),1,0,false);
 
 count = 0;
+cursor_moved = false;

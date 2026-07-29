@@ -17,7 +17,7 @@ for(var i = 0; i < array_length(bonuses[0]); i++) {
 	draw_text(xview + 8,(yview + 56) + (16 * i),bonuses[0][i])
 }
 draw_set_halign(fa_center);
-if global.main_stats.stage <= 6 and global.freeplaymode == false {
+if global.main_stats.stage <= 6 and global.freeplaymode == false and global.replay_mode == false {
 	if global.main_stats.time_orbs >= global.main_stats.orb_requirement {
 		draw_text(xview + 128,yview + 216,"TIME ORB REQUIREMENT MET\n" + string(global.main_stats.hours_passed) + " HOUR(S) SINCE OUTBREAK BEGAN")
 	}

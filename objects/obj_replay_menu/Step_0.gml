@@ -26,10 +26,10 @@ if delay <= 0 {
 	
 		if (a_button) {
 			scr_one_channel_sound(snd_menuconfirm);
-			scr_load_replay(option[y_pos]);
+			scr_load_replay("replays/" + option[y_pos]);
 			var inst = instance_create_depth(0,0,0,obj_replay_stage_select);
 			inst.selected_replay = replay_list[y_pos];
-			with(inst) { event_perform(ev_user0,0) }
+			with(inst) { event_perform(ev_other,ev_user0) }
 			instance_destroy();
 		}
 	}

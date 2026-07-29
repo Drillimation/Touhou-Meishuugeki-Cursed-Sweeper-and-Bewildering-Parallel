@@ -24,8 +24,17 @@ if delay <= 0 {
 	}
 
 	if (a_button) {
-		if replay_input[0].stage_played[y_pos] != 0 {
+		if selected_replay.replay_input[0].stage_played[y_pos] != 0 {
+			scr_stop_bgm();
+			global.main_stats.time_orbs = 0;
 			global.main_stats.orb_requirement = global.main_stats.stage * 1000;
+			global.main_stats.spells_captured = [];
+			global.main_stats.continues_used = 0;
+			global.main_stats.current_spell = "";
+			random_set_seed(global.playing_field.random_seed);
+			for(var i = 0; i < array_length(selected_replay.replay_input); i++) {
+				global.player_stats[i] = selected_replay.replay_input[i].replay_score[y_pos];
+			}
 			switch(y_pos) {
 				case 0:	room_goto(room_transition_1); break;
 				case 1:	room_goto(room_transition_2); break;

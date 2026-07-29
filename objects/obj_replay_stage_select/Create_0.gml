@@ -8,7 +8,22 @@ delay = 10;
 
 selected_replay = undefined;
 
-var load_array = scr_json_load_file("menu_data/replay_menu" + string(global.suf) + ".json");
+load_array = scr_json_load_file("menu_data/replay_menu" + string(global.suf) + ".json");
+
+option = [
+	["1",undefined],
+	["2",undefined],
+	["3",undefined],
+	["4",undefined],
+	["5",undefined],
+	["6",undefined],
+	["EX",undefined],
+	["PH",undefined]
+]
+description = [undefined,undefined,undefined,undefined,undefined]
+
+op_length_y = array_length(option);
+op_length_x = 1;
 
 //array_copy(option,0,load_array.menu_options,0,array_length(load_array.menu_options));
 //array_copy(description,0,load_array.menu_description,0,array_length(load_array.menu_description));

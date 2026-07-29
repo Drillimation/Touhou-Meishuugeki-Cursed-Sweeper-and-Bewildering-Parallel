@@ -32,7 +32,7 @@ function scr_get_input(_player){
 	}
 	
 	//Saving inputs to replay
-	if global.replay_mode == false {
+	if global.replay_mode == false and global.main_stats.continues_used == 0 {
 		array_push(global.replay_input[_player].replay_stage[global.main_stats.stage - 1],[rKey,lKey,dKey,uKey,action_shoot,action_focus,action_bomb])
 	}
 }
@@ -49,5 +49,7 @@ function scr_replay_input(_player) {
 	action_shoot = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][replay_frame][4]
 	action_focus = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][replay_frame][5]
 	action_bomb = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][replay_frame][6]
+	
+	action_pause = keyboard_check_pressed(vk_escape);
 	replay_frame++;
 }

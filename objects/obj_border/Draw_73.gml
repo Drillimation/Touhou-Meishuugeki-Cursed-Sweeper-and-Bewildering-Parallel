@@ -8,3 +8,11 @@ scribble_object[0] = scribble("FPS: " + string(fps))
 	.align(fa_right,fa_top)
 	.wrap(640)
 	.draw(xview + 640,yview + 344)
+
+if global.replay_mode == true {
+	scribble_object[0] = scribble("REPLAY MODE")
+		.starting_format("drp_shd",make_color_rgb(255,255,255))
+		.align(fa_center,fa_top)
+		.wrap(640)
+		.draw(xview + 320,yview + 0)
+}

@@ -8,9 +8,7 @@ y = yview + y_pos;
 
 //Movement
 if global.replay_mode == false {
-	if global.main_stats.continues_used == 0 {
-		scr_get_input(play_id);
-	}
+	scr_get_input(play_id);
 }
 else {
 	scr_replay_input(play_id);

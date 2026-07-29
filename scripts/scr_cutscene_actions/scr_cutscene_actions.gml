@@ -133,7 +133,7 @@ function scr_cutscene_show_textbox(_file,_key) {
 		if keyboard_check_pressed(vk_enter) or 
 		keyboard_check_pressed(ord("Z")) or 
 		gamepad_button_check_pressed(0,gp_face1) or
-		global.replay_input[0].replay_stage[global.main_stats.stage - 1][obj_player.replay_frame][4] == 1 {
+		cursor_moved == true {
 			var check_fade = typist.get_state()
 			if check_fade == 1 {
 				with(other) {
@@ -144,6 +144,7 @@ function scr_cutscene_show_textbox(_file,_key) {
 			else {
 				typist.skip();
 			}
+			cursor_moved = false;
 		}
 	}
 }

@@ -15,6 +15,7 @@ function scr_system_initiate(_no_of_players = 1){
 		camera_priority : 80,
 		random_seed : random_get_seed()
 	}
+	random_set_seed(global.playing_field.random_seed);
 	global.main_stats = {
 		difficulty : 0,
 		stage : 1,
@@ -69,22 +70,24 @@ function scr_system_close() {
 
 function scr_load_replay(_file) {
 	var _replay_file = scr_json_load_file(_file);
-	global.replay_mode = true;
-	var freeplay = struct_get(_replay_file,"free_play")
-	switch(freeplay) {
-		case 0: global.freeplaymode = false; break;
-		case 1: global.freeplaymode = true; break;
-	}
+	var freeplay = struct_get(_replay_file.replay_info,"free_play")
+	show_debug_message(freeplay)
+	global.freeplaymode = freeplay;
+	if global.freeplaymode == true show_debug_message("Replay created in Free Play Mode.")
 	scr_system_initiate(array_length(_replay_file));
+	global.replay_mode = true;
 	global.playing_field = struct_get(_replay_file,"playing_field");
 	global.main_stats = struct_get(_replay_file,"main_stats");
 	global.replay_input = struct_get(_replay_file,"replay_input");
 }
 
 function scr_save_replay(_file) {
+	var freeplay;
+	if global.freeplaymode == true { freeplay = 1 }
+	else { freeplay = 0 }
 	var save_data = {
 		replay_info : {
-			free_play : global.freeplaymode,
+			free_play : freeplay,
 			player_name : global.game_options.player_name,
 			save_date : string(current_year) + "/" + string_repeat("0",2-string_length(string(current_month))) + string(current_month) + "/" + string_repeat("0",2-string_length(string(current_day))) + string(current_day) + " " + string_repeat("0",2-string_length(string(current_hour))) + string(current_hour) + ":" + string_repeat("0",2-string_length(string(current_minute))) + string(current_minute) + ":" + string_repeat("0",2-string_length(string(current_second))) + string(current_second),
 			version : global.game_version

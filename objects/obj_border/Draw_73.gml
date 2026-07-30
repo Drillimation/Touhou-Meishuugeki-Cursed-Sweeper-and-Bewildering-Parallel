@@ -18,3 +18,17 @@ if struct_exists(global,"replay_mode") {
 			.draw(xview + 320,yview + 0)
 	}
 }
+/*scribble_object[1] = scribble(global.replay_frame)
+	.starting_format("drp_shd",make_color_rgb(255,255,255))
+	.align(fa_left,fa_top)
+	.wrap(640)
+	.draw(xview + 0,yview + 0)
+	
+if instance_exists(obj_control) {
+	var testarray = [obj_control.rKey,obj_control.lKey,obj_control.dKey,obj_control.uKey,obj_control.action_shoot,obj_control.action_focus,obj_control.action_bomb]
+	scribble_object[2] = scribble(string(testarray))
+		.starting_format("drp_shd",make_color_rgb(255,255,255))
+		.align(fa_left,fa_top)
+		.wrap(640)
+		.draw(xview + 0,yview + 16)
+}*/

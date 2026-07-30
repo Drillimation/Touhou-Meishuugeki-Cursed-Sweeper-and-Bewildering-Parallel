@@ -3,8 +3,9 @@ function scr_system_initiate(_no_of_players = 1){
 	/// @description Initiates the system. This is important when running the game, as running the game without it may result in errors.
 	/// @param {real} _no_of_players Sets the number of players.
 	
-	randomize();
+	var set_random_seed = randomize();
 	global.replay_mode = false;
+	global.replay_frame = 0;
 	global.playing_field = {
 		x1 : 0,
 		y1 : 0,
@@ -13,9 +14,9 @@ function scr_system_initiate(_no_of_players = 1){
 		minrpriority : 20,
 		maxrpriority : 60,
 		camera_priority : 80,
-		random_seed : random_get_seed()
+		random_seed : set_random_seed
 	}
-	random_set_seed(global.playing_field.random_seed,true);
+	random_set_seed(set_random_seed,true);
 	global.main_stats = {
 		difficulty : 0,
 		stage : 1,
@@ -66,6 +67,7 @@ function scr_system_close() {
 	struct_remove(global,"main_stats");
 	struct_remove(global,"player_stats");
 	struct_remove(global,"replay_input");
+	struct_remove(global,"replay_frame");
 }
 
 function scr_load_replay(_file) {
@@ -81,6 +83,7 @@ function scr_load_replay(_file) {
 	}
 	scr_system_initiate(array_length(_replay_file));
 	global.replay_mode = true;
+	global.replay_frame = 0;
 	global.playing_field = struct_get(_replay_file,"playing_field");
 	global.main_stats = struct_get(_replay_file,"main_stats");
 	global.replay_input = struct_get(_replay_file,"replay_input");

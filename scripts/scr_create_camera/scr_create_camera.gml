@@ -11,6 +11,9 @@ function scr_create_camera(_camera){
 		cutscene_index = string(global.player_stats[0].character) + string(ss.cutscene_index);
 		path_length = path_get_length(camera_path);
 		increment_amount = stage_speed / path_length;
+		path_position = 0;
+		x = path_get_x(camera_path,path_position);
+		y = path_get_y(camera_path,path_position);
 		//path_start(camera_path,stage_speed,path_action_stop,true)
 	}
 }

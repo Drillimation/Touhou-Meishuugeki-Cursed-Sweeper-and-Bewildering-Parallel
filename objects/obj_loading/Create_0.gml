@@ -9,3 +9,4 @@ if global.replay_mode == false {
 		}
 	}
 }
+global.replay_frame = 0;

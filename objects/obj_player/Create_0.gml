@@ -31,3 +31,5 @@ count2 = 0;
 reload = 0;
 replay_frame = 0;
 turret_pos = 0;
+
+is_bombing = false;

@@ -13,7 +13,7 @@ function scr_get_input(_player){
 		
 		action_shoot = gamepad_button_check(_player, gp_face1);
 		action_focus = gamepad_button_check(_player,gp_face2) || gamepad_button_check(_player,gp_shoulderl) || gamepad_button_check(_player,gp_shoulderlb);
-		action_bomb = gamepad_button_check_pressed(_player,gp_face3) || gamepad_button_check_pressed(_player,gp_shoulderr) || gamepad_button_check_pressed(_player,gp_shoulderrb);
+		action_bomb = gamepad_button_check(_player,gp_face3) || gamepad_button_check(_player,gp_shoulderr) || gamepad_button_check(_player,gp_shoulderrb);
 		action_pause = gamepad_button_check_pressed(_player,gp_start);
 	}
 	else {
@@ -27,29 +27,23 @@ function scr_get_input(_player){
 		
 		action_shoot = keyboard_check(ord("Z"));
 		action_focus = keyboard_check(vk_shift);
-		action_bomb = keyboard_check_pressed(ord("X"));
+		action_bomb = keyboard_check(ord("X"));
 		action_pause = keyboard_check_pressed(vk_escape);
 	}
 }
 
 function scr_replay_input(_player) {
-	rKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][0]
-	lKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][1]
-	dKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][2]
-	uKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][3]
+	rKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][0]
+	lKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][1]
+	dKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][2]
+	uKey = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][3]
 
 	xaxis = (rKey - lKey);
 	yaxis = (dKey - uKey);
 		
-	action_shoot = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][4]
-	action_focus = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][5]
-	
-	if global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame][6] == true and global.replay_input[_player].replay_stage[global.main_stats.stage - 1][obj_control.replay_frame - 1][6] == false {
-		action_bomb = true;
-	}
-	else {
-		action_bomb = false;
-	}
+	action_shoot = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][4]
+	action_focus = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][5]
+	action_bomb = global.replay_input[_player].replay_stage[global.main_stats.stage - 1][global.replay_frame][6]
 	
 	if gamepad_is_connected(0) {
 		action_pause = gamepad_button_check_pressed(_player,gp_start);

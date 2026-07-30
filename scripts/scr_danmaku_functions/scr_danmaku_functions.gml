@@ -116,9 +116,12 @@ function shot_CreateShotA1(_x,_y,_speed,_angle,_graphic,_delay,_subimg = 0) {
 		sprite_index : _graphic,
 		image_index : _subimg
 	})
-	inst.dir = _angle;
-	inst.spd = _speed;
-	inst.delay = _delay;
+	with(inst) {
+		dir = _angle;
+		spd = _speed;
+		delay = _delay;
+		scr_danmaku_sprites();
+	}
 	return inst
 }
 
@@ -271,9 +274,12 @@ function shot_CreateLooseLaserA1(_x,_y,_speed,_angle,_length,_width,_graphic,_de
 		image_xscale : _length,
 		image_yscale : _width
 	})
-	inst.spd = _speed;
-	inst.dir = _angle;
-	inst.delay = _delay;
+	with(inst) {
+		spd = _speed;
+		dir = _angle;
+		delay = _delay;
+		scr_danmaku_sprites();
+	}
 	return inst
 }
 
@@ -306,6 +312,7 @@ function shot_CreateStraightLaserA1(_x,_y,_angle,_length,_width,_deletetime,_gra
 		dir = _angle;
 		delay = _delay;
 		deletetime = _deletetime;
+		scr_danmaku_sprites();
 	}
 	return inst
 }
@@ -329,10 +336,13 @@ function shot_CreateCurveLaserA1(_x,_y,_speed,_angle,_length,_width,_graphic,_de
 		image_xscale : _length,
 		image_yscale : _width
 	})
-	inst.spd = _speed;
-	inst.dir = _angle;
-	inst.delay = _delay;
-	inst.angular_velocity = 1;
+	with(inst) {
+		spd = _speed;
+		dir = _angle;
+		delay = _delay;
+		angular_velocity = 1;
+		scr_danmaku_sprites();
+	}
 	return inst
 }
 

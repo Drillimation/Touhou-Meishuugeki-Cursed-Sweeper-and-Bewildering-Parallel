@@ -7,13 +7,6 @@ x = xview + x_pos;
 y = yview + y_pos;
 
 //Movement
-if global.replay_mode == false {
-	scr_get_input(play_id);
-}
-else {
-	scr_replay_input(play_id);
-}
-
 script_execute(state);
 
 //Button Commands
@@ -39,19 +32,25 @@ else {
 
 ///Bombing
 if (action_bomb) and can_bomb == true {
-	if global.player_stats[play_id].cur_bombs >= 1 and global.player_stats[play_id].power_items >= 10 and !instance_exists(obj_spell_card_player) and !instance_exists(obj_cutscene_textbox) {
-		player_SetPlayerInvincibilityFrame(300,play_id);
-		player_SetPlayerPower(-10,play_id,true);
-		if deathbomb_time >= 1 {
-			player_SetPlayerLife(1,play_id,true);
-			player_SetPlayerPower(22,play_id,true);
+	if is_bombing == false {
+		is_bombing = true
+		if global.player_stats[play_id].cur_bombs >= 1 and global.player_stats[play_id].power_items >= 10 and !instance_exists(obj_spell_card_player) and !instance_exists(obj_cutscene_textbox) {
+			player_SetPlayerInvincibilityFrame(300,play_id);
+			player_SetPlayerPower(-10,play_id,true);
+			if deathbomb_time >= 1 {
+				player_SetPlayerLife(1,play_id,true);
+				player_SetPlayerPower(22,play_id,true);
+			}
+			global.player_stats[play_id].bombs_used += 1;
+			with(obj_spell_card_enemy) { captured = false; }
+			bomb_sequence();
 		}
-		global.player_stats[play_id].bombs_used += 1;
-		with(obj_spell_card_enemy) { captured = false; }
-		bomb_sequence();
+		else {
+			sound_ObjSound_Play(se_invalid);
+		}
 	}
 	else {
-		sound_ObjSound_Play(se_invalid);
+		is_bombing = false;
 	}
 }
 invultime--;

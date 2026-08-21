@@ -3,7 +3,7 @@ fmod_system_init(512,FMOD_INIT.NORMAL);
 global.bgm = undefined;
 global.bgm_channel = undefined;
 global.current_bgm = undefined;
-global.game_version = "Windows Beta V101"
+global.game_version = "MacOS Beta V101"
 
 game_set_speed(60, gamespeed_fps);
 audio_group_load(audiogroup_default);

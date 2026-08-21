@@ -188,7 +188,7 @@ function scr_koko_attacks(){
 							if count mod 15 == 0 {
 								dir += irandom_range(-20,20);
 								spd += random_range(-0.25,0.25);
-								spd = clamp(speed,0.5,2);
+								spd = clamp(spd,0.5,2);
 							}
 							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);
@@ -291,7 +291,7 @@ function scr_koko_attacks(){
 							if count mod 15 == 0 {
 								dir += irandom_range(-20,20);
 								spd += random_range(-0.25,0.25);
-								spd = clamp(speed,0.5,2);
+								spd = clamp(spd,0.5,2);
 							}
 							if count mod 6 == 0 {
 								var inst = shot_CreateShotA1(x,y,0,0,spr_danmaku_ball_s1,5,10);

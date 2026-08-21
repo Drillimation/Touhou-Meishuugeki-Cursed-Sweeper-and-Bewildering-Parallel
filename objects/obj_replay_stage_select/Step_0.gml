@@ -51,4 +51,9 @@ if delay <= 0 {
 			sound_ObjSound_Play(se_invalid)
 		}
 	}
+	if (b_button) {
+		scr_one_channel_sound(snd_menucancel);
+		instance_destroy();
+		instance_create_depth(0,0,0,obj_replay_menu);
+	}
 }

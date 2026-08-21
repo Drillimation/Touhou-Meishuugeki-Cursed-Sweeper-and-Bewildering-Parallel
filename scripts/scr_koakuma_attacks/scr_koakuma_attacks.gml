@@ -15,7 +15,7 @@ function scr_koakuma_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count >= 60 {
@@ -23,23 +23,23 @@ function scr_koakuma_attacks(){
 				if count < 160 and count mod 10 == 0 {
 					sound_ObjSound_Play(se_tan01)
 					repeat(5 + global.main_stats.difficulty) {
-						shot_CreateShotA1(x,y,1,dir,spr_danmaku_ball_l,5,11)
-						dir += 360/(5 + global.main_stats.difficulty)
+						shot_CreateShotA1(x,y,1,sweep_dir,spr_danmaku_ball_l,5,11)
+						sweep_dir += 360/(5 + global.main_stats.difficulty)
 					}
-					dir -= 10;
+					sweep_dir -= 10;
 				}
 				if count > 160 and count mod 10 == 0 {
 					sound_ObjSound_Play(se_tan01)
 					repeat(5 + global.main_stats.difficulty) {
-						shot_CreateShotA1(x,y,1,dir,spr_danmaku_ball_l,5,11)
-						dir += 360/(5 + global.main_stats.difficulty)
+						shot_CreateShotA1(x,y,1,sweep_dir,spr_danmaku_ball_l,5,11)
+						sweep_dir += 360/(5 + global.main_stats.difficulty)
 					}
-					dir += 10;
+					sweep_dir += 10;
 				}
 			}
 			if count == 260 {
 				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
-				dir = 0;
+				sweep_dir = 0;
 			}
 			if count >= 260 and count < 300 {
 				if count mod 5 == 0 {
@@ -61,7 +61,7 @@ function scr_koakuma_attacks(){
 			}
 			if count == 360 {
 				move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
-				dir = 0;
+				sweep_dir = 0;
 			}
 			if count >= 360 and count < 400 {
 				sound_ObjSound_Play(se_tan01)
@@ -87,19 +87,19 @@ function scr_koakuma_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
-			dir2 = 0;
+			sweep_dir = 0;
+			sweep_dir2 = 0;
 		}
 		
 		if count >= 60 and count < 140 {
 			if count mod 4 == 0 {
 				sound_ObjSound_Play(se_tan01)
 				for(var i = 1; i < 11; i++) {
-					shot_CreateShotA1(x,y,0.5 + (i / 6),dir + dir2,spr_danmaku_ball_s1,5,0);
-					shot_CreateShotA1(x,y,0.5 + (i / 6),dir - dir2,spr_danmaku_ball_s1,5,0);
-					dir += 360/10
+					shot_CreateShotA1(x,y,0.5 + (i / 6),sweep_dir + sweep_dir2,spr_danmaku_ball_s1,5,0);
+					shot_CreateShotA1(x,y,0.5 + (i / 6),sweep_dir - sweep_dir2,spr_danmaku_ball_s1,5,0);
+					sweep_dir += 360/10
 				}
-				dir2 += 5;
+				sweep_dir2 += 5;
 			}
 		}
 		if count >= 180 and count < 360 {
@@ -165,7 +165,7 @@ function scr_koakuma_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count mod 120 == 0 and count > 0 {
@@ -228,7 +228,7 @@ function scr_koakuma_attacks(){
 			move_ObjMove_SetY(self,144);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 			baseAngle1 = 0;
 			baseAngle2 = 0;
 		}

@@ -18,15 +18,15 @@ if entered == true {
 	}
 	if count > 50 {
 		spd += 0.01;
-		spd = clamp(speed,0,2)
+		spd = clamp(spd,0,2)
 	}
 	if count == 50 {
-		angleT = point_direction(x,y,obj_player.x,obj_player.y) - 20;
+		angleT = point_direction(x,y,obj_player.x,obj_player.y);
 	}
 	if count > 50 and count < 110 {
 		if count mod (8 - global.main_stats.difficulty) == 0 {
 			sound_ObjSound_Play(se_tan02);
-			for(var i = -1; i <= 1; i++) {
+			for(var i = -1; i < 2; i++) {
 				shot_CreateShotA1(x,y,1.5,angleT + (20 * i),spr_danmaku_seed_m,5,0);
 			}
 		}

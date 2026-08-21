@@ -32,7 +32,7 @@ function scr_veronica_attacks(){
 	attack_veronica_main_02 = function() {
 		if count == 0 {
 			timer = 60;
-			dir = 1;
+			spread_dir = 1;
 			x_pos = 24;
 			y_pos = 48;
 			spd = 0;
@@ -482,7 +482,7 @@ function scr_veronica_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count == 40 {
-							var inst = shot_CreateShotA1(x,y,2,direction,spr_danmaku_ball_m1,10,0);
+							var inst = shot_CreateShotA1(x,y,2,dir,spr_danmaku_ball_m1,10,0);
 							with(inst) {
 								if count mod 25 == 0 {
 									sound_ObjSound_Play(se_tan01)
@@ -503,7 +503,7 @@ function scr_veronica_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count == 40 {
-							var inst = shot_CreateShotA1(x,y,2,direction,spr_danmaku_ball_m1,10,0);
+							var inst = shot_CreateShotA1(x,y,2,dir,spr_danmaku_ball_m1,10,0);
 							with(inst) {
 								if count mod 25 == 0 {
 									sound_ObjSound_Play(se_tan01)

@@ -18,7 +18,7 @@ else {
 //Replay check
 if array_length(load_replays) >= 1 {
 	for(var i = 0; i < array_length(load_replays); i++) {
-		var replay_to_check = scr_json_load_file("replays/" + load_replays[i]);
+		var replay_to_check = scr_binary_load_file("replays/" + load_replays[i]);
 		//Main struct check
 		if !struct_exists(replay_to_check,"replay_info") or !is_struct(replay_to_check.replay_info) { show_debug_message("\"replay_info\" not found."); continue; }
 		if !struct_exists(replay_to_check,"playing_field") or !is_struct(replay_to_check.playing_field) { show_debug_message("\"playing_field\" not found."); continue; }
@@ -56,13 +56,12 @@ if array_length(load_replays) >= 1 {
 			if !struct_exists(replay_to_check.replay_input[j],"replay_stage") or !is_array(replay_to_check.replay_input[j].replay_stage) { show_debug_message("\"replay_stage\" not found."); multi_check = false; }
 			if !struct_exists(replay_to_check.replay_input[j],"replay_score") or !is_array(replay_to_check.replay_input[j].replay_score) { show_debug_message("\"replay_score\" not found."); multi_check = false; }
 			if !struct_exists(replay_to_check.replay_input[j],"stage_played") or !is_array(replay_to_check.replay_input[j].stage_played) { show_debug_message("\"stage_played\" not found."); multi_check = false; }
-			var stages_played = 0;
-			for (var m = 0; m < 8; m++) {
-				if struct_names_count(replay_to_check.replay_input[j].replay_score[m]) != 0 {
-					stages_played++;
+			if multi_check == false { break; }
+			for (var k = 0; k < 8; k++) {
+				if struct_names_count(replay_to_check.replay_input[j].replay_score[k]) == 0 {
+					continue;
 				}
-			}
-			for(var k = 0; k < stages_played; k++) {
+
 				if !struct_exists(replay_to_check.replay_input[j].replay_score[k],"character") or !is_string(replay_to_check.replay_input[j].replay_score[k].character) { show_debug_message("\"character\" not found."); multi_check = false; }
 				if !struct_exists(replay_to_check.replay_input[j].replay_score[k],"cur_score") or !is_real(replay_to_check.replay_input[j].replay_score[k].cur_score) { show_debug_message("\"cur_score\" not found."); multi_check = false; }
 				if !struct_exists(replay_to_check.replay_input[j].replay_score[k],"cur_lives") or !is_real(replay_to_check.replay_input[j].replay_score[k].cur_lives) { show_debug_message("\"cur_lives\" not found."); multi_check = false; }
@@ -81,9 +80,15 @@ if array_length(load_replays) >= 1 {
 				if !struct_exists(replay_to_check.replay_input[j].replay_score[k],"bombscore") or !is_real(replay_to_check.replay_input[j].replay_score[k].bombscore) { show_debug_message("\"bombscore\" not found."); multi_check = false; }
 				if !struct_exists(replay_to_check.replay_input[j].replay_score[k],"received") or !is_real(replay_to_check.replay_input[j].replay_score[k].received) { show_debug_message("\"received\" not found."); multi_check = false; }
 			
-				if !is_array(replay_to_check.replay_input[j].replay_stage[k]) { multi_check = false }
-				if !is_real(replay_to_check.replay_input[j].stage_played[k]) { multi_check = false }
+				if k >= array_length(replay_to_check.replay_input[j].replay_stage) or !is_array(replay_to_check.replay_input[j].replay_stage[k]) { multi_check = false }
+				if k >= array_length(replay_to_check.replay_input[j].stage_played) or !is_real(replay_to_check.replay_input[j].stage_played[k]) { multi_check = false }
+				if multi_check == false { break; }
 				for(var l = 0; l < array_length(replay_to_check.replay_input[j].replay_stage[k]); l++) {
+					var frame_input = replay_to_check.replay_input[j].replay_stage[k][l];
+		            if !is_array(frame_input) or (array_length(frame_input) < 7) {
+		                multi_check = false;
+		                break;
+		            }
 					if (!is_bool(replay_to_check.replay_input[j].replay_stage[k][l][0])) { show_debug_message("\"right\" not found."); multi_check = false; }
 					if (!is_bool(replay_to_check.replay_input[j].replay_stage[k][l][1])) { show_debug_message("\"left\" not found."); multi_check = false; }
 					if (!is_bool(replay_to_check.replay_input[j].replay_stage[k][l][2])) { show_debug_message("\"down\" not found."); multi_check = false; }
@@ -91,10 +96,12 @@ if array_length(load_replays) >= 1 {
 					if (!is_real(replay_to_check.replay_input[j].replay_stage[k][l][4])) or (replay_to_check.replay_input[j].replay_stage[k][l][4] < 0) or (replay_to_check.replay_input[j].replay_stage[k][l][4] > 1) { show_debug_message("\"shoot\" not found."); multi_check = false; }
 					if (!is_bool(replay_to_check.replay_input[j].replay_stage[k][l][5])) { show_debug_message("\"focus\" not found."); multi_check = false; }
 					if (!is_bool(replay_to_check.replay_input[j].replay_stage[k][l][6])) { show_debug_message("\"bomb\" not found."); multi_check = false; }
+					if multi_check == false { break; }
 				}
 			}
+			if multi_check == false { break; }
 		}
-		if multi_check == false continue;
+		if multi_check == false { continue; }
 		array_push(replay_list,replay_to_check);
 	}
 }
@@ -120,18 +127,34 @@ description = []
 
 if array_length(load_replays) >= 1 {
 	array_copy(option,0,load_replays,0,array_length(load_replays));
-	for(var i = 0; i < array_length(replay_list); i++) {
-		var character_text = struct_get(load_array.characters,replay_list[i].replay_input[0].replay_score[0].character)
-		var rank_text = load_array.rank[replay_list[i].main_stats.difficulty]
-		var stage_text = load_array.stage[replay_list[i].main_stats.stage - 1]
-		array_push(description,[
-			replay_list[i].replay_info.player_name,
-			replay_list[i].replay_info.save_date,
-			character_text,
-			rank_text,
-			stage_text
-		]);
-	}
+	
+	for(var i = 0; i < array_length(replay_list); i++) { 
+        // 1. Find the first valid stage in this replay
+        var first_active_stage_idx = 0;
+        for (var m = 0; m < 8; m++) {
+            if (struct_names_count(replay_list[i].replay_input[0].replay_score[m]) > 0) {
+                first_active_stage_idx = m;
+                break;
+            }
+        }
+        // 2. Safely read the character from the active stage index
+        var active_score_struct = replay_list[i].replay_input[0].replay_score[first_active_stage_idx];
+        var character_text = "Unknown";
+        if (struct_exists(active_score_struct, "character")) {
+            character_text = struct_get(load_array.characters, active_score_struct.character);
+        }
+        // 3. Get the overall run data
+        var rank_text = load_array.rank[replay_list[i].main_stats.difficulty]; 
+        var stage_text = load_array.stage[replay_list[i].main_stats.stage - 1]; 
+        
+        array_push(description, [ 
+            replay_list[i].replay_info.player_name, 
+            replay_list[i].replay_info.save_date, 
+            character_text, 
+            rank_text, 
+            stage_text 
+        ]); 
+    } 
 }
 //array_copy(description,0,load_array.option_select.option_description,0,array_length(load_array.option_select.option_description));
 

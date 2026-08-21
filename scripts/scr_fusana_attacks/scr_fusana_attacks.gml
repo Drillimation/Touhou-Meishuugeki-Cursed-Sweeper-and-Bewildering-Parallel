@@ -68,7 +68,7 @@ function scr_fusana_attacks(){
 			}
 		}
 		
-		if count mod 180 == 0 {
+		if count mod 180 == 0 and count > 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,128),60);
 		}
 	}
@@ -94,7 +94,7 @@ function scr_fusana_attacks(){
 				shot_CreateShotA1(x,y,2,angleT + (15 * i),spr_danmaku_star_m,5,2)
 			}
 		}
-		if count mod 180 == 0 {
+		if count mod 180 == 0 and count > 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(32,128),60);
 		}
 	}
@@ -113,7 +113,7 @@ function scr_fusana_attacks(){
 			y_pos = 96;
 			
 			angleT = 270;
-			dir = 1;
+			sweep_dir = 1;
 		}
 		
 		if count >= 60 {
@@ -134,10 +134,10 @@ function scr_fusana_attacks(){
 					}
 				}
 				
-				angleT += 5 * dir;
+				angleT += 5 * sweep_dir;
 				
 				if angleT > 315 or angleT < 235 {
-					dir *= -1;
+					sweep_dir *= -1;
 				}
 			}
 			if count mod 180 == 0 {

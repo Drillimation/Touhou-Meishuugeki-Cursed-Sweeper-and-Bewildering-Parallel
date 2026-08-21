@@ -228,7 +228,7 @@ function scr_berenice_attacks(){
 						set_function = function() {
 							if count mod 30 == 0 {
 								sound_ObjSound_Play(se_kira02)
-								move_ObjMove_SetSpeed(self,speed + random_range(-0.25,0.75))
+								move_ObjMove_SetSpeed(self,spd + random_range(-0.25,0.75))
 								move_ObjMove_SetAngle(self,dir + random_range(-10,10))
 							}
 						}

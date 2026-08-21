@@ -31,7 +31,7 @@ if set_function != undefined {
 //Direction Manipulation
 dir += angular_velocity;
 spd += acceleration;
-if speedcap == true { spd = clamp(speed,0,maxspeed); }
+if speedcap == true { spd = clamp(spd,0,maxspeed); }
 if jitter == true {
 	if count mod jitter_speed == 0 {
 		dir += choose(jitter_direction,-jitter_direction);
@@ -41,11 +41,22 @@ if jitter == true {
 }
 
 if autohome == true {
-	if collision_rectangle(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2,enemy_target,false,true) {
-		if instance_exists(enemy_target) {
-			var ex = instance_nearest(x,y,enemy_target).x;
-			var ey = instance_nearest(x,y,enemy_target).y;
-			dir = point_direction(x,y,ex,ey);
+	if instance_exists(my_target) {
+		if point_in_rectangle(my_target.x,my_target.y,xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2) {
+			set_target = true;
+			dir = point_direction(x,y,my_target.x,my_target.y);
+		}
+		else {
+			my_target = noone;
+			set_target = false;
+		}
+	}
+	if my_target == noone {
+		var inst = collision_rectangle(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2,enemy_target,false,true);
+		if inst != noone and inst.entered == true {
+			my_target = inst;
+			set_target = true;
+			dir = point_direction(x,y,inst.x,inst.y);
 		}
 	}
 }

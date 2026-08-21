@@ -71,7 +71,7 @@ function scr_system_close() {
 }
 
 function scr_load_replay(_file) {
-	var _replay_file = scr_json_load_file(_file);
+	var _replay_file = scr_binary_load_file(_file);
 	var freeplay = struct_get(_replay_file.replay_info,"free_play")
 	show_debug_message(freeplay)
 	if freeplay == 1 {
@@ -104,5 +104,5 @@ function scr_save_replay(_file) {
 		main_stats : global.main_stats,
 		replay_input : global.replay_input
 	}
-	scr_json_save_file(save_data,_file)
+	scr_binary_save_file(save_data,_file)
 }

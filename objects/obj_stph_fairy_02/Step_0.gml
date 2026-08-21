@@ -11,7 +11,7 @@ if entered == true {
 	}
 	if count < 75 {
 		spd -= 0.02;
-		spd = clamp(speed,0,1.5);
+		spd = clamp(spd,0,1.5);
 	}
 	if count == 50 {
 		sound_ObjSound_Play(se_tan01);
@@ -28,8 +28,8 @@ if entered == true {
 						instance_destroy();
 					}
 					else {
-						x_pos = parent_object.x_pos + lengthdir_x(32,direction);
-						y_pos = parent_object.y_pos + lengthdir_y(32,direction);
+						x_pos = parent_object.x_pos + lengthdir_x(32,dir);
+						y_pos = parent_object.y_pos + lengthdir_y(32,dir);
 						dir++;
 						if count mod 20 == 0 {
 							sound_ObjSound_Play(se_kira01);

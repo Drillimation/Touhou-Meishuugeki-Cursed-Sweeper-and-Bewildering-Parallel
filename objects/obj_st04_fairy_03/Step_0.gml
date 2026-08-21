@@ -11,7 +11,7 @@ if entered == true {
 	
 	if count < 50 {
 		spd -= 0.04;
-		spd = clamp(speed,0,2);
+		spd = clamp(spd,0,2);
 	}
 	if count == 50 {
 		sound_ObjSound_Play(se_tan02);
@@ -26,7 +26,7 @@ if entered == true {
 	}
 	if count > 50 {
 		spd += 0.04;
-		spd = clamp(speed,0,2);
+		spd = clamp(spd,0,2);
 	}
 	
 	count++;

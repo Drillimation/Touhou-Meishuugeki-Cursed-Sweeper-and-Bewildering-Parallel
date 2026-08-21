@@ -87,7 +87,7 @@ function scr_camille_attacks(){
 				shot_CreateShotA1(255,random_range(16,272),0.75,180,spr_danmaku_dagger,10,10);
 			}
 		}
-		if count mod 90 == 0 {
+		if count mod 90 == 0 and count > 0 {
 			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
 		}
 	}
@@ -238,12 +238,12 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count mod 45 == 0 {
 			sound_ObjSound_Play(se_tan01);
-			var angleT = dir;
+			var angleT = sweep_dir;
 			repeat(20 + (global.main_stats.difficulty * 4)) {
 				shot_CreateShotA1(x,y,1,angleT,spr_danmaku_dagger,10,0);
 				angleT += 360 / (20 + (global.main_stats.difficulty * 4));
@@ -251,13 +251,13 @@ function scr_camille_attacks(){
 		}
 		if count > 0 and count mod 60 == 0 {
 			sound_ObjSound_Play(se_kira01);
-			var angleT = dir + 45;
+			var angleT = sweep_dir + 45;
 			repeat(4) {
 				var inst = shot_CreateShotA1(x,y,2,angleT,spr_danmaku_ball_m1,10,0);
 				with(inst) {
 					set_function = function() {
 						if count < 30 {
-							move_ObjMove_SetSpeed(self,speed * 0.92)
+							move_ObjMove_SetSpeed(self,spd * 0.92)
 						}
 						if count == 30 {
 							instance_destroy();
@@ -273,7 +273,7 @@ function scr_camille_attacks(){
 			}
 		}
 		if count >= 60 {
-			dir += 7.3;
+			sweep_dir += 7.3;
 		}
 	}
 	spell_card_camille_02 = function() {
@@ -287,7 +287,7 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count == 60 {
@@ -325,7 +325,7 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count == 60 {
@@ -333,19 +333,19 @@ function scr_camille_attacks(){
 			var ceilinglaser = shot_CreateLooseLaserA1(0,80,0,0,25.6,1,spr_danmaku_laser,40,0);
 			var floorlaser = shot_CreateLooseLaserA1(0,208,0,0,25.6,1,spr_danmaku_laser,40,0);
 			with(ceilinglaser) {
-				dir = 0;
+				sweep_dir = 0;
 				set_function = function() {
-					x_pos = 0 + lengthdir_x(0,dir);
-					y_pos = 80 + lengthdir_y(40,dir);
-					dir++;
+					x_pos = 0 + lengthdir_x(0,sweep_dir);
+					y_pos = 80 + lengthdir_y(40,sweep_dir);
+					sweep_dir++;
 				}
 			}
 			with(floorlaser) {
-				dir = 0;
+				sweep_dir = 0;
 				set_function = function() {
-					x_pos = 0 + lengthdir_x(0,dir);
-					y_pos = 208 + lengthdir_y(40,dir);
-					dir++;
+					x_pos = 0 + lengthdir_x(0,sweep_dir);
+					y_pos = 208 + lengthdir_y(40,sweep_dir);
+					sweep_dir++;
 				}
 			}
 		}
@@ -376,7 +376,7 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 			streamAngle = 270;
 			angleDirection = 1;
 		}
@@ -414,7 +414,7 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count mod 240 == 0 {
 			move_ObjMove_SetDestAtSpeed(self,irandom_range(32,224),irandom_range(48,96),1);
@@ -459,7 +459,7 @@ function scr_camille_attacks(){
 			y_pos = 96;
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count >= 60 and count mod 70 == 0 {
@@ -530,7 +530,7 @@ function scr_camille_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count == 60 {
 			sound_ObjSound_Play(se_lazer00);
@@ -565,7 +565,7 @@ function scr_camille_attacks(){
 			x_pos = 128;
 			y_pos = 144;
 			invultime = 7200;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count < 100 {
 			image_alpha -= 0.01;
@@ -578,11 +578,11 @@ function scr_camille_attacks(){
 				var angleT = 0;
 				repeat(5 + global.main_stats.difficulty) {
 					for(var i = -2; i < 3; i++) {
-						shot_CreateShotA1(x,y,1.5,dir + (angleT + (i * 5)),spr_danmaku_arrowhead,10,0);
+						shot_CreateShotA1(x,y,1.5,sweep_dir + (angleT + (i * 5)),spr_danmaku_arrowhead,10,0);
 					}
 					angleT += 360 / (5 + global.main_stats.difficulty)
 				}
-				dir += 2.5;
+				sweep_dir += 2.5;
 			}
 			
 			if count mod 90 == 0 {

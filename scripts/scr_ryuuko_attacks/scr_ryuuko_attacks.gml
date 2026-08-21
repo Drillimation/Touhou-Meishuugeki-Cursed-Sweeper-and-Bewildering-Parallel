@@ -14,7 +14,7 @@ function scr_ryuuko_attacks(){
 				with(inst) {
 					set_function = function() {
 						if count <= 299 {
-							spd = clamp(speed,0.25,2);
+							spd = clamp(spd,0.25,2);
 						}
 						if count == 300 {
 							sound_ObjSound_Play(se_kira00);

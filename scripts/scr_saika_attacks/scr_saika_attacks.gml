@@ -63,6 +63,8 @@ function scr_saika_attacks(){
 	}
 	attack_saika_02 = function() {
 		if count == 0 {
+			spd = 0;
+			move_mode = false;
 			x_pos = 128;
 			y_pos = 96;
 			timer = 50;
@@ -77,7 +79,7 @@ function scr_saika_attacks(){
 						if count == 60 {
 							sound_ObjSound_Play(se_kira01)
 							for(var j = 0; j < 5; j++) {
-								shot_CreateShotA1(x,y,speed * 1.25,(dir - 20) + (j * 10),spr_danmaku_bullet,5,0);
+								shot_CreateShotA1(x,y,spd * 1.25,(dir - 20) + (j * 10),spr_danmaku_bullet,5,0);
 							}
 							prop_ObjShot_FadeDelete(self,-0.02);
 						}
@@ -85,7 +87,7 @@ function scr_saika_attacks(){
 				}
 			}
 		}
-		if count mod 80 == 0 {
+		if count mod 80 == 0 and count > 0 {
 			move_ObjMove_SetDestAtFrame(self,irandom_range(32,224),irandom_range(48,96),60);
 		}
 	}

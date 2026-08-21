@@ -18,7 +18,7 @@ if entered == true {
 	}
 	if count > 50 {
 		spd += 0.04;
-		spd = clamp(speed,0,2)
+		spd = clamp(spd,0,2)
 	}
 	if count == 50 {
 		var angleT = 0;

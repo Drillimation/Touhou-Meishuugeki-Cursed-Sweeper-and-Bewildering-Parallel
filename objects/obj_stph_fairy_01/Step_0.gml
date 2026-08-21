@@ -10,7 +10,7 @@ if entered == true {
 	}
 	if count < 75 {
 		spd -= 0.02;
-		spd = clamp(speed,0,1.5);
+		spd = clamp(spd,0,1.5);
 	}
 	
 	if count < 90 {

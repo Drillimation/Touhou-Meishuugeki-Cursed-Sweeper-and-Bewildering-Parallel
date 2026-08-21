@@ -33,6 +33,9 @@ actual_damage = 1;
 penetration = 1;
 autohome = false;
 enemy_target = -1;
+my_target = noone;
+set_target = false;
+set_target = false;
 set_function = undefined;
 
 count = 0;

@@ -29,7 +29,7 @@ function scr_doromi_attacks(){
 		}
 		if count mod 60 == 45 {
 			sound_ObjSound_Play(se_kira01)
-			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
+			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 			for(var i = -2 - global.main_stats.difficulty; i < 3 + global.main_stats.difficulty; i++) {
 				shot_CreateShotA1(x,y,1.25,angleT + (i * 12),spr_danmaku_dagger,15,12);
 			}
@@ -55,7 +55,7 @@ function scr_doromi_attacks(){
 		if count mod 20 == 0 and count mod 80 < 60 {
 			sound_ObjSound_Play(se_tan01);
 			var speedT = 1.6;
-			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
+			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 			var shotColor;
 			if count mod 40 == 0 {
 				shotColor = 0;
@@ -92,7 +92,7 @@ function scr_doromi_attacks(){
 		}
 		if count mod 12 == 0 {
 			sound_ObjSound_Play(se_tan01);
-			var angleT = point_dir(x,y,obj_player.x,obj_player.y);
+			var angleT = point_direction(x,y,obj_player.x,obj_player.y);
 			var speedT = 2.25;
 			repeat(1 + global.main_stats.difficulty) {
 				shot_CreateShotA1(x,y,speedT,angleT - 15,spr_danmaku_arrowhead,4,1);
@@ -324,7 +324,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count >= 60 {
@@ -359,7 +359,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 			sweepRange = 45;
 			baseAngle = 270;
 		}
@@ -397,7 +397,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count >= 60 {
 			if count mod 60 == 0 {
@@ -450,7 +450,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count >= 60 {
 			if count mod 50 == 0 {
@@ -494,7 +494,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count mod 120 == 0 and count > 0 {
 			var ez = 0;
@@ -527,7 +527,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count >= 60 {
@@ -561,7 +561,7 @@ function scr_doromi_attacks(){
 					}
 					var spawnY = irandom_range(16,144);
 					var speedT = 1;
-					var angleBase = point_dir(x,y,obj_player.x,obj_player.y);
+					var angleBase = point_direction(x,y,obj_player.x,obj_player.y);
 					for(var i = 0; i < 1 + global.main_stats.difficulty; i++) {
 						shot_CreateShotA1(spawnX,spawnY,speedT,angleBase,spr_danmaku_seed_m,5,12);
 						speedT -= 0.1;
@@ -584,7 +584,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		
 		if count >= 60 {
@@ -631,7 +631,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,96);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 		}
 		if count >= 60 {
 			if count mod 25 - (global.main_stats.difficulty * 5) == 0 {
@@ -718,7 +718,7 @@ function scr_doromi_attacks(){
 			move_ObjMove_SetY(self,144);
 			spd = 0;
 			move_mode = false;
-			dir = 0;
+			sweep_dir = 0;
 			invultime = 7200;
 		}
 		

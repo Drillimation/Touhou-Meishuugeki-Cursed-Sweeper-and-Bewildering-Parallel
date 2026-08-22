@@ -25,6 +25,7 @@ function playermain_CreatePlayerShotA1(_x,_y,_speed,_angle,_damage,_penetration,
 		dir = _angle;
 		penetration = _penetration;
 		play_id = play_id;
+		scr_danmaku_sprites();
 	}
 	return inst
 }

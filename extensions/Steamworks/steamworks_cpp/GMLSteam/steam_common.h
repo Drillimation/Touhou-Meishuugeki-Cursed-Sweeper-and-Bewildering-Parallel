@@ -18,12 +18,16 @@ extern void Steam_Friends_Init();
 extern void Steam_UGC_Init();
 extern void Steam_Screenshots_Init();
 extern void Steam_RemoteStorage_Init();
+extern void Steam_Input_Init();
+extern void Steam_Input_Cleanup();
+extern bool steam_input_auto_initialized;
 
 extern int requestInd;
 extern int getAsyncRequestInd();
 
 extern void Steam_UserStats_Process();
 
+extern void YYStructAddUndefined(RValue* s, const char* key);
 extern void _SW_SetArrayOfString(RValue* _array, char* str, const char* delim);
 extern void _SW_SetArrayOfInt32(RValue* _array, std::vector<int> &values);
 extern void _SW_SetArrayOfInt64(RValue* _array, std::vector<int64> &values);
@@ -31,4 +35,5 @@ extern void _SW_SetArrayOfReal(RValue* _array, std::vector<double> &values);
 extern void _SW_SetArrayOfRValue(RValue* _array, std::vector<RValue> &values);
 extern std::vector<const char*> _SW_GetArrayOfStrings(RValue* arg, int arg_idx, const char* func);
 extern std::vector<int32> _SW_GetArrayOfInt32(RValue* arg, int arg_idx, const char* func);
+std::vector<double> _SW_GetArrayOfReal(RValue* arg, int arg_idx, const char* func);
 extern std::vector<uint64> _SW_GetArrayOfUint64(RValue* arg, int arg_idx, const char* func);

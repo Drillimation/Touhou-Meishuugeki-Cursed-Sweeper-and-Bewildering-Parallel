@@ -55,6 +55,7 @@
     {"$GMFolder":"","%Name":"Stage 4","folderPath":"folders/Stage Enemies/Stage 4.yy","name":"Stage 4","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 5","folderPath":"folders/Stage Enemies/Stage 5.yy","name":"Stage 5","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage 6","folderPath":"folders/Stage Enemies/Stage 6.yy","name":"Stage 6","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Steamworks","folderPath":"folders/Steamworks.yy","name":"Steamworks","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
@@ -559,6 +560,7 @@
   "name":"Touhou Meishuugeki ~ Cursed Sweeper and Bewildering Parallel",
   "resources":[
     {"id":{"name":"FMOD","path":"extensions/FMOD/FMOD.yy",},},
+    {"id":{"name":"Steamworks","path":"extensions/Steamworks/Steamworks.yy",},},
     {"id":{"name":"font_chicago","path":"fonts/font_chicago/font_chicago.yy",},},
     {"id":{"name":"font_dice_condensed","path":"fonts/font_dice_condensed/font_dice_condensed.yy",},},
     {"id":{"name":"font_dice","path":"fonts/font_dice/font_dice.yy",},},

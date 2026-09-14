@@ -43,6 +43,7 @@
     {"name":"Stage 4","order":4,"path":"folders/Stage Enemies/Stage 4.yy",},
     {"name":"Stage 5","order":5,"path":"folders/Stage Enemies/Stage 5.yy",},
     {"name":"Stage 6","order":6,"path":"folders/Stage Enemies/Stage 6.yy",},
+    {"name":"Steamworks","order":65,"path":"folders/Steamworks.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"FMOD","order":2,"path":"extensions/FMOD/FMOD.yy",},

@@ -35,6 +35,7 @@ enemy_target = -1;
 my_target = noone;
 set_target = false;
 set_function = undefined;
+entered = true;
 
 count = 0;
 jitter = false;

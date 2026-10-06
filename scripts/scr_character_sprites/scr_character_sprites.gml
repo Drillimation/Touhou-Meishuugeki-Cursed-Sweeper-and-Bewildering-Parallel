@@ -43,11 +43,11 @@ function scr_character_sprites(){
 					set_function = function() {
 						image_xscale -= 0.003;
 						image_yscale -= 0.003;
-					}
-					var object_array = [obj_enemy,obj_enemy_bullet];
-					for(var i = 0; i < array_length(object_array); i++) {
-						if instance_exists(object_array[i]) {
-							move_ObjMove_SetAngleAtTarget(inst,object_array[i]);
+						if instance_exists(obj_enemy_bullet) {
+							move_ObjMove_SetAngleAtTarget(self,obj_enemy_bullet);
+						}
+						else {
+							move_ObjMove_SetAngleAtTarget(self,obj_enemy);
 						}
 					}
 				}

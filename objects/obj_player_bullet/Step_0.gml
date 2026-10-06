@@ -42,7 +42,7 @@ if jitter == true {
 
 if autohome == true {
 	if instance_exists(my_target) {
-		if point_in_rectangle(my_target.x,my_target.y,xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2) {
+		if point_in_rectangle(my_target.x,my_target.y,xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview + global.playing_field.y2) {
 			set_target = true;
 			dir = point_direction(x,y,my_target.x,my_target.y);
 		}
@@ -51,13 +51,27 @@ if autohome == true {
 			set_target = false;
 		}
 	}
-	if my_target == noone {
-		var inst = collision_rectangle(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview +  + global.playing_field.y2,enemy_target,false,true);
-		if inst != noone and inst.entered == true {
-			my_target = inst;
-			set_target = true;
-			dir = point_direction(x,y,inst.x,inst.y);
+	else {
+		var _list = ds_list_create();
+		var _num = collision_rectangle_list(xview + global.playing_field.x1,yview + global.playing_field.y1,xview + global.playing_field.x2,yview + global.playing_field.y2,enemy_target,false,true,_list,false);
+		if _num > 0 {
+			var _arr = ds_grid_create(2,_num);
+			for(var i = 0; i < ds_grid_height(_arr); i++) {
+				var inst_dist = point_distance(x,y,_list[|i].x,_list[|i].y)
+				_arr[# 0,i] = inst_dist
+				_arr[# 1,i] = _list[|i]
+			}
+			ds_grid_sort(_arr,1,true)
+			var inst = _arr[# 1,0]
+			
+			if inst != noone and inst.entered == true {
+				my_target = inst;
+				set_target = true;
+				dir = point_direction(x,y,inst.x,inst.y);
+			}
+			ds_grid_destroy(_arr);
 		}
+		ds_list_destroy(_list);
 	}
 }
 
